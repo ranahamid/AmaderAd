@@ -20,8 +20,7 @@ namespace AmaderAd.Controllers
 {
     [ExceptionHandler]
     public class HomeController : BaseController
-    {
-        
+    {        
         public ActionResult Index()
         {
             Log.Info("App started...");
