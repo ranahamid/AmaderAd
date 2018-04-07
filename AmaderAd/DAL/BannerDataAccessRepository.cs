@@ -59,8 +59,7 @@ namespace AmaderAd.DAL
                     {
                         URL = HttpUtility.UrlPathEncode(y.URL),
                         MerchantId = y.MerchantId,
-                        CategoryId = y.CategoryId,
-                        //Content/images/categories/placeholder.png
+                        CategoryId = y.CategoryId,                       
                         ImagePath = HttpUtility.UrlPathEncode(baseUrl + y.ImagePath),
                         Description = y.Description,
                         DisplayOrder = y.DisplayOrder
@@ -82,8 +81,7 @@ namespace AmaderAd.DAL
                     URL = HttpUtility.UrlPathEncode(y.URL),
                     MerchantId = y.MerchantId,
                     CategoryId = y.CategoryId,
-                    ImagePath = HttpUtility.UrlPathEncode(baseUrl + y.ImagePath),
-                  
+                    ImagePath = HttpUtility.UrlPathEncode(baseUrl + y.ImagePath),                  
                     Description = y.Description,
                     DisplayOrder = y.DisplayOrder
                 }).ToList(),
@@ -95,7 +93,6 @@ namespace AmaderAd.DAL
             }).ToList();
             return entities;
         }
-
 
 
         public Banner Get(int id)

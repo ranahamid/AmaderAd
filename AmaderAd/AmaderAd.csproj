@@ -272,7 +272,9 @@
     <Compile Include="DAL\IAccountAccessRepository.cs" />
     <Compile Include="DAL\IBannerAccessRepository.cs" />
     <Compile Include="DAL\ILogAccessRepository.cs" />
+    <Compile Include="DAL\INewspaperAccessRepository.cs" />
     <Compile Include="DAL\LogDataAccessRepository.cs" />
+    <Compile Include="DAL\NewspaperDataAccessRepository.cs" />
     <Compile Include="DAL\Shodypati.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -296,6 +298,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Newspaper.cs" />
     <Compile Include="Models\UserRegistrationInfo.cs" />
     <Compile Include="Models\NullObjectCache.cs" />
     <Compile Include="Models\User.cs" />
