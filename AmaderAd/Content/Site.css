@@ -9,7 +9,7 @@
 input,
 select,
 textarea {
-    max-width: 380px;
+    max-width: 45%;
 }
 
 /* styles for validation helpers */
@@ -1336,4 +1336,9 @@ form#headersearch {
 #calendar {
     max-width: 900px;
     margin: 0 auto;
+}
+
+.box-heading-green {
+    background-color: #2196F3;
+    color: white;
 }

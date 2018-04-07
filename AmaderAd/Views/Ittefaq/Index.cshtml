@@ -1,0 +1,761 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>Ittefaq</h2>
+
+<div class="row" id="sortable_portlets">
+    <div class="col-md-12 column sortable">
+        <div class="portlet portlet-sortable  bg-inverse">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-puzzle font-red-flamingo"></i>
+                    <span class="caption-subject bold font-red-flamingo uppercase">শ্রেণিভুক্ত বিজ্ঞাপন</span>
+                    <span class="caption-helper">Classified Advertisement</span>
+                </div>
+                <div class="tools">
+                    <a href="" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="" class="reload"> </a>
+                    <a href="" class="fullscreen"> </a>
+                    <a href="" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-chambray">
+                                <div class="mt-head-desc">শ্রেণিভুক্ত বিজ্ঞাপন</div>
+                                <span class="mt-head-date">Classified Advertisement</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- empty sortable porlet required for each columns! -->
+        <div class="portlet portlet-sortable-empty"> </div>
+    </div>
+</div>
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">মূল পত্রিকা</span>
+                <span class="caption-helper">Main Paper</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>নির্দিষ্ট পৃষ্ঠা <small>Specific Page</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">প্রথম  পৃষ্ঠা (রঙিন) কমপক্ষে ১২ কলাম ইঞ্চি </div>
+                                <span class="mt-head-date">1st page (Color) At least 12 column inch  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন) কমপক্ষে ৬ কলাম ইঞ্চি </div>
+                                <span class="mt-head-date">Last Page (Color) At least 6 column inch  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">তৃতীয় পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date">3rd Page (Color)  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc"> পঞ্চম  পৃষ্ঠা  (রঙিন)</div>
+                                <span class="mt-head-date">5th Page Color  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> পঞ্চম  পৃষ্ঠা  (সাদা কালো)</div>
+                                <span class="mt-head-date">5th Page Black & White  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> দ্বিতীয় পৃষ্ঠা  (রঙিন)</div>
+                                <span class="mt-head-date">2nd Page Color</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> দ্বিতীয় পৃষ্ঠা  (সাদা কালো)</div>
+                                <span class="mt-head-date">2nd Page Black & White  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">উনিশ/তেইশ পৃষ্ঠা (রঙিন) </div>
+                                <span class="mt-head-date">19th/23rd Page Color</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">উনিশ/তেইশ পৃষ্ঠা (সাদা কালো) </div>
+                                <span class="mt-head-date">19th/23rd Page Black & White</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">খেলার পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date"> sports page (Color)</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">খেলার পৃষ্ঠা (সাদা কালো)  </div>
+                                <span class="mt-head-date">Sports Page (Black & White)</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">মাঝের দুই পৃষ্ঠা </div>
+                                <span class="mt-head-date">Middle 2 Page Color </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-purple-intense">
+
+                                <div class="mt-head-desc">ভিতরের পৃষ্ঠা (সাদা কালো) </div>
+                                <span class="mt-head-date">Inner Page Black & White </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-purple-intense">
+
+                                <div class="mt-head-desc">ভিতরের পৃষ্ঠা (রঙিন) </div>
+                                <span class="mt-head-date">Inner Page Color</span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                  
+                </div>
+
+            </div>
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>প্যানেল বিজ্ঞাপন <small>Panel Advertisement</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-purple">
+
+                                <div class="mt-head-desc">শেষের পাতা</div>
+                                <span class="mt-head-date">Last Page  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-purple">
+
+                                <div class="mt-head-desc">ভিতরের পাতা</div>
+                                <span class="mt-head-date">Inner Page  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- empty sortable porlet required for each columns! -->
+    <div class="portlet portlet-sortable-empty"> </div>
+</div>
+
+<div class="col-md-12 column sortable">
+<div class="portlet portlet-sortable  bg-inverse">
+<div class="portlet-title">
+    <div class="caption">
+        <i class="icon-pin font-yellow-lemon"></i>
+        <span class="caption-subject bold font-red-flamingo uppercase">নিয়মিত ক্রোড়পত্র</span>
+        <span class="caption-helper">Feature Paper</span>
+    </div>
+    <div class="tools">
+        <a href="" class="collapse"> </a>
+        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+        <a href="" class="reload"> </a>
+        <a href="" class="fullscreen"> </a>
+        <a href="" class="remove"> </a>
+    </div>
+</div>
+
+<div class="portlet-body">
+    <div class="box-heading-green box-sections box-block">
+        <p>ঠাট্টা (ম্যাগাজিন) প্রকাশিত হয় রবিবার  <small>Thatta (Magazine) Publish in Sunday</small></p>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-yellow-gold">
+
+                    <div class="mt-head-desc">শেষ প্রচ্ছদ </div>
+                    <span class="mt-head-date">Last Cover Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-yellow-gold">
+
+                    <div class="mt-head-desc">দ্বিতীয় প্রচ্ছদ </div>
+                    <span class="mt-head-date">Second Cover Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-yellow-gold">
+
+                    <div class="mt-head-desc">তৃতীয় প্রচ্ছদ</div>
+                    <span class="mt-head-date">Third Cover Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-yellow-gold">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা </div>
+                    <span class="mt-head-date">Inner Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-yellow-gold">
+
+                    <div class="mt-head-desc">ভিতরের দুই পৃষ্ঠা</div>
+                    <span class="mt-head-date">Inner Two Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="portlet-body">
+    <div class="box-heading-green box-sections box-block">
+        <p>প্রজন্ম : প্রকাশিত হয় সোমবার  <small>Projonmo (publish in monday)</small></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-haze">
+
+                    <div class="mt-head-desc"> প্রথম  পৃষ্ঠা </div>
+                    <span class="mt-head-date">First Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-haze">
+
+                    <div class="mt-head-desc"> শেষ পৃষ্ঠা ( কচিকাঁচার আসর)</div>
+                    <span class="mt-head-date">Last Page (kochikachar Asor)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-haze">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা</div>
+                    <span class="mt-head-date">Inner Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="portlet-body">
+    <div class="box-heading-green box-sections box-block">
+        <p>কড়চা: প্রকাশিত হয় মঙ্গলবার  ( ট্যাবলয়েড )  <small> korcha(publish in Thuesday) Weekly Tabloid </small></p>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-red-haze">
+
+                    <div class="mt-head-desc">প্রথম  পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">First Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-red-haze">
+
+                    <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">Last Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-red-haze">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">Inner Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-red-haze">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা (সাদা কালো ) </div>
+                    <span class="mt-head-date">Inner Page (Black & White)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="portlet-body">
+    <div class="box-heading-green box-sections box-block">
+        <p>  ক্যাম্পাস : প্রকাশিত হয় বুধবার <small>Campus(publish in wednesday ) Weekly Tabloid </small></p>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-jungle ">
+
+                    <div class="mt-head-desc">  প্রথম  পৃষ্ঠা (রঙিন) </div>
+                    <span class="mt-head-date">First Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-jungle">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">Inner Page(Color) </span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-jungle">
+
+                    <div class="mt-head-desc">  তথ্য প্রযুক্তি (রঙিন) </div>
+                    <span class="mt-head-date">Information Technology (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-green-jungle">
+
+                    <div class="mt-head-desc">ক্যারিয়ার  (রঙিন)</div>
+                    <span class="mt-head-date">Career (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="portlet-body">
+    <div class="box-heading-green box-sections box-block">
+        <p>আনন্দ  বিনোদন: প্রকাশিত হয় বৃহস্পতিবার <small>  Anondo binodon(publish in Thursday) </small></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-light-blue-gradient">
+
+                    <div class="mt-head-desc">প্রথম  পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">First Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-hover-blue">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">Inner Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-before-blue-hoki">
+
+                    <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">Last Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="portlet-body">
+    <div class="box-heading-green box-sections box-block">
+        <p> সাহিত্য সাময়িকী : প্রকাশিত হয় শুক্রবার<small>Shaitto shamoiki (publish in Friday) Weekly Tabloid</small></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-blue-steel">
+
+                    <div class="mt-head-desc"> প্রথম  পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">First Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-blue-steel">
+
+                    <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন)</div>
+                    <span class="mt-head-date">Last Page (Color)</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mt-widget-3">
+                <div class="mt-head bg-blue-steel">
+
+                    <div class="mt-head-desc">ভিতরের পৃষ্ঠা</div>
+                    <span class="mt-head-date">Inner Page</span>
+                    <div class="mt-head-button">
+                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- empty sortable porlet required for each columns! -->
+<div class="portlet portlet-sortable-empty"> </div>
+</div>
+
+</div>
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">স্পট/প্যানেল বিজ্ঞাপন </span>
+                <span class="caption-helper">(Spot/Panel Advertisement)</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>স্পট বিজ্ঞাপন <small>Spot Advertisement</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-purple-soft">
+
+                                <div class="mt-head-desc">প্রথম পাতা</div>
+                                <span class="mt-head-date">First Page  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-purple-soft">
+
+                                <div class="mt-head-desc">শেষের পাতা</div>
+                                <span class="mt-head-date">Last Page  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>প্যানেল বিজ্ঞাপন <small>Panel Advertisement</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">শেষের পাতা</div>
+                                <span class="mt-head-date">Last Page  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">ভিতরের পাতা</div>
+                                <span class="mt-head-date">Inner Page  </span>
+                                <div class="mt-head-button">
+                                    <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- empty sortable porlet required for each columns! -->
+    <div class="portlet portlet-sortable-empty"> </div>
+</div>
+
+<script src="~/Content/metronic/portlet-draggable.js"></script>

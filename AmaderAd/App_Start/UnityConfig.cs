@@ -32,7 +32,9 @@ namespace AmaderAd
             container.RegisterType<IBannerAccessRepository<Banner, int>, BannerDataAccessRepository>();
             //account
             container.RegisterType<IAccountAccessRepository<RegisterViewModel, int>, AccountDataAccessRepository>();
-          
+
+            //newspaper
+            container.RegisterType<INewspaperAccessRepository<Newspaper, int>, NewspaperDataAccessRepository>();
 
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);

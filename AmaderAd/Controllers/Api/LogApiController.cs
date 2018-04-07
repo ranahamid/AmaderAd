@@ -16,7 +16,7 @@ namespace AmaderAd.Controllers.Api
 {
     public class LogApiController : ApiController
     {
-        private ILogAccessRepository<Log, int> _repository;
+        private readonly ILogAccessRepository<Log, int> _repository;
 
         public LogApiController(ILogAccessRepository<Log, int> r)
         {

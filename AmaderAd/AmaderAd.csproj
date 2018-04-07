@@ -254,6 +254,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\AccountApiController.cs" />
     <Compile Include="Controllers\Api\BannersApiController.cs" />
+    <Compile Include="Controllers\Api\NewspaperApiController.cs" />
     <Compile Include="Controllers\BannersController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -262,10 +263,12 @@
     <Compile Include="Controllers\Api\LogApiController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IttefaqController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Admin\RolesAdminController.cs" />
     <Compile Include="Controllers\Admin\UserAdminController.cs" />
+    <Compile Include="Controllers\NewspapersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\AccountDataAccessRepository.cs" />
     <Compile Include="DAL\BannerDataAccessRepository.cs" />
@@ -4420,6 +4423,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\Newspapers\Create.cshtml" />
+    <Content Include="Views\Newspapers\Delete.cshtml" />
+    <Content Include="Views\Newspapers\Details.cshtml" />
+    <Content Include="Views\Newspapers\Edit.cshtml" />
+    <Content Include="Views\Newspapers\Index.cshtml" />
+    <Content Include="Views\Ittefaq\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

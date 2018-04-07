@@ -13,19 +13,24 @@ namespace AmaderAd.Models
         public Guid? NewsGuidId { get; set; }
 
         //main
+        [Required]
         [Display(Name = "Newspaper Name")]
         public string NewspaperName { get; set; }
 
+        [Required]
         [Display(Name = "Advertisement Location")]
         public string AdLocation { get; set; }
         
         public int? Price { get; set; }
 
+        [Required]
         [Display(Name = "Advertiser Name")]
         public string AdvertiserName { get; set; }
 
+
         [Display(Name = "Advertiser Address")]
         public string AdvertiserAddress { get; set; }
+
 
         [Display(Name = "Advertiser Mobile")]
         public string AdvertiserMobile { get; set; }
@@ -33,6 +38,7 @@ namespace AmaderAd.Models
         [Display(Name = "Advertiser Email")]
         public string AdvertiserEmail { get; set; }
 
+        [Required]
         [Display(Name = "Date of Publication")]
         public DateTime? DateofPublication { get; set; }
 

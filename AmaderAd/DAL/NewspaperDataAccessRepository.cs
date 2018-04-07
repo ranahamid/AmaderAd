@@ -21,26 +21,26 @@ namespace AmaderAd.DAL
         {
             var entities = Db.NewspaperTbls.Select(x => new Newspaper()
             {
-                Id 						=x.Id 						,		
-                NewsGuidId 	            =x.NewsGuidId 	            ,
-                NewspaperName           =x.NewspaperName            ,
-                AdLocation              =x.AdLocation               ,
-                Price                   =x.Price                    ,
-                AdvertiserName          =x.AdvertiserName           ,
-                AdvertiserAddress       =x.AdvertiserAddress        ,
-                AdvertiserMobile        =x.AdvertiserMobile         ,
-                AdvertiserEmail         =x.AdvertiserEmail          ,
-                DateofPublication       =x.DateofPublication        ,
-                ColumnSize              =x.ColumnSize               ,
-                Inch                    =x.Inch                     ,
-                TotalColumnInch         =x.TotalColumnInch          ,
-                TotalPrice              =x.TotalPrice               ,
-                Description             =x.Description              ,
+                Id 						= x.Id 						,		
+                NewsGuidId 	            = x.NewsGuidId 	            ,
+                NewspaperName           = x.NewspaperName            ,
+                AdLocation              = x.AdLocation               ,
+                Price                   = x.Price                    ,
+                AdvertiserName          = x.AdvertiserName           ,
+                AdvertiserAddress       = x.AdvertiserAddress        ,
+                AdvertiserMobile        = x.AdvertiserMobile         ,
+                AdvertiserEmail         = x.AdvertiserEmail          ,
+                DateofPublication       = x.DateofPublication        ,
+                ColumnSize              = x.ColumnSize               ,
+                Inch                    = x.Inch                     ,
+                TotalColumnInch         = x.TotalColumnInch          ,
+                TotalPrice              = x.TotalPrice               ,
+                Description             = x.Description              ,
                 MainImagePath           = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
                 RawDbImagePath          = x.MainImagePath           ,
-                CreatedOnUtc            =x.CreatedOnUtc             ,
-                UpdatedOnUtc            =x.UpdatedOnUtc             ,
-                Active                  =x.Active                   ,
+                CreatedOnUtc            = x.CreatedOnUtc             ,
+                UpdatedOnUtc            = x.UpdatedOnUtc             ,
+                Active                  = x.Active                   ,
 
             }).ToList();
             return entities;
@@ -52,26 +52,26 @@ namespace AmaderAd.DAL
         {
             var entity = Db.NewspaperTbls.Where(x => x.Id == id).Select(x => new Newspaper()
             {
-                Id 						=x.Id 						,		
-                NewsGuidId 	            =x.NewsGuidId 	            ,
-                NewspaperName           =x.NewspaperName            ,
-                AdLocation              =x.AdLocation               ,
-                Price                   =x.Price                    ,
-                AdvertiserName          =x.AdvertiserName           ,
-                AdvertiserAddress       =x.AdvertiserAddress        ,
-                AdvertiserMobile        =x.AdvertiserMobile         ,
-                AdvertiserEmail         =x.AdvertiserEmail          ,
-                DateofPublication       =x.DateofPublication        ,
-                ColumnSize              =x.ColumnSize               ,
-                Inch                    =x.Inch                     ,
-                TotalColumnInch         =x.TotalColumnInch          ,
-                TotalPrice              =x.TotalPrice               ,
-                Description             =x.Description              ,
+                Id 						= x.Id 						,		
+                NewsGuidId 	            = x.NewsGuidId 	            ,
+                NewspaperName           = x.NewspaperName            ,
+                AdLocation              = x.AdLocation               ,
+                Price                   = x.Price                    ,
+                AdvertiserName          = x.AdvertiserName           ,
+                AdvertiserAddress       = x.AdvertiserAddress        ,
+                AdvertiserMobile        = x.AdvertiserMobile         ,
+                AdvertiserEmail         = x.AdvertiserEmail          ,
+                DateofPublication       = x.DateofPublication        ,
+                ColumnSize              = x.ColumnSize               ,
+                Inch                    = x.Inch                     ,
+                TotalColumnInch         = x.TotalColumnInch          ,
+                TotalPrice              = x.TotalPrice               ,
+                Description             = x.Description              ,
                 MainImagePath           = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
-                RawDbImagePath          = x.MainImagePath           ,
-                CreatedOnUtc            =x.CreatedOnUtc             ,
-                UpdatedOnUtc            =x.UpdatedOnUtc             ,
-                Active                  =x.Active                   ,
+                RawDbImagePath          = x.MainImagePath            ,
+                CreatedOnUtc            = x.CreatedOnUtc             ,
+                UpdatedOnUtc            = x.UpdatedOnUtc             ,
+                Active                  = x.Active                   ,
 
             }).SingleOrDefault();
 
@@ -132,22 +132,22 @@ namespace AmaderAd.DAL
 
             var entitySingle = isEntity.Single();
 
-            entitySingle.NewspaperName           =entity.NewspaperName          ;
-            entitySingle.AdLocation              =entity.AdLocation             ;
-            entitySingle.Price                   =entity.Price                  ;
-            entitySingle.AdvertiserName          =entity.AdvertiserName         ;
-            entitySingle.AdvertiserAddress       =entity.AdvertiserAddress      ;
-            entitySingle.AdvertiserMobile        =entity.AdvertiserMobile       ;
-            entitySingle.AdvertiserEmail         =entity.AdvertiserEmail        ;
-            entitySingle.DateofPublication       =entity.DateofPublication      ;
-            entitySingle.ColumnSize              =entity.ColumnSize             ;
-            entitySingle.Inch                    =entity.Inch                   ;
-            entitySingle.TotalColumnInch         =entity.TotalColumnInch        ;
-            entitySingle.TotalPrice              =entity.TotalPrice             ;
-            entitySingle.Description             =entity.Description            ;
-            entitySingle.MainImagePath           = imgAddress                   ;
-            entitySingle.UpdatedOnUtc            =DateTime.Now;                 ;
-            entitySingle.Active                  =entity.Active                 ;
+            entitySingle.NewspaperName           = entity.NewspaperName          ;
+            entitySingle.AdLocation              = entity.AdLocation             ;
+            entitySingle.Price                   = entity.Price                  ;
+            entitySingle.AdvertiserName          = entity.AdvertiserName         ;
+            entitySingle.AdvertiserAddress       = entity.AdvertiserAddress      ;
+            entitySingle.AdvertiserMobile        = entity.AdvertiserMobile       ;
+            entitySingle.AdvertiserEmail         = entity.AdvertiserEmail        ;
+            entitySingle.DateofPublication       = entity.DateofPublication      ;
+            entitySingle.ColumnSize              = entity.ColumnSize             ;
+            entitySingle.Inch                    = entity.Inch                   ;
+            entitySingle.TotalColumnInch         = entity.TotalColumnInch        ;
+            entitySingle.TotalPrice              = entity.TotalPrice             ;
+            entitySingle.Description             = entity.Description            ;
+            entitySingle.MainImagePath           = imgAddress                    ;
+            entitySingle.UpdatedOnUtc            = DateTime.Now;                 ;
+            entitySingle.Active                  = entity.Active                 ;
 
             try
             {
