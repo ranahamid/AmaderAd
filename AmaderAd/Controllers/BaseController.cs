@@ -111,6 +111,53 @@ namespace AmaderAd.Controllers
         }
         #endregion
 
+        #region ittefaq
+
+        public List<SelectListItem> GetAllAdCategory()
+        {
+            List<SelectListItem> ads = new List<SelectListItem>
+            {
+     
+                new SelectListItem { Value = "1", Text = "ক্রয়   (Purchase)"},
+                new SelectListItem { Value = "2", Text = " বিক্রয়   (Sale)"},
+                new SelectListItem { Value = "3", Text = "বাড়ি ভাড়া (To-let) "},
+                new SelectListItem { Value = "4", Text = " অফিস ভাড়া   (Office Rent)"},
+                new SelectListItem { Value = "5", Text = "ভাড়া হবে  (For Rent) "},
+                new SelectListItem { Value = "6", Text = "ফ্ল্যাট বিক্রয় (Flat Sale) "},
+                new SelectListItem { Value = "7", Text = " জমি বিক্রয় (Land Sale)"},
+                new SelectListItem { Value = "8", Text = "বিবিধ বিক্রয় (Miscellaneous Sale)"},
+                new SelectListItem { Value = "9", Text = "বাড়ি বিক্রয় (House Sale)"},
+                new SelectListItem { Value = "10", Text = "প্লট বিক্রয় (Plot Sale)"},
+                new SelectListItem { Value = "11", Text = "দোকান বিক্রয় (Shop Sale)"},
+                new SelectListItem { Value = "12", Text = " গাড়ি বিক্রয় (Car Sale)"},
+                new SelectListItem { Value = "13", Text = " প্লট ক্রয় (Plot Purchase)"},
+                new SelectListItem { Value = "14", Text = "আবশ্যক (Wanted)"},
+                new SelectListItem { Value = "15", Text = " টিউটর দিচ্ছি/নিচ্ছি (Tution GIVE/Take)"},
+                new SelectListItem { Value = "16", Text = " পড়াতে চাই (Tution Wanted)"},
+                new SelectListItem { Value = "17", Text = "হোস্টেল ( Hostel) "},
+                new SelectListItem { Value = "18", Text = " পাত্র চাই (Groom Wanted)"},
+                new SelectListItem { Value = "19", Text = " পাত্রী চাই (Bride Wanted)"},
+                new SelectListItem { Value = "20", Text = "হিন্দু পাত্র চাই (Hindu Groom Wanted)"},
+                new SelectListItem { Value = "21", Text = "হিন্দু পাত্রী চাই ( Hindu Bride wanted)"},
+                new SelectListItem { Value = "22", Text = " বিবিধ  (Miscellaneous)"},
+                new SelectListItem { Value = "23", Text = " হারানো বিজ্ঞপ্তি (Missing Notice)"},
+                new SelectListItem { Value = "24", Text = " হারানো (Lost)"},
+                new SelectListItem { Value = "25", Text = " এফিডেভিট/সংশোধনী (Affidavit/Correction)"},
+                new SelectListItem { Value = "26", Text = " সাহায্যের আবেদন (Seeking Help)"},
+                new SelectListItem { Value = "27", Text = " শোক সংবাদ (Obituary/Mourn)"},
+                new SelectListItem { Value = "28", Text = " কুলখানি (Qulkhani)"},
+                new SelectListItem { Value = "29", Text = " মৃত্যুবার্ষিকী (Death Anniversary)"},
+                new SelectListItem { Value = "30", Text = "মেধাবী মুখ (Meritorious Student)"},
+                new SelectListItem { Value = "31", Text = "জন্মদিনের শুভেচ্ছা (Birthday Greeting)"},
+                new SelectListItem { Value = "32", Text = "Others "}
+            };
+
+            return ads;
+        }
+
+        #endregion
+
+
         #region Basic
         private string SwitchEngBan(string number)
         {

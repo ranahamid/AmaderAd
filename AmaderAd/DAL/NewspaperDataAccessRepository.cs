@@ -36,6 +36,7 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = x.TotalColumnInch          ,
                 TotalPrice              = x.TotalPrice               ,
                 Description             = x.Description              ,
+                AllAdCategoryId         = x.AllAdCategoryId          ,
                 MainImagePath           = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
                 RawDbImagePath          = x.MainImagePath           ,
                 CreatedOnUtc            = x.CreatedOnUtc             ,
@@ -67,6 +68,7 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = x.TotalColumnInch          ,
                 TotalPrice              = x.TotalPrice               ,
                 Description             = x.Description              ,
+                AllAdCategoryId         = x.AllAdCategoryId          ,
                 MainImagePath           = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
                 RawDbImagePath          = x.MainImagePath            ,
                 CreatedOnUtc            = x.CreatedOnUtc             ,
@@ -103,6 +105,7 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = entity.TotalColumnInch          ,
                 TotalPrice              = entity.TotalPrice               ,
                 Description             = entity.Description              ,
+                AllAdCategoryId         = entity.AllAdCategoryId          ,
                 MainImagePath           = imgAddress                      ,
                 CreatedOnUtc            = DateTime.Now                    ,
                 UpdatedOnUtc            = DateTime.Now                    ,
@@ -145,6 +148,7 @@ namespace AmaderAd.DAL
             entitySingle.TotalColumnInch         = entity.TotalColumnInch        ;
             entitySingle.TotalPrice              = entity.TotalPrice             ;
             entitySingle.Description             = entity.Description            ;
+            entitySingle.AllAdCategoryId         = entity.AllAdCategoryId        ;
             entitySingle.MainImagePath           = imgAddress                    ;
             entitySingle.UpdatedOnUtc            = DateTime.Now;                 ;
             entitySingle.Active                  = entity.Active                 ;

@@ -7,7 +7,7 @@ using AmaderAd.Models;
 
 namespace AmaderAd.Controllers
 {
-    public class IttefaqController : Controller
+    public class IttefaqController : BaseController
     {
         // GET: Ittefaq
         public ActionResult Index()
@@ -21,10 +21,13 @@ namespace AmaderAd.Controllers
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Classified Advertisement"
+                AdLocation = "Classified Advertisement",
+                AllAdCategory = GetAllAdCategory()
             };
             return View(model);
         }
+
+
 
     }
 }

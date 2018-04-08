@@ -42,6 +42,10 @@ namespace AmaderAd.Controllers
             url = baseUrl + "api/NewspaperApi";
         }
 
+        public ActionResult Success(Newspaper entity)
+        {
+            return View(entity);
+        }
         // GET: Products
         public async Task<ActionResult> Index()
         {
@@ -61,11 +65,8 @@ namespace AmaderAd.Controllers
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
 
             var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-            if (entity != null)
-            {           
-                return View(entity);
-            }
-            throw new Exception("Exception");
+            entity.AllAdCategoryName = GetAdCategoryName(entity.AllAdCategoryId);
+            return View(entity);
         }
 
 
@@ -73,7 +74,10 @@ namespace AmaderAd.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            var entity = new Newspaper();
+            var entity = new Newspaper
+            {
+                AllAdCategory = GetAllAdCategory(),
+            };
             return View(entity);
         }
 
@@ -83,16 +87,34 @@ namespace AmaderAd.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Newspaper entity)
         {
+            
+            // Home is default controller
+            string controller = string.Empty;
+            string action = string.Empty;
+
+            if (Request.UrlReferrer != null)
+            {
+                 controller = (Request.UrlReferrer.Segments.Skip(1).Take(1).SingleOrDefault() ?? "Home").Trim('/');
+            }
+
+            // Index is default action 
+            if (Request.UrlReferrer != null)
+            {
+                 action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
+            }
+
             if (ModelState.IsValid)
             {
                 var responseMessage = await client.PostAsJsonAsync(url, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                  
+                    return View("Success", entity);
                 }
             }
-            //end AllBrandNameList
-            return View(entity);
+
+            return RedirectToAction(action, controller, entity);
+           
         }
 
         [HttpPost]
@@ -131,10 +153,8 @@ namespace AmaderAd.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-                if (entity != null)
-                {                   
-                    return View(entity);
-                }
+                entity.AllAdCategory = GetAllAdCategory();
+                return View(entity);
             }
             throw new Exception("Exception");
         }
@@ -165,12 +185,19 @@ namespace AmaderAd.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
+                entity.AllAdCategoryName = GetAdCategoryName(entity.AllAdCategoryId);
+
                 if (entity != null)
                 {                    
                     return View(entity);
                 }
             }
             throw new Exception("Exception");
+        }
+
+        public string GetAdCategoryName(string categoryId)
+        {
+            return "";
         }
 
         // POST: Products/Delete/5

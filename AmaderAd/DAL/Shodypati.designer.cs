@@ -42,12 +42,12 @@ namespace AmaderAd.DAL
     partial void InsertLogTbl(LogTbl instance);
     partial void UpdateLogTbl(LogTbl instance);
     partial void DeleteLogTbl(LogTbl instance);
-    partial void InsertNewspaperTbl(NewspaperTbl instance);
-    partial void UpdateNewspaperTbl(NewspaperTbl instance);
-    partial void DeleteNewspaperTbl(NewspaperTbl instance);
     partial void InsertUserTbl(UserTbl instance);
     partial void UpdateUserTbl(UserTbl instance);
     partial void DeleteUserTbl(UserTbl instance);
+    partial void InsertNewspaperTbl(NewspaperTbl instance);
+    partial void UpdateNewspaperTbl(NewspaperTbl instance);
+    partial void DeleteNewspaperTbl(NewspaperTbl instance);
     #endregion
 		
 		public ShodypatiDataContext() : 
@@ -120,19 +120,19 @@ namespace AmaderAd.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<NewspaperTbl> NewspaperTbls
-		{
-			get
-			{
-				return this.GetTable<NewspaperTbl>();
-			}
-		}
-		
 		public System.Data.Linq.Table<UserTbl> UserTbls
 		{
 			get
 			{
 				return this.GetTable<UserTbl>();
+			}
+		}
+		
+		public System.Data.Linq.Table<NewspaperTbl> NewspaperTbls
+		{
+			get
+			{
+				return this.GetTable<NewspaperTbl>();
 			}
 		}
 	}
@@ -1108,6 +1108,332 @@ namespace AmaderAd.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTbl")]
+	public partial class UserTbl : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private string _Company;
+		
+		private System.Nullable<int> _NoOfVisits;
+		
+		private System.Nullable<System.DateTime> _LastLoginDateUtc;
+		
+		private string _LastLoginIP;
+		
+		private System.Nullable<int> _FailedLoginAttempts;
+		
+		private System.Nullable<System.DateTime> _CannotLoginUntilDateUtc;
+		
+		private System.Nullable<System.DateTime> _CreatedOnUtc;
+		
+		private System.Nullable<System.DateTime> _UpdatedOnUtc;
+		
+		private System.Nullable<bool> _Active;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnCompanyChanging(string value);
+    partial void OnCompanyChanged();
+    partial void OnNoOfVisitsChanging(System.Nullable<int> value);
+    partial void OnNoOfVisitsChanged();
+    partial void OnLastLoginDateUtcChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastLoginDateUtcChanged();
+    partial void OnLastLoginIPChanging(string value);
+    partial void OnLastLoginIPChanged();
+    partial void OnFailedLoginAttemptsChanging(System.Nullable<int> value);
+    partial void OnFailedLoginAttemptsChanged();
+    partial void OnCannotLoginUntilDateUtcChanging(System.Nullable<System.DateTime> value);
+    partial void OnCannotLoginUntilDateUtcChanged();
+    partial void OnCreatedOnUtcChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnUtcChanged();
+    partial void OnUpdatedOnUtcChanging(System.Nullable<System.DateTime> value);
+    partial void OnUpdatedOnUtcChanged();
+    partial void OnActiveChanging(System.Nullable<bool> value);
+    partial void OnActiveChanged();
+    #endregion
+		
+		public UserTbl()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(128)")]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this.OnFirstNameChanging(value);
+					this.SendPropertyChanging();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(128)")]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this.OnLastNameChanging(value);
+					this.SendPropertyChanging();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", DbType="NVarChar(128)")]
+		public string Company
+		{
+			get
+			{
+				return this._Company;
+			}
+			set
+			{
+				if ((this._Company != value))
+				{
+					this.OnCompanyChanging(value);
+					this.SendPropertyChanging();
+					this._Company = value;
+					this.SendPropertyChanged("Company");
+					this.OnCompanyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoOfVisits", DbType="Int")]
+		public System.Nullable<int> NoOfVisits
+		{
+			get
+			{
+				return this._NoOfVisits;
+			}
+			set
+			{
+				if ((this._NoOfVisits != value))
+				{
+					this.OnNoOfVisitsChanging(value);
+					this.SendPropertyChanging();
+					this._NoOfVisits = value;
+					this.SendPropertyChanged("NoOfVisits");
+					this.OnNoOfVisitsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDateUtc", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> LastLoginDateUtc
+		{
+			get
+			{
+				return this._LastLoginDateUtc;
+			}
+			set
+			{
+				if ((this._LastLoginDateUtc != value))
+				{
+					this.OnLastLoginDateUtcChanging(value);
+					this.SendPropertyChanging();
+					this._LastLoginDateUtc = value;
+					this.SendPropertyChanged("LastLoginDateUtc");
+					this.OnLastLoginDateUtcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginIP", DbType="NVarChar(128)")]
+		public string LastLoginIP
+		{
+			get
+			{
+				return this._LastLoginIP;
+			}
+			set
+			{
+				if ((this._LastLoginIP != value))
+				{
+					this.OnLastLoginIPChanging(value);
+					this.SendPropertyChanging();
+					this._LastLoginIP = value;
+					this.SendPropertyChanged("LastLoginIP");
+					this.OnLastLoginIPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FailedLoginAttempts", DbType="Int")]
+		public System.Nullable<int> FailedLoginAttempts
+		{
+			get
+			{
+				return this._FailedLoginAttempts;
+			}
+			set
+			{
+				if ((this._FailedLoginAttempts != value))
+				{
+					this.OnFailedLoginAttemptsChanging(value);
+					this.SendPropertyChanging();
+					this._FailedLoginAttempts = value;
+					this.SendPropertyChanged("FailedLoginAttempts");
+					this.OnFailedLoginAttemptsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CannotLoginUntilDateUtc", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> CannotLoginUntilDateUtc
+		{
+			get
+			{
+				return this._CannotLoginUntilDateUtc;
+			}
+			set
+			{
+				if ((this._CannotLoginUntilDateUtc != value))
+				{
+					this.OnCannotLoginUntilDateUtcChanging(value);
+					this.SendPropertyChanging();
+					this._CannotLoginUntilDateUtc = value;
+					this.SendPropertyChanged("CannotLoginUntilDateUtc");
+					this.OnCannotLoginUntilDateUtcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOnUtc", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> CreatedOnUtc
+		{
+			get
+			{
+				return this._CreatedOnUtc;
+			}
+			set
+			{
+				if ((this._CreatedOnUtc != value))
+				{
+					this.OnCreatedOnUtcChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedOnUtc = value;
+					this.SendPropertyChanged("CreatedOnUtc");
+					this.OnCreatedOnUtcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdatedOnUtc", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> UpdatedOnUtc
+		{
+			get
+			{
+				return this._UpdatedOnUtc;
+			}
+			set
+			{
+				if ((this._UpdatedOnUtc != value))
+				{
+					this.OnUpdatedOnUtcChanging(value);
+					this.SendPropertyChanging();
+					this._UpdatedOnUtc = value;
+					this.SendPropertyChanged("UpdatedOnUtc");
+					this.OnUpdatedOnUtcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit")]
+		public System.Nullable<bool> Active
+		{
+			get
+			{
+				return this._Active;
+			}
+			set
+			{
+				if ((this._Active != value))
+				{
+					this.OnActiveChanging(value);
+					this.SendPropertyChanging();
+					this._Active = value;
+					this.SendPropertyChanged("Active");
+					this.OnActiveChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NewspaperTbl")]
 	public partial class NewspaperTbl : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1141,6 +1467,8 @@ namespace AmaderAd.DAL
 		private System.Nullable<int> _TotalColumnInch;
 		
 		private System.Nullable<int> _TotalPrice;
+		
+		private string _AllAdCategoryId;
 		
 		private string _Description;
 		
@@ -1184,6 +1512,8 @@ namespace AmaderAd.DAL
     partial void OnTotalColumnInchChanged();
     partial void OnTotalPriceChanging(System.Nullable<int> value);
     partial void OnTotalPriceChanged();
+    partial void OnAllAdCategoryIdChanging(string value);
+    partial void OnAllAdCategoryIdChanged();
     partial void OnDescriptionChanging(string value);
     partial void OnDescriptionChanged();
     partial void OnMainImagePathChanging(string value);
@@ -1481,6 +1811,26 @@ namespace AmaderAd.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AllAdCategoryId", DbType="NVarChar(20)")]
+		public string AllAdCategoryId
+		{
+			get
+			{
+				return this._AllAdCategoryId;
+			}
+			set
+			{
+				if ((this._AllAdCategoryId != value))
+				{
+					this.OnAllAdCategoryIdChanging(value);
+					this.SendPropertyChanging();
+					this._AllAdCategoryId = value;
+					this.SendPropertyChanged("AllAdCategoryId");
+					this.OnAllAdCategoryIdChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(4000)")]
 		public string Description
 		{
@@ -1517,332 +1867,6 @@ namespace AmaderAd.DAL
 					this._MainImagePath = value;
 					this.SendPropertyChanged("MainImagePath");
 					this.OnMainImagePathChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOnUtc", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> CreatedOnUtc
-		{
-			get
-			{
-				return this._CreatedOnUtc;
-			}
-			set
-			{
-				if ((this._CreatedOnUtc != value))
-				{
-					this.OnCreatedOnUtcChanging(value);
-					this.SendPropertyChanging();
-					this._CreatedOnUtc = value;
-					this.SendPropertyChanged("CreatedOnUtc");
-					this.OnCreatedOnUtcChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdatedOnUtc", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> UpdatedOnUtc
-		{
-			get
-			{
-				return this._UpdatedOnUtc;
-			}
-			set
-			{
-				if ((this._UpdatedOnUtc != value))
-				{
-					this.OnUpdatedOnUtcChanging(value);
-					this.SendPropertyChanging();
-					this._UpdatedOnUtc = value;
-					this.SendPropertyChanged("UpdatedOnUtc");
-					this.OnUpdatedOnUtcChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit")]
-		public System.Nullable<bool> Active
-		{
-			get
-			{
-				return this._Active;
-			}
-			set
-			{
-				if ((this._Active != value))
-				{
-					this.OnActiveChanging(value);
-					this.SendPropertyChanging();
-					this._Active = value;
-					this.SendPropertyChanged("Active");
-					this.OnActiveChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTbl")]
-	public partial class UserTbl : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _FirstName;
-		
-		private string _LastName;
-		
-		private string _Company;
-		
-		private System.Nullable<int> _NoOfVisits;
-		
-		private System.Nullable<System.DateTime> _LastLoginDateUtc;
-		
-		private string _LastLoginIP;
-		
-		private System.Nullable<int> _FailedLoginAttempts;
-		
-		private System.Nullable<System.DateTime> _CannotLoginUntilDateUtc;
-		
-		private System.Nullable<System.DateTime> _CreatedOnUtc;
-		
-		private System.Nullable<System.DateTime> _UpdatedOnUtc;
-		
-		private System.Nullable<bool> _Active;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    partial void OnCompanyChanging(string value);
-    partial void OnCompanyChanged();
-    partial void OnNoOfVisitsChanging(System.Nullable<int> value);
-    partial void OnNoOfVisitsChanged();
-    partial void OnLastLoginDateUtcChanging(System.Nullable<System.DateTime> value);
-    partial void OnLastLoginDateUtcChanged();
-    partial void OnLastLoginIPChanging(string value);
-    partial void OnLastLoginIPChanged();
-    partial void OnFailedLoginAttemptsChanging(System.Nullable<int> value);
-    partial void OnFailedLoginAttemptsChanged();
-    partial void OnCannotLoginUntilDateUtcChanging(System.Nullable<System.DateTime> value);
-    partial void OnCannotLoginUntilDateUtcChanged();
-    partial void OnCreatedOnUtcChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreatedOnUtcChanged();
-    partial void OnUpdatedOnUtcChanging(System.Nullable<System.DateTime> value);
-    partial void OnUpdatedOnUtcChanged();
-    partial void OnActiveChanging(System.Nullable<bool> value);
-    partial void OnActiveChanged();
-    #endregion
-		
-		public UserTbl()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(128)")]
-		public string FirstName
-		{
-			get
-			{
-				return this._FirstName;
-			}
-			set
-			{
-				if ((this._FirstName != value))
-				{
-					this.OnFirstNameChanging(value);
-					this.SendPropertyChanging();
-					this._FirstName = value;
-					this.SendPropertyChanged("FirstName");
-					this.OnFirstNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(128)")]
-		public string LastName
-		{
-			get
-			{
-				return this._LastName;
-			}
-			set
-			{
-				if ((this._LastName != value))
-				{
-					this.OnLastNameChanging(value);
-					this.SendPropertyChanging();
-					this._LastName = value;
-					this.SendPropertyChanged("LastName");
-					this.OnLastNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", DbType="NVarChar(128)")]
-		public string Company
-		{
-			get
-			{
-				return this._Company;
-			}
-			set
-			{
-				if ((this._Company != value))
-				{
-					this.OnCompanyChanging(value);
-					this.SendPropertyChanging();
-					this._Company = value;
-					this.SendPropertyChanged("Company");
-					this.OnCompanyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoOfVisits", DbType="Int")]
-		public System.Nullable<int> NoOfVisits
-		{
-			get
-			{
-				return this._NoOfVisits;
-			}
-			set
-			{
-				if ((this._NoOfVisits != value))
-				{
-					this.OnNoOfVisitsChanging(value);
-					this.SendPropertyChanging();
-					this._NoOfVisits = value;
-					this.SendPropertyChanged("NoOfVisits");
-					this.OnNoOfVisitsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDateUtc", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> LastLoginDateUtc
-		{
-			get
-			{
-				return this._LastLoginDateUtc;
-			}
-			set
-			{
-				if ((this._LastLoginDateUtc != value))
-				{
-					this.OnLastLoginDateUtcChanging(value);
-					this.SendPropertyChanging();
-					this._LastLoginDateUtc = value;
-					this.SendPropertyChanged("LastLoginDateUtc");
-					this.OnLastLoginDateUtcChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginIP", DbType="NVarChar(128)")]
-		public string LastLoginIP
-		{
-			get
-			{
-				return this._LastLoginIP;
-			}
-			set
-			{
-				if ((this._LastLoginIP != value))
-				{
-					this.OnLastLoginIPChanging(value);
-					this.SendPropertyChanging();
-					this._LastLoginIP = value;
-					this.SendPropertyChanged("LastLoginIP");
-					this.OnLastLoginIPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FailedLoginAttempts", DbType="Int")]
-		public System.Nullable<int> FailedLoginAttempts
-		{
-			get
-			{
-				return this._FailedLoginAttempts;
-			}
-			set
-			{
-				if ((this._FailedLoginAttempts != value))
-				{
-					this.OnFailedLoginAttemptsChanging(value);
-					this.SendPropertyChanging();
-					this._FailedLoginAttempts = value;
-					this.SendPropertyChanged("FailedLoginAttempts");
-					this.OnFailedLoginAttemptsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CannotLoginUntilDateUtc", DbType="DateTime2")]
-		public System.Nullable<System.DateTime> CannotLoginUntilDateUtc
-		{
-			get
-			{
-				return this._CannotLoginUntilDateUtc;
-			}
-			set
-			{
-				if ((this._CannotLoginUntilDateUtc != value))
-				{
-					this.OnCannotLoginUntilDateUtcChanging(value);
-					this.SendPropertyChanging();
-					this._CannotLoginUntilDateUtc = value;
-					this.SendPropertyChanged("CannotLoginUntilDateUtc");
-					this.OnCannotLoginUntilDateUtcChanged();
 				}
 			}
 		}

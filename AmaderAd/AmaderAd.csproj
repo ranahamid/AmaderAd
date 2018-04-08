@@ -3463,6 +3463,7 @@
     <Content Include="Content\shards\shards.css" />
     <Content Include="Content\shopping-cart-2-responsive\index.html" />
     <Content Include="Content\shopping-cart-2-responsive\js\index.js" />
+    <Content Include="Content\w3.css\w3.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\blueimp-gallery2\js\blueimp-gallery-fullscreen.js" />
@@ -4434,6 +4435,7 @@
     <Content Include="Views\Shared\_NewspaperHeader.cshtml" />
     <Content Include="Views\Shared\_NewspaperNotice.cshtml" />
     <Content Include="Views\Shared\_NewspaperSampleAd.cshtml" />
+    <Content Include="Views\Newspapers\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

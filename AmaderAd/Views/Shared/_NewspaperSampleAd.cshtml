@@ -1,5 +1,7 @@
 ﻿<h2>Sample Advertisement</h2>
 
+<link href="~/Content/w3.css/w3.css" rel="stylesheet" />
+
 <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-teal w3-margin-top w3-hover-black w3-xlarge">
     <b>বাড়ি ভাড়া </b>
 </button>
@@ -567,3 +569,13 @@
     </ol>
 </div>
 
+<script>
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>

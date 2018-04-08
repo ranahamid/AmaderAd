@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 9.75" name="AmaderAd">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 10.125" name="AmaderAd">
   <DataContextMoniker Name="/ShodypatiDataContext" />
   <nestedChildShapes>
     <classShape Id="b1407c5b-1a54-40a8-b0e4-dc2d74bc57d0" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
@@ -32,16 +32,16 @@
         <elementListCompartment Id="c67e480c-6f16-4a56-bbd9-7408e07b0d2a" absoluteBounds="0.765, 7.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6196e7fb-be3b-45f6-b1c9-600b8e564b9f" absoluteBounds="6.75, 3.75, 2, 4.4631168619791666">
-      <DataClassMoniker Name="/ShodypatiDataContext/NewspaperTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="7c4386c1-f07a-440b-b4be-fed00ed0dbeb" absoluteBounds="6.765, 4.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="b8be47bf-73c8-4cc3-a4ee-455c1a85680c" absoluteBounds="9.75, 0.75, 2, 3.1170068359375005">
       <DataClassMoniker Name="/ShodypatiDataContext/UserTbl" />
       <nestedChildShapes>
         <elementListCompartment Id="2ec03374-155c-4c07-89d4-8b566cbb551c" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6120597-4315-44b3-be4b-4f75a72f71ca" absoluteBounds="7.125, 5.25, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/ShodypatiDataContext/NewspaperTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63543eaf-391b-4103-99a1-d1de28f8712b" absoluteBounds="7.14, 5.71, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace AmaderAd.Models
 {
@@ -61,6 +62,16 @@ namespace AmaderAd.Models
         public string RawDbImagePath { get; set; }
 
         //end of main
+
+        //ittefaq
+        public List<SelectListItem> AllAdCategory { get; set; }
+
+        [Display(Name = "Ad Category")]
+        public string AllAdCategoryId { get; set; }
+
+        [Display(Name = "Ad Category")]
+        public string AllAdCategoryName { get; set; }
+        //ittefaq
 
         public DateTime? CreatedOnUtc { get; set; }
 
