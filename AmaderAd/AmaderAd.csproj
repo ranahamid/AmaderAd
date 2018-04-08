@@ -3442,6 +3442,7 @@
     <Content Include="Content\metronic\morris\spec\viz\exemplary\stacked_bar0.png" />
     <Content Include="Content\metronic\morris\spec\viz\test.html" />
     <Content Include="Content\metronic\morris\spec\viz\visual_specs.js" />
+    <Content Include="Content\metronic\portlet-draggable.js" />
     <Content Include="Content\metronic\simple-line-icons\fonts\Simple-Line-Icons.dev.svg" />
     <Content Include="Content\metronic\simple-line-icons\fonts\Simple-Line-Icons.svg" />
     <Content Include="Content\metronic\simple-line-icons\icons-lte-ie7.js" />
@@ -4429,6 +4430,10 @@
     <Content Include="Views\Newspapers\Edit.cshtml" />
     <Content Include="Views\Newspapers\Index.cshtml" />
     <Content Include="Views\Ittefaq\Index.cshtml" />
+    <Content Include="Views\Ittefaq\ClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\Shared\_NewspaperHeader.cshtml" />
+    <Content Include="Views\Shared\_NewspaperNotice.cshtml" />
+    <Content Include="Views\Shared\_NewspaperSampleAd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
