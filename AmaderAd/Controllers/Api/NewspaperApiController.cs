@@ -59,6 +59,7 @@ namespace AmaderAd.Controllers.Api
         [ResponseType(typeof(Newspaper))]
         public IHttpActionResult PostNewspaper(Newspaper entity)
         {
+     
             _repository.Post(entity);
             return Ok(entity);
         }

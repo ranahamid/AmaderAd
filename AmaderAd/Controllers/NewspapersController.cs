@@ -42,10 +42,7 @@ namespace AmaderAd.Controllers
             url = baseUrl + "api/NewspaperApi";
         }
 
-        public ActionResult Success(Newspaper entity)
-        {
-            return View(entity);
-        }
+     
         // GET: Products
         public async Task<ActionResult> Index()
         {
@@ -70,7 +67,7 @@ namespace AmaderAd.Controllers
         }
 
 
-
+  
         // GET: Products/Create
         public ActionResult Create()
         {
@@ -81,6 +78,7 @@ namespace AmaderAd.Controllers
             return View(entity);
         }
 
+        [AllowAnonymous]
         // POST: Products/Create
         [ValidateInput(false)]
         [HttpPost]
@@ -105,11 +103,13 @@ namespace AmaderAd.Controllers
 
             if (ModelState.IsValid)
             {
+                entity.NewsGuidId=Guid.NewGuid();
                 var responseMessage = await client.PostAsJsonAsync(url, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
                   
-                    return View("Success", entity);
+                 
+                    return RedirectToAction("Index", "Payments", entity);
                 }
             }
 

@@ -11,7 +11,7 @@ namespace AmaderAd.Filters
 {
     public class ExceptionHandlerAttribute : FilterAttribute, IExceptionFilter
     {
-        public ShodypatiDataContext db = new ShodypatiDataContext();
+        public AmaderAdDataContext db = new AmaderAdDataContext();
 
         public void OnException(ExceptionContext filterContext)
         {

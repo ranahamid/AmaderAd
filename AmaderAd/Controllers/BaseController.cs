@@ -27,7 +27,7 @@ namespace AmaderAd.Controllers
     [ExceptionHandler]
     public class BaseController:Controller
     {
-        public ShodypatiDataContext Db = new ShodypatiDataContext();
+        public AmaderAdDataContext Db = new AmaderAdDataContext();
         public HttpClient client;
         public string url;
         public string baseUrl = ConfigurationManager.AppSettings["webapibaseurl"];

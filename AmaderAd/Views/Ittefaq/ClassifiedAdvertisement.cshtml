@@ -12,8 +12,7 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    
+    <div class="form-horizontal">    
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.Partial("_NewspaperHeader", Model)
@@ -70,34 +69,26 @@
 
 	
 <script>
-	
-    var amount;
- 
+    var amount; 
     $("#Description").bind('keyup keydown paste cut', function(e) 
-    {
-  
+    {  
         setTimeout(function () { 	 
-            debugger;
+            
             var value = $('#Description').val();
             if (value.length == 0) {
-                $('#TotalPrice').html(0);
-            //    $('#hiddenBasicCost').val(0);
-              //  $('#basicAmount').html(0);
+                $('#TotalPrice').val(0);
                 $('#wordLimiter').html(0);
                 return;
             }
             var regex = /\s+/gi;
-            var wordCount = value.trim().replace(regex, ' ').split(' ').length;
-		   
-            var wordcount = wordCount;
-			
+            var wordcount = value.trim().replace(regex, ' ').split(' ').length;
+
             var x = 600 * .15;
 		
             if (wordcount>=50) {
                 document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ পঞ্চাশ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 50 words advertisement";
             }
-            if (wordcount <50) {
-              
+            if (wordcount <50) {              
                 $('#maxwords').empty();
             }
 			 
@@ -107,25 +98,22 @@
             } else {
                 $("#submit-btn").removeAttr("disabled");    
             }
+
             if (wordcount <= 16) {
                 amount = 600 + x;
             }
             else if (wordcount > 16) {
                 var extraWord = wordcount - 16;
-                var y = (extraWord *40) * .15;
+                var y = (extraWord *40) * 0.15;
                 var extraAmount = extraWord * 40 + y;
                 amount = 690 + extraAmount;
             }
 
             $('#TotalPrice').val(amount);
     
-
-          //  $('#hiddenBasicCost').val(amount);
-         //   $('#basicAmount').html(amount);
             $('#wordLimiter').html(wordcount);
         },100);
-    });
-    
+    });    
 	
 </script>
 	

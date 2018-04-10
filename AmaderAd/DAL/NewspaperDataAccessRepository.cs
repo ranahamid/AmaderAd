@@ -91,7 +91,7 @@ namespace AmaderAd.DAL
             Db.NewspaperTbls.InsertOnSubmit(new NewspaperTbl
             {
 
-                NewsGuidId 	            = new Guid(),
+                NewsGuidId 	            = entity.NewsGuidId,
                 NewspaperName           = entity.NewspaperName            ,
                 AdLocation              = entity.AdLocation               ,
                 Price                   = entity.Price                    ,

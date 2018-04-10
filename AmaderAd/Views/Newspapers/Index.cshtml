@@ -19,9 +19,7 @@
         <th>
             @Html.DisplayNameFor(model => model.AdLocation)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>*@
+  
         <th>
             @Html.DisplayNameFor(model => model.AdvertiserName)
         </th>
@@ -34,18 +32,13 @@
             @Html.DisplayNameFor(model => model.DateofPublication)
         </th>
      
-        @*<th>
-            @Html.DisplayNameFor(model => model.TotalColumnInch)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.TotalPrice)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.MainImagePath)
-        </th>*@
+     
        
         <th>
             @Html.DisplayNameFor(model => model.CreatedOnUtc)
@@ -63,9 +56,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.AdLocation)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>*@
+    
         <td>
             @Html.DisplayFor(modelItem => item.AdvertiserName)
         </td>
@@ -78,27 +69,14 @@
             @Html.DisplayFor(modelItem => item.DateofPublication)
         </td>
     
-        @*<td>
-            @Html.DisplayFor(modelItem => item.TotalColumnInch)
-        </td>*@
+ 
         <td>
             @Html.DisplayFor(modelItem => item.TotalPrice)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
-        @*<td>
-        @{
-            if (!string.IsNullOrEmpty(item.MainImagePath))
-            {
-                <a href="@item.MainImagePath" data-lightbox="image-1" data-title="@item.MainImagePath">
-                    <img src="@item.MainImagePath" class="img-display"/>
-                </a>
-            }
-        }
-
-    
-        <td>*@
+        <td>
             @Html.DisplayFor(modelItem => item.CreatedOnUtc)
         </td>
     

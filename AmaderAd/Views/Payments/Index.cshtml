@@ -1,0 +1,66 @@
+﻿@model AmaderAd.Models.Payment
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Index", "Payments"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Partial("_NewspaperPaymentHeader", Model)
+
+
+        <h2>Ad Description</h2>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Newspaper.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Newspaper.Description, new { htmlAttributes = new { style = "height:80px;", @class = "form-control", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Newspaper.Description, "", new { @class = "text-danger" })
+
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Total Cost with 15% VAT", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Newspaper.TotalPrice, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Newspaper.TotalPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <h1>Select Payment methods</h1>
+
+        @foreach (var item in Model.PaymentMethods)
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-1">@Html.RadioButtonFor(model => item.Name, true, new { }) </div>
+                    <div class="col-md-11">
+                        <p>@item.Name</p>
+                        <p>@item.Instructions</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+            </div>
+        </div>
+    </div>
+}
+
+
+

@@ -36,6 +36,12 @@ namespace AmaderAd
             //newspaper
             container.RegisterType<INewspaperAccessRepository<Newspaper, int>, NewspaperDataAccessRepository>();
 
+            //OrderPaymentMethod
+            container.RegisterType<IOrderPaymentMethodAccessRepository<OrderPaymentMethod, int>, OrderPaymentMethodDataAccessRepository>();
+            //OrderPaymentStatus
+            container.RegisterType<IOrderPaymentStatusAccessRepository<OrderPaymentStatus, int>, OrderPaymentStatusDataAccessRepository>();
+
+
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

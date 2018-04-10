@@ -3,99 +3,112 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AmaderAd.Models;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 using AmaderAd.DAL;
+using System.Configuration;
+using AmaderAd.Filters;
 
 namespace AmaderAd.Controllers
 {
     [Authorize(Roles = "Admin")]
-
-    public class LogsController : BaseController
+    [ExceptionHandler]
+    public class OrderPaymentStatusController : BaseController
     {
 
-        public AmaderAdDataContext db;
-        public LogsController()
+        public OrderPaymentStatusController()
         {
             //api url                  
-            url = baseUrl + "api/LogApi";
-            db = new AmaderAdDataContext();
+            url = baseUrl + "api/OrderPaymentStatusApi";
         }
-
-
-        // GET: Logs
+        
+        // GET: OrderPaymentStatuss
         public async Task<ActionResult> Index()
         {
             var responseMessage = await client.GetAsync(url);
             if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-            var entity = JsonConvert.DeserializeObject<List<Log>>(responseData);
+            var entity = JsonConvert.DeserializeObject<List<OrderPaymentStatus>>(responseData);
             return View(entity);
         }
 
-        // GET: Logs/Details/5
-        public async Task<ActionResult> Details(int id)
+        // GET: OrderPaymentStatuss/Details/5
+        public async Task<ActionResult> Details(int? id)
         {
             var responseMessage = await client.GetAsync(url + "/" + id);
             if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-            var entity = JsonConvert.DeserializeObject<Log>(responseData);
+            var entity = JsonConvert.DeserializeObject<OrderPaymentStatus>(responseData);
             return View(entity);
         }
 
-        // GET: Logs/Create
+        // GET: OrderPaymentStatuss/Create
         public ActionResult Create()
         {
-            return null;
-        }
-
-        // POST: Logs/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Log log)
-        {
-            if (ModelState.IsValid)
-            {
-                throw new Exception("Exception");
-            }
-            throw new Exception("Exception");
-        }
-
-        // GET: Logs/Edit/5
-        public ActionResult Edit(int id)
-        {
-            throw new Exception("Exception");
-        }
-
-        // POST: Logs/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Log log)
-        {
-            if (ModelState.IsValid)
-            {
-                throw new Exception("Exception");
-            }
-            throw new Exception("Exception");
-        }
-
-        // GET: Logs/Delete/5
-        public async Task<ActionResult> Delete(int id)
-        {
-            var responseMessage = await client.GetAsync(url + "/" + id);
-            if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
-            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-            var entity = JsonConvert.DeserializeObject<Log>(responseData);
+            var entity = new OrderPaymentStatus();
             return View(entity);
         }
 
 
-        // POST: Logs/Delete/5
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(OrderPaymentStatus entity)
+        {
+            if (!ModelState.IsValid) return View(entity);
+            var responseMessage = await client.PostAsJsonAsync(url, entity);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View(entity);
+        }
+
+        // GET: OrderPaymentStatuss/Edit/5
+        public async Task<ActionResult> Edit(int? id)
+        {
+            var responseMessage = await client.GetAsync(url + "/" + id);
+            if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+            var entity = JsonConvert.DeserializeObject<OrderPaymentStatus>(responseData);
+            return View(entity);
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(int id, OrderPaymentStatus entity)
+        {
+            if (!ModelState.IsValid) return View(entity);
+            var responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(entity);
+        }
+
+
+
+        // GET: OrderPaymentStatuss/Delete/5
+        public async Task<ActionResult> Delete(int? id)
+        {
+            var responseMessage = await client.GetAsync(url + "/" + id);
+            if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+            var entity = JsonConvert.DeserializeObject<OrderPaymentStatus>(responseData);
+            return View(entity);
+        }
+
+        // POST: OrderPaymentStatuss/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
@@ -106,27 +119,6 @@ namespace AmaderAd.Controllers
                 return RedirectToAction("Index");
             }
             throw new Exception("Exception");
-        }
-
-        public  ActionResult DeleteAllLog()
-        {
-            var q = from x in db.LogTbls
-                select x;
-
-            foreach (var item in q)
-            {
-                db.LogTbls.DeleteOnSubmit(item);
-            }
-
-            try
-            {
-                db.SubmitChanges();
-            }
-            catch (Exception)
-            {
-                throw new Exception("Exception");
-            }
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

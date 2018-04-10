@@ -1178,7 +1178,7 @@ address {
     }
 
 .box-heading {
-    background-color: rgb(234, 35, 73);
+    background-color: #128e73;
 }
 
 .productName {
@@ -1349,3 +1349,12 @@ input[readonly] {
     background-color: #ccc;
     font-style: italic;
 }
+
+/* Index */
+
+
+.card-img-top {
+    max-height: 100px;
+    min-height: 100px;
+}
+/* END Index */

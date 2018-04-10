@@ -16,11 +16,11 @@ namespace AmaderAd.DAL
     [ExceptionHandlerAttribute]
     public class LogDataAccessRepository : ILogAccessRepository<Log, int>
     {
-        public ShodypatiDataContext db;
+        public AmaderAdDataContext db;
 
         public LogDataAccessRepository()
         {
-            db = new ShodypatiDataContext();
+            db = new AmaderAdDataContext();
         }
 
 
