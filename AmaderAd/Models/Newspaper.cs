@@ -32,13 +32,15 @@ namespace AmaderAd.Models
         [Display(Name = "Advertiser Address")]
         public string AdvertiserAddress { get; set; }
 
-
+        [Phone]
         [Display(Name = "Advertiser Mobile")]
         public string AdvertiserMobile { get; set; }
 
+        [EmailAddress]
         [Display(Name = "Advertiser Email")]
         public string AdvertiserEmail { get; set; }
 
+        
         [Required]
         [Display(Name = "Date of Publication")]
         public DateTime? DateofPublication { get; set; }
