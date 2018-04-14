@@ -47,8 +47,6 @@ namespace AmaderAd.DAL
             return entities;
         }
 
-
-
         public Newspaper Get(int id)
         {
             var entity = Db.NewspaperTbls.Where(x => x.Id == id).Select(x => new Newspaper()
@@ -162,8 +160,7 @@ namespace AmaderAd.DAL
                 throw new Exception("Exception");
             }
         }
-
-
+    
         public void Delete(int id)
         {
             var entity = (from x in Db.NewspaperTbls
@@ -185,8 +182,6 @@ namespace AmaderAd.DAL
                 throw new Exception("Exception");
             }
         }
-
-
 
     }
 }

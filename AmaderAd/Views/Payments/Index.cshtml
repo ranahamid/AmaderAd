@@ -53,7 +53,7 @@
     @Html.HiddenFor(model => model.PaymentChannel)
     
 
-    <div id="bkash-payment" style="display: none;">
+    @*<div id="bkash-payment" style="display: none;">
         <h3>How to pay</h3>
         <div class="row">
             <div class="col-md-6">
@@ -95,6 +95,7 @@
     <div id="internet-payment" style="display: none;">
         <h3>Coming soon...</h3>
     </div>
+
     <div id="card-payment" style="display: none;">
         <h3>How to pay</h3>
         <div class="row">
@@ -113,7 +114,7 @@
                 }
             </div>
         </div>
-    </div>
+    </div>*@
 
     <div id="mobilePayment"  style="display: none;">
         <div class="form-group">
@@ -155,33 +156,37 @@
 
         $("#PaymentChannel").val(paymentChannel);
 
-        if (paymentChannel === '1' ) {
-            $("#bkash-payment").css("display", "block");
-            $("#rocket-payment").css("display", "none");
-            $("#internet-payment").css("display", "none");
-            $("#card-payment").css("display", "none");
-        }
+        //create jquery - ajax call to display 
 
-        else if (paymentChannel === '2' ) {
-            $("#bkash-payment").css("display", "none");
-            $("#rocket-payment").css("display", "block");
-            $("#internet-payment").css("display", "none");
-            $("#card-payment").css("display", "none");
-        }
+        // end
 
-        else if (paymentChannel === '3' ) {
-            $("#bkash-payment").css("display", "none");
-            $("#rocket-payment").css("display", "none");
-            $("#internet-payment").css("display", "block");
-            $("#card-payment").css("display", "none");
-        }
+        //if (paymentChannel === '1' ) {
+        //    $("#bkash-payment").css("display", "block");
+        //    $("#rocket-payment").css("display", "none");
+        //    $("#internet-payment").css("display", "none");
+        //    $("#card-payment").css("display", "none");
+        //}
 
-        else if (paymentChannel === '4' || paymentChannel === '5') {
-            $("#mobile-payment").css("display", "none");
-            $("#rocket-payment").css("display", "none");
-            $("#internet-payment").css("display", "none");
-            $("#card-payment").css("display", "block");
-        }
+        //else if (paymentChannel === '2' ) {
+        //    $("#bkash-payment").css("display", "none");
+        //    $("#rocket-payment").css("display", "block");
+        //    $("#internet-payment").css("display", "none");
+        //    $("#card-payment").css("display", "none");
+        //}
+
+        //else if (paymentChannel === '3' ) {
+        //    $("#bkash-payment").css("display", "none");
+        //    $("#rocket-payment").css("display", "none");
+        //    $("#internet-payment").css("display", "block");
+        //    $("#card-payment").css("display", "none");
+        //}
+
+        //else if (paymentChannel === '4' || paymentChannel === '5') {
+        //    $("#mobile-payment").css("display", "none");
+        //    $("#rocket-payment").css("display", "none");
+        //    $("#internet-payment").css("display", "none");
+        //    $("#card-payment").css("display", "block");
+        //}
 
 
         if (paymentChannel === '1' || paymentChannel === '2') {

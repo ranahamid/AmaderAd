@@ -6,14 +6,21 @@ using System.Web;
 
 namespace AmaderAd.Models
 {
-    public class Payment
+    public class Payment:Newspaper
     {
-        public int Id { get; set; }
+        public new int Id { get; set; }
         public Newspaper Newspaper { get; set; }
         public List<OrderPaymentMethod> PaymentMethods { get; set; }
         public string PaymentMethodName { get; set; }
 
-        public  int OrderId { get; set; }
+        //Newspaper
+
+
+        //END Newspaper
+        public Guid? PaymentGuidId { get; set; }
+
+        public int? OrderId { get; set; }
+
         public string PaymentChannel { get; set; }
 
         [Display(Name = "Transaction Mobile")]
@@ -23,7 +30,7 @@ namespace AmaderAd.Models
         public string PaymentTrxId { get; set; }
 
         [Display(Name = "Transaction Amount")]
-        public string PaymentAmount { get; set; }
+        public int? PaymentAmount { get; set; }
 
     }
 

@@ -51,6 +51,9 @@ namespace AmaderAd.DAL
     partial void InsertOrderPaymentStatusTbl(OrderPaymentStatusTbl instance);
     partial void UpdateOrderPaymentStatusTbl(OrderPaymentStatusTbl instance);
     partial void DeleteOrderPaymentStatusTbl(OrderPaymentStatusTbl instance);
+    partial void InsertPaymentTbl(PaymentTbl instance);
+    partial void UpdatePaymentTbl(PaymentTbl instance);
+    partial void DeletePaymentTbl(PaymentTbl instance);
     partial void InsertUserTbl(UserTbl instance);
     partial void UpdateUserTbl(UserTbl instance);
     partial void DeleteUserTbl(UserTbl instance);
@@ -147,6 +150,14 @@ namespace AmaderAd.DAL
 			get
 			{
 				return this.GetTable<OrderPaymentStatusTbl>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PaymentTbl> PaymentTbls
+		{
+			get
+			{
+				return this.GetTable<PaymentTbl>();
 			}
 		}
 		
@@ -1287,7 +1298,7 @@ namespace AmaderAd.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdLocation", DbType="NVarChar(1020)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdLocation", DbType="NVarChar(127)")]
 		public string AdLocation
 		{
 			get
@@ -1891,6 +1902,644 @@ namespace AmaderAd.DAL
 					this._DefaultStatus = value;
 					this.SendPropertyChanged("DefaultStatus");
 					this.OnDefaultStatusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PaymentTbl")]
+	public partial class PaymentTbl : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private System.Nullable<System.Guid> _PaymentGuidId;
+		
+		private string _NewspaperName;
+		
+		private string _AdLocation;
+		
+		private System.Nullable<int> _Price;
+		
+		private string _AdvertiserName;
+		
+		private string _AdvertiserAddress;
+		
+		private string _AdvertiserMobile;
+		
+		private string _AdvertiserEmail;
+		
+		private System.Nullable<System.DateTime> _DateofPublication;
+		
+		private System.Nullable<int> _ColumnSize;
+		
+		private System.Nullable<int> _Inch;
+		
+		private System.Nullable<int> _TotalColumnInch;
+		
+		private System.Nullable<int> _TotalPrice;
+		
+		private string _AllAdCategoryName;
+		
+		private string _Description;
+		
+		private string _MainImagePath;
+		
+		private System.Nullable<System.DateTime> _CreatedOnUtc;
+		
+		private System.Nullable<System.DateTime> _UpdatedOnUtc;
+		
+		private System.Nullable<int> _OrderId;
+		
+		private string _PaymentChannel;
+		
+		private string _PaymentMobile;
+		
+		private string _PaymentTrxId;
+		
+		private System.Nullable<int> _PaymentAmount;
+		
+		private System.Nullable<bool> _Active;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnPaymentGuidIdChanging(System.Nullable<System.Guid> value);
+    partial void OnPaymentGuidIdChanged();
+    partial void OnNewspaperNameChanging(string value);
+    partial void OnNewspaperNameChanged();
+    partial void OnAdLocationChanging(string value);
+    partial void OnAdLocationChanged();
+    partial void OnPriceChanging(System.Nullable<int> value);
+    partial void OnPriceChanged();
+    partial void OnAdvertiserNameChanging(string value);
+    partial void OnAdvertiserNameChanged();
+    partial void OnAdvertiserAddressChanging(string value);
+    partial void OnAdvertiserAddressChanged();
+    partial void OnAdvertiserMobileChanging(string value);
+    partial void OnAdvertiserMobileChanged();
+    partial void OnAdvertiserEmailChanging(string value);
+    partial void OnAdvertiserEmailChanged();
+    partial void OnDateofPublicationChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateofPublicationChanged();
+    partial void OnColumnSizeChanging(System.Nullable<int> value);
+    partial void OnColumnSizeChanged();
+    partial void OnInchChanging(System.Nullable<int> value);
+    partial void OnInchChanged();
+    partial void OnTotalColumnInchChanging(System.Nullable<int> value);
+    partial void OnTotalColumnInchChanged();
+    partial void OnTotalPriceChanging(System.Nullable<int> value);
+    partial void OnTotalPriceChanged();
+    partial void OnAllAdCategoryNameChanging(string value);
+    partial void OnAllAdCategoryNameChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnMainImagePathChanging(string value);
+    partial void OnMainImagePathChanged();
+    partial void OnCreatedOnUtcChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnUtcChanged();
+    partial void OnUpdatedOnUtcChanging(System.Nullable<System.DateTime> value);
+    partial void OnUpdatedOnUtcChanged();
+    partial void OnOrderIdChanging(System.Nullable<int> value);
+    partial void OnOrderIdChanged();
+    partial void OnPaymentChannelChanging(string value);
+    partial void OnPaymentChannelChanged();
+    partial void OnPaymentMobileChanging(string value);
+    partial void OnPaymentMobileChanged();
+    partial void OnPaymentTrxIdChanging(string value);
+    partial void OnPaymentTrxIdChanged();
+    partial void OnPaymentAmountChanging(System.Nullable<int> value);
+    partial void OnPaymentAmountChanged();
+    partial void OnActiveChanging(System.Nullable<bool> value);
+    partial void OnActiveChanged();
+    #endregion
+		
+		public PaymentTbl()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentGuidId", DbType="UniqueIdentifier")]
+		public System.Nullable<System.Guid> PaymentGuidId
+		{
+			get
+			{
+				return this._PaymentGuidId;
+			}
+			set
+			{
+				if ((this._PaymentGuidId != value))
+				{
+					this.OnPaymentGuidIdChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentGuidId = value;
+					this.SendPropertyChanged("PaymentGuidId");
+					this.OnPaymentGuidIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewspaperName", DbType="NVarChar(255)")]
+		public string NewspaperName
+		{
+			get
+			{
+				return this._NewspaperName;
+			}
+			set
+			{
+				if ((this._NewspaperName != value))
+				{
+					this.OnNewspaperNameChanging(value);
+					this.SendPropertyChanging();
+					this._NewspaperName = value;
+					this.SendPropertyChanged("NewspaperName");
+					this.OnNewspaperNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdLocation", DbType="NVarChar(127)")]
+		public string AdLocation
+		{
+			get
+			{
+				return this._AdLocation;
+			}
+			set
+			{
+				if ((this._AdLocation != value))
+				{
+					this.OnAdLocationChanging(value);
+					this.SendPropertyChanging();
+					this._AdLocation = value;
+					this.SendPropertyChanged("AdLocation");
+					this.OnAdLocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Int")]
+		public System.Nullable<int> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdvertiserName", DbType="NVarChar(255)")]
+		public string AdvertiserName
+		{
+			get
+			{
+				return this._AdvertiserName;
+			}
+			set
+			{
+				if ((this._AdvertiserName != value))
+				{
+					this.OnAdvertiserNameChanging(value);
+					this.SendPropertyChanging();
+					this._AdvertiserName = value;
+					this.SendPropertyChanged("AdvertiserName");
+					this.OnAdvertiserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdvertiserAddress", DbType="NVarChar(255)")]
+		public string AdvertiserAddress
+		{
+			get
+			{
+				return this._AdvertiserAddress;
+			}
+			set
+			{
+				if ((this._AdvertiserAddress != value))
+				{
+					this.OnAdvertiserAddressChanging(value);
+					this.SendPropertyChanging();
+					this._AdvertiserAddress = value;
+					this.SendPropertyChanged("AdvertiserAddress");
+					this.OnAdvertiserAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdvertiserMobile", DbType="NVarChar(20)")]
+		public string AdvertiserMobile
+		{
+			get
+			{
+				return this._AdvertiserMobile;
+			}
+			set
+			{
+				if ((this._AdvertiserMobile != value))
+				{
+					this.OnAdvertiserMobileChanging(value);
+					this.SendPropertyChanging();
+					this._AdvertiserMobile = value;
+					this.SendPropertyChanged("AdvertiserMobile");
+					this.OnAdvertiserMobileChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdvertiserEmail", DbType="NVarChar(255)")]
+		public string AdvertiserEmail
+		{
+			get
+			{
+				return this._AdvertiserEmail;
+			}
+			set
+			{
+				if ((this._AdvertiserEmail != value))
+				{
+					this.OnAdvertiserEmailChanging(value);
+					this.SendPropertyChanging();
+					this._AdvertiserEmail = value;
+					this.SendPropertyChanged("AdvertiserEmail");
+					this.OnAdvertiserEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateofPublication", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> DateofPublication
+		{
+			get
+			{
+				return this._DateofPublication;
+			}
+			set
+			{
+				if ((this._DateofPublication != value))
+				{
+					this.OnDateofPublicationChanging(value);
+					this.SendPropertyChanging();
+					this._DateofPublication = value;
+					this.SendPropertyChanged("DateofPublication");
+					this.OnDateofPublicationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ColumnSize", DbType="Int")]
+		public System.Nullable<int> ColumnSize
+		{
+			get
+			{
+				return this._ColumnSize;
+			}
+			set
+			{
+				if ((this._ColumnSize != value))
+				{
+					this.OnColumnSizeChanging(value);
+					this.SendPropertyChanging();
+					this._ColumnSize = value;
+					this.SendPropertyChanged("ColumnSize");
+					this.OnColumnSizeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Inch", DbType="Int")]
+		public System.Nullable<int> Inch
+		{
+			get
+			{
+				return this._Inch;
+			}
+			set
+			{
+				if ((this._Inch != value))
+				{
+					this.OnInchChanging(value);
+					this.SendPropertyChanging();
+					this._Inch = value;
+					this.SendPropertyChanged("Inch");
+					this.OnInchChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalColumnInch", DbType="Int")]
+		public System.Nullable<int> TotalColumnInch
+		{
+			get
+			{
+				return this._TotalColumnInch;
+			}
+			set
+			{
+				if ((this._TotalColumnInch != value))
+				{
+					this.OnTotalColumnInchChanging(value);
+					this.SendPropertyChanging();
+					this._TotalColumnInch = value;
+					this.SendPropertyChanged("TotalColumnInch");
+					this.OnTotalColumnInchChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalPrice", DbType="Int")]
+		public System.Nullable<int> TotalPrice
+		{
+			get
+			{
+				return this._TotalPrice;
+			}
+			set
+			{
+				if ((this._TotalPrice != value))
+				{
+					this.OnTotalPriceChanging(value);
+					this.SendPropertyChanging();
+					this._TotalPrice = value;
+					this.SendPropertyChanged("TotalPrice");
+					this.OnTotalPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AllAdCategoryName", DbType="NVarChar(255)")]
+		public string AllAdCategoryName
+		{
+			get
+			{
+				return this._AllAdCategoryName;
+			}
+			set
+			{
+				if ((this._AllAdCategoryName != value))
+				{
+					this.OnAllAdCategoryNameChanging(value);
+					this.SendPropertyChanging();
+					this._AllAdCategoryName = value;
+					this.SendPropertyChanged("AllAdCategoryName");
+					this.OnAllAdCategoryNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(4000)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MainImagePath", DbType="NVarChar(255)")]
+		public string MainImagePath
+		{
+			get
+			{
+				return this._MainImagePath;
+			}
+			set
+			{
+				if ((this._MainImagePath != value))
+				{
+					this.OnMainImagePathChanging(value);
+					this.SendPropertyChanging();
+					this._MainImagePath = value;
+					this.SendPropertyChanged("MainImagePath");
+					this.OnMainImagePathChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOnUtc", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> CreatedOnUtc
+		{
+			get
+			{
+				return this._CreatedOnUtc;
+			}
+			set
+			{
+				if ((this._CreatedOnUtc != value))
+				{
+					this.OnCreatedOnUtcChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedOnUtc = value;
+					this.SendPropertyChanged("CreatedOnUtc");
+					this.OnCreatedOnUtcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdatedOnUtc", DbType="DateTime2")]
+		public System.Nullable<System.DateTime> UpdatedOnUtc
+		{
+			get
+			{
+				return this._UpdatedOnUtc;
+			}
+			set
+			{
+				if ((this._UpdatedOnUtc != value))
+				{
+					this.OnUpdatedOnUtcChanging(value);
+					this.SendPropertyChanging();
+					this._UpdatedOnUtc = value;
+					this.SendPropertyChanged("UpdatedOnUtc");
+					this.OnUpdatedOnUtcChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderId", DbType="Int")]
+		public System.Nullable<int> OrderId
+		{
+			get
+			{
+				return this._OrderId;
+			}
+			set
+			{
+				if ((this._OrderId != value))
+				{
+					this.OnOrderIdChanging(value);
+					this.SendPropertyChanging();
+					this._OrderId = value;
+					this.SendPropertyChanged("OrderId");
+					this.OnOrderIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentChannel", DbType="NVarChar(255)")]
+		public string PaymentChannel
+		{
+			get
+			{
+				return this._PaymentChannel;
+			}
+			set
+			{
+				if ((this._PaymentChannel != value))
+				{
+					this.OnPaymentChannelChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentChannel = value;
+					this.SendPropertyChanged("PaymentChannel");
+					this.OnPaymentChannelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentMobile", DbType="NVarChar(20)")]
+		public string PaymentMobile
+		{
+			get
+			{
+				return this._PaymentMobile;
+			}
+			set
+			{
+				if ((this._PaymentMobile != value))
+				{
+					this.OnPaymentMobileChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentMobile = value;
+					this.SendPropertyChanged("PaymentMobile");
+					this.OnPaymentMobileChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentTrxId", DbType="NVarChar(20)")]
+		public string PaymentTrxId
+		{
+			get
+			{
+				return this._PaymentTrxId;
+			}
+			set
+			{
+				if ((this._PaymentTrxId != value))
+				{
+					this.OnPaymentTrxIdChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentTrxId = value;
+					this.SendPropertyChanged("PaymentTrxId");
+					this.OnPaymentTrxIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentAmount", DbType="Int")]
+		public System.Nullable<int> PaymentAmount
+		{
+			get
+			{
+				return this._PaymentAmount;
+			}
+			set
+			{
+				if ((this._PaymentAmount != value))
+				{
+					this.OnPaymentAmountChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentAmount = value;
+					this.SendPropertyChanged("PaymentAmount");
+					this.OnPaymentAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit")]
+		public System.Nullable<bool> Active
+		{
+			get
+			{
+				return this._Active;
+			}
+			set
+			{
+				if ((this._Active != value))
+				{
+					this.OnActiveChanging(value);
+					this.SendPropertyChanging();
+					this._Active = value;
+					this.SendPropertyChanged("Active");
+					this.OnActiveChanged();
 				}
 			}
 		}

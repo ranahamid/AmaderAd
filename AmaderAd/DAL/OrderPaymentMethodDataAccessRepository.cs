@@ -20,7 +20,7 @@ namespace AmaderAd.DAL
 
         public IEnumerable<OrderPaymentMethod> Get()
         {
-            var entities = Db.OrderPaymentMethodTbls.Where(x=>x.Published==true).Select(x => new OrderPaymentMethod()
+            var entities = Db.OrderPaymentMethodTbls.Select(x => new OrderPaymentMethod()
             {
                 Id = x.Id,
                 Name = x.Name,

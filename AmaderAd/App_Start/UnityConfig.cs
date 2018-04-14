@@ -40,6 +40,9 @@ namespace AmaderAd
             container.RegisterType<IOrderPaymentMethodAccessRepository<OrderPaymentMethod, int>, OrderPaymentMethodDataAccessRepository>();
             //OrderPaymentStatus
             container.RegisterType<IOrderPaymentStatusAccessRepository<OrderPaymentStatus, int>, OrderPaymentStatusDataAccessRepository>();
+            
+            //Payment
+            container.RegisterType<IPaymentAccessRepository<Payment, int>, PaymentDataAccessRepository>();
 
 
 

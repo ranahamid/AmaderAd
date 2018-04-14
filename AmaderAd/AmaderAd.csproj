@@ -257,6 +257,7 @@
     <Compile Include="Controllers\Api\NewspaperApiController.cs" />
     <Compile Include="Controllers\Api\OrderPaymentMethodApiController.cs" />
     <Compile Include="Controllers\Api\OrderPaymentStatusApiController.cs" />
+    <Compile Include="Controllers\Api\PaymentApiController.cs" />
     <Compile Include="Controllers\BannersController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -283,10 +284,12 @@
     <Compile Include="DAL\INewspaperAccessRepository.cs" />
     <Compile Include="DAL\IOrderPaymentMethodAccessRepository.cs" />
     <Compile Include="DAL\IOrderPaymentStatusAccessRepository.cs" />
+    <Compile Include="DAL\IPaymentAccessRepository.cs" />
     <Compile Include="DAL\LogDataAccessRepository.cs" />
     <Compile Include="DAL\NewspaperDataAccessRepository.cs" />
     <Compile Include="DAL\OrderPaymentMethodDataAccessRepository.cs" />
     <Compile Include="DAL\OrderPaymentStatusDataAccessRepository.cs" />
+    <Compile Include="DAL\PaymentDataAccessRepository.cs" />
     <Compile Include="DAL\Shodypati.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -4458,6 +4461,7 @@
     <Content Include="Views\OrderPaymentStatus\Index.cshtml" />
     <Content Include="Views\Payments\Index.cshtml" />
     <Content Include="Views\Shared\_NewspaperPaymentHeader.cshtml" />
+    <Content Include="Views\Shared\_PaymentMethodsInstructions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

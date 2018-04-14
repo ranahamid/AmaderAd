@@ -60,7 +60,7 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NewsGuidId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Column Name="NewspaperName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="AdLocation" Type="System.String" DbType="NVarChar(1020)" CanBeNull="true" />
+      <Column Name="AdLocation" Type="System.String" DbType="NVarChar(127)" CanBeNull="true" />
       <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="AdvertiserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="AdvertiserAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
@@ -93,6 +93,35 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="DefaultStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaymentTbl" Member="PaymentTbls">
+    <Type Name="PaymentTbl">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PaymentGuidId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NewspaperName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdLocation" Type="System.String" DbType="NVarChar(127)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdvertiserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdvertiserAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdvertiserMobile" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AdvertiserEmail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateofPublication" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ColumnSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Inch" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalColumnInch" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AllAdCategoryName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="MainImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="UpdatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentChannel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PaymentMobile" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PaymentTrxId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PaymentAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.UserTbl" Member="UserTbls">
