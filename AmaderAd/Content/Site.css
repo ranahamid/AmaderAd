@@ -43,6 +43,10 @@ input[type="checkbox"].input-validation-error {
     max-width: 300px;
 }
 
+.img-display-payment {
+    max-height: 350px;
+    max-width: 500px;
+}
 
 .multiselect-container > li {
     padding-left: 8px;

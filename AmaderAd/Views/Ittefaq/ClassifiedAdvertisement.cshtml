@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "ClassifiedAdvertisement";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>ইত্তেফাকে শ্রেণিভুক্ত বিজ্ঞাপন দিন (Publish classified advertisement at Ittefaq)</h2>
@@ -66,8 +66,6 @@
 @Html.Partial("_NewspaperSampleAd")
 
 
-
-	
 <script>
     var amount; 
     $("#Description").bind('keyup keydown paste cut', function(e) 
@@ -113,8 +111,16 @@
     
             $('#wordLimiter').html(wordcount);
         },100);
-    });    
-	
+    });
+
 </script>
-	
-    
+
+
+<script>
+    var hour = new Date().getUTCHours()+6;
+    $(".datetime").datepicker({
+        startDate: hour >= 18 ? '+2d' : '+1d',
+        autoclose:true
+     });
+  
+</script>

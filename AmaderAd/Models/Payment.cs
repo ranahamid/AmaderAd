@@ -11,8 +11,20 @@ namespace AmaderAd.Models
         public int Id { get; set; }
         public Newspaper Newspaper { get; set; }
         public List<OrderPaymentMethod> PaymentMethods { get; set; }
-
         public string PaymentMethodName { get; set; }
+
+        public  int OrderId { get; set; }
+        public string PaymentChannel { get; set; }
+
+        [Display(Name = "Transaction Mobile")]
+        public string PaymentMobile { get; set; }
+
+        [Display(Name = "Transaction Id")]
+        public string PaymentTrxId { get; set; }
+
+        [Display(Name = "Transaction Amount")]
+        public string PaymentAmount { get; set; }
+
     }
 
     public class OrderPaymentMethod
