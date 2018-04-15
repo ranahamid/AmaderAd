@@ -61,13 +61,16 @@ namespace AmaderAd.Models
         [Display(Name = "Choose File")]
         public string MainImagePath { get; set; }
 
+        [ScaffoldColumn(false)]
         public string RawDbImagePath { get; set; }
 
         //end of main
 
         //ittefaq
+        [ScaffoldColumn(false)]
         public List<SelectListItem> AllAdCategory { get; set; }
 
+        [ScaffoldColumn(false)]
         [Display(Name = "Ad Category")]
         public string AllAdCategoryId { get; set; }
 

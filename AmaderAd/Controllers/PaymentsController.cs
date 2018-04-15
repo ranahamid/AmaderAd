@@ -21,20 +21,32 @@ using System.Web.Hosting;
 
 namespace AmaderAd.Controllers
 {
+    [ExceptionHandler]
     public class PaymentsController : BaseController
     {
+        private readonly FilesHelper _filesHelper;
+        readonly string tempPath = "~/payments/";
+        readonly string serverMapPath = "~/Content/images/payments/";
+        private readonly string UrlBase = "/Content/images/payments/"; //with out '/'
+        readonly string DeleteURL = "/Payments/DeleteAdditionalFile/?file=";
+        private string StorageRoot => Path.Combine(HostingEnvironment.MapPath(serverMapPath));
+        string DeleteType = "GET";
+
         public PaymentsController()
         {
+            int randN = GetRandomNumber();
+            _filesHelper = new FilesHelper(DeleteURL, DeleteType, StorageRoot + randN + "/", UrlBase + randN + "/", tempPath + randN + "/", serverMapPath + randN + "/");
             //api url                  
-         
+            url = baseUrl + "api/PaymentApi";
+                          
+
         }
 
         // GET: Payments
-    
+
         public async Task<ActionResult> Index(Newspaper entity)
         {
             entity.Id = Db.NewspaperTbls.Where(x => x.NewsGuidId == entity.NewsGuidId).Select(x => x.Id).FirstOrDefault();
-            
 
             url = baseUrl + "api/OrderPaymentMethodApi";
             var responseMessage = await client.GetAsync(url);
@@ -49,10 +61,166 @@ namespace AmaderAd.Controllers
             return View(payment);
         }
 
+        [AllowAnonymous]
+        // POST: Payments
+        [ValidateInput(false)]
         [HttpPost]
-        public ActionResult Index(Payment entity)
+        [ValidateAntiForgeryToken]        
+        public async Task<ActionResult> Index(Payment entity)
+        {
+            // Home is default controller
+            string controller = string.Empty;
+            string action = string.Empty;
+
+            if (Request.UrlReferrer != null)
+            {
+                controller = (Request.UrlReferrer.Segments.Skip(1).Take(1).SingleOrDefault() ?? "Home").Trim('/');
+            }
+
+            // Index is default action 
+            if (Request.UrlReferrer != null)
+            {
+                action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
+            }
+
+            if (ModelState.IsValid)
+            {
+                entity.PaymentGuidId = Guid.NewGuid();
+                var responseMessage = await client.PostAsJsonAsync(url, entity);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Success", "Payments", entity);
+                }
+            }
+            return RedirectToAction(action, controller, entity);
+        }
+
+        public ActionResult Success()
         {
             return View();
+        }
+
+        // GET: Products
+        public async Task<ActionResult> List()
+        {
+            var responseMessage = await client.GetAsync(url);
+            if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+            var entity = JsonConvert.DeserializeObject<List<Newspaper>>(responseData);
+            return View(entity);
+        }
+
+        // GET: Products/Details/5
+        public async Task<ActionResult> Details(int? id)
+        {
+            var responseMessage = await client.GetAsync(url + "/" + id);
+            if (!responseMessage.IsSuccessStatusCode)
+                throw new Exception("Exception");
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+
+            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);          
+            return View(entity);
+        }
+
+
+        [HttpPost]
+        public JsonResult Upload()
+        {
+            var resultList = new List<ViewDataUploadFilesResult>();
+
+            var currentContext = HttpContext;
+            _filesHelper.UploadAndShowResults(currentContext, resultList);
+            JsonFiles files = new JsonFiles(resultList);
+
+            bool isEmpty = !resultList.Any();
+            if (isEmpty)
+            {
+                return Json("Error ");
+            }
+
+            return Json(files);
+        }
+
+
+        [HttpGet]
+        public JsonResult DeleteFile(string file)
+        {
+            _filesHelper.DeleteFile(file);
+            return Json("OK", JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        // GET: Products/Edit/5
+        public async Task<ActionResult> Edit(int? id)
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
+                entity.AllAdCategory = GetAllAdCategory();
+                return View(entity);
+            }
+            throw new Exception("Exception");
+        }
+
+        // POST: Products/Edit/5
+        [ValidateInput(false)]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(int id, Newspaper entity)
+        {
+            if (ModelState.IsValid)
+            {
+                HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+
+            return View(entity);
+        }
+
+        // GET: Products/Delete/5
+        public async Task<ActionResult> Delete(int? id)
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
+           
+                if (entity != null)
+                {
+                    return View(entity);
+                }
+            }
+            throw new Exception("Exception");
+        }
+
+        // POST: Products/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> DeleteConfirmed(int id)
+        {
+
+            HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            throw new Exception("Exception");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                Db.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
 

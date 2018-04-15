@@ -84,8 +84,7 @@ namespace AmaderAd.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Newspaper entity)
-        {
-            
+        {            
             // Home is default controller
             string controller = string.Empty;
             string action = string.Empty;
@@ -112,9 +111,7 @@ namespace AmaderAd.Controllers
                     return RedirectToAction("Index", "Payments", entity);
                 }
             }
-
-            return RedirectToAction(action, controller, entity);
-           
+            return RedirectToAction(action, controller, entity);          
         }
 
         [HttpPost]

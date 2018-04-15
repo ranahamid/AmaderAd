@@ -17,8 +17,6 @@
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.Partial("_NewspaperPaymentHeader", Model)
 
-
-
     <div class="form-group">
         @Html.LabelFor(model => model.Newspaper.Description, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10" style="word-break: keep-all;">
@@ -52,69 +50,10 @@
 
     @Html.HiddenFor(model => model.PaymentChannel)
     
-
-    @*<div id="bkash-payment" style="display: none;">
-        <h3>How to pay</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <span style="white-space: pre-line">@Model.PaymentMethods[0].Instructions</span>
-            </div>
-            <div class="col-md-6">
-                @{
-                    if (!string.IsNullOrEmpty(Model.PaymentMethods[0].InstructionsImageUrl))
-                    {
-
-                        <a href="@Model.PaymentMethods[0].InstructionsImageUrl" data-lightbox="image-1" data-title="@Model.PaymentMethods[0].Name">
-                            <img src="@Model.PaymentMethods[0].InstructionsImageUrl" class="img-display-payment" />
-                        </a>
-                    }
-                }
-            </div>
-        </div>
+    <div class="form-group" id="PaymentInstructionsDiv">
+     
     </div>
-
-    <div id="rocket-payment" style="display: none;">
-        <h3>How to pay</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <span style="white-space: pre-line">@Model.PaymentMethods[1].Instructions</span>
-            </div>
-            <div class="col-md-6">
-                @{
-                    if (!string.IsNullOrEmpty(Model.PaymentMethods[1].InstructionsImageUrl))
-                    {
-
-                        <a href="@Model.PaymentMethods[1].InstructionsImageUrl" data-lightbox="image-1" data-title="@Model.PaymentMethods[1].Name">
-                            <img src="@Model.PaymentMethods[1].InstructionsImageUrl" class="img-display-payment" />
-                        </a>
-                    }
-                }
-            </div>
-        </div>
-    </div>
-    <div id="internet-payment" style="display: none;">
-        <h3>Coming soon...</h3>
-    </div>
-
-    <div id="card-payment" style="display: none;">
-        <h3>How to pay</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <span style="white-space: pre-line">@Model.PaymentMethods[3].Instructions</span>
-            </div>
-            <div class="col-md-6">
-                @{
-                    if (!string.IsNullOrEmpty(Model.PaymentMethods[3].InstructionsImageUrl))
-                    {
-
-                        <a href="@Model.PaymentMethods[3].InstructionsImageUrl" data-lightbox="image-1" data-title="@Model.PaymentMethods[3].Name">
-                            <img src="@Model.PaymentMethods[3].InstructionsImageUrl" class="img-display-payment" />
-                        </a>
-                    }
-                }
-            </div>
-        </div>
-    </div>*@
+    
 
     <div id="mobilePayment"  style="display: none;">
         <div class="form-group">
@@ -150,44 +89,21 @@
 
 
 
+
 <script>
     $(".paymentTypes").change(function () {
         var paymentChannel = this.value;
 
+        $("#PaymentInstructionsDiv").empty();
+        $("#PaymentInstructionsDiv").load('/OrderPaymentMethods/FillPaymentsInstructions', { id: paymentChannel }, function (responseTxt, statusTxt, xhr) {
+
+        });
+
+
+
         $("#PaymentChannel").val(paymentChannel);
 
-        //create jquery - ajax call to display 
-
-        // end
-
-        //if (paymentChannel === '1' ) {
-        //    $("#bkash-payment").css("display", "block");
-        //    $("#rocket-payment").css("display", "none");
-        //    $("#internet-payment").css("display", "none");
-        //    $("#card-payment").css("display", "none");
-        //}
-
-        //else if (paymentChannel === '2' ) {
-        //    $("#bkash-payment").css("display", "none");
-        //    $("#rocket-payment").css("display", "block");
-        //    $("#internet-payment").css("display", "none");
-        //    $("#card-payment").css("display", "none");
-        //}
-
-        //else if (paymentChannel === '3' ) {
-        //    $("#bkash-payment").css("display", "none");
-        //    $("#rocket-payment").css("display", "none");
-        //    $("#internet-payment").css("display", "block");
-        //    $("#card-payment").css("display", "none");
-        //}
-
-        //else if (paymentChannel === '4' || paymentChannel === '5') {
-        //    $("#mobile-payment").css("display", "none");
-        //    $("#rocket-payment").css("display", "none");
-        //    $("#internet-payment").css("display", "none");
-        //    $("#card-payment").css("display", "block");
-        //}
-
+       
 
         if (paymentChannel === '1' || paymentChannel === '2') {
             $("#mobilePayment").css("display", "block");

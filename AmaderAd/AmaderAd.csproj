@@ -4448,7 +4448,6 @@
     <Content Include="Views\Shared\_NewspaperHeader.cshtml" />
     <Content Include="Views\Shared\_NewspaperNotice.cshtml" />
     <Content Include="Views\Shared\_NewspaperSampleAd.cshtml" />
-    <Content Include="Views\Newspapers\Success.cshtml" />
     <Content Include="Views\OrderPaymentMethods\Create.cshtml" />
     <Content Include="Views\OrderPaymentMethods\Delete.cshtml" />
     <Content Include="Views\OrderPaymentMethods\Details.cshtml" />
@@ -4462,6 +4461,12 @@
     <Content Include="Views\Payments\Index.cshtml" />
     <Content Include="Views\Shared\_NewspaperPaymentHeader.cshtml" />
     <Content Include="Views\Shared\_PaymentMethodsInstructions.cshtml" />
+    <Content Include="Views\Shared\_PaymentInstructions.cshtml" />
+    <Content Include="Views\Payments\List.cshtml" />
+    <Content Include="Views\Payments\Details.cshtml" />
+    <Content Include="Views\Payments\Edit.cshtml" />
+    <Content Include="Views\Payments\Delete.cshtml" />
+    <Content Include="Views\Payments\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

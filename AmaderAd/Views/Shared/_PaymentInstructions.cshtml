@@ -1,0 +1,19 @@
+﻿@model AmaderAd.Models.OrderPaymentMethod
+
+<h3>How to pay</h3>
+<div class="row">
+    <div class="col-md-6">
+        <span style="white-space: pre-line">@Model.Instructions</span>
+    </div>
+    <div class="col-md-6">
+        @{
+            if (!string.IsNullOrEmpty(Model.InstructionsImageUrl))
+            {
+
+                <a href="@Model.InstructionsImageUrl" data-lightbox="image-1" data-title="@Model.Name">
+                    <img src="@Model.InstructionsImageUrl" class="img-display-payment" />
+                </a>
+            }
+        }
+    </div>
+</div>

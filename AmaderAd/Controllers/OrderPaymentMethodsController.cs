@@ -52,14 +52,27 @@ namespace AmaderAd.Controllers
             return View(entity);
         }
 
-        // GET: OrderPaymentMethods/Details/5
-        public async Task<ActionResult> Details(int? id)
+        public async Task<OrderPaymentMethod> GetDetails(int? id)
         {
             var responseMessage = await client.GetAsync(url + "/" + id);
             if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
             var entity = JsonConvert.DeserializeObject<OrderPaymentMethod>(responseData);
+            return entity;
+        }
+
+        // GET: OrderPaymentMethods/Details/5
+        public ActionResult Details(int? id)
+        {
+            var entity = GetDetails(id);
             return View(entity);
+        }
+
+        public async Task<ActionResult> FillPaymentsInstructions(string id)
+        {
+            int.TryParse(id, out var parsedResult);           
+            var entity = await GetDetails(parsedResult);
+            return PartialView("_PaymentMethodsInstructions", entity);
         }
 
         // GET: OrderPaymentMethods/Create

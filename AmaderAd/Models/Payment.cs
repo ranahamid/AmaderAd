@@ -9,8 +9,11 @@ namespace AmaderAd.Models
     public class Payment:Newspaper
     {
         public new int Id { get; set; }
+
         public Newspaper Newspaper { get; set; }
+
         public List<OrderPaymentMethod> PaymentMethods { get; set; }
+
         public string PaymentMethodName { get; set; }
 
         //Newspaper
