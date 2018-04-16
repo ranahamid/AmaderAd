@@ -60,7 +60,6 @@ namespace AmaderAd.Controllers.Api
         [ResponseType(typeof(Payment))]
         public IHttpActionResult PostPayment(Payment entity)
         {
-
             _repository.Post(entity);
             return Ok(entity);
         }

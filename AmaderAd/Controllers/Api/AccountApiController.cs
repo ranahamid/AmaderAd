@@ -20,7 +20,7 @@ namespace AmaderAd.Controllers.Api
 {
     public class AccountApiController : ApiController
     {
-        private IAccountAccessRepository<RegisterViewModel, int> _repository;
+        private readonly IAccountAccessRepository<RegisterViewModel, int> _repository;
 
         public AccountApiController(IAccountAccessRepository<RegisterViewModel, int> r)
         {

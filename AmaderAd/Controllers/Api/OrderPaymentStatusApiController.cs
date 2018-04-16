@@ -17,7 +17,7 @@ namespace AmaderAd.Controllers.Api
 {
     public class OrderPaymentStatusApiController : ApiController
     {
-        private IOrderPaymentStatusAccessRepository<OrderPaymentStatus, int> _repository;
+        private readonly IOrderPaymentStatusAccessRepository<OrderPaymentStatus, int> _repository;
 
         public OrderPaymentStatusApiController(IOrderPaymentStatusAccessRepository<OrderPaymentStatus, int> r)
         {

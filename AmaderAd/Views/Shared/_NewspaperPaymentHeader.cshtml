@@ -5,86 +5,86 @@
 <div class="form-group">
     @Html.Label("Ad order No", htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
-        @Html.EditorFor(model => model.Newspaper.Id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-        @Html.ValidationMessageFor(model => model.Newspaper.Id, "", new { @class = "text-danger" })
+        @Html.EditorFor(model =>  model.Id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+        @Html.ValidationMessageFor(model =>  model.Id, "", new { @class = "text-danger" })
     </div>
 </div>
 
 <div class="form-group">
-    @Html.LabelFor(model => model.Newspaper.NewspaperName, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.LabelFor(model =>  model.NewspaperName, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
-        @Html.EditorFor(model => model.Newspaper.NewspaperName, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-        @Html.ValidationMessageFor(model => model.Newspaper.NewspaperName, "", new { @class = "text-danger" })
+        @Html.EditorFor(model =>  model.NewspaperName, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+        @Html.ValidationMessageFor(model =>  model.NewspaperName, "", new { @class = "text-danger" })
     </div>
 </div>
 
 <div class="form-group">
-    @Html.LabelFor(model => model.Newspaper.AdLocation, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.LabelFor(model =>  model.AdLocation, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
-        @Html.EditorFor(model => model.Newspaper.AdLocation, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-        @Html.ValidationMessageFor(model => model.Newspaper.AdLocation, "", new { @class = "text-danger" })
+        @Html.EditorFor(model =>  model.AdLocation, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+        @Html.ValidationMessageFor(model =>  model.AdLocation, "", new { @class = "text-danger" })
     </div>
 </div>
 
 
-@Html.HiddenFor(model => model.Newspaper.Price)
+@Html.HiddenFor(model =>  model.Price)
 @*<div class="form-group">
-        @Html.LabelFor(model => model.Newspaper.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model =>  model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Newspaper.Price, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Newspaper.Price, "", new { @class = "text-danger" })
+            @Html.EditorFor(model =>  model.Price, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model =>  model.Price, "", new { @class = "text-danger" })
         </div>
     </div>*@
 
-@Html.HiddenFor(model => model.Newspaper.AdvertiserName)
+@Html.HiddenFor(model =>  model.AdvertiserName)
 
 @*<div class="form-group">
-        @Html.LabelFor(model => model.Newspaper.AdvertiserName, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model =>  model.AdvertiserName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Newspaper.AdvertiserName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Newspaper.AdvertiserName, "", new { @class = "text-danger" })
-        </div>
-    </div>*@
-
-@Html.HiddenFor(model => model.Newspaper.AdvertiserAddress)
-@*<div class="form-group">
-        @Html.LabelFor(model => model.Newspaper.AdvertiserAddress, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Newspaper.AdvertiserAddress, new { htmlAttributes = new { style = "height:80px;", @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Newspaper.AdvertiserAddress, "", new { @class = "text-danger" })
+            @Html.EditorFor(model =>  model.AdvertiserName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model =>  model.AdvertiserName, "", new { @class = "text-danger" })
         </div>
     </div>*@
 
-@Html.HiddenFor(model => model.Newspaper.AdvertiserMobile)
+@Html.HiddenFor(model =>  model.AdvertiserAddress)
 @*<div class="form-group">
-        @Html.LabelFor(model => model.Newspaper.AdvertiserMobile, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model =>  model.AdvertiserAddress, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Newspaper.AdvertiserMobile, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Newspaper.AdvertiserMobile, "", new { @class = "text-danger" })
-        </div>
-    </div>*@
-@Html.HiddenFor(model => model.Newspaper.AdvertiserEmail)
-@*<div class="form-group">
-        @Html.LabelFor(model => model.Newspaper.AdvertiserEmail, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Newspaper.AdvertiserEmail, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Newspaper.AdvertiserEmail, "", new { @class = "text-danger" })
-        </div>
-    </div>*@
-@Html.HiddenFor(model => model.Newspaper.DateofPublication)
-@*<div class="form-group">
-        @Html.LabelFor(model => model.Newspaper.DateofPublication, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Newspaper.DateofPublication, new { htmlAttributes = new { @class = "form-control datetime" } })
-            @Html.ValidationMessageFor(model => model.Newspaper.DateofPublication, "", new { @class = "text-danger" })
+            @Html.EditorFor(model =>  model.AdvertiserAddress, new { htmlAttributes = new { style = "height:80px;", @class = "form-control" } })
+            @Html.ValidationMessageFor(model =>  model.AdvertiserAddress, "", new { @class = "text-danger" })
         </div>
     </div>*@
 
-@Html.HiddenFor(model => model.Newspaper.AllAdCategoryId)
+@Html.HiddenFor(model =>  model.AdvertiserMobile)
+@*<div class="form-group">
+        @Html.LabelFor(model =>  model.AdvertiserMobile, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model =>  model.AdvertiserMobile, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model =>  model.AdvertiserMobile, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+@Html.HiddenFor(model =>  model.AdvertiserEmail)
+@*<div class="form-group">
+        @Html.LabelFor(model =>  model.AdvertiserEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model =>  model.AdvertiserEmail, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model =>  model.AdvertiserEmail, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+@Html.HiddenFor(model =>  model.DateofPublication)
+@*<div class="form-group">
+        @Html.LabelFor(model =>  model.DateofPublication, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model =>  model.DateofPublication, new { htmlAttributes = new { @class = "form-control datetime" } })
+            @Html.ValidationMessageFor(model =>  model.DateofPublication, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+@Html.HiddenFor(model =>  model.AllAdCategoryId)
 @*<div class="form-group">
         @Html.LabelFor(m => m.AllAdCategoryId, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownListFor(m => model.Newspaper.AllAdCategoryId, model.Newspaper.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Newspaper.AllAdCategoryId, "", new { @class = "text-danger" })
+            @Html.DropDownListFor(m =>  model.AllAdCategoryId,  model.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model =>  model.AllAdCategoryId, "", new { @class = "text-danger" })
         </div>
     </div>*@

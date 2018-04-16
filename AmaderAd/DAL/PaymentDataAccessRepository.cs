@@ -100,7 +100,6 @@ namespace AmaderAd.DAL
 
             Db.PaymentTbls.InsertOnSubmit(new PaymentTbl
             {
-
                 AdLocation = entity.AdLocation,
                 Price = entity.Price,
                 AdvertiserName = entity.AdvertiserName,
