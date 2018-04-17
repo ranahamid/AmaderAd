@@ -45,6 +45,7 @@ namespace AmaderAd.DAL
         }
         
 
+
         public BannerMobile GetHomePageBanner()
         {
             var entity = Db.BannerTbls.FirstOrDefault(x => x.IsHomePageBanner == true);
