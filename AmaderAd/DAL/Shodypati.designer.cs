@@ -60,7 +60,7 @@ namespace AmaderAd.DAL
     #endregion
 		
 		public AmaderAdDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["AmaderAdConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
