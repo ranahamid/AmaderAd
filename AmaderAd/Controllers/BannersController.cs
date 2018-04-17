@@ -19,7 +19,6 @@ using AmaderAd.Helpers;
 using System.IO;
 using System.Web.Hosting;
 
-
 namespace AmaderAd.Controllers
 {
     [ExceptionHandler]
