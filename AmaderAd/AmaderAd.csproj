@@ -3007,6 +3007,7 @@
     <Content Include="Content\metronic\img\sidebar_toggler_icon_grey.png" />
     <Content Include="Content\metronic\img\sidebar_toggler_icon_light.png" />
     <Content Include="Content\metronic\img\sidebar_toggler_icon_light2.png" />
+    <Content Include="Content\metronic\Invoice\invoice.css" />
     <Content Include="Content\metronic\jquery-easypiechart\angular.easypiechart.js" />
     <Content Include="Content\metronic\jquery-easypiechart\angular.easypiechart.min.js" />
     <Content Include="Content\metronic\jquery-easypiechart\jquery.easypiechart.js" />
@@ -4151,6 +4152,7 @@
     <Content Include="Views\Payments\Delete.cshtml" />
     <Content Include="Views\Payments\Success.cshtml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Views\Payments\Invoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
