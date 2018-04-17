@@ -180,23 +180,26 @@ namespace AmaderAd.Controllers
             return Json("OK", JsonRequestBehavior.AllowGet);
         }
 
+        public async Task<Payment> GetPayment (int? id)
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (!responseMessage.IsSuccessStatusCode)
+                throw new Exception("Exception");
 
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+
+            var entity = JsonConvert.DeserializeObject<Payment>(responseData);
+            return entity;
+        }
 
         // GET: Products/Edit/5
         public async Task<ActionResult> Edit(int? id)
-        {
-            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-
-                var entity = JsonConvert.DeserializeObject<Payment>(responseData);
-                var entityOrderPayment = await GetPaymentMethods();
-                entity.AllAdCategory = GetAllAdCategory();
-                entity.PaymentMethods = entityOrderPayment;
-                return View(entity);
-            }
-            throw new Exception("Exception");
+        {            
+            var entity = await GetPayment(id);
+            var entityOrderPayment = await GetPaymentMethods();
+            entity.AllAdCategory = GetAllAdCategory();
+            entity.PaymentMethods = entityOrderPayment;
+            return View(entity);        
         }
 
         // POST: Products/Edit/5
