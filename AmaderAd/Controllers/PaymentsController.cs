@@ -56,13 +56,12 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Index(Newspaper entity)
         {
             entity.Id = Db.NewspaperTbls.Where(x => x.NewsGuidId == entity.NewsGuidId).Select(x => x.Id).FirstOrDefault();
-
             var entityOrderPayment = await GetPaymentMethods();
 
             Payment payment = new Payment();
             payment.PaymentMethods = entityOrderPayment;
             //payment.Newspaper = entity;
-            payment.Id = entity.Id;
+            payment.OrderId = entity.Id;
             payment.NewsGuidId = entity.NewsGuidId;
             payment.NewspaperName = entity.NewspaperName;
             payment.AdLocation = entity.AdLocation;
@@ -77,7 +76,7 @@ namespace AmaderAd.Controllers
             payment.TotalColumnInch = entity.TotalColumnInch;
             payment.TotalPrice = entity.TotalPrice;
             payment.Description = entity.Description;
-            payment.AllAdCategoryId = entity.AllAdCategoryId;
+            payment.AdCategoryId = entity.AdCategoryId;
             payment.MainImagePath = HttpUtility.UrlPathEncode(baseUrl + entity.MainImagePath);
             payment.RawDbImagePath = entity.MainImagePath;
             payment.CreatedOnUtc = entity.CreatedOnUtc;

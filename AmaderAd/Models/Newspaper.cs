@@ -72,10 +72,11 @@ namespace AmaderAd.Models
 
         [ScaffoldColumn(false)]
         [Display(Name = "Ad Category")]
-        public string AllAdCategoryId { get; set; }
+        public string AdCategoryId { get; set; }
+
 
         [Display(Name = "Ad Category")]
-        public string AllAdCategoryName { get; set; }
+        public string AdCategoryName { get; set; }
         //ittefaq
 
         public DateTime? CreatedOnUtc { get; set; }

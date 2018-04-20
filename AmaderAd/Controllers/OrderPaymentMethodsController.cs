@@ -52,6 +52,7 @@ namespace AmaderAd.Controllers
             return View(entity);
         }
 
+        [AllowAnonymous]
         public async Task<OrderPaymentMethod> GetDetails(int? id)
         {
             var responseMessage = await client.GetAsync(url + "/" + id);
@@ -68,9 +69,11 @@ namespace AmaderAd.Controllers
             return View(entity);
         }
 
+        [AllowAnonymous]
+        [HttpPost]
         public async Task<ActionResult> FillPaymentsInstructions(string id)
         {
-            int.TryParse(id, out var parsedResult);           
+            int.TryParse(id, out var parsedResult);
             var entity = await GetDetails(parsedResult);
             return PartialView("_PaymentMethodsInstructions", entity);
         }

@@ -1175,7 +1175,7 @@ namespace AmaderAd.DAL
 		
 		private System.Nullable<int> _TotalPrice;
 		
-		private string _AllAdCategoryId;
+		private string _AdCategoryId;
 		
 		private string _Description;
 		
@@ -1219,8 +1219,8 @@ namespace AmaderAd.DAL
     partial void OnTotalColumnInchChanged();
     partial void OnTotalPriceChanging(System.Nullable<int> value);
     partial void OnTotalPriceChanged();
-    partial void OnAllAdCategoryIdChanging(string value);
-    partial void OnAllAdCategoryIdChanged();
+    partial void OnAdCategoryIdChanging(string value);
+    partial void OnAdCategoryIdChanged();
     partial void OnDescriptionChanging(string value);
     partial void OnDescriptionChanged();
     partial void OnMainImagePathChanging(string value);
@@ -1518,22 +1518,22 @@ namespace AmaderAd.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AllAdCategoryId", DbType="NVarChar(20)")]
-		public string AllAdCategoryId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdCategoryId", DbType="NVarChar(20)")]
+		public string AdCategoryId
 		{
 			get
 			{
-				return this._AllAdCategoryId;
+				return this._AdCategoryId;
 			}
 			set
 			{
-				if ((this._AllAdCategoryId != value))
+				if ((this._AdCategoryId != value))
 				{
-					this.OnAllAdCategoryIdChanging(value);
+					this.OnAdCategoryIdChanging(value);
 					this.SendPropertyChanging();
-					this._AllAdCategoryId = value;
-					this.SendPropertyChanged("AllAdCategoryId");
-					this.OnAllAdCategoryIdChanged();
+					this._AdCategoryId = value;
+					this.SendPropertyChanged("AdCategoryId");
+					this.OnAdCategoryIdChanged();
 				}
 			}
 		}
@@ -1961,7 +1961,7 @@ namespace AmaderAd.DAL
 		
 		private System.Nullable<int> _TotalPrice;
 		
-		private string _AllAdCategoryName;
+		private string _AdCategoryId;
 		
 		private string _Description;
 		
@@ -2015,8 +2015,8 @@ namespace AmaderAd.DAL
     partial void OnTotalColumnInchChanged();
     partial void OnTotalPriceChanging(System.Nullable<int> value);
     partial void OnTotalPriceChanged();
-    partial void OnAllAdCategoryNameChanging(string value);
-    partial void OnAllAdCategoryNameChanged();
+    partial void OnAdCategoryIdChanging(string value);
+    partial void OnAdCategoryIdChanged();
     partial void OnDescriptionChanging(string value);
     partial void OnDescriptionChanged();
     partial void OnMainImagePathChanging(string value);
@@ -2324,22 +2324,22 @@ namespace AmaderAd.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AllAdCategoryName", DbType="NVarChar(255)")]
-		public string AllAdCategoryName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdCategoryId", DbType="NVarChar(255)")]
+		public string AdCategoryId
 		{
 			get
 			{
-				return this._AllAdCategoryName;
+				return this._AdCategoryId;
 			}
 			set
 			{
-				if ((this._AllAdCategoryName != value))
+				if ((this._AdCategoryId != value))
 				{
-					this.OnAllAdCategoryNameChanging(value);
+					this.OnAdCategoryIdChanging(value);
 					this.SendPropertyChanging();
-					this._AllAdCategoryName = value;
-					this.SendPropertyChanged("AllAdCategoryName");
-					this.OnAllAdCategoryNameChanged();
+					this._AdCategoryId = value;
+					this.SendPropertyChanged("AdCategoryId");
+					this.OnAdCategoryIdChanged();
 				}
 			}
 		}

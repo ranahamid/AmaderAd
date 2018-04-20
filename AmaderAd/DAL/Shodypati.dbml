@@ -71,7 +71,7 @@
       <Column Name="Inch" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TotalColumnInch" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TotalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AllAdCategoryId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AdCategoryId" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
       <Column Name="MainImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="CreatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
@@ -111,7 +111,7 @@
       <Column Name="Inch" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TotalColumnInch" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TotalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AllAdCategoryName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdCategoryId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
       <Column Name="MainImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="CreatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />

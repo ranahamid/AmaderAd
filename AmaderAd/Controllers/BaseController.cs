@@ -113,6 +113,21 @@ namespace AmaderAd.Controllers
 
         #region ittefaq
 
+        public string GetAdCategory(string id)
+        {
+            var result = string.Empty;
+
+            var list = GetAllAdCategory();
+            foreach (var item in list)
+            {
+                if (item.Value == id)
+                {
+                    return item.Text;
+                }
+            }
+            return result;
+        }
+
         public List<SelectListItem> GetAllAdCategory()
         {
             List<SelectListItem> ads = new List<SelectListItem>

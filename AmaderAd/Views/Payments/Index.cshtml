@@ -50,7 +50,7 @@
 
     @Html.HiddenFor(model => model.PaymentChannel)
     
-    <div class="form-group" id="PaymentInstructionsDiv">
+    <div class="form-group" id="PaymentInstructions"  style="margin-left: 10px;">
      
     </div>
     
@@ -92,13 +92,13 @@
 
 <script>
     $(".paymentTypes").change(function () {
+  
         var paymentChannel = this.value;
 
         $("#PaymentInstructionsDiv").empty();
-        $("#PaymentInstructionsDiv").load('/OrderPaymentMethods/FillPaymentsInstructions', { id: paymentChannel }, function (responseTxt, statusTxt, xhr) {
-
-        });
-
+       
+        $("#PaymentInstructions").load("/OrderPaymentMethods/FillPaymentsInstructions", 
+            { id: paymentChannel });
 
 
         $("#PaymentChannel").val(paymentChannel);

@@ -62,7 +62,7 @@ namespace AmaderAd.Controllers
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
 
             var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-            entity.AllAdCategoryName = GetAdCategoryName(entity.AllAdCategoryId);
+            entity.AdCategoryName = GetAdCategoryName(entity.AdCategoryId);
             return View(entity);
         }
 
@@ -182,7 +182,7 @@ namespace AmaderAd.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-                entity.AllAdCategoryName = GetAdCategoryName(entity.AllAdCategoryId);
+                entity.AdCategoryName = GetAdCategoryName(entity.AdCategoryId);
 
                 if (entity != null)
                 {                    

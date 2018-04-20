@@ -22,6 +22,7 @@ namespace AmaderAd.DAL
             var entities = Db.PaymentTbls.Select(x => new Payment()
             {
                 Id = x.Id,
+                NewspaperName = x.NewspaperName,
                 AdLocation = x.AdLocation,
                 Price = x.Price,
                 AdvertiserName = x.AdvertiserName,
@@ -41,7 +42,7 @@ namespace AmaderAd.DAL
                 UpdatedOnUtc = x.UpdatedOnUtc,
                 Active = x.Active,
 
-                AllAdCategoryName   = x.AllAdCategoryName,
+                AdCategoryId        = x.AdCategoryId,
                 PaymentGuidId       = x.PaymentGuidId,
                 OrderId             = x.OrderId,
                 PaymentChannel      = x.PaymentChannel,
@@ -58,6 +59,7 @@ namespace AmaderAd.DAL
             var entity = Db.PaymentTbls.Where(x => x.Id == id).Select(x => new Payment()
             {
                 Id = x.Id,
+                NewspaperName = x.NewspaperName,
                 AdLocation = x.AdLocation,
                 Price = x.Price,
                 AdvertiserName = x.AdvertiserName,
@@ -77,17 +79,32 @@ namespace AmaderAd.DAL
                 UpdatedOnUtc = x.UpdatedOnUtc,
                 Active = x.Active,
 
-                AllAdCategoryName   = x.AllAdCategoryName,
+                AdCategoryId        = x.AdCategoryId,
                 PaymentGuidId       = x.PaymentGuidId,
                 OrderId             = x.OrderId,
                 PaymentChannel      = x.PaymentChannel,
-                PaymentMobile       = x.PaymentMobile,
+
+                PaymentChannelName = Db.OrderPaymentMethodTbls.Where(y => y.Id == id).Select(y => y.Name).FirstOrDefault(),
+
+                PaymentMobile = x.PaymentMobile,
                 PaymentTrxId        = x.PaymentTrxId,
                 PaymentAmount       = x.PaymentAmount
 
             }).SingleOrDefault();
 
+            if (entity != null)
+            {
+                entity.AdCategoryName = GetAdCategory(id.ToString());                
+            }
             return entity;
+        }
+
+
+
+        public string GetPaymentName(int id)
+        {
+            var paymentName = Db.OrderPaymentMethodTbls.Where(x => x.Id == id).Select(x => x.Name).FirstOrDefault();
+            return paymentName;
         }
 
         public void Post(Payment entity)
@@ -100,6 +117,7 @@ namespace AmaderAd.DAL
 
             Db.PaymentTbls.InsertOnSubmit(new PaymentTbl
             {
+                NewspaperName = entity.NewspaperName,
                 AdLocation = entity.AdLocation,
                 Price = entity.Price,
                 AdvertiserName = entity.AdvertiserName,
@@ -118,7 +136,8 @@ namespace AmaderAd.DAL
                 UpdatedOnUtc = DateTime.Now,
                 Active = entity.Active,
 
-                AllAdCategoryName   = entity.AllAdCategoryName,
+                AdCategoryId        = entity.AdCategoryId,
+
                 PaymentGuidId       = entity.PaymentGuidId,
                 OrderId             = entity.OrderId,
                 PaymentChannel      = entity.PaymentChannel,
@@ -150,7 +169,7 @@ namespace AmaderAd.DAL
 
             var entitySingle = isEntity.Single();
 
-   
+            entitySingle.NewspaperName = entity.NewspaperName;
             entitySingle.AdLocation = entity.AdLocation;
             entitySingle.Price = entity.Price;
             entitySingle.AdvertiserName = entity.AdvertiserName;
@@ -169,7 +188,7 @@ namespace AmaderAd.DAL
             entitySingle.Active = entity.Active;
 
 
-            entitySingle.AllAdCategoryName   = entity.AllAdCategoryName;
+            entitySingle.AdCategoryId        = entity.AdCategoryId;
             entitySingle.PaymentGuidId       = entity.PaymentGuidId;
             entitySingle.OrderId             = entity.OrderId;
             entitySingle.PaymentChannel      = entity.PaymentChannel;

@@ -26,6 +26,9 @@ namespace AmaderAd.Models
 
         public string PaymentChannel { get; set; }
 
+        public string PaymentChannelName { get; set; }
+
+        
         [Display(Name = "Transaction Mobile")]
         public string PaymentMobile { get; set; }
 

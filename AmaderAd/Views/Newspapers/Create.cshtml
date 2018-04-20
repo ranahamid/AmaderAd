@@ -108,10 +108,10 @@
 
       
         <div class="form-group">
-            @Html.LabelFor(m => m.AllAdCategoryId, new { @class = "col-md-2 control-label" })
+            @Html.LabelFor(m => m.AdCategoryId, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.DropDownListFor(m => Model.AllAdCategoryId, Model.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.AllAdCategoryId, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(m => Model.AdCategoryId, Model.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AdCategoryId, "", new { @class = "text-danger" })
             </div>
         </div>
     
