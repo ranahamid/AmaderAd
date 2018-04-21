@@ -22,27 +22,27 @@ namespace AmaderAd.DAL
             var entities = Db.PaymentTbls.Select(x => new Payment()
             {
                 Id = x.Id,
-                NewspaperName = x.NewspaperName,
-                AdLocation = x.AdLocation,
-                Price = x.Price,
-                AdvertiserName = x.AdvertiserName,
-                AdvertiserAddress = x.AdvertiserAddress,
-                AdvertiserMobile = x.AdvertiserMobile,
-                AdvertiserEmail = x.AdvertiserEmail,
-                DateofPublication = x.DateofPublication,
-                ColumnSize = x.ColumnSize,
-                Inch = x.Inch,
-                TotalColumnInch = x.TotalColumnInch,
-                TotalPrice = x.TotalPrice,
-                Description = x.Description,
+                //NewspaperName = x.NewspaperName,
+                //AdLocation = x.AdLocation,
+                //Price = x.Price,
+                //AdvertiserName = x.AdvertiserName,
+                //AdvertiserAddress = x.AdvertiserAddress,
+                //AdvertiserMobile = x.AdvertiserMobile,
+                //AdvertiserEmail = x.AdvertiserEmail,
+                //DateofPublication = x.DateofPublication,
+                //ColumnSize = x.ColumnSize,
+                //Inch = x.Inch,
+                //TotalColumnInch = x.TotalColumnInch,
+                //TotalPrice = x.TotalPrice,
+                //Description = x.Description,
                 
-                MainImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
-                RawDbImagePath = x.MainImagePath,
+                //MainImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
+                //RawDbImagePath = x.MainImagePath,
                 CreatedOnUtc = x.CreatedOnUtc,
                 UpdatedOnUtc = x.UpdatedOnUtc,
                 Active = x.Active,
 
-                AdCategoryId        = x.AdCategoryId,
+                //AdCategoryId        = x.AdCategoryId,
                 PaymentGuidId       = x.PaymentGuidId,
                 OrderId             = x.OrderId,
                 PaymentChannel      = x.PaymentChannel,
@@ -59,27 +59,27 @@ namespace AmaderAd.DAL
             var entity = Db.PaymentTbls.Where(x => x.Id == id).Select(x => new Payment()
             {
                 Id = x.Id,
-                NewspaperName = x.NewspaperName,
-                AdLocation = x.AdLocation,
-                Price = x.Price,
-                AdvertiserName = x.AdvertiserName,
-                AdvertiserAddress = x.AdvertiserAddress,
-                AdvertiserMobile = x.AdvertiserMobile,
-                AdvertiserEmail = x.AdvertiserEmail,
-                DateofPublication = x.DateofPublication,
-                ColumnSize = x.ColumnSize,
-                Inch = x.Inch,
-                TotalColumnInch = x.TotalColumnInch,
-                TotalPrice = x.TotalPrice,
-                Description = x.Description,
+                //NewspaperName = x.NewspaperName,
+                //AdLocation = x.AdLocation,
+                //Price = x.Price,
+                //AdvertiserName = x.AdvertiserName,
+                //AdvertiserAddress = x.AdvertiserAddress,
+                //AdvertiserMobile = x.AdvertiserMobile,
+                //AdvertiserEmail = x.AdvertiserEmail,
+                //DateofPublication = x.DateofPublication,
+                //ColumnSize = x.ColumnSize,
+                //Inch = x.Inch,
+                //TotalColumnInch = x.TotalColumnInch,
+                //TotalPrice = x.TotalPrice,
+                //Description = x.Description,
 
-                MainImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
-                RawDbImagePath = x.MainImagePath,
+                //MainImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
+                //RawDbImagePath = x.MainImagePath,
                 CreatedOnUtc = x.CreatedOnUtc,
                 UpdatedOnUtc = x.UpdatedOnUtc,
                 Active = x.Active,
 
-                AdCategoryId        = x.AdCategoryId,
+                //AdCategoryId        = x.AdCategoryId,
                 PaymentGuidId       = x.PaymentGuidId,
                 OrderId             = x.OrderId,
                 PaymentChannel      = x.PaymentChannel,
@@ -92,10 +92,10 @@ namespace AmaderAd.DAL
 
             }).SingleOrDefault();
 
-            if (entity != null)
-            {
-                entity.AdCategoryName = GetAdCategory(id.ToString());                
-            }
+            //if (entity != null)
+            //{
+            //    entity.AdCategoryName = GetAdCategory(id.ToString());                
+            //}
             return entity;
         }
 
@@ -109,34 +109,35 @@ namespace AmaderAd.DAL
 
         public void Post(Payment entity)
         {
-            var imgAddress = string.Empty;
-            if (entity.MainImagePath != null)
-            {
-                imgAddress = entity.MainImagePath.TrimStart('/');
-            }
+            //var imgAddress = string.Empty;
+            //if (entity.MainImagePath != null)
+            //{
+            //    imgAddress = entity.MainImagePath.TrimStart('/');
+            //}
 
             Db.PaymentTbls.InsertOnSubmit(new PaymentTbl
             {
-                NewspaperName = entity.NewspaperName,
-                AdLocation = entity.AdLocation,
-                Price = entity.Price,
-                AdvertiserName = entity.AdvertiserName,
-                AdvertiserAddress = entity.AdvertiserAddress,
-                AdvertiserMobile = entity.AdvertiserMobile,
-                AdvertiserEmail = entity.AdvertiserEmail,
-                DateofPublication = entity.DateofPublication,
-                ColumnSize = entity.ColumnSize,
-                Inch = entity.Inch,
-                TotalColumnInch = entity.TotalColumnInch,
-                TotalPrice = entity.TotalPrice,
-                Description = entity.Description,
-   
-                MainImagePath = imgAddress,
+                //NewspaperName = entity.NewspaperName,
+                //AdLocation = entity.AdLocation,
+                //Price = entity.Price,
+                //AdvertiserName = entity.AdvertiserName,
+                //AdvertiserAddress = entity.AdvertiserAddress,
+                //AdvertiserMobile = entity.AdvertiserMobile,
+                //AdvertiserEmail = entity.AdvertiserEmail,
+                //DateofPublication = entity.DateofPublication,
+                //ColumnSize = entity.ColumnSize,
+                //Inch = entity.Inch,
+                //TotalColumnInch = entity.TotalColumnInch,
+                //TotalPrice = entity.TotalPrice,
+                //Description = entity.Description,
+
+                //MainImagePath = imgAddress,
+          
                 CreatedOnUtc = DateTime.Now,
                 UpdatedOnUtc = DateTime.Now,
                 Active = entity.Active,
 
-                AdCategoryId        = entity.AdCategoryId,
+                //AdCategoryId        = entity.AdCategoryId,
 
                 PaymentGuidId       = entity.PaymentGuidId,
                 OrderId             = entity.OrderId,
@@ -161,34 +162,34 @@ namespace AmaderAd.DAL
             var isEntity = from x in Db.PaymentTbls
                            where x.Id == entity.Id
                            select x;
-            var imgAddress = string.Empty;
-            if (entity.RawDbImagePath != null)
-            {
-                imgAddress = entity.RawDbImagePath.TrimStart('/');
-            }
+            //var imgAddress = string.Empty;
+            //if (entity.RawDbImagePath != null)
+            //{
+            //    imgAddress = entity.RawDbImagePath.TrimStart('/');
+            //}
 
             var entitySingle = isEntity.Single();
 
-            entitySingle.NewspaperName = entity.NewspaperName;
-            entitySingle.AdLocation = entity.AdLocation;
-            entitySingle.Price = entity.Price;
-            entitySingle.AdvertiserName = entity.AdvertiserName;
-            entitySingle.AdvertiserAddress = entity.AdvertiserAddress;
-            entitySingle.AdvertiserMobile = entity.AdvertiserMobile;
-            entitySingle.AdvertiserEmail = entity.AdvertiserEmail;
-            entitySingle.DateofPublication = entity.DateofPublication;
-            entitySingle.ColumnSize = entity.ColumnSize;
-            entitySingle.Inch = entity.Inch;
-            entitySingle.TotalColumnInch = entity.TotalColumnInch;
-            entitySingle.TotalPrice = entity.TotalPrice;
-            entitySingle.Description = entity.Description;
+            //entitySingle.NewspaperName = entity.NewspaperName;
+            //entitySingle.AdLocation = entity.AdLocation;
+            //entitySingle.Price = entity.Price;
+            //entitySingle.AdvertiserName = entity.AdvertiserName;
+            //entitySingle.AdvertiserAddress = entity.AdvertiserAddress;
+            //entitySingle.AdvertiserMobile = entity.AdvertiserMobile;
+            //entitySingle.AdvertiserEmail = entity.AdvertiserEmail;
+            //entitySingle.DateofPublication = entity.DateofPublication;
+            //entitySingle.ColumnSize = entity.ColumnSize;
+            //entitySingle.Inch = entity.Inch;
+            //entitySingle.TotalColumnInch = entity.TotalColumnInch;
+            //entitySingle.TotalPrice = entity.TotalPrice;
+            //entitySingle.Description = entity.Description;
            
-            entitySingle.MainImagePath = imgAddress;
+            //entitySingle.MainImagePath = imgAddress;
             entitySingle.UpdatedOnUtc = DateTime.Now; ;
             entitySingle.Active = entity.Active;
 
 
-            entitySingle.AdCategoryId        = entity.AdCategoryId;
+            //entitySingle.AdCategoryId        = entity.AdCategoryId;
             entitySingle.PaymentGuidId       = entity.PaymentGuidId;
             entitySingle.OrderId             = entity.OrderId;
             entitySingle.PaymentChannel      = entity.PaymentChannel;

@@ -58,33 +58,30 @@ namespace AmaderAd.Controllers
             entity.Id = Db.NewspaperTbls.Where(x => x.NewsGuidId == entity.NewsGuidId).Select(x => x.Id).FirstOrDefault();
             var entityOrderPayment = await GetPaymentMethods();
 
-            Payment payment = new Payment();
-            payment.PaymentMethods = entityOrderPayment;
-            //payment.Newspaper = entity;
-            payment.OrderId = entity.Id;
-            payment.NewsGuidId = entity.NewsGuidId;
-            payment.NewspaperName = entity.NewspaperName;
-            payment.AdLocation = entity.AdLocation;
-            payment.Price = entity.Price;
-            payment.AdvertiserName = entity.AdvertiserName;
-            payment.AdvertiserAddress = entity.AdvertiserAddress;
-            payment.AdvertiserMobile = entity.AdvertiserMobile;
-            payment.AdvertiserEmail = entity.AdvertiserEmail;
-            payment.DateofPublication = entity.DateofPublication;
-            payment.ColumnSize = entity.ColumnSize;
-            payment.Inch = entity.Inch;
-            payment.TotalColumnInch = entity.TotalColumnInch;
-            payment.TotalPrice = entity.TotalPrice;
-            payment.Description = entity.Description;
-            payment.AdCategoryId = entity.AdCategoryId;
-            payment.MainImagePath = HttpUtility.UrlPathEncode(baseUrl + entity.MainImagePath);
-            payment.RawDbImagePath = entity.MainImagePath;
-            payment.CreatedOnUtc = entity.CreatedOnUtc;
-            payment.UpdatedOnUtc = entity.UpdatedOnUtc;
-            payment.Active = entity.Active;
-
-            //end of payment.Newspaper = entity;
-
+            Payment payment = new Payment
+            {
+                PaymentMethods = entityOrderPayment,
+                OrderId = entity.Id,
+                NewsGuidId = entity.NewsGuidId,
+                NewspaperName = entity.NewspaperName,
+                AdLocation = entity.AdLocation,
+                Price = entity.Price,
+                AdvertiserName = entity.AdvertiserName,
+                AdvertiserAddress = entity.AdvertiserAddress,
+                AdvertiserMobile = entity.AdvertiserMobile,
+                AdvertiserEmail = entity.AdvertiserEmail,
+                DateofPublication = entity.DateofPublication,
+                ColumnSize = entity.ColumnSize,
+                Inch = entity.Inch,
+                TotalColumnInch = entity.TotalColumnInch,
+                TotalPrice = entity.TotalPrice,
+                Description = entity.Description,
+                AdCategoryId = entity.AdCategoryId,
+                MainImagePath = entity.MainImagePath,
+                CreatedOnUtc = entity.CreatedOnUtc,
+                UpdatedOnUtc = entity.UpdatedOnUtc,
+                Active = entity.Active
+            };
             return View(payment);
         }
 
@@ -200,7 +197,7 @@ namespace AmaderAd.Controllers
         {
             var entity = await GetPayment(id);
             var entityOrderPayment = await GetPaymentMethods();
-            entity.AllAdCategory = GetAllAdCategory();
+            //entity.AllAdCategory = GetAllAdCategory();
             entity.PaymentMethods = entityOrderPayment;
             return View(entity);
         }

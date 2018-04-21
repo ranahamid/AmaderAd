@@ -74,7 +74,10 @@ namespace AmaderAd.DAL
                 Active                  = x.Active                   ,
 
             }).SingleOrDefault();
-
+            if (entity != null)
+            {
+                entity.AdCategoryName = GetAdCategory(entity.AdCategoryId);
+            }
             return entity;
         }
 
@@ -103,12 +106,11 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = entity.TotalColumnInch          ,
                 TotalPrice              = entity.TotalPrice               ,
                 Description             = entity.Description              ,
-                AdCategoryId         = entity.AdCategoryId          ,
+                AdCategoryId            = entity.AdCategoryId             ,
                 MainImagePath           = imgAddress                      ,
                 CreatedOnUtc            = DateTime.Now                    ,
                 UpdatedOnUtc            = DateTime.Now                    ,
-                Active                  = entity.Active                   ,
-           
+                Active                  = entity.Active                   ,           
             });
             try
             {

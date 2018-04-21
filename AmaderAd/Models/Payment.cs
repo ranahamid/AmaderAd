@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AmaderAd.Models
 {
-    public class Payment:Newspaper
+    public class Payment : Newspaper
     {
         public new int Id { get; set; }
 
@@ -37,6 +37,14 @@ namespace AmaderAd.Models
 
         [Display(Name = "Transaction Amount")]
         public int? PaymentAmount { get; set; }
+
+
+
+        public DateTime? CreatedOnUtc { get; set; }
+
+        public DateTime? UpdatedOnUtc { get; set; }
+
+        public bool? Active { get; set; }
 
     }
 

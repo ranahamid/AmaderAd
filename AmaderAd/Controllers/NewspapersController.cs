@@ -61,8 +61,7 @@ namespace AmaderAd.Controllers
                 throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
 
-            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-            entity.AdCategoryName = GetAdCategoryName(entity.AdCategoryId);
+            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);          
             return View(entity);
         }
 
@@ -106,8 +105,6 @@ namespace AmaderAd.Controllers
                 var responseMessage = await client.PostAsJsonAsync(url, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                  
-                 
                     return RedirectToAction("Index", "Payments", entity);
                 }
             }
@@ -182,19 +179,12 @@ namespace AmaderAd.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-                entity.AdCategoryName = GetAdCategoryName(entity.AdCategoryId);
-
                 if (entity != null)
                 {                    
                     return View(entity);
                 }
             }
             throw new Exception("Exception");
-        }
-
-        public string GetAdCategoryName(string categoryId)
-        {
-            return "";
         }
 
         // POST: Products/Delete/5
