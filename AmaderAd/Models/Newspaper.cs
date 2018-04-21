@@ -56,6 +56,7 @@ namespace AmaderAd.Models
         [Display(Name = "Total Price")]
         public int? TotalPrice { get; set; }
 
+        [Display(Name = "")]
         public string Description { get; set; }
 
         [Display(Name = "Choose File")]
