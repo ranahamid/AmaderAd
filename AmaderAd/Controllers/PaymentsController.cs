@@ -43,16 +43,31 @@ namespace AmaderAd.Controllers
         // GET: Payments
 
 
-        public async Task<List<OrderPaymentMethod>> GetPaymentMethods()
+        public async Task<List<System.Web.Mvc.SelectListItem>> GetPaymentMethods()
         {
-            url = baseUrl + "api/OrderPaymentMethodApi";
+            url = baseUrl + "api/OrderPaymentMethodApi/GetAllOrderPaymentMethodSelectList/";
             var responseMessage = await client.GetAsync(url);
             if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-            var entityOrderPayment = JsonConvert.DeserializeObject<List<OrderPaymentMethod>>(responseData);
+            var entityOrderPayment = JsonConvert.DeserializeObject<List<System.Web.Mvc.SelectListItem>>(responseData);
             return entityOrderPayment;
         }
-
+        public async Task<List<System.Web.Mvc.SelectListItem>> GetPaymentMethodsByMethodId(string paymentChannel)
+        {
+            var list= await GetPaymentMethods();
+            List<System.Web.Mvc.SelectListItem> entities = new List<System.Web.Mvc.SelectListItem>();
+            foreach (var item in list)
+            {
+                entities.Add(new SelectListItem()
+                {
+                    Value = item.Value,
+                    Text = item.Text,
+                    Selected = (item.Value == paymentChannel) ? true : false
+                });
+            }
+            return entities;
+        }
+        
         public async Task<ActionResult> Index(Newspaper entity)
         {
             entity.Id = Db.NewspaperTbls.Where(x => x.NewsGuidId == entity.NewsGuidId).Select(x => x.Id).FirstOrDefault();
@@ -62,26 +77,32 @@ namespace AmaderAd.Controllers
             {
                 PaymentMethods = entityOrderPayment,
                 OrderId = entity.Id,
-                NewsGuidId = entity.NewsGuidId,
-                NewspaperName = entity.NewspaperName,
-                AdLocation = entity.AdLocation,
-                Price = entity.Price,
-                AdvertiserName = entity.AdvertiserName,
-                AdvertiserAddress = entity.AdvertiserAddress,
-                AdvertiserMobile = entity.AdvertiserMobile,
-                AdvertiserEmail = entity.AdvertiserEmail,
-                DateofPublication = entity.DateofPublication,
-                ColumnSize = entity.ColumnSize,
-                Inch = entity.Inch,
-                TotalColumnInch = entity.TotalColumnInch,
-                TotalPrice = entity.TotalPrice,
-                Description = entity.Description,
-                AdCategoryId = entity.AdCategoryId,
-                MainImagePath = entity.MainImagePath,
+
                 CreatedOnUtc = entity.CreatedOnUtc,
                 UpdatedOnUtc = entity.UpdatedOnUtc,
-                Active = entity.Active
+                Active = entity.Active,
+                NewspaperCls =
+                {
+                    NewsGuidId = entity.NewsGuidId,
+                    NewspaperName = entity.NewspaperName,
+                    AdLocation = entity.AdLocation,
+                    Price = entity.Price,
+                    AdvertiserName = entity.AdvertiserName,
+                    AdvertiserAddress = entity.AdvertiserAddress,
+                    AdvertiserMobile = entity.AdvertiserMobile,
+                    AdvertiserEmail = entity.AdvertiserEmail,
+                    DateofPublication = entity.DateofPublication,
+                    ColumnSize = entity.ColumnSize,
+                    Inch = entity.Inch,
+                    TotalColumnInch = entity.TotalColumnInch,
+                    TotalPrice = entity.TotalPrice,
+                    Description = entity.Description,
+                    AdCategoryId = entity.AdCategoryId,
+                    MainImagePath = entity.MainImagePath
+                }
             };
+
+
             return View(payment);
         }
 
@@ -141,19 +162,21 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Details(int? id)
         {
             var entity = await GetPayment(id);
+            entity.NewspaperCls =await GetNewsPaperData(entity.OrderId);
+         
             return View(entity);
         }
 
+     
         // GET: Products/Details/5
         public async Task<ActionResult> Invoice(int? id)
         {
             var entity = await GetPayment(id);
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
             return View(entity);
         }
 
-
-
-
+        
         [HttpPost]
         public JsonResult Upload()
         {
@@ -182,6 +205,7 @@ namespace AmaderAd.Controllers
 
         public async Task<Payment> GetPayment(int? id)
         {
+            url = baseUrl + "api/PaymentApi";
             HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
             if (!responseMessage.IsSuccessStatusCode)
                 throw new Exception("Exception");
@@ -196,9 +220,12 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Edit(int? id)
         {
             var entity = await GetPayment(id);
-            var entityOrderPayment = await GetPaymentMethods();
-            //entity.AllAdCategory = GetAllAdCategory();
-            entity.PaymentMethods = entityOrderPayment;
+                      
+            entity.PaymentMethods = await GetPaymentMethodsByMethodId(entity.PaymentChannel);
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
+            
+            entity.NewspaperCls.AllAdCategory = GetAllAdCategoryBySelect(entity.NewspaperCls.AdCategoryId);
+   
             return View(entity);
         }
 
@@ -216,7 +243,12 @@ namespace AmaderAd.Controllers
                     return RedirectToAction("Index");
                 }
             }
-
+        
+            var entityOrderPayment = await GetPaymentMethods();
+            entity.PaymentMethods = entityOrderPayment;
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
+            entity.NewspaperCls.AllAdCategory = GetAllAdCategory();
+           
             return View(entity);
         }
 
@@ -224,6 +256,7 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Delete(int? id)
         {
             var entity = await GetPayment(id);
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
             return View(entity);
         }
 

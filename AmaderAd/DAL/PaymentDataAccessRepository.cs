@@ -162,29 +162,10 @@ namespace AmaderAd.DAL
             var isEntity = from x in Db.PaymentTbls
                            where x.Id == entity.Id
                            select x;
-            //var imgAddress = string.Empty;
-            //if (entity.RawDbImagePath != null)
-            //{
-            //    imgAddress = entity.RawDbImagePath.TrimStart('/');
-            //}
-
+        
             var entitySingle = isEntity.Single();
 
-            //entitySingle.NewspaperName = entity.NewspaperName;
-            //entitySingle.AdLocation = entity.AdLocation;
-            //entitySingle.Price = entity.Price;
-            //entitySingle.AdvertiserName = entity.AdvertiserName;
-            //entitySingle.AdvertiserAddress = entity.AdvertiserAddress;
-            //entitySingle.AdvertiserMobile = entity.AdvertiserMobile;
-            //entitySingle.AdvertiserEmail = entity.AdvertiserEmail;
-            //entitySingle.DateofPublication = entity.DateofPublication;
-            //entitySingle.ColumnSize = entity.ColumnSize;
-            //entitySingle.Inch = entity.Inch;
-            //entitySingle.TotalColumnInch = entity.TotalColumnInch;
-            //entitySingle.TotalPrice = entity.TotalPrice;
-            //entitySingle.Description = entity.Description;
            
-            //entitySingle.MainImagePath = imgAddress;
             entitySingle.UpdatedOnUtc = DateTime.Now; ;
             entitySingle.Active = entity.Active;
 
@@ -196,6 +177,40 @@ namespace AmaderAd.DAL
             entitySingle.PaymentMobile       = entity.PaymentMobile;
             entitySingle.PaymentTrxId        = entity.PaymentTrxId;
             entitySingle.PaymentAmount       = entity.PaymentAmount;
+
+            //newspapere table
+            var isEntity2 = from x in Db.NewspaperTbls
+                           where x.Id == entity.OrderId
+                           select x;
+            var imgAddress = string.Empty;
+            if (entity.RawDbImagePath != null)
+            {
+                imgAddress = entity.RawDbImagePath.TrimStart('/');
+            }
+            else if (entity.MainImagePath != null)
+            {                
+                    imgAddress = entity.MainImagePath.TrimStart('/');                
+            }
+
+            var entitySingle2 = isEntity2.Single();
+
+            entitySingle2.NewspaperName           = entity.NewspaperName          ;
+            entitySingle2.AdLocation              = entity.AdLocation             ;
+            entitySingle2.Price                   = entity.Price                  ;
+            entitySingle2.AdvertiserName          = entity.AdvertiserName         ;
+            entitySingle2.AdvertiserAddress       = entity.AdvertiserAddress      ;
+            entitySingle2.AdvertiserMobile        = entity.AdvertiserMobile       ;
+            entitySingle2.AdvertiserEmail         = entity.AdvertiserEmail        ;
+            entitySingle2.DateofPublication       = entity.DateofPublication      ;
+            entitySingle2.ColumnSize              = entity.ColumnSize             ;
+            entitySingle2.Inch                    = entity.Inch                   ;
+            entitySingle2.TotalColumnInch         = entity.TotalColumnInch        ;
+            entitySingle2.TotalPrice              = entity.TotalPrice             ;
+            entitySingle2.Description             = entity.Description            ;
+            entitySingle2.AdCategoryId            = entity.AdCategoryId        ;
+            entitySingle2.MainImagePath           = imgAddress                    ;
+            entitySingle2.UpdatedOnUtc            = DateTime.Now;                 ;
+            entitySingle2.Active                  = entity.Active                 ;
 
             try
             {

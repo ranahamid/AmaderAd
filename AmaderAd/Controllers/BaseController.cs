@@ -55,7 +55,24 @@ namespace AmaderAd.Controllers
 
         //AmaderAd
 
-        
+        #region  newspaper
+
+
+        public async Task<Newspaper> GetNewsPaperData(int? id)
+        {
+            url = baseUrl + "api/NewspaperApi";
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (!responseMessage.IsSuccessStatusCode)
+                throw new Exception("Exception");
+
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+
+            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
+            return entity;
+        }
+
+        #endregion
+
 
         #region  user
 
@@ -127,6 +144,24 @@ namespace AmaderAd.Controllers
             }
             return result;
         }
+
+        public List<SelectListItem> GetAllAdCategoryBySelect(string adCategoryId)
+        {
+            List<SelectListItem> entity = GetAllAdCategory();
+            List<SelectListItem> entities = new List<SelectListItem>();
+            foreach (var item in entity)
+            {
+                entities.Add(new SelectListItem()
+                {
+                    Value = item.Value,
+                    Text = item.Text,
+                    Selected = (item.Value == adCategoryId) ? true : false
+                });
+            }
+
+            return entities;
+        }
+        
 
         public List<SelectListItem> GetAllAdCategory()
         {

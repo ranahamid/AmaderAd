@@ -11,76 +11,8 @@
 <div>
     <h4>Newspaper</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OrderId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OrderId)
-        </dd>
-        
-        
-        <dt>
-            @Html.DisplayNameFor(model => model.PaymentChannel)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PaymentChannelName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PaymentTrxId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PaymentTrxId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PaymentAmount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PaymentAmount)
-        </dd>
-
-
-
-   
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedOnUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedOnUtc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdatedOnUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdatedOnUtc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-
-    </dl>
+    @Html.Partial("_PaymentAdminDetails", Model)
+    @Html.Partial("_NewspaperAdminDetails", Model.NewspaperCls)
 
     @using (Html.BeginForm())
     {

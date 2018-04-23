@@ -42,7 +42,8 @@ namespace AmaderAd.Controllers
             url = baseUrl + "api/NewspaperApi";
         }
 
-     
+
+
         // GET: Products
         public async Task<ActionResult> Index()
         {

@@ -132,6 +132,10 @@ namespace AmaderAd.DAL
             {
                 imgAddress = entity.RawDbImagePath.TrimStart('/');
             }
+            else if (entity.MainImagePath != null)
+            {
+                imgAddress = entity.MainImagePath.TrimStart('/');
+            }
 
             var entitySingle = isEntity.Single();
 

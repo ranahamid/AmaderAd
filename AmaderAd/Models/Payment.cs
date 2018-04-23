@@ -6,18 +6,19 @@ using System.Web;
 
 namespace AmaderAd.Models
 {
-    public class Payment : Newspaper
+    public class Payment:Newspaper 
     {
         public new int Id { get; set; }
 
        // public Newspaper Newspaper { get; set; }
 
-        public List<OrderPaymentMethod> PaymentMethods { get; set; }
+        public List<System.Web.Mvc.SelectListItem> PaymentMethods { get; set; }
 
         public string PaymentMethodName { get; set; }
 
         //Newspaper
 
+        public Newspaper NewspaperCls { get; set; }
 
         //END Newspaper
         public Guid? PaymentGuidId { get; set; }
