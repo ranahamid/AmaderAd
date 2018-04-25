@@ -187,16 +187,16 @@ namespace AmaderAd.DAL
             {
                 imgAddress = entity.RawDbImagePath.TrimStart('/');
             }
-            else if (entity.MainImagePath != null)
-            {                
-                    imgAddress = entity.MainImagePath.TrimStart('/');                
-            }
+            //else if (entity.MainImagePath != null)
+            //{                
+            //        imgAddress = entity.MainImagePath.TrimStart('/');                
+            //}
 
             var entitySingle2 = isEntity2.Single();
 
             entitySingle2.NewspaperName           = entity.NewspaperName          ;
             entitySingle2.AdLocation              = entity.AdLocation             ;
-            entitySingle2.Price                   = entity.Price                  ;
+            entitySingle2.PriceDescription        = entity.PriceDescription       ;
             entitySingle2.AdvertiserName          = entity.AdvertiserName         ;
             entitySingle2.AdvertiserAddress       = entity.AdvertiserAddress      ;
             entitySingle2.AdvertiserMobile        = entity.AdvertiserMobile       ;
@@ -207,7 +207,7 @@ namespace AmaderAd.DAL
             entitySingle2.TotalColumnInch         = entity.TotalColumnInch        ;
             entitySingle2.TotalPrice              = entity.TotalPrice             ;
             entitySingle2.Description             = entity.Description            ;
-            entitySingle2.AdCategoryId            = entity.AdCategoryId        ;
+            entitySingle2.AdCategoryId            = entity.AdCategoryId           ;
             entitySingle2.MainImagePath           = imgAddress                    ;
             entitySingle2.UpdatedOnUtc            = DateTime.Now;                 ;
             entitySingle2.Active                  = entity.Active                 ;

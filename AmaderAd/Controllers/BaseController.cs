@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using System.IO;
 using System.Net;
 using AmaderAd.Models;
 using Microsoft.AspNet.Identity.Owin;
@@ -57,6 +58,20 @@ namespace AmaderAd.Controllers
 
         #region  newspaper
 
+        public string UploadFile(Newspaper entity)
+        {
+            var path = string.Empty;
+            if (entity.MainImagePath != null && entity.MainImagePath.ContentLength > 0)
+            {
+                var uploadDir = "~/Content/uploads/";
+                var imagePath = Path.Combine(Server.MapPath(uploadDir), entity.MainImagePath.FileName);
+                var imageUrl = Path.Combine(uploadDir, entity.MainImagePath.FileName);
+                entity.MainImagePath.SaveAs(imagePath);
+                path = uploadDir + entity.MainImagePath.FileName;
+            }
+
+            return path;
+        }
 
         public async Task<Newspaper> GetNewsPaperData(int? id)
         {

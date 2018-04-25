@@ -1,0 +1,9 @@
+﻿@model AmaderAd.Models.Newspaper
+
+<div class="form-group">
+    @Html.LabelFor(model => model.MainImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.MainImagePath, new { type = "file" })
+        @*@Html.EditorFor(m => m.MainImagePath)*@
+    </div>
+</div>

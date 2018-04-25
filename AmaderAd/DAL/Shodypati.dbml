@@ -61,7 +61,7 @@
       <Column Name="NewsGuidId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Column Name="NewspaperName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="AdLocation" Type="System.String" DbType="NVarChar(127)" CanBeNull="true" />
-      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceDescription" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="AdvertiserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="AdvertiserAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="AdvertiserMobile" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />

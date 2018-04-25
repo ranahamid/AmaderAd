@@ -33,7 +33,7 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Ittefaq",
                 AdLocation = "Ittefaq First Page Color",
-                AllAdCategory = GetAllAdCategory()
+                PriceDescription = " Per Column inch = 14000tk"
             };
             return View(model);
         }

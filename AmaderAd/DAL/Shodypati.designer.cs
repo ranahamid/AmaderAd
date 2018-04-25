@@ -1155,7 +1155,7 @@ namespace AmaderAd.DAL
 		
 		private string _AdLocation;
 		
-		private System.Nullable<int> _Price;
+		private string _PriceDescription;
 		
 		private string _AdvertiserName;
 		
@@ -1201,8 +1201,8 @@ namespace AmaderAd.DAL
     partial void OnNewspaperNameChanged();
     partial void OnAdLocationChanging(string value);
     partial void OnAdLocationChanged();
-    partial void OnPriceChanging(System.Nullable<int> value);
-    partial void OnPriceChanged();
+    partial void OnPriceDescriptionChanging(string value);
+    partial void OnPriceDescriptionChanged();
     partial void OnAdvertiserNameChanging(string value);
     partial void OnAdvertiserNameChanged();
     partial void OnAdvertiserAddressChanging(string value);
@@ -1322,22 +1322,22 @@ namespace AmaderAd.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Int")]
-		public System.Nullable<int> Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceDescription", DbType="NVarChar(255)")]
+		public string PriceDescription
 		{
 			get
 			{
-				return this._Price;
+				return this._PriceDescription;
 			}
 			set
 			{
-				if ((this._Price != value))
+				if ((this._PriceDescription != value))
 				{
-					this.OnPriceChanging(value);
+					this.OnPriceDescriptionChanging(value);
 					this.SendPropertyChanging();
-					this._Price = value;
-					this.SendPropertyChanged("Price");
-					this.OnPriceChanged();
+					this._PriceDescription = value;
+					this.SendPropertyChanged("PriceDescription");
+					this.OnPriceDescriptionChanged();
 				}
 			}
 		}

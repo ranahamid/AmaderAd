@@ -33,6 +33,14 @@ namespace AmaderAd.Controllers
         private string StorageRoot => Path.Combine(HostingEnvironment.MapPath(serverMapPath));
         string DeleteType = "GET";
 
+        public string[] ValidImageTypes = new string[]
+        {
+            "image/gif",
+            "image/jpeg",
+            "image/pjpeg",
+            "image/png",
+            "application/pdf",
+        };
 
         public NewspapersController()
         {
@@ -99,18 +107,37 @@ namespace AmaderAd.Controllers
             {
                  action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
             }
+            //start method
+       
+            if (entity.MainImagePath == null || entity.MainImagePath.ContentLength == 0)
+            {
+                ModelState.AddModelError("ImageUpload", "This field is required");
+            }
+            else if (!ValidImageTypes.Contains(entity.MainImagePath.ContentType))
+            {
+                ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
+            }
+
 
             if (ModelState.IsValid)
             {
+                //test
+                //end of test
+                entity.RawDbImagePath= UploadFile(entity);
                 entity.NewsGuidId=Guid.NewGuid();
+                entity.MainImagePath = null;
                 var responseMessage = await client.PostAsJsonAsync(url, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index", "Payments", entity);
+                    return RedirectToAction("DoPayment", "Payments", entity);
                 }
             }
             return RedirectToAction(action, controller, entity);          
         }
+
+   
+
+
 
         [HttpPost]
         public JsonResult Upload()
@@ -160,8 +187,19 @@ namespace AmaderAd.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(int id, Newspaper entity)
         {
+            if (entity.MainImagePath == null || entity.MainImagePath.ContentLength == 0)
+            {
+                ModelState.AddModelError("ImageUpload", "This field is required");
+            }
+            else if (!ValidImageTypes.Contains(entity.MainImagePath.ContentType))
+            {
+                ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
+            }
             if (ModelState.IsValid)
             {
+                entity.RawDbImagePath = UploadFile(entity);
+                entity.MainImagePath = null;
+
                 HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {

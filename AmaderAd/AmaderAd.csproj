@@ -4148,7 +4148,7 @@
     <Content Include="Views\OrderPaymentStatus\Details.cshtml" />
     <Content Include="Views\OrderPaymentStatus\Edit.cshtml" />
     <Content Include="Views\OrderPaymentStatus\Index.cshtml" />
-    <Content Include="Views\Payments\Index.cshtml" />
+    <Content Include="Views\Payments\DoPayment.cshtml" />
     <Content Include="Views\Shared\_PaymentMethodsInstructions.cshtml" />
     <Content Include="Views\Shared\_PaymentInstructions.cshtml" />
     <Content Include="Views\Payments\List.cshtml" />
@@ -4167,6 +4167,13 @@
     <Content Include="Views\Shared\_NewspaperAdminEdit.cshtml" />
     <Content Include="Views\Shared\_NewspaperAdminDetails.cshtml" />
     <Content Include="Views\Shared\_PaymentAdminDetails.cshtml" />
+    <Content Include="Views\Shared\_NewspaperAdCategory.cshtml" />
+    <Content Include="Views\Shared\_NewspaperDescriptionAd.cshtml" />
+    <Content Include="Views\Shared\_NewspaperTotalCostWithVat.cshtml" />
+    <Content Include="Views\Shared\_NewspaperTotalCostWithoutVat.cshtml" />
+    <Content Include="Views\Shared\_NewspaperComment.cshtml" />
+    <Content Include="Views\Shared\_NewspaperFileUploadCreate.cshtml" />
+    <Content Include="Views\Shared\_PaymentBody.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

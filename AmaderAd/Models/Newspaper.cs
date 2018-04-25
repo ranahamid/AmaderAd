@@ -22,7 +22,7 @@ namespace AmaderAd.Models
         [Display(Name = "বিজ্ঞাপনের স্থান (Advertisement Location)")]
         public string AdLocation { get; set; }
         
-        public int? Price { get; set; }
+        public string PriceDescription { get; set; }
 
         [Required]
         [Display(Name = "বিজ্ঞাপনদাতার নাম (Advertiser Name)")]
@@ -65,8 +65,7 @@ namespace AmaderAd.Models
         public string Comments { get; set; }
 
 
-        [Display(Name = "Choose File")]
-        public string MainImagePath { get; set; }
+
 
         [ScaffoldColumn(false)]
         public string RawDbImagePath { get; set; }
@@ -77,7 +76,7 @@ namespace AmaderAd.Models
         [ScaffoldColumn(false)]
         public List<SelectListItem> AllAdCategory { get; set; }
 
-        [Required]
+   
         [ScaffoldColumn(false)]
         [Display(Name = "Ad Category")]
         public string AdCategoryId { get; set; }
@@ -85,7 +84,12 @@ namespace AmaderAd.Models
 
         [Display(Name = "Ad Category")]
         public string AdCategoryName { get; set; }
-        //ittefaq
+        
+
+        [Display(Name = "Choose File")]
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase MainImagePath { get; set; }
+
 
         public DateTime? CreatedOnUtc { get; set; }
 
