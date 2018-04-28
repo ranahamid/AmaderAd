@@ -35,11 +35,19 @@ namespace AmaderAd.Controllers
 
         public string[] ValidImageTypes = new string[]
         {
-            "image/gif",
-            "image/jpeg",
+            "image/gif",          
             "image/pjpeg",
             "image/png",
             "application/pdf",
+            "image/bmp",
+            "image/pjpeg",
+            "image/jpg",  
+            "image/jpeg",
+            "image/x-portable-bitmap",
+            "image/tiff",
+            "application/postscript",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         };
 
         public NewspapersController()

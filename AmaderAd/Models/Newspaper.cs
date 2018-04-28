@@ -21,8 +21,9 @@ namespace AmaderAd.Models
         [Required]
         [Display(Name = "বিজ্ঞাপনের স্থান (Advertisement Location)")]
         public string AdLocation { get; set; }
-        
-        public string PriceDescription { get; set; }
+
+        [Display(Name = "Price Per Column inch")]
+        public int? PriceDescription { get; set; }
 
         [Required]
         [Display(Name = "বিজ্ঞাপনদাতার নাম (Advertiser Name)")]
@@ -51,7 +52,7 @@ namespace AmaderAd.Models
         [Display(Name = "ইঞ্চি (Inch)")]
         public int? Inch { get; set; }
 
-        [Display(Name = "Total Column Inch")]
+        [Display(Name = "সর্বমোট কলামইঞ্চি (Total column inch)")]
         public int? TotalColumnInch { get; set; }
 
 

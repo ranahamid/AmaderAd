@@ -1,65 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 12.75" name="AmaderAd">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 12.875" name="AmaderAd">
   <DataContextMoniker Name="/AmaderAdDataContext" />
   <nestedChildShapes>
-    <classShape Id="7672bdce-201e-4c55-84ca-b12a5c271f44" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
-      <DataClassMoniker Name="/AmaderAdDataContext/BannerImageTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="b1384580-d377-4aba-b012-25be0b3db8ed" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="e4b1f2b8-f66e-412d-a7ad-87132bcd0e09" absoluteBounds="3.75, 0.75, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/AmaderAdDataContext/BannerTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="1d4ef8db-53e7-4802-be82-f44bc75ef563" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="c85b8e0f-af74-41f6-b67f-ec17ecba2377" absoluteBounds="3.75, 3.75, 2, 1.7708968098958327">
-      <DataClassMoniker Name="/AmaderAdDataContext/CustomerSearchTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="17170b32-bea0-4366-a930-7ea6acda6510" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="4976dd28-bc88-4ce3-98f6-bfe9811405d2" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
-      <DataClassMoniker Name="/AmaderAdDataContext/GeoZoneTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="86beade7-efaa-4541-a66a-9cca5ccec45d" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="a50871ce-2d9e-497b-a9d7-49fe19f57cce" absoluteBounds="0.75, 6.75, 2, 2.7324039713541666">
-      <DataClassMoniker Name="/AmaderAdDataContext/LogTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="bde57b49-d6da-4839-a8e1-56026b857434" absoluteBounds="0.765, 7.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="08ac0a98-01b6-469c-a6b0-9751958ac1d5" absoluteBounds="6.75, 3.75, 2, 4.8477197265624987">
-      <DataClassMoniker Name="/AmaderAdDataContext/NewspaperTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="4da302a9-faaa-42f8-b383-205245d7dcd3" absoluteBounds="6.765, 4.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="59d2567a-7764-4d13-a5f5-0eb17a9f85f7" absoluteBounds="9.75, 0.75, 2, 1.7708968098958329">
-      <DataClassMoniker Name="/AmaderAdDataContext/OrderPaymentMethodTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="f99af38a-cf89-460d-844e-05882945cfd9" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="2ef41ecc-be13-4bfc-8a63-93db95bfc09e" absoluteBounds="9.75, 3.75, 2, 1.3862939453125005">
-      <DataClassMoniker Name="/AmaderAdDataContext/OrderPaymentStatusTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="a0159102-25bf-458a-a28b-a38d149d0ea0" absoluteBounds="9.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="19da52d2-2deb-4676-bed7-0d47e61cddda" absoluteBounds="3.75, 9.75, 2, 2.7324039713541666">
-      <DataClassMoniker Name="/AmaderAdDataContext/PaymentTbl" />
-      <nestedChildShapes>
-        <elementListCompartment Id="80c0ebde-35fe-4252-af13-cde9d967a094" absoluteBounds="3.765, 10.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="88c54768-c6e0-4f15-a49b-f216bd84a6b8" absoluteBounds="9.75, 6.75, 2, 3.1170068359375014">
+    <classShape Id="336ae4d8-a08b-4c87-a2de-4dbfbfc1b700" absoluteBounds="0.75, 0.75, 2, 3.1170068359375005">
       <DataClassMoniker Name="/AmaderAdDataContext/UserTbl" />
       <nestedChildShapes>
-        <elementListCompartment Id="a17cac07-c91e-426d-a055-0fd5f7c1bedd" absoluteBounds="9.765, 7.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="359e88a4-594f-45f4-b236-ecb14f7b7231" absoluteBounds="0.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d31f1c3a-7d10-4696-b74f-9184915e02e9" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/AmaderAdDataContext/BannerImageTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c886431-9fe8-40ee-8c14-ca9e11aa1c87" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6404bf8d-c738-4b34-be5e-87d92b265c57" absoluteBounds="0.75, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AmaderAdDataContext/BannerTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3cbb73ba-0467-40ae-9ad9-e5e1b6355989" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e53b45c-2efe-4bbc-9aea-9f8746675de6" absoluteBounds="3.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/AmaderAdDataContext/CustomerSearchTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58905920-b5c5-4248-bc58-c39a8acb5982" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="155e78e4-1c9c-47b9-876b-74ed2482b0d4" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/AmaderAdDataContext/GeoZoneTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e34d7792-8352-40b5-9f4f-f3418ce68aaa" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39ac0496-c4dd-4c9a-aca3-2f478be1f4ce" absoluteBounds="6.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/AmaderAdDataContext/LogTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="435e0af6-4869-4b31-babf-7990cfa88056" absoluteBounds="6.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78a0725a-1b83-49fe-95ec-08b6b9830061" absoluteBounds="0.75, 7.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/AmaderAdDataContext/NewspaperTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8705825c-ec12-4a75-8c12-71ce921756ee" absoluteBounds="0.765, 8.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d56b39f3-d34a-4a48-ad3e-10176c3bc2eb" absoluteBounds="3.75, 7.75, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/AmaderAdDataContext/OrderPaymentMethodTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c48991fd-848b-4b1f-95f5-a38a5a522af7" absoluteBounds="3.765, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d37db14-d758-41ca-87a8-87d18629df1d" absoluteBounds="6.75, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/AmaderAdDataContext/OrderPaymentStatusTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cea058d2-1a4d-4628-829d-049e246dbd83" absoluteBounds="6.765, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0e12eac-76e4-425a-8c53-22c47a45c040" absoluteBounds="9.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/AmaderAdDataContext/PaymentTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3056b080-d762-4729-a64d-1268906639fa" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

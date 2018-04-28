@@ -33,10 +33,22 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Ittefaq",
                 AdLocation = "Ittefaq First Page Color",
-                PriceDescription = " Per Column inch = 14000tk"
+                PriceDescription = 14000
             };
             return View(model);
         }
+
+        public ActionResult LastPageColorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Ittefaq",
+                AdLocation = "Ittefaq Last Page Color",
+                PriceDescription = 12000
+            };
+            return View(model);
+        }
+
 
 
     }
