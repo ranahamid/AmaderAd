@@ -1,4 +1,18 @@
 ﻿
+<style>
+    .image-preview-input input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        margin: 1px;
+        padding: 0;
+        font-size: 21px;
+        cursor: pointer;
+        opacity: 0;
+        max-width: 100% !important;
+        filter: alpha(opacity=0);
+    }
+</style>
 
 <script>
     $(document).on('click', '#close-preview', function () {
@@ -70,17 +84,17 @@
         border-color: #ccc;
     }
 
-        .image-preview-input input[type=file] {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
-            cursor: pointer;
-            opacity: 0;
-            filter: alpha(opacity=0);
-        }
+    .image-preview-input input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
 
     .image-preview-input-title {
         margin-left: 2px;
@@ -111,7 +125,7 @@
 
                 var fileName = $("#filename").val();
                 $.ajax({
-                    url: '/Products/DeleteFile/?file=' + fileName,
+                    url: '/Newspapers/DeleteFile/?file=' + fileName,
                     type: 'GET',
                     success: function (result) {
                         // Do something with the result

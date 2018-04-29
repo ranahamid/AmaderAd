@@ -6,18 +6,19 @@ using System.Web;
 
 namespace AmaderAd.Models
 {
-    public class Payment:Newspaper
+    public class Payment:Newspaper 
     {
         public new int Id { get; set; }
 
        // public Newspaper Newspaper { get; set; }
 
-        public List<OrderPaymentMethod> PaymentMethods { get; set; }
+        public List<System.Web.Mvc.SelectListItem> PaymentMethods { get; set; }
 
         public string PaymentMethodName { get; set; }
 
         //Newspaper
 
+        public Newspaper NewspaperCls { get; set; }
 
         //END Newspaper
         public Guid? PaymentGuidId { get; set; }
@@ -26,6 +27,9 @@ namespace AmaderAd.Models
 
         public string PaymentChannel { get; set; }
 
+        public string PaymentChannelName { get; set; }
+
+        
         [Display(Name = "Transaction Mobile")]
         public string PaymentMobile { get; set; }
 
@@ -34,6 +38,14 @@ namespace AmaderAd.Models
 
         [Display(Name = "Transaction Amount")]
         public int? PaymentAmount { get; set; }
+
+
+
+        public DateTime? CreatedOnUtc { get; set; }
+
+        public DateTime? UpdatedOnUtc { get; set; }
+
+        public bool? Active { get; set; }
 
     }
 

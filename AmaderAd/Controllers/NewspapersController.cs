@@ -33,6 +33,22 @@ namespace AmaderAd.Controllers
         private string StorageRoot => Path.Combine(HostingEnvironment.MapPath(serverMapPath));
         string DeleteType = "GET";
 
+        public string[] ValidImageTypes = new string[]
+        {
+            "image/gif",          
+            "image/pjpeg",
+            "image/png",
+            "application/pdf",
+            "image/bmp",
+            "image/pjpeg",
+            "image/jpg",  
+            "image/jpeg",
+            "image/x-portable-bitmap",
+            "image/tiff",
+            "application/postscript",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        };
 
         public NewspapersController()
         {
@@ -42,7 +58,8 @@ namespace AmaderAd.Controllers
             url = baseUrl + "api/NewspaperApi";
         }
 
-     
+
+
         // GET: Products
         public async Task<ActionResult> Index()
         {
@@ -61,8 +78,7 @@ namespace AmaderAd.Controllers
                 throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
 
-            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-            entity.AllAdCategoryName = GetAdCategoryName(entity.AllAdCategoryId);
+            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);          
             return View(entity);
         }
 
@@ -99,20 +115,37 @@ namespace AmaderAd.Controllers
             {
                  action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
             }
+            //start method
+       
+            if (entity.MainImagePath == null || entity.MainImagePath.ContentLength == 0)
+            {
+                ModelState.AddModelError("ImageUpload", "This field is required");
+            }
+            else if (!ValidImageTypes.Contains(entity.MainImagePath.ContentType))
+            {
+                ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
+            }
+
 
             if (ModelState.IsValid)
             {
+                //test
+                //end of test
+                entity.RawDbImagePath= UploadFile(entity);
                 entity.NewsGuidId=Guid.NewGuid();
+                entity.MainImagePath = null;
                 var responseMessage = await client.PostAsJsonAsync(url, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                  
-                 
-                    return RedirectToAction("Index", "Payments", entity);
+                    return RedirectToAction("DoPayment", "Payments", entity);
                 }
             }
             return RedirectToAction(action, controller, entity);          
         }
+
+   
+
+
 
         [HttpPost]
         public JsonResult Upload()
@@ -162,8 +195,19 @@ namespace AmaderAd.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(int id, Newspaper entity)
         {
+            if (entity.MainImagePath == null || entity.MainImagePath.ContentLength == 0)
+            {
+                ModelState.AddModelError("ImageUpload", "This field is required");
+            }
+            else if (!ValidImageTypes.Contains(entity.MainImagePath.ContentType))
+            {
+                ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
+            }
             if (ModelState.IsValid)
             {
+                entity.RawDbImagePath = UploadFile(entity);
+                entity.MainImagePath = null;
+
                 HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
@@ -182,19 +226,12 @@ namespace AmaderAd.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
-                entity.AllAdCategoryName = GetAdCategoryName(entity.AllAdCategoryId);
-
                 if (entity != null)
                 {                    
                     return View(entity);
                 }
             }
             throw new Exception("Exception");
-        }
-
-        public string GetAdCategoryName(string categoryId)
-        {
-            return "";
         }
 
         // POST: Products/Delete/5

@@ -27,6 +27,38 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
+        public ActionResult FirstPage_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Ittefaq",
+                AdLocation = "Ittefaq First Page Color",
+                PriceDescription = 14000
+            };
+            return View(model);
+        }
+
+        public ActionResult LastPageColorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Ittefaq",
+                AdLocation = "Ittefaq Last Page Color",
+                PriceDescription = 12000
+            };
+            return View(model);
+        }
+
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Ittefaq",
+                AdLocation = "Ittefaq Third Page Color",
+                PriceDescription = 9000
+            };
+            return View(model);
+        }
 
 
     }

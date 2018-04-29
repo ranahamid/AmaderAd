@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using System.IO;
 using System.Net;
 using AmaderAd.Models;
 using Microsoft.AspNet.Identity.Owin;
@@ -55,7 +56,38 @@ namespace AmaderAd.Controllers
 
         //AmaderAd
 
-        
+        #region  newspaper
+
+        public string UploadFile(Newspaper entity)
+        {
+            var path = string.Empty;
+            if (entity.MainImagePath != null && entity.MainImagePath.ContentLength > 0)
+            {
+                var uploadDir = "~/Content/uploads/";
+                var imagePath = Path.Combine(Server.MapPath(uploadDir), entity.MainImagePath.FileName);
+                var imageUrl = Path.Combine(uploadDir, entity.MainImagePath.FileName);
+                entity.MainImagePath.SaveAs(imagePath);
+                path = uploadDir + entity.MainImagePath.FileName;
+            }
+
+            return path;
+        }
+
+        public async Task<Newspaper> GetNewsPaperData(int? id)
+        {
+            url = baseUrl + "api/NewspaperApi";
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (!responseMessage.IsSuccessStatusCode)
+                throw new Exception("Exception");
+
+            var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+
+            var entity = JsonConvert.DeserializeObject<Newspaper>(responseData);
+            return entity;
+        }
+
+        #endregion
+
 
         #region  user
 
@@ -112,6 +144,39 @@ namespace AmaderAd.Controllers
         #endregion
 
         #region ittefaq
+
+        public string GetAdCategory(string id)
+        {
+            var result = string.Empty;
+
+            var list = GetAllAdCategory();
+            foreach (var item in list)
+            {
+                if (item.Value == id)
+                {
+                    return item.Text;
+                }
+            }
+            return result;
+        }
+
+        public List<SelectListItem> GetAllAdCategoryBySelect(string adCategoryId)
+        {
+            List<SelectListItem> entity = GetAllAdCategory();
+            List<SelectListItem> entities = new List<SelectListItem>();
+            foreach (var item in entity)
+            {
+                entities.Add(new SelectListItem()
+                {
+                    Value = item.Value,
+                    Text = item.Text,
+                    Selected = (item.Value == adCategoryId) ? true : false
+                });
+            }
+
+            return entities;
+        }
+        
 
         public List<SelectListItem> GetAllAdCategory()
         {

@@ -25,7 +25,7 @@ namespace AmaderAd.DAL
                 NewsGuidId 	            = x.NewsGuidId 	            ,
                 NewspaperName           = x.NewspaperName            ,
                 AdLocation              = x.AdLocation               ,
-                Price                   = x.Price                    ,
+                PriceDescription                   = x.PriceDescription                    ,
                 AdvertiserName          = x.AdvertiserName           ,
                 AdvertiserAddress       = x.AdvertiserAddress        ,
                 AdvertiserMobile        = x.AdvertiserMobile         ,
@@ -36,9 +36,9 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = x.TotalColumnInch          ,
                 TotalPrice              = x.TotalPrice               ,
                 Description             = x.Description              ,
-                AllAdCategoryId         = x.AllAdCategoryId          ,
-                MainImagePath           = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
-                RawDbImagePath          = x.MainImagePath           ,
+                AdCategoryId             = x.AdCategoryId          ,
+                RawDbImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
+               // RawDbImagePath          = x.MainImagePath           ,
                 CreatedOnUtc            = x.CreatedOnUtc             ,
                 UpdatedOnUtc            = x.UpdatedOnUtc             ,
                 Active                  = x.Active                   ,
@@ -55,7 +55,7 @@ namespace AmaderAd.DAL
                 NewsGuidId 	            = x.NewsGuidId 	            ,
                 NewspaperName           = x.NewspaperName            ,
                 AdLocation              = x.AdLocation               ,
-                Price                   = x.Price                    ,
+                PriceDescription                   = x.PriceDescription                    ,
                 AdvertiserName          = x.AdvertiserName           ,
                 AdvertiserAddress       = x.AdvertiserAddress        ,
                 AdvertiserMobile        = x.AdvertiserMobile         ,
@@ -66,24 +66,27 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = x.TotalColumnInch          ,
                 TotalPrice              = x.TotalPrice               ,
                 Description             = x.Description              ,
-                AllAdCategoryId         = x.AllAdCategoryId          ,
-                MainImagePath           = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
-                RawDbImagePath          = x.MainImagePath            ,
+                AdCategoryId         = x.AdCategoryId          ,
+                RawDbImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
+            //    RawDbImagePath          = x.MainImagePath            ,
                 CreatedOnUtc            = x.CreatedOnUtc             ,
                 UpdatedOnUtc            = x.UpdatedOnUtc             ,
                 Active                  = x.Active                   ,
 
             }).SingleOrDefault();
-
+            if (entity != null)
+            {
+                entity.AdCategoryName = GetAdCategory(entity.AdCategoryId);
+            }
             return entity;
         }
 
         public void Post(Newspaper entity)
         {
             var imgAddress = string.Empty;
-            if (entity.MainImagePath != null)
+            if (entity.RawDbImagePath != null)
             {
-                imgAddress = entity.MainImagePath.TrimStart('/');
+                imgAddress = entity.RawDbImagePath.TrimStart('~').TrimStart('/');
             }
 
             Db.NewspaperTbls.InsertOnSubmit(new NewspaperTbl
@@ -92,7 +95,7 @@ namespace AmaderAd.DAL
                 NewsGuidId 	            = entity.NewsGuidId,
                 NewspaperName           = entity.NewspaperName            ,
                 AdLocation              = entity.AdLocation               ,
-                Price                   = entity.Price                    ,
+                PriceDescription        = entity.PriceDescription                    ,
                 AdvertiserName          = entity.AdvertiserName           ,
                 AdvertiserAddress       = entity.AdvertiserAddress        ,
                 AdvertiserMobile        = entity.AdvertiserMobile         ,
@@ -103,12 +106,11 @@ namespace AmaderAd.DAL
                 TotalColumnInch         = entity.TotalColumnInch          ,
                 TotalPrice              = entity.TotalPrice               ,
                 Description             = entity.Description              ,
-                AllAdCategoryId         = entity.AllAdCategoryId          ,
+                AdCategoryId            = entity.AdCategoryId             ,
                 MainImagePath           = imgAddress                      ,
                 CreatedOnUtc            = DateTime.Now                    ,
                 UpdatedOnUtc            = DateTime.Now                    ,
-                Active                  = entity.Active                   ,
-           
+                Active                  = entity.Active                   ,           
             });
             try
             {
@@ -128,14 +130,15 @@ namespace AmaderAd.DAL
             var imgAddress = string.Empty;
             if (entity.RawDbImagePath != null)
             {
-                imgAddress = entity.RawDbImagePath.TrimStart('/');
+                imgAddress = entity.RawDbImagePath.TrimStart('~').TrimStart('/');
             }
+       
 
             var entitySingle = isEntity.Single();
 
             entitySingle.NewspaperName           = entity.NewspaperName          ;
             entitySingle.AdLocation              = entity.AdLocation             ;
-            entitySingle.Price                   = entity.Price                  ;
+            entitySingle.PriceDescription                   = entity.PriceDescription                  ;
             entitySingle.AdvertiserName          = entity.AdvertiserName         ;
             entitySingle.AdvertiserAddress       = entity.AdvertiserAddress      ;
             entitySingle.AdvertiserMobile        = entity.AdvertiserMobile       ;
@@ -146,7 +149,7 @@ namespace AmaderAd.DAL
             entitySingle.TotalColumnInch         = entity.TotalColumnInch        ;
             entitySingle.TotalPrice              = entity.TotalPrice             ;
             entitySingle.Description             = entity.Description            ;
-            entitySingle.AllAdCategoryId         = entity.AllAdCategoryId        ;
+            entitySingle.AdCategoryId         = entity.AdCategoryId        ;
             entitySingle.MainImagePath           = imgAddress                    ;
             entitySingle.UpdatedOnUtc            = DateTime.Now;                 ;
             entitySingle.Active                  = entity.Active                 ;

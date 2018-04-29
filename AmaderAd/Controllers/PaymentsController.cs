@@ -24,18 +24,9 @@ namespace AmaderAd.Controllers
     [ExceptionHandler]
     public class PaymentsController : BaseController
     {
-        private readonly FilesHelper _filesHelper;
-        readonly string tempPath = "~/payments/";
-        readonly string serverMapPath = "~/Content/images/payments/";
-        private readonly string UrlBase = "/Content/images/payments/"; //with out '/'
-        readonly string DeleteURL = "/Payments/DeleteAdditionalFile/?file=";
-        private string StorageRoot => Path.Combine(HostingEnvironment.MapPath(serverMapPath));
-        string DeleteType = "GET";
-
+      
         public PaymentsController()
         {
-            int randN = GetRandomNumber();
-            _filesHelper = new FilesHelper(DeleteURL, DeleteType, StorageRoot + randN + "/", UrlBase + randN + "/", tempPath + randN + "/", serverMapPath + randN + "/");
             //api url                  
             url = baseUrl + "api/PaymentApi";
         }
@@ -43,48 +34,65 @@ namespace AmaderAd.Controllers
         // GET: Payments
 
 
-        public async Task<List<OrderPaymentMethod>> GetPaymentMethods()
+        public async Task<List<System.Web.Mvc.SelectListItem>> GetPaymentMethods()
         {
-            url = baseUrl + "api/OrderPaymentMethodApi";
+            url = baseUrl + "api/OrderPaymentMethodApi/GetAllOrderPaymentMethodSelectList/";
             var responseMessage = await client.GetAsync(url);
             if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-            var entityOrderPayment = JsonConvert.DeserializeObject<List<OrderPaymentMethod>>(responseData);
+            var entityOrderPayment = JsonConvert.DeserializeObject<List<System.Web.Mvc.SelectListItem>>(responseData);
             return entityOrderPayment;
         }
-
-        public async Task<ActionResult> Index(Newspaper entity)
+        public async Task<List<System.Web.Mvc.SelectListItem>> GetPaymentMethodsByMethodId(string paymentChannel)
+        {
+            var list= await GetPaymentMethods();
+            List<System.Web.Mvc.SelectListItem> entities = new List<System.Web.Mvc.SelectListItem>();
+            foreach (var item in list)
+            {
+                entities.Add(new SelectListItem()
+                {
+                    Value = item.Value,
+                    Text = item.Text,
+                    Selected = (item.Value == paymentChannel) ? true : false
+                });
+            }
+            return entities;
+        }
+        
+        public async Task<ActionResult> DoPayment(Newspaper entity)
         {
             entity.Id = Db.NewspaperTbls.Where(x => x.NewsGuidId == entity.NewsGuidId).Select(x => x.Id).FirstOrDefault();
-
             var entityOrderPayment = await GetPaymentMethods();
 
-            Payment payment = new Payment();
-            payment.PaymentMethods = entityOrderPayment;
-            //payment.Newspaper = entity;
-            payment.Id = entity.Id;
-            payment.NewsGuidId = entity.NewsGuidId;
-            payment.NewspaperName = entity.NewspaperName;
-            payment.AdLocation = entity.AdLocation;
-            payment.Price = entity.Price;
-            payment.AdvertiserName = entity.AdvertiserName;
-            payment.AdvertiserAddress = entity.AdvertiserAddress;
-            payment.AdvertiserMobile = entity.AdvertiserMobile;
-            payment.AdvertiserEmail = entity.AdvertiserEmail;
-            payment.DateofPublication = entity.DateofPublication;
-            payment.ColumnSize = entity.ColumnSize;
-            payment.Inch = entity.Inch;
-            payment.TotalColumnInch = entity.TotalColumnInch;
-            payment.TotalPrice = entity.TotalPrice;
-            payment.Description = entity.Description;
-            payment.AllAdCategoryId = entity.AllAdCategoryId;
-            payment.MainImagePath = HttpUtility.UrlPathEncode(baseUrl + entity.MainImagePath);
-            payment.RawDbImagePath = entity.MainImagePath;
-            payment.CreatedOnUtc = entity.CreatedOnUtc;
-            payment.UpdatedOnUtc = entity.UpdatedOnUtc;
-            payment.Active = entity.Active;
+            Payment payment = new Payment
+            {
+                PaymentMethods = entityOrderPayment,
+                OrderId = entity.Id,
 
-            //end of payment.Newspaper = entity;
+                CreatedOnUtc = entity.CreatedOnUtc,
+                UpdatedOnUtc = entity.UpdatedOnUtc,
+                Active = entity.Active,
+                
+            };
+            payment.NewspaperCls =new Newspaper();
+
+            payment.NewspaperCls.NewsGuidId = entity.NewsGuidId;
+            payment.NewspaperCls.NewspaperName = entity.NewspaperName;
+            payment.NewspaperCls.AdLocation = entity.AdLocation;
+            payment.NewspaperCls.PriceDescription = entity.PriceDescription;
+            payment.NewspaperCls.AdvertiserName = entity.AdvertiserName;
+            payment.NewspaperCls.AdvertiserAddress = entity.AdvertiserAddress;
+            payment.NewspaperCls.AdvertiserMobile = entity.AdvertiserMobile;
+            payment.NewspaperCls.AdvertiserEmail = entity.AdvertiserEmail;
+            payment.NewspaperCls.DateofPublication = entity.DateofPublication;
+            payment.NewspaperCls.ColumnSize = entity.ColumnSize;
+            payment.NewspaperCls.Inch = entity.Inch;
+            payment.NewspaperCls.TotalColumnInch = entity.TotalColumnInch;
+            payment.NewspaperCls.TotalPrice = entity.TotalPrice;
+            payment.NewspaperCls.Description = entity.Description;
+            payment.NewspaperCls.AdCategoryId = entity.AdCategoryId;
+            payment.NewspaperCls.RawDbImagePath = entity.RawDbImagePath;
+
 
             return View(payment);
         }
@@ -94,7 +102,7 @@ namespace AmaderAd.Controllers
         [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Index(Payment entity)
+        public async Task<ActionResult> DoPayment(Payment entity)
         {
             // Home is default controller
             var controller = string.Empty;
@@ -145,47 +153,25 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Details(int? id)
         {
             var entity = await GetPayment(id);
+            entity.NewspaperCls =await GetNewsPaperData(entity.OrderId);
+         
             return View(entity);
         }
 
+     
         // GET: Products/Details/5
         public async Task<ActionResult> Invoice(int? id)
         {
             var entity = await GetPayment(id);
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
             return View(entity);
         }
 
-
-
-
-        [HttpPost]
-        public JsonResult Upload()
-        {
-            var resultList = new List<ViewDataUploadFilesResult>();
-
-            var currentContext = HttpContext;
-            _filesHelper.UploadAndShowResults(currentContext, resultList);
-            JsonFiles files = new JsonFiles(resultList);
-
-            bool isEmpty = !resultList.Any();
-            if (isEmpty)
-            {
-                return Json("Error ");
-            }
-
-            return Json(files);
-        }
-
-
-        [HttpGet]
-        public JsonResult DeleteFile(string file)
-        {
-            _filesHelper.DeleteFile(file);
-            return Json("OK", JsonRequestBehavior.AllowGet);
-        }
+        
 
         public async Task<Payment> GetPayment(int? id)
         {
+            url = baseUrl + "api/PaymentApi";
             HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
             if (!responseMessage.IsSuccessStatusCode)
                 throw new Exception("Exception");
@@ -200,9 +186,12 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Edit(int? id)
         {
             var entity = await GetPayment(id);
-            var entityOrderPayment = await GetPaymentMethods();
-            entity.AllAdCategory = GetAllAdCategory();
-            entity.PaymentMethods = entityOrderPayment;
+                      
+            entity.PaymentMethods = await GetPaymentMethodsByMethodId(entity.PaymentChannel);
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
+            
+            entity.NewspaperCls.AllAdCategory = GetAllAdCategoryBySelect(entity.NewspaperCls.AdCategoryId);
+   
             return View(entity);
         }
 
@@ -217,10 +206,15 @@ namespace AmaderAd.Controllers
                 HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("List");
                 }
             }
-
+        
+            var entityOrderPayment = await GetPaymentMethods();
+            entity.PaymentMethods = entityOrderPayment;
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
+            entity.NewspaperCls.AllAdCategory = GetAllAdCategory();
+           
             return View(entity);
         }
 
@@ -228,6 +222,7 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Delete(int? id)
         {
             var entity = await GetPayment(id);
+            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
             return View(entity);
         }
 
@@ -240,7 +235,7 @@ namespace AmaderAd.Controllers
             HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("List");
             }
             throw new Exception("Exception");
         }

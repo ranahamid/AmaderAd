@@ -3,12 +3,21 @@
     ViewBag.Title = "Invoice";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<style>
+    #footer, .menu-banner {
+        display: none;
+    }
+</style>
+
 <link href="~/Content/metronic/Invoice/invoice.css" rel="stylesheet" />
+
+
 <h2>Invoice</h2>
 
 <!-- END PAGE TITLE-->
 <!-- END PAGE HEADER-->
-<div class="invoice">
+<div class="invoice" id="printJS-form">
     <div class="row invoice-logo">
         <div class="col-xs-6 invoice-logo-space">
             <img src="../assets/pages/media/invoice/walmart.png" class="img-responsive" alt="" />
@@ -69,40 +78,40 @@
         <div class="col-xs-12">
             <table class="table table-striped table-hover">
                 <thead>
-                    <tr>
-                        <th> # </th>
-                        <th> Item </th>
-                        <th class="hidden-xs"> Description </th>
-                        <th class="hidden-xs"> Quantity </th>
-                        <th class="hidden-xs"> Unit Cost </th>
-                        <th> Total </th>
-                    </tr>
+                <tr>
+                    <th> # </th>
+                    <th> Item </th>
+                    <th class="hidden-xs"> Description </th>
+                    <th class="hidden-xs"> Quantity </th>
+                    <th class="hidden-xs"> Unit Cost </th>
+                    <th> Total </th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> 1 </td>
-                        <td> Hardware </td>
-                        <td class="hidden-xs"> Server hardware purchase </td>
-                        <td class="hidden-xs"> 32 </td>
-                        <td class="hidden-xs"> $75 </td>
-                        <td> $2152 </td>
-                    </tr>
-                    <tr>
-                        <td> 2 </td>
-                        <td> Furniture </td>
-                        <td class="hidden-xs"> Office furniture purchase </td>
-                        <td class="hidden-xs"> 15 </td>
-                        <td class="hidden-xs"> $169 </td>
-                        <td> $4169 </td>
-                    </tr>
-                    <tr>
-                        <td> 3 </td>
-                        <td> Foods </td>
-                        <td class="hidden-xs"> Company Anual Dinner Catering </td>
-                        <td class="hidden-xs"> 69 </td>
-                        <td class="hidden-xs"> $49 </td>
-                        <td> $1260 </td>
-                    </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Hardware </td>
+                    <td class="hidden-xs"> Server hardware purchase </td>
+                    <td class="hidden-xs"> 32 </td>
+                    <td class="hidden-xs"> $75 </td>
+                    <td> $2152 </td>
+                </tr>
+                <tr>
+                    <td> 2 </td>
+                    <td> Furniture </td>
+                    <td class="hidden-xs"> Office furniture purchase </td>
+                    <td class="hidden-xs"> 15 </td>
+                    <td class="hidden-xs"> $169 </td>
+                    <td> $4169 </td>
+                </tr>
+                <tr>
+                    <td> 3 </td>
+                    <td> Foods </td>
+                    <td class="hidden-xs"> Company Anual Dinner Catering </td>
+                    <td class="hidden-xs"> 69 </td>
+                    <td class="hidden-xs"> $49 </td>
+                    <td> $1260 </td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -148,3 +157,4 @@
         </div>
     </div>
 </div>
+

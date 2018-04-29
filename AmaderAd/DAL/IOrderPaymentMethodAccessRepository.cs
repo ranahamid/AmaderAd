@@ -15,5 +15,7 @@ namespace AmaderAd.DAL
         void Delete(TPrimaryKey id);
         //custom
         List<System.Web.Mvc.SelectListItem> GetAllOrderPaymentMethodSelectList();
+
+        
     }
 }
