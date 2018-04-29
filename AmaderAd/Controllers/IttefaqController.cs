@@ -15,11 +15,7 @@ namespace AmaderAd.Controllers
             return View();
         }
 
-        #region classified
-
-        
-
-     
+        #region classified        
         //classified advertisement
         public ActionResult ClassifiedAdvertisement()
         {
@@ -34,9 +30,6 @@ namespace AmaderAd.Controllers
         #endregion
 
         #region main page
-
-        
-
 
         public ActionResult FirstPage_MainPage()
         {
@@ -187,7 +180,6 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-
 
 
         public ActionResult InnerPageColorAdvertisement_MainPage()
