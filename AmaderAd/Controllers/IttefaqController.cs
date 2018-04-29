@@ -49,6 +49,16 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Ittefaq",
+                AdLocation = "Ittefaq Third Page Color",
+                PriceDescription = 9000
+            };
+            return View(model);
+        }
 
 
     }

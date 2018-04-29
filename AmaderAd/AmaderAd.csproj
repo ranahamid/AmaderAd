@@ -4175,6 +4175,7 @@
     <Content Include="Views\Shared\_NewspaperFileUploadCreate.cshtml" />
     <Content Include="Views\Shared\_PaymentBody.cshtml" />
     <Content Include="Views\Ittefaq\LastPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Ittefaq\ThirdPageColorAdvertisement_MainPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
