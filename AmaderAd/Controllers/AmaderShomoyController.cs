@@ -13,6 +13,7 @@ namespace AmaderAd.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
         //classified advertisement
         public ActionResult ClassifiedAdvertisement()
