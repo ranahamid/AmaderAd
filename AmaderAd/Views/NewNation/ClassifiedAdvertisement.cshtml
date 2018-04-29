@@ -44,7 +44,8 @@
 
 <script>
     var amount;
-    $("#Description").bind('keyup keydown paste cut', function (e) {
+    $("#Description").bind('keyup keydown paste cut', function(e)
+    {
         setTimeout(function () {
 
             var value = $('#Description').val();
@@ -58,14 +59,14 @@
 
             var x = 600 * .15;
 
-            if (wordcount >= 50) {
+            if (wordcount>=50) {
                 document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ পঞ্চাশ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 50 words advertisement";
             }
-            if (wordcount < 50) {
+            if (wordcount <50) {
                 $('#maxwords').empty();
             }
 
-            if (wordcount > 50) {
+            if ( wordcount > 50 ){
                 $("#submit-btn").attr("disabled", "disabled");
 
             } else {
@@ -77,7 +78,7 @@
             }
             else if (wordcount > 16) {
                 var extraWord = wordcount - 16;
-                var y = (extraWord * 40) * 0.15;
+                var y = (extraWord *40) * 0.15;
                 var extraAmount = extraWord * 40 + y;
                 amount = 690 + extraAmount;
             }
@@ -85,17 +86,17 @@
             $('#TotalPrice').val(amount);
 
             $('#wordLimiter').html(wordcount);
-        }, 100);
+        },100);
     });
 
 </script>
 
 
 <script>
-    var hour = new Date().getUTCHours() + 6;
+    var hour = new Date().getUTCHours()+6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
-        autoclose: true
-    });
+        autoclose:true
+     });
 
 </script>

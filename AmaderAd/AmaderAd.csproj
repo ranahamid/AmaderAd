@@ -276,14 +276,17 @@
     <Compile Include="Controllers\JaiJaiDinController.cs" />
     <Compile Include="Controllers\JanakanthaController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
+    <Compile Include="Controllers\ManabzaminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Admin\RolesAdminController.cs" />
     <Compile Include="Controllers\Admin\UserAdminController.cs" />
     <Compile Include="Controllers\NayaDigantaController.cs" />
+    <Compile Include="Controllers\NewNationController.cs" />
     <Compile Include="Controllers\NewspapersController.cs" />
     <Compile Include="Controllers\OrderPaymentMethodsController.cs" />
     <Compile Include="Controllers\OrderPaymentStatusController.cs" />
     <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\SamakalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\AccountDataAccessRepository.cs" />
     <Compile Include="DAL\BannerDataAccessRepository.cs" />
@@ -4183,6 +4186,9 @@
     <Content Include="Views\Jaiaidin\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\Janakantha\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\NayaDiganta\ClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\Manabzamin\ClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\NewNation\ClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\Samakal\ClassifiedAdvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
