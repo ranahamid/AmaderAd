@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ইত্তেফাকে শ্রেণিভুক্ত বিজ্ঞাপন দিন (Publish classified advertisement at Ittefaq)</h2>
+<h2>ইত্তেফাকের প্রথম পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
-@using (Html.BeginForm("Create", "Newspapers"))
+@using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
 {
     @Html.AntiForgeryToken()
 
@@ -17,44 +17,13 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.Partial("_NewspaperHeader", Model)
 
-        <div class="form-group">
-            @Html.LabelFor(m => m.AdCategoryId, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(m => Model.AdCategoryId, Model.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.AdCategoryId, "", new { @class = "text-danger" })
-            </div>
-        </div>
         @Html.Partial("_NewspaperBody", Model)
 
+        @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
 
-        <h2>শ্রেণিভুক্ত বিজ্ঞাপন </h2>
-        <h2>Classified Advertisement</h2>
+        @Html.Partial("_NewspaperComment")
 
-        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে ।</p>
-        <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 16 words will be charged 600tk and after each word, 40 tk will be added with per word. The maximum word limit for classified ad is 50 words.</p>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { style = "height:80px;", @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                <div class="">
-                    <p id="maxwords" style="color: red;"> <b> </b> </p>
-                    <p>Total Words: <b><span id="wordLimiter">0</span>/50</b></p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.Label("Total Cost with 15% VAT", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalPrice, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                @Html.ValidationMessageFor(model => model.TotalPrice, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        @Html.Partial("_NewspaperNotice")
+        @Html.Partial("_NewspaperFileUploadCreate")
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -67,54 +36,6 @@
 @Html.Partial("_NewspaperSampleAd")
 
 
-<script>
-    var amount;
-    $("#Description").bind('keyup keydown paste cut', function (e) {
-        setTimeout(function () {
-
-            var value = $('#Description').val();
-            if (value.length == 0) {
-                $('#TotalPrice').val(0);
-                $('#wordLimiter').html(0);
-                return;
-            }
-            var regex = /\s+/gi;
-            var wordcount = value.trim().replace(regex, ' ').split(' ').length;
-
-            var x = 600 * .15;
-
-            if (wordcount >= 50) {
-                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ পঞ্চাশ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 50 words advertisement";
-            }
-            if (wordcount < 50) {
-                $('#maxwords').empty();
-            }
-
-            if (wordcount > 50) {
-                $("#submit-btn").attr("disabled", "disabled");
-
-            } else {
-                $("#submit-btn").removeAttr("disabled");
-            }
-
-            if (wordcount <= 16) {
-                amount = 600 + x;
-            }
-            else if (wordcount > 16) {
-                var extraWord = wordcount - 16;
-                var y = (extraWord * 40) * 0.15;
-                var extraAmount = extraWord * 40 + y;
-                amount = 690 + extraAmount;
-            }
-
-            $('#TotalPrice').val(amount);
-
-            $('#wordLimiter').html(wordcount);
-        }, 100);
-    });
-
-</script>
-
 
 <script>
     var hour = new Date().getUTCHours() + 6;
@@ -122,5 +43,37 @@
         startDate: hour >= 18 ? '+2d' : '+1d',
         autoclose: true
     });
+</script>
+
+
+<script>
+    function myAmountLimit1() {
+
+        var columnSize = $("#ColumnSize").val();
+        var inchSize = $("#Inch").val();
+
+        var priceDescription = @Html.Raw(Model.PriceDescription);
+
+        if ((columnSize * inchSize) < 12) {
+            $("#columninchwarning").html("এই পেজে  কমপক্ষে বারো কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You have to publish minimum 12 column inch advertisement here ");
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
+            $("#submit-btn").attr("disabled", "disabled");
+        }
+        else {
+            var totalColumnInch = columnSize * inchSize;
+            var totalPrice = columnSize * inchSize * priceDescription;
+            //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
+            $("#columninchwarning").empty();
+
+            $("#TotalColumnInch").html(totalColumnInch);
+            $("#TotalColumnInch").val(totalColumnInch);
+
+            $("#TotalPrice").html(totalPrice);
+            $("#TotalPrice").val(totalPrice);
+
+            $("#submit-btn").removeAttr("disabled");
+        }
+    }
 
 </script>

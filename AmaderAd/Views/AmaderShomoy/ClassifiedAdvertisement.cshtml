@@ -17,13 +17,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.Partial("_NewspaperHeader", Model)
 
-        <div class="form-group">
-            @Html.LabelFor(m => m.AllAdCategoryId, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(m => Model.AllAdCategoryId, Model.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.AllAdCategoryId, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.Partial("_NewspaperAdCategory", Model)
 
 
         <h2>শ্রেণিভুক্ত বিজ্ঞাপন </h2>
@@ -31,30 +25,12 @@
 
         <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ২০ শব্দের জন্য মোট ৩০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ১৫ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৬০ শব্দের মধ্যে হতে হবে ।</p>
         <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 20 words will be charged 300tk and after each word, 15 tk will be added with per word. The maximum word limit for classified ad is 60 words.</p>
+        
+        @Html.Partial("_NewspaperDescriptionAd", Model)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { style = "height:80px;", @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                <div class="">
-                    <p id="maxwords" style="color: red;"> <b> </b> </p>
-                    <p>Total Words: <b><span id="wordLimiter">0</span>/50</b></p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.Label("Total Cost with 15% VAT", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalPrice, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                @Html.ValidationMessageFor(model => model.TotalPrice, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.Partial("_NewspaperTotalCostWithVat", Model)
 
         @Html.Partial("_NewspaperNotice")
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
