@@ -22,7 +22,7 @@ namespace AmaderAd.Models
         [Display(Name = "বিজ্ঞাপনের স্থান (Advertisement Location)")]
         public string AdLocation { get; set; }
 
-        [Display(Name = "Price Per Column inch")]
+        [Display(Name = "Price")]
         public int? PriceDescription { get; set; }
 
         [Required]
