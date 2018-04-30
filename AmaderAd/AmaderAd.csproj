@@ -273,7 +273,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InqilabController.cs" />
     <Compile Include="Controllers\IttefaqController.cs" />
-    <Compile Include="Controllers\JaiJaiDinController.cs" />
     <Compile Include="Controllers\JanakanthaController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -4183,6 +4182,20 @@
     <Content Include="Views\Jaiaidin\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\Janakantha\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\NayaDiganta\ClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\Janakantha\JanakanthaFirstPage_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\JanakanthaGeneralDisplayAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\JanakanthaSecondpageblackandwhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\JanakanthathirdpagecolorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\JanakanthathirdpageblackandwhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakanthafifthpagecolorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakanthafifthpageblackandwhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakanthasportspagecolorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakanthasportspageblackandwhiteadvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakanthapagebeforlastpageblackandwhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\JanakanthalastpagecolorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakanthafirstpagespotAdvertisem_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\jankanthalastpagespotAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Janakantha\janakantha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
