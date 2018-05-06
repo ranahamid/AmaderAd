@@ -9,6 +9,7 @@ namespace AmaderAd.Controllers
 {
     public class JaiaidinController : BaseController
     {
+
         // GET: Jaijaidin
         public ActionResult Index()
         {
