@@ -1,0 +1,84 @@
+﻿@model AmaderAd.Models.Newspaper
+
+@{
+    ViewBag.Title = "ClassifiedAdvertisement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ইনকিলাবের শেষের পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন  <br>Color Advertisement in last page of Inqilab </h2>
+<p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
+
+@using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Partial("_NewspaperHeader", Model)
+
+        @Html.Partial("_NewspaperBody", Model)
+
+        @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
+
+        @Html.Partial("_NewspaperComment")
+
+        @Html.Partial("_NewspaperFileUploadCreate")
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+            </div>
+        </div>
+    </div>
+}
+
+@Html.Partial("_NewspaperSampleAd")
+
+
+
+<script>
+    var hour = new Date().getUTCHours() + 6;
+    $(".datetime").datepicker({
+        startDate: hour >= 18 ? '+2d' : '+1d',
+        autoclose: true
+    });
+</script>
+
+
+<script>
+    function myAmountLimit1() {
+
+        var columnSize = $("#ColumnSize").val();
+        var inchSize = $("#Inch").val();
+
+        var priceDescription = @Html.Raw(Model.PriceDescription);
+
+        if ((columnSize * inchSize) < 4 || (columnSize * inchSize) > 100 ) {
+            $("#columninchwarning").html("এই পেজে কমপক্ষে চার এবং সর্বোচ্চ একশ কলাম ইঞ্চির বিজ্ঞাপন দিতে হবে   <br>You can publish atleast 4 column inch and maximum 100 column inch Advertisement here ");
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
+            $("#submit-btn").attr("disabled", "disabled");
+        }
+        else {
+            var totalColumnInch = columnSize * inchSize;
+            var totalPrice = columnSize * inchSize * priceDescription;
+            //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
+            $("#columninchwarning").empty();
+
+            $("#TotalColumnInch").html(totalColumnInch);
+            $("#TotalColumnInch").val(totalColumnInch);
+
+            $("#TotalPrice").html(totalPrice);
+            $("#TotalPrice").val(totalPrice);
+
+            $("#submit-btn").removeAttr("disabled");
+        }
+    }
+
+</script>
+
+
+
+
+

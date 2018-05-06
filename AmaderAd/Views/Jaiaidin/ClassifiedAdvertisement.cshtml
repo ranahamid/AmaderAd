@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ইত্তেফাকে শ্রেণিভুক্ত বিজ্ঞাপন দিন (Publish classified advertisement at Ittefaq)</h2>
+<h2>যায়যায়দিনে শ্রেণিভুক্ত বিজ্ঞাপন দিন (Publish classified advertisement at Jaijaidin)</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers"))
@@ -22,8 +22,8 @@
         <h2>শ্রেণিভুক্ত বিজ্ঞাপন </h2>
         <h2>Classified Advertisement</h2>
 
-        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে ।</p>
-        <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 16 words will be charged 600tk and after each word, 40 tk will be added with per word. The maximum word limit for classified ad is 50 words.</p>
+        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ৩০ শব্দের জন্য মোট ৩০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ২০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৬০ শব্দের মধ্যে হতে হবে ।</p>
+        <p>No noticable headline will be given on Classified Advertisement. For This type of Advertisement first 30 words will be charged 300tk and after each word, 20 tk will be added with per word. The maximum word limit for classified ad is 60 words.</p>
 
         @Html.Partial("_NewspaperDescriptionAd", Model)
 
@@ -56,30 +56,30 @@
             var regex = /\s+/gi;
             var wordcount = value.trim().replace(regex, ' ').split(' ').length;
 
-            var x = 600 * .15;
+            var x = 300 * .15;
 
-            if (wordcount >= 50) {
-                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ পঞ্চাশ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 50 words advertisement";
+            if (wordcount >= 60) {
+                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ ৬০ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 60 words advertisement";
             }
-            if (wordcount < 50) {
+            if (wordcount < 60) {
                 $('#maxwords').empty();
             }
 
-            if (wordcount > 50) {
+            if (wordcount > 60) {
                 $("#submit-btn").attr("disabled", "disabled");
 
             } else {
                 $("#submit-btn").removeAttr("disabled");
             }
 
-            if (wordcount <= 16) {
-                amount = 600 + x;
+            if (wordcount <= 30) {
+                amount = 300 + x;
             }
-            else if (wordcount > 16) {
-                var extraWord = wordcount - 16;
-                var y = (extraWord * 40) * 0.15;
-                var extraAmount = extraWord * 40 + y;
-                amount = 690 + extraAmount;
+            else if (wordcount > 30) {
+                var extraWord = wordcount - 30;
+                var y = (extraWord * 20) * 0.15;
+                var extraAmount = extraWord * 20 + y;
+                amount = 345 + extraAmount;
             }
 
             $('#TotalPrice').val(amount);
