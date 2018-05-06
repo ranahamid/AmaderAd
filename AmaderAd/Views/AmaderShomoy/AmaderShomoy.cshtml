@@ -1,0 +1,427 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Amadershomoy</h2>
+
+<div class="row" id="sortable_portlets">
+    <div class="col-md-12 column sortable">
+        <div class="portlet portlet-sortable  bg-inverse">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-puzzle font-red-flamingo"></i>
+                    <span class="caption-subject bold font-red-flamingo uppercase">শ্রেণিভুক্ত বিজ্ঞাপন</span>
+                    <span class="caption-helper">Classified Advertisement</span>
+                </div>
+                <div class="tools">
+                    <a href="" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="" class="reload"> </a>
+                    <a href="" class="fullscreen"> </a>
+                    <a href="" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-chambray">
+                                <div class="mt-head-desc">শ্রেণিভুক্ত বিজ্ঞাপন</div>
+                                <span class="mt-head-date">Classified Advertisement</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "ClassifiedAdvertisement", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- empty sortable porlet required for each columns! -->
+        <div class="portlet portlet-sortable-empty"> </div>
+    </div>
+</div>
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">মূল পত্রিকা</span>
+                <span class="caption-helper">Main Paper</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>নির্দিষ্ট পৃষ্ঠা <small>Specific Page</small></p>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">প্রথম  পৃষ্ঠা (রঙিন) কমপক্ষে ১২ কলাম ইঞ্চি </div>
+                                <span class="mt-head-date">1st page (Color) At least 12 column inch  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", " AmaderShomoyfirstpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date"> last page (Color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoylastpagecolorAdvertisemnet_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">তৃতীয় পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date">3rd Page (Color)  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoythirdpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">তৃতীয় পৃষ্ঠা (সাদা কালো)</div>
+                                <span class="mt-head-date">3rd Page (Black and white)  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoythirdpageblackandwhiteadvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> পঞ্চম  পৃষ্ঠা  (রঙিন)</div>
+                                <span class="mt-head-date">5th Page color  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoyfifthpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> পঞ্চম  পৃষ্ঠা  (সাদা কালো)</div>
+                                <span class="mt-head-date">5th Page color  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoyfifthpageblackandwhiteAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> অষ্টম পৃষ্ঠা  (রঙিন)</div>
+                                <span class="mt-head-date">8th Page color  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoyeightpagecoloradvertiement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> দশম পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date">Tenth page(color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoytenpagecoloradvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">দ্বিতীয় পৃষ্ঠা (রঙিন) </div>
+                                <span class="mt-head-date">Second Page (Color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AmaderShomoysecondpagecoloradvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue-steel">
+
+                                    <div class="mt-head-desc">দ্বিতীয় পৃষ্ঠা (সাদা কালো ) </div>
+                                    <span class="mt-head-date">Second Page (Black and White)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoysecondpageblackandwhiteadvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mt-widget-3">
+                                    <div class="mt-head bg-blue-steel">
+
+                                        <div class="mt-head-desc">এগারতম পৃষ্ঠা (রঙিন) </div>
+                                        <span class="mt-head-date">Eleventh Page (Color)</span>
+                                        <div class="mt-head-button">
+                                            @Html.ActionLink("Click here to place your Ad", " AmaderShomoyelevenpagecoloradvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="mt-widget-3">
+                                        <div class="mt-head bg-blue-steel">
+
+                                            <div class="mt-head-desc">এগারতম পৃষ্ঠা (সাদা কালো ) </div>
+                                            <span class="mt-head-date">Eleventh Page (Black and White)</span>
+                                            <div class="mt-head-button">
+                                                @Html.ActionLink("Click here to place your Ad", "AmaderShomoyelevenpageblackandwhiteadvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="mt-widget-3">
+                                        <div class="mt-head bg-blue-steel">
+
+                                            <div class="mt-head-desc">ভিতরের সাধারণ পৃষ্ঠা (রঙিন)   </div>
+                                            <span class="mt-head-date"> Inner Page (Color)</span>
+                                            <div class="mt-head-button">
+                                                @Html.ActionLink("Click here to place your Ad", "AmaderShomoyinnerpagecoloradvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="mt-widget-3">
+                                        <div class="mt-head bg-blue-steel">
+
+                                            <div class="mt-head-desc">ভিতরের সাধারণ পৃষ্ঠা (সাদা কালো)   </div>
+                                            <span class="mt-head-date"> Inner Page (Black and White)</span>
+                                            <div class="mt-head-button">
+                                                @Html.ActionLink("Click here to place your Ad", "AmaderShomoyinnerpageblackandwhiteadvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                        </div>
+                        <div class="portlet-body">
+                            <div class="box-heading-green box-sections box-block">
+                                <p>স্পট বিজ্ঞাপন <small>Spot Advertisement</small></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mt-widget-3">
+                                        <div class="mt-head bg-purple">
+
+                                            <div class="mt-head-desc">প্রথম পাতা</div>
+                                            <span class="mt-head-date">First Page  </span>
+                                            <div class="mt-head-button">
+                                                @Html.ActionLink("Click here to place your Ad", "AmaderShomoyfirstpagespotadvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mt-widget-3">
+                                        <div class="mt-head bg-purple">
+
+                                            <div class="mt-head-desc">শেষের পাতা</div>
+                                            <span class="mt-head-date">Last Page  </span>
+                                            <div class="mt-head-button">
+                                                @Html.ActionLink("Click here to place your Ad", " AmaderShomoylastpagespotadvertisementMainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="box-heading-green box-sections box-block">
+                        <p>নিয়মিত ক্রোরপত্র  <small>Feature Paper</small></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-yellow-gold">
+
+                                    <div class="mt-head-desc">বিশেষ ক্রোরপত্র (রঙিন) </div>
+                                    <span class="mt-head-date">Feature Paper (Color)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoyspecialkororpotrocolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-yellow-gold">
+
+                                    <div class="mt-head-desc">বিশেষ ক্রোরপত্র (সাদা কালো)</div>
+                                    <span class="mt-head-date">Feature Paper (Black and White)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoyspecialkororpotroblackandwhiteAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <!-- empty sortable porlet required for each columns! -->
+                    <div class="portlet portlet-sortable-empty"> </div>
+                </div>
+
+                
+                
+                <div class="portlet-body">
+                    <div class="box-heading-green box-sections box-block">
+                        <p>আয়না সময়   <small>Ayna Shomoy</small></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-yellow-gold">
+
+                                    <div class="mt-head-desc">প্রথম পাতা (রঙিন) </div>
+                                    <span class="mt-head-date">First Page (Color)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoyaynashomoyfirstpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-yellow-gold">
+
+                                    <div class="mt-head-desc">শেষের পাতা (রঙিন))</div>
+                                    <span class="mt-head-date">Last Page (color)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoyaynashomoylastpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-yellow-gold">
+
+                                    <div class="mt-head-desc">তৃতীয় পাতা (রঙিন))</div>
+                                    <span class="mt-head-date">Third Page (Color)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoyaynashomoythirdpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-yellow-gold">
+
+                                    <div class="mt-head-desc">সাধারন পাতা (রঙিন))</div>
+                                    <span class="mt-head-date">Genarel Page (Color)</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "AmaderShomoyaynashomoygeneralpagecolorAdvertisement_MainPage", "Amadershomoy", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <!-- empty sortable porlet required for each columns! -->
+                    <div class="portlet portlet-sortable-empty"> </div>
+                </div>
+
+
+
+
+                <script src="~/Content/metronic/portlet-draggable.js"></script>
