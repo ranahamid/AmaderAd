@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AmaderAd.Models;
+
 
 namespace AmaderAd.Controllers
 {
-    public class SamakalController : Controller
+    public class SamakalController : BaseController
     {
         // GET: Samakal
         public ActionResult Index()
