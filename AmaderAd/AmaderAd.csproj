@@ -273,7 +273,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InqilabController.cs" />
     <Compile Include="Controllers\IttefaqController.cs" />
-    <Compile Include="Controllers\JaiJaiDinController.cs" />
     <Compile Include="Controllers\JanakanthaController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\ManabzaminController.cs" />
