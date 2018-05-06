@@ -1,0 +1,104 @@
+﻿@model AmaderAd.Models.Newspaper
+
+@{
+                /**/
+
+                ViewBag.Title = "ClassifiedAdvertisement";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Publish Classified Advertisement at News Today </h2>
+<p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
+
+@using (Html.BeginForm("Create", "Newspapers"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Partial("_NewspaperHeader", Model)
+
+        @Html.Partial("_NewspaperAdCategory", Model)
+
+        <h2>শ্রেণিভুক্ত বিজ্ঞাপন </h2>
+        <h2>Classified Advertisement</h2>
+
+        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ১৬ শব্দের জন্য মোট ৮০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৫০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে ।</p>
+        <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 16 words will be charged 800 tk and after each word, 50 tk will be added with per word. The maximum word limit for classified ad is 50 words.</p>
+
+        @Html.Partial("_NewspaperDescriptionAd", Model)
+
+        @Html.Partial("_NewspaperTotalCostWithVat", Model)
+
+        @Html.Partial("_NewspaperNotice")
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+            </div>
+        </div>
+    </div>
+}
+
+@Html.Partial("_NewspaperSampleAd")
+
+
+<script>
+    var amount;
+    $("#Description").bind('keyup keydown paste cut', function(e)
+    {
+        setTimeout(function () {
+
+            var value = $('#Description').val();
+            if (value.length == 0) {
+                $('#TotalPrice').val(0);
+                $('#wordLimiter').html(0);
+                return;
+            }
+            var regex = /\s+/gi;
+            var wordcount = value.trim().replace(regex, ' ').split(' ').length;
+
+            var x = 800 * .15;
+
+            if (wordcount>=50) {
+                document.getElementById("maxwords").innerHTML = "You can submit maximum 60 words Advertisement";
+            }
+            if (wordcount <50) {
+                $('#maxwords').empty();
+            }
+
+            if ( wordcount > 50 ){
+                $("#submit-btn").attr("disabled", "disabled");
+
+            } else {
+                $("#submit-btn").removeAttr("disabled");
+            }
+
+            if (wordcount <= 16) {
+                amount = 800 + x;
+            }
+            else if (wordcount > 16) {
+                var extraWord = wordcount - 16;
+                var y = (extraWord *50) * 0.15;
+                var extraAmount = extraWord * 50 + y;
+                amount = 920 + extraAmount;
+            }
+
+            $('#TotalPrice').val(amount);
+
+            $('#wordLimiter').html(wordcount);
+        },100);
+    });
+
+</script>
+
+
+<script>
+    var hour = new Date().getUTCHours()+6;
+    $(".datetime").datepicker({
+        startDate: hour >= 18 ? '+2d' : '+1d',
+        autoclose:true
+     });
+
+</script>
