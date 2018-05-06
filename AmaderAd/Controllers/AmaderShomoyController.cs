@@ -26,5 +26,227 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        public ActionResult AmaderShomoyfirstpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shonoy First Page Color",
+                PriceDescription = 16000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoylastpagecolorAdvertisemnet_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy last page color advertisemnet",
+                PriceDescription = 14000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoythirdpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy third page color advertisement",
+                PriceDescription = 9000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoythirdpageblackandwhiteadvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy third page black and white advertisement",
+                PriceDescription = 8000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyfifthpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy fifth page color advertisement",
+                PriceDescription = 6500
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyfifthpageblackandwhiteAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy fifth page black and white advertisement",
+                PriceDescription = 5500
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyeightpagecoloradvertiement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy eight page color advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoytenpagecoloradvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy ten page color advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoysecondpagecoloradvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy second page color advertisement",
+                PriceDescription = 6500
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoysecondpageblackandwhiteadvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader-Shomoy second page black and white advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyelevenpagecoloradvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy eleven page color advertisement",
+                PriceDescription = 6000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyelevenpageblackandwhiteadvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy eleven page black and white advertisement",
+                PriceDescription = 4500
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyinnerpagecoloradvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy inner page color advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyinnerpageblackandwhiteadvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy inner page black and white advertisement",
+                PriceDescription = 4000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyfirstpagespotadvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy first page spot advertisement",
+                PriceDescription = 300000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoylastpagespotadvertisementMainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy last page spot advertisement",
+                PriceDescription = 20000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyspecialkororpotrocolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy special kororpotro color advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyspecialkororpotroblackandwhiteAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy special kororpotro black and white advertisement",
+                PriceDescription = 3500
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyaynashomoyfirstpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy ayna shomoy first page-color advertisement",
+                PriceDescription = 8000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyaynashomoylastpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy ayna shomoy last page-color advertisement",
+                PriceDescription = 6000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyaynashomoythirdpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy ayna shomoy third page-color advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult AmaderShomoyaynashomoygeneralpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy ayna shomoy general page-color advertisement",
+                PriceDescription = 4000
+            };
+            return View(model);
+        }
+
     }
+
 }
