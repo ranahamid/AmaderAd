@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ইত্তেফাকে শ্রেণিভুক্ত বিজ্ঞাপন দিন (Publish classified advertisement at Ittefaq)</h2>
+<h2>ইনকিলাবে শ্রেণিভুক্ত  বিজ্ঞাপন দিন (Publish classified advertisement at Inqilab)</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers"))
@@ -17,20 +17,41 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.Partial("_NewspaperHeader", Model)
 
-        @Html.Partial("_NewspaperAdCategory", Model)
+        <div class="form-group">
+            @Html.LabelFor(m => m.AllAdCategoryId, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => Model.AllAdCategoryId, Model.AllAdCategory, "বিজ্ঞাপনের শিরোনামটি বাছাই করুন  (Choose AD Category)", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AllAdCategoryId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
 
         <h2>শ্রেণিভুক্ত বিজ্ঞাপন </h2>
         <h2>Classified Advertisement</h2>
 
-        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে ।</p>
-        <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 16 words will be charged 600tk and after each word, 40 tk will be added with per word. The maximum word limit for classified ad is 50 words.</p>
+        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ২০ শব্দের জন্য মোট ২০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ২০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৬০ শব্দের মধ্যে হতে হবে ।</p>
+        <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 20 words will be charged 200tk and after each word, 20 tk will be added with per word. The maximum word limit for classified ad is 60 words.</p>
 
-        @Html.Partial("_NewspaperDescriptionAd", Model)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { style = "height:80px;", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                <div class="">
+                    <p id="maxwords" style="color: red;"> <b> </b> </p>
+                    <p>Total Words: <b><span id="wordLimiter">0</span>/50</b></p>
+                </div>
 
-        @Html.Partial("_NewspaperTotalCostWithVat", Model)
+            </div>
+        </div>
 
-
-
+        <div class="form-group">
+            @Html.Label("Total Cost with 15% VAT", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TotalPrice, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.TotalPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         @Html.Partial("_NewspaperNotice")
 
@@ -47,7 +68,8 @@
 
 <script>
     var amount;
-    $("#Description").bind('keyup keydown paste cut', function (e) {
+    $("#Description").bind('keyup keydown paste cut', function(e)
+    {
         setTimeout(function () {
 
             var value = $('#Description').val();
@@ -59,46 +81,46 @@
             var regex = /\s+/gi;
             var wordcount = value.trim().replace(regex, ' ').split(' ').length;
 
-            var x = 600 * .15;
+            var x = 200 * .15;
 
-            if (wordcount >= 50) {
+            if (wordcount>=60) {
                 document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ পঞ্চাশ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 50 words advertisement";
             }
-            if (wordcount < 50) {
+            if (wordcount <60) {
                 $('#maxwords').empty();
             }
 
-            if (wordcount > 50) {
+            if ( wordcount > 60 ){
                 $("#submit-btn").attr("disabled", "disabled");
 
             } else {
                 $("#submit-btn").removeAttr("disabled");
             }
 
-            if (wordcount <= 16) {
-                amount = 600 + x;
+            if (wordcount <= 20) {
+                amount = 200 + x;
             }
-            else if (wordcount > 16) {
-                var extraWord = wordcount - 16;
-                var y = (extraWord * 40) * 0.15;
-                var extraAmount = extraWord * 40 + y;
-                amount = 690 + extraAmount;
+            else if (wordcount > 20) {
+                var extraWord = wordcount - 20;
+                var y = (extraWord *20) * 0.15;
+                var extraAmount = extraWord * 20 + y;
+                amount = 230 + extraAmount;
             }
 
             $('#TotalPrice').val(amount);
 
             $('#wordLimiter').html(wordcount);
-        }, 100);
+        },100);
     });
 
 </script>
 
 
 <script>
-    var hour = new Date().getUTCHours() + 6;
+    var hour = new Date().getUTCHours()+6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
-        autoclose: true
-    });
+        autoclose:true
+     });
 
 </script>

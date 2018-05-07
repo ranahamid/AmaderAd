@@ -4167,7 +4167,6 @@
     <Content Include="Views\Payments\Invoice.cshtml" />
     <Content Include="Views\Ittefaq\FirstPage_MainPage.cshtml" />
     <Content Include="Views\Shared\_NewspaperBody.cshtml" />
-    <Content Include="Views\Inqilab\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\JaiJaiDin\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\JaiJaiDin\FirstPage_MainPage.cshtml" />
     <Content Include="Views\Shared\_NewspaperAdminEdit.cshtml" />
@@ -4241,19 +4240,19 @@
     <Content Include="Views\Manabzamin\ManabzaminFirstPageColorAdvertisement_SpotPanel.cshtml" />
     <Content Include="Views\Manabzamin\ManabzaminLastPageColorAdvertisement_SpotPanel.cshtml" />
     <Content Include="Views\Manabzamin\Manabzaminfirstpagepannel.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabfirstpagecoloradvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilablastpagecoloradvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabgeneraldisplayadvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabthirdpagecoloradvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabthirdpageblackandwhiteadvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabsecondpageblackandwhiteadvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabinnerpagecoloradvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabinnerpageblackandwhiteadvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabsportspagecoloradvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabsportspageblackandwhiteadvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabpagebeforelastpageblackandwhiteadvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\Inqilabentertainmentpagecoloradvertisement_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\inqilabentertainmentpageblackandwhiteadvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\FirstPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\LastPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\GeneralDisplayAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\ThirdPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\ThirdPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\SecondPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\InnerPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\InnerPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\SportsPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\SportsPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\PageBeforeLastPageBlackWhiteadvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\EntertainmentPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\EntertainmentPageBlackWhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\Jaiaidin\Jaijaidinfirstpagecoloradvertisement_MainPage.cshtml" />
     <Content Include="Views\Jaiaidin\Jaijaidinlastpagecoloradvertisement_MainPage.cshtml" />
     <Content Include="Views\Jaiaidin\Jaijaidinlastpageblackandwhiteadvertisement_MainPage.cshtml" />
@@ -4437,7 +4436,8 @@
     <Content Include="Views\AmaderShomoy\AmaderShomoythirdpagecolorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\Janakantha\Index.cshtml" />
     <Content Include="Views\Inqilab\FirstPage_MainPage.cshtml" />
-    <Content Include="Views\Inqilab\InqilabClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\Inqilab\ClassifiedAdvertisement.cshtml" />
+    <Content Include="Views\Inqilab\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
