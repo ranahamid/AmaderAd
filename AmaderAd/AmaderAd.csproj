@@ -4412,7 +4412,7 @@
     <Content Include="Views\Janakantha\JanakanthathirdpageblackandwhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\Janakantha\JanakanthathirdpagecolorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\Janakantha\jankanthalastpagespotAdvertisement_MainPage.cshtml" />
-    <Content Include="Views\AmaderShomoy\AmaderShomoy.cshtml" />
+    <Content Include="Views\AmaderShomoy\Index.cshtml" />
     <Content Include="Views\AmaderShomoy\AmaderShomoyaynashomoyfirstpagecolorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\AmaderShomoy\AmaderShomoyaynashomoygeneralpagecolorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\AmaderShomoy\AmaderShomoyaynashomoylastpagecolorAdvertisement_MainPage.cshtml" />
@@ -4435,7 +4435,9 @@
     <Content Include="Views\AmaderShomoy\AmaderShomoytenpagecoloradvertisement_MainPage.cshtml" />
     <Content Include="Views\AmaderShomoy\AmaderShomoythirdpageblackandwhiteadvertisement_MainPage.cshtml" />
     <Content Include="Views\AmaderShomoy\AmaderShomoythirdpagecolorAdvertisement_MainPage.cshtml" />
-    <Content Include="Views\Janakantha\janakantha.cshtml" />
+    <Content Include="Views\Janakantha\Index.cshtml" />
+    <Content Include="Views\Inqilab\FirstPage_MainPage.cshtml" />
+    <Content Include="Views\Inqilab\InqilabClassifiedAdvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
