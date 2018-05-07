@@ -25,7 +25,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult JanakanthaFirstPage_MainPage()
+        public ActionResult FirstPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -35,7 +35,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult JanakanthaGeneralDisplayAdvertisement_MainPage()
+        public ActionResult GeneralDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -45,7 +45,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult JanakanthaSecondpageblackandwhiteAdvertisement_MainPage()
+        public ActionResult SecondpageblackandwhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -55,7 +55,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult JanakanthathirdpagecolorAdvertisement_MainPage()
+        public ActionResult thirdpagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -65,7 +65,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult JanakanthathirdpageblackandwhiteAdvertisement_MainPage()
+        public ActionResult thirdpageblackandwhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -75,7 +75,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult janakanthafifthpagecolorAdvertisement_MainPage()
+        public ActionResult fifthpagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -85,7 +85,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult janakanthafifthpageblackandwhiteAdvertisement_MainPage()
+        public ActionResult fifthpageblackandwhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -95,7 +95,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult janakanthasportspagecolorAdvertisement_MainPage()
+        public ActionResult sportspagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -105,7 +105,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult janakanthasportspageblackandwhiteadvertisement_MainPage()
+        public ActionResult  sportspageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -115,7 +115,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult janakanthapagebeforlastpageblackandwhiteAdvertisement_MainPage()
+        public ActionResult pagebeforlastpageblackandwhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -125,7 +125,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult JanakanthalastpagecolorAdvertisement_MainPage()
+        public ActionResult lastpagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -135,7 +135,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult janakanthafirstpagespotAdvertisem_MainPage()
+        public ActionResult firstpagespotAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -145,7 +145,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult jankanthalastpagespotAdvertisement_MainPage()
+        public ActionResult lastpagespotAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {

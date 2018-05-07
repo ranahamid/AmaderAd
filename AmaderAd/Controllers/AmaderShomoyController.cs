@@ -26,7 +26,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyfirstpagecolorAdvertisement_MainPage()
+        public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -36,7 +36,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoylastpagecolorAdvertisemnet_MainPage()
+        public ActionResult LastPageColorAdvertisemnet_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -46,7 +46,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoythirdpagecolorAdvertisement_MainPage()
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -56,7 +56,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoythirdpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ThirdPageBlackandWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -66,7 +66,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyfifthpagecolorAdvertisement_MainPage()
+        public ActionResult FifthPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -76,7 +76,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyfifthpageblackandwhiteAdvertisement_MainPage()
+        public ActionResult FifthPageBlackandWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -86,7 +86,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyeightpagecoloradvertiement_MainPage()
+        public ActionResult EightPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -96,7 +96,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoytenpagecoloradvertisement_MainPage()
+        public ActionResult TenPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -106,7 +106,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoysecondpagecoloradvertisement_MainPage()
+        public ActionResult SecondPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -116,17 +116,17 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoysecondpageblackandwhiteadvertisement_MainPage()
+        public ActionResult SecondPageBlackandWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Amader Shomoy",
-                AdLocation = "Amader-Shomoy second page black and white advertisement",
+                AdLocation = "Amader Shomoy second page black and white advertisement",
                 PriceDescription = 5000
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyelevenpagecoloradvertisement_MainPage()
+        public ActionResult ElevenPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -136,7 +136,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyelevenpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ElevenPageBlackandWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -146,7 +146,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyinnerpagecoloradvertisement_MainPage()
+        public ActionResult InnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -156,7 +156,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyinnerpageblackandwhiteadvertisement_MainPage()
+        public ActionResult InnerPageBlackandWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -166,7 +166,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyfirstpagespotadvertisement_MainPage()
+        public ActionResult FirstPageSpotAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -176,7 +176,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoylastpagespotadvertisementMainPage()
+        public ActionResult LastPageSpotAdvertisementMainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -186,7 +186,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyspecialkororpotrocolorAdvertisement_MainPage()
+        public ActionResult SpecialKororpotroColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -196,7 +196,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyspecialkororpotroblackandwhiteAdvertisement_MainPage()
+        public ActionResult SpecialKororpotroBlackandWhiteAdvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -206,7 +206,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyaynashomoyfirstpagecolorAdvertisement_MainPage()
+        public ActionResult AynashomoyFirstPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -216,7 +216,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyaynashomoylastpagecolorAdvertisement_MainPage()
+        public ActionResult AynashomoyLastPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -226,7 +226,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyaynashomoythirdpagecolorAdvertisement_MainPage()
+        public ActionResult AynashomoyThirdPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -236,7 +236,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AmaderShomoyaynashomoygeneralpagecolorAdvertisement_MainPage()
+        public ActionResult AynashomoyGeneralPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
