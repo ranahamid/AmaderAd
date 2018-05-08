@@ -27,7 +27,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinfirstpagecoloradvertisement_MainPage()
+        public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -37,7 +37,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinlastpagecoloradvertisement_MainPage()
+        public ActionResult lastPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -47,7 +47,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinlastpageblackandwhiteadvertisement_MainPage()
+        public ActionResult LastPageblacWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -57,7 +57,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidingeneraldisplaycoloradvertisement_MainPage()
+        public ActionResult GeneralDisplayColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -67,7 +67,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidingeneraldisplayblackandwhiteadvertisement_MainPage()
+        public ActionResult GeneralDisplayBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -77,7 +77,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinthirdpagecoloradvertisement_MainPage()
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -87,7 +87,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinthirdpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -97,7 +97,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinfifthpagecoloradvertisement_MainPage()
+        public ActionResult FifthPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -107,7 +107,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinfifthpageblackandwhiteadvertisement_MainPage()
+        public ActionResult FifthPageblackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -117,7 +117,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinsportspagecoloradvertisement_MainPage()
+        public ActionResult SportsPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -127,7 +127,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinsportspageblackandwhiteadvertisement_MainPage()
+        public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -137,7 +137,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidininnerpagecoloradvertisement_MainPage()
+        public ActionResult InnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -147,7 +147,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidininnerpageblackandwhiteadvertisement_MainPage()
+        public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -157,7 +157,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinsummonsnoticefinanacecourtadvertisement_MainPage()
+        public ActionResult SummonsNoticeFinanaceCourtAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -167,7 +167,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinfirstpageadvertisement_Spot()
+        public ActionResult FirstPageAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
             {
@@ -177,7 +177,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Jaijaidinlastpageadvertisement_Spot()
+        public ActionResult LastPageAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
             {

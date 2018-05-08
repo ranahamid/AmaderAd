@@ -26,7 +26,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult newstodayfrontpagecoloradvertisement_MainPage()
+        public ActionResult FrontPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -36,7 +36,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodayfrontpageblackandwhiteadvertisement_MainPage()
+        public ActionResult FrontPageBlackWhitAadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -46,7 +46,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaybackpagecoloradvertisement_MainPage()
+        public ActionResult BackPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -56,7 +56,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaybackpageblackandwhiteadvertisement_MainPage()
+        public ActionResult BackPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -66,7 +66,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaythirdpagecoloradvertisement_MainPage()
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -76,7 +76,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaythirdpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ThirdPageBlacWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -86,7 +86,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodayinnerpagecoloradvertisement_MainPage()
+        public ActionResult InnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -96,7 +96,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodayinnerpageblackandwhiteadvertisement_MainPage()
+        public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -106,7 +106,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaydifferentcategoriespageadvertisement_MainPage()
+        public ActionResult DifferentCategoriesPageAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -116,7 +116,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaycareeropportunityvacancyblackandwhiteadvertisement_MainPage()
+        public ActionResult CareerOpportunityVacancyBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -126,7 +126,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newstodaybirthdaytoletpurchasesaletutionqulkhanilostandfoundwantedscholarshipcoachingcenterreunionexibitionacademicfeatfashionshowculturalprogramme_MainPage()
+        public ActionResult BirthdayToletPurchaseSaleTutionQulkhaniLostAndFoundWantedScholarshipCoachingCenterReunionExibitionAcademicFeatFashionShowCulturalProgramme_MainPage()
         {
             Newspaper model = new Newspaper
             {
