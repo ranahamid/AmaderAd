@@ -196,26 +196,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerfullpagecoloradvertisement()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Samakal",
-                AdLocation = "samakal magazine shahitto shamoyiki kaler kheya inner full page color advertisement",
-                PriceDescription = 25000
-            };
-            return View(model);
-        }
-        public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerfullpagecoloradvertisement()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Samakal",
-                AdLocation = "samakal magazine shahitto shamoyiki kaler kheya inner full page color advertisement",
-                PriceDescription = 25000
-            };
-            return View(model);
-        }
+    
         public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerfullpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
@@ -436,16 +417,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult samakalnondonshonskritiobinodonshamoyikifirstpagecoloradvertisement()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Samakal",
-                AdLocation = "samakal nondon shonskriti o binodon shamoyiki first page color advertisement",
-                PriceDescription = 7500
-            };
-            return View(model);
-        }
+      
         public ActionResult samakalnondonshonskritiobinodonshamoyikilastpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
