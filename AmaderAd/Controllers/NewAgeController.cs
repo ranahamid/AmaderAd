@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AmaderAd.Models;
 
 namespace AmaderAd.Controllers
 {
-    public class NewAgeController : Controller
+    public class NewAgeController : BaseController
     {
         // GET: NewAge
         public ActionResult Index()
