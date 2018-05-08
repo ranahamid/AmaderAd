@@ -26,7 +26,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult FirstPageColorAdvertisement_MainPage()
+        public ActionResult Samakalfirstpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -36,7 +36,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult LastPageColorAdvertisement_MainPage()
+        public ActionResult samakallastpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -46,7 +46,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ThirdPageColorAdvertisement_MainPage()
+        public ActionResult samakalthirdpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -56,7 +56,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ThirdPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalthirdpageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -66,7 +66,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult FifthPageColorAdvertisement_MainPage()
+        public ActionResult samakalfifthpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -76,7 +76,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult FifthPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalfifthpageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -86,7 +86,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult EntertainmentPageColorAdvertisement_MainPage()
+        public ActionResult samakalentertainmentpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -96,7 +96,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult EntertainmentPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalentertainmentpageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -106,7 +106,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult SportsPageColorAdvertisement_MainPage()
+        public ActionResult samakalsportspagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -116,7 +116,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult SportsPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalsportspageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -126,7 +126,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult SecondPageColorAdvertisement_MainPage()
+        public ActionResult samakalsecondpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -136,7 +136,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult SecondPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalsecondpageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -146,7 +146,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult PageBeforeLastPageColorAdvertisement_MainPage()
+        public ActionResult samakalpagebeforelastpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -156,7 +156,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult PageBeforeLastPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalpagebeforelastpageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -166,7 +166,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult InnerOtherPageColorAdvertisement_MainPage()
+        public ActionResult samakalinnerotherpagecoloradvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -176,7 +176,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult InnerOtherPageBlackandWhiteAdvertisement_MainPage()
+        public ActionResult samakalinnerotherpageblackandwhiteadvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -186,7 +186,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoShamoyikikalerkheyaInnerFullPageColorAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerfullpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -196,8 +196,8 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        
-        public ActionResult MagazineShahittoShamoyikiKalerkheyaInnerFullPageBlackandWhiteAdvertisement()
+    
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerfullpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -207,7 +207,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineshahittoShamoyikikalerkheyaInnerHalfPageColorAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerhalfpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -217,7 +217,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoShamoyikiKalerkheyaInnerHalfPageBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyainnerhalfpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -227,7 +227,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoShamoyikiKalerKheyaFirstCoverColorAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyafirstcovercoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -237,7 +237,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoShamoyikiKalerKheyaLastCoverColorAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyalastcovercoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -247,7 +247,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoShamoyikiKalerKheyaSecondCoverBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyasecondcoverblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -257,7 +257,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoshamoyikiKalerKheyaThirdCoverBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyathirdcoverblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -267,7 +267,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineShahittoShamoyikiKalerKheyaMiddleTwoFullPageTogetherColorAdvertisement()
+        public ActionResult samakalmagazineshahittoshamoyikikalerkheyamiddletwofullpagetogethercoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -277,7 +277,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalInnerFullPageColorAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalinnerfullpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -287,7 +287,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalInnerFullPageBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalinnerfullpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -297,7 +297,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalInnerHalfPageColorAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalinnerhalfpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -307,7 +307,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalInnerHalfPageBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalinnerhalfpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -317,7 +317,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalFirstCoverColorAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalfirstcovercoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -327,7 +327,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalLastCoverColorAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechallastcovercoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -337,7 +337,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalSecondCoverBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalsecondcoverblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -347,7 +347,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalThirdCoverBlackandWhiteAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalthirdcoverblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -357,7 +357,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MagazineRommoShamoyikiPechalMiddleTwoFullPageTogetherColorAdvertisement()
+        public ActionResult samakalmagazinerommoshamoyikipechalmiddletwofullpagetogethercoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -367,7 +367,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ShoiliFirstPageColorAdvertisement()
+        public ActionResult samakalshoilifirstpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -377,7 +377,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ShoiliLastPageColorAdvertisement()
+        public ActionResult samakalshoililastpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -387,7 +387,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ShoiliInnerPageColorAdvertisement()
+        public ActionResult samakalshoiliinnerpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -397,7 +397,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ShoiliInnerPageBlackandWhiteAdvertisement()
+        public ActionResult samakalshoiliinnerpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -407,7 +407,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult NondonShonskritiOBinodonShamoyikiFirstPageColorAdvertisement()
+        public ActionResult samakalnondonshonskritiobinodonshamoyikifirstpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -417,8 +417,8 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        
-        public ActionResult NondonShonskritiOBinodonShamoyikiLastPageColorAdvertisement()
+      
+        public ActionResult samakalnondonshonskritiobinodonshamoyikilastpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -428,7 +428,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult NondonShonskritiOBinodonShamoyikiInnerPageColorAdvertisement()
+        public ActionResult samakalnondonshonskritiobinodonshamoyikiinnerpagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -438,7 +438,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult NondonShonskritiOBinodonShamoyikiInnerPageBlackandWhiteAdvertisement()
+        public ActionResult samakalnondonshonskritiobinodonshamoyikiinnerpageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -448,7 +448,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult KholaHawaGhashForingBigganBoloyDehoghoriFeaturePagecoloradvertisement()
+        public ActionResult samakalkholahawaghashforingbigganboloydehoghorifeaturepagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -458,7 +458,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult KholaHawaGhashForingBigganBoloyDehoghoriFeaturePageblackandwhiteadvertisement()
+        public ActionResult samakalkholahawaghashforingbigganboloydehoghorifeaturepageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -468,7 +468,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AlorPothJatriFeaturePageColorAdvertisement()
+        public ActionResult samakalalorpothjatrifeaturepagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -478,7 +478,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult AlorPothJatriFeaturePageBlackandWhiteAdvertisement()
+        public ActionResult samakalalorpothjatrifeaturepageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -488,7 +488,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MoncherbaireSuhridShomabeshTechLineFeaturePageColorAdvertisement()
+        public ActionResult samakalmoncherbairesuhridshomabeshtechlinefeaturepagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -498,7 +498,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult MoncherbaireSuhridShomabeshTechLineFeaturePageblackandwhiteadvertisement()
+        public ActionResult samakalmoncherbairesuhridshomabeshtechlinefeaturepageblackandwhiteadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -508,7 +508,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult FirstPageSpotAdvertisement()
+        public ActionResult samakalfirstpagespotadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -518,7 +518,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult LastPageSpotAdvertisement()
+        public ActionResult samakallastpagespotadvertisement()
         {
             Newspaper model = new Newspaper
             {
@@ -528,7 +528,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult SportsPageSpotAdvertisement()
+        public ActionResult samakalsportspagespotadvertisement()
         {
             Newspaper model = new Newspaper
             {

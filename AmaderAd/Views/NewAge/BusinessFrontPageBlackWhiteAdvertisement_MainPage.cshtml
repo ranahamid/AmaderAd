@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>যায়যায়দিনের প্রথম পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন <br> Color Advertisement in first page of Jaijaidin </h2>
+<h2>Black and White Advertisement in Business front page of New Age </h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -54,8 +54,8 @@
 
         var priceDescription = @Html.Raw(Model.PriceDescription);
 
-        if ((columnSize * inchSize) < 12) {
-            $("#columninchwarning").html("এই পেজে  কমপক্ষে বারো কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You have to publish minimum 12 column inch advertisement here ");
+        if ((columnSize * inchSize) < 4 || (columnSize * inchSize) > 80 ) {
+            $("#columninchwarning").html("You can publish atleast 4 column inch and maximum 80 column inch Advertisement here ");
             $("#TotalPrice").html(0);
             $("#TotalPrice").val(0);
             $("#submit-btn").attr("disabled", "disabled");
@@ -77,3 +77,12 @@
     }
 
 </script>
+
+
+
+
+
+
+
+
+

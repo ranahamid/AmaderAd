@@ -25,7 +25,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantageneraldisplayadvertisement_MainPage()
+        public ActionResult GeneralDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -35,7 +35,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult nayadigantafirstpagecoloradvertisement_MainPage()
+        public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -45,7 +45,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantasecondpageblackandwhiteadvertisement_MainPage()
+        public ActionResult SecondPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -55,7 +55,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantalastpagecoloradvertisement_MainPage()
+        public ActionResult LastPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -65,7 +65,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantalastpageblackandwhiteadvertisement_MainPage()
+        public ActionResult LastPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -75,7 +75,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantathirdpagecoloradvertisement_MainPage()
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -85,7 +85,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantathirdpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -95,7 +95,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantafifthpagecoloradvertisement_MainPage()
+        public ActionResult FifthPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -105,7 +105,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantafifthpageblackandwhiteadvertisement_MainPage()
+        public ActionResult FifthPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -115,7 +115,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantabusinesspagecoloradvertisement_MainPage()
+        public ActionResult BusinessPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -125,7 +125,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantabusinesspageblacandwhiteadvertisement_MainPage()
+        public ActionResult BusinessPageBlacWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -135,7 +135,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaentertainmentpagecoloradvertisement_MainPage()
+        public ActionResult EntertainmentPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -145,7 +145,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaentertainmentpageblackandwhiteadvertisement_MainPage()
+        public ActionResult EntertainmentPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -155,7 +155,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantasportspagecoloradvertisement_MainPage()
+        public ActionResult SportsPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -165,7 +165,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantasportspageblackandwhiteadvertisement_MainPage()
+        public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -175,7 +175,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantainnerpagecoloradvertisement_MainPage()
+        public ActionResult InnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -185,7 +185,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantainnerpageblackandwhiteadvertisement_MainPage()
+        public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -195,7 +195,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantabackinnerpageblackandwhiteadvertisement_MainPage()
+        public ActionResult BackInnerPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -205,17 +205,17 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult nayadigantafinanacecourtadvertisement_MainPage()
+        public ActionResult FinanceCourtAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Naya Diganta",
-                AdLocation = "Naya Diganta Finanace Court related advertisement",
+                AdLocation = "Naya Diganta Finance Court related advertisement",
                 PriceDescription = 3500
             };
             return View(model);
         }
-        public ActionResult nayadigantabirthdaymeritoriousstudentmissingcoloradvertisement_MainPage()
+        public ActionResult BirthdayMeritoriousStudentMissingColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -225,7 +225,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantabirthdaymeritoriousstudentmissingblackandwhiteadvertiement_MainPage()
+        public ActionResult BirthdayMeritoriousStudentMissingBlackWhiteAdvertiement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -235,7 +235,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult NayaDigantaFirstPageColorAdvertisement_Spot()
+        public ActionResult FirstPageColorAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
             {
@@ -245,7 +245,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult NayaDigantaLastPageColorAdvertisement_Spot()
+        public ActionResult LastPageColorAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
             {
@@ -255,7 +255,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaobokashcoloradvertisement_WeeklyPublication()
+        public ActionResult ObokashColorAdvertisement_WeeklyPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -265,7 +265,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaobokashblackandwhiteadvertisement_WeeklyPublication()
+        public ActionResult ObokashBlackWhiteAdvertisement_WeeklyPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -275,7 +275,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaweeklytherapycoloradvertisement_WeeklyPublication()
+        public ActionResult WeeklyTherapyColoradvertisement_WeeklyPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -285,7 +285,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaweeklytherapyblackandwhiteadvertisement_WeeklyPublication()
+        public ActionResult WeeklyTherapyBlackWhiteAdvertisement_WeeklyPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -295,7 +295,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaweeklyshatrongcoloradvertisement_WeeklyPublication()
+        public ActionResult WeeklyShatrongColorAdvertisement_WeeklyPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -305,7 +305,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaweeklyshatrongblackandwhiteadvertisement_WeeklyPublication()
+        public ActionResult WeeklyShatrongBlackWhiteAdvertisement_WeeklyPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -315,7 +315,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaanondolokcoloradvertisement_RegularPublication()
+        public ActionResult AnondolokColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -325,7 +325,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaanondolokblackandwhiteadvertisement_RegularPublication()
+        public ActionResult AnondolokBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -335,7 +335,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantabinodonsharadincoloradvertisement_RegularPublication()
+        public ActionResult BinodonSharadinColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -345,7 +345,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantabinodonsharadinblackandwhiteadvertisement_RegularPublication()
+        public ActionResult BinodonSharadinBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -355,7 +355,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantadigantashahittocoloradvertisement_RegularPublication()
+        public ActionResult DigantaShahittoColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -365,7 +365,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantadigantashahittoblackandwhiteadvertisement_RegularPublication()
+        public ActionResult DigantaShahittoBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -375,7 +375,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantanittodincoloradvertisement_RegularPublication()
+        public ActionResult NittodinColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -385,7 +385,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantanittodinblackandwhiteadvertisement_RegularPublication()
+        public ActionResult NittodinBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -395,7 +395,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantasyllabuscoloradvertisement_RegularPublication()
+        public ActionResult SyllabusColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -405,7 +405,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantasyllabusblackandwhiteadvertisement_RegularPublication()
+        public ActionResult SyllabusBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -415,7 +415,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantanaricoloradvertisement_RegularPublication()
+        public ActionResult NariColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -425,7 +425,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantanariblacandwhiteadvertisement_RegularPublication()
+        public ActionResult NariBlacWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -435,7 +435,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaagdumbagdumcoloradvertisement_RegularPublication()
+        public ActionResult AgdumBagdumColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -445,7 +445,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaagdumbagdumblackandwhiteadvertisement_RegularPublication()
+        public ActionResult AgdumBagdumBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -455,7 +455,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantascienceandtechnologycoloradvertisement_RegularPublication()
+        public ActionResult ScienceAndTechnologyColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -465,7 +465,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantascienceandtechnologyblackandwhiteadvertisement_RegularPublication()
+        public ActionResult ScienceAndTechnologyBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -475,7 +475,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantamuktobazarcoloradvertisement_RegularPublication()
+        public ActionResult MuktoBazarColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -485,7 +485,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantamuktobazarblackandwhiteadvertisement_RegularPublication()
+        public ActionResult MuktoBazarBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -495,27 +495,27 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantapriyojoncoloradvertisement_RegularPublication()
+        public ActionResult PriyoJonColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Naya Diganta",
-                AdLocation = "Naya-Diganta priyojon color advertisement",
+                AdLocation = "Naya Diganta Priyojon color advertisement",
                 PriceDescription = 5000
             };
             return View(model);
         }
-        public ActionResult Nayadigantapriyojonblackandwhiteadvertisement_RegularPublication()
+        public ActionResult PriyoJonBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Naya Diganta",
-                AdLocation = "Naya-Diganta priyojon black and white advertisement",
+                AdLocation = "Naya Diganta priyojon black and white advertisement",
                 PriceDescription = 3500
             };
             return View(model);
         }
-        public ActionResult Nayadigantaniramoycoloradvertisement_RegularPublication()
+        public ActionResult NiramoyColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -525,7 +525,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaniramoyblackandwhiteadvertisement_RegularPublication()
+        public ActionResult NiramoyBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -535,7 +535,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaislamidigantacoloradvertisement_RegularPublication()
+        public ActionResult IslamiDigantaColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -545,7 +545,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaislamidigantablackandwhiteadvertisement_RegularPublication()
+        public ActionResult IslamiDigantaBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -555,7 +555,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantadeshmohadeshcoloradvertisement_RegularPublication()
+        public ActionResult DeshMohadeshColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -565,7 +565,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantadeshmohadeshblackandwhiteadvertisement_RegularPublication()
+        public ActionResult DeshMohadeshBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -575,7 +575,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaajkercomputercoloradvertisement_RegularPublication()
+        public ActionResult AjkerComputerColorAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {
@@ -585,7 +585,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Nayadigantaajkercomputerblackandwhiteadvertisement_RegularPublication()
+        public ActionResult AjkerComputerBlackWhiteAdvertisement_RegularPublication()
         {
             Newspaper model = new Newspaper
             {

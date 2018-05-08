@@ -1,15 +1,11 @@
 ﻿@model AmaderAd.Models.Newspaper
 
 @{
-    /**/
-
-    /**/
-
     ViewBag.Title = "ClassifiedAdvertisement";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2> যায়যায়দিনে সমন/নোটিশ/নিলাম/অর্থঋণ আদালত সংক্রান্ত বিজ্ঞাপন দিন  <br> Publish Summons/Notice/Auction/Finance Court related Advertisement in Jaijaidin</h2>
+<h2> ইনকিলাবের বিনোদন পৃষ্ঠাতে সাদা কালো বিজ্ঞাপন দিন  <br> Black & White Advertisement in Entertainment page of Inqilab</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -78,8 +74,6 @@
     }
 
 </script>
-
-
 
 
 

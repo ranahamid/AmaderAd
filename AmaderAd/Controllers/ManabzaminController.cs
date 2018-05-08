@@ -26,7 +26,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ManabZaminfirstpagecoloradvertisement_MainPage()
+        public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -36,7 +36,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminlastpagecoloradvertisement_MainPage()
+        public ActionResult LastPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -47,7 +47,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
-        public ActionResult Manabzaminspecialdisplayadvertisement_MainPage()
+        public ActionResult SpecialDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -57,7 +57,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzamingeneraldisplayadvertisement_MainPage()
+        public ActionResult GeneralDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -67,7 +67,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzamineducativereligiousaffairadvertisement_MainPage()
+        public ActionResult EducativeReligiousAffairAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -77,7 +77,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminthirdpagecoloradvertisement_MainPage()
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -87,7 +87,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminthirdpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -97,7 +97,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminentertainmentpagecoloradvertisement_MainPage()
+        public ActionResult EntertainmentPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -107,7 +107,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminentertainmentpageblackandwhiteadvertisement_MainPage()
+        public ActionResult EntertainmentPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -117,7 +117,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminsportpagecoloradvertisement_MainPage()
+        public ActionResult SportPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -127,7 +127,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminotherpagecoloradvertisement_MainPage()
+        public ActionResult OtherPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -137,7 +137,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ManabzaminFirstPageColorAdvertisement_SpotPanel()
+        public ActionResult FirstPageColorAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
             {
@@ -147,7 +147,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult ManabzaminLastPageColorAdvertisement_SpotPanel()
+        public ActionResult LastPageColorAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
             {
@@ -157,7 +157,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Manabzaminfirstpagepannel()
+        public ActionResult FirstPage_pannel()
         {
             Newspaper model = new Newspaper
             {

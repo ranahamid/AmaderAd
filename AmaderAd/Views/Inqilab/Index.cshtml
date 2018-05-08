@@ -14,30 +14,118 @@ namespace AmaderAd.Controllers
         {
             return View();
         }
-
         //classified advertisement
         public ActionResult ClassifiedAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Classified Advertisement",
+                AdLocation = "InqilabClassifiedAdvertisement",
                 AllAdCategory = GetAllAdCategory()
             };
             return View(model);
         }
-
-        public ActionResult FirstPageColorAdvertisement_MainPage()
+        public ActionResult InqilabFirstPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab first page color advertisement",
+                AdLocation = "Inqilab First Page Color",
                 PriceDescription = 14000
             };
             return View(model);
         }
-        public ActionResult LastPageColorAdvertisement_MainPage()
+        public ActionResult InqilabGeneralDisplayAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab General Display Advertisement",
+                PriceDescription = 3000
+            };
+            return View(model);
+        }
+        public ActionResult InqilabSecondpageblackandwhiteAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab Secondpage black and white Advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult InqilabthirdpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab third page color Advertisement",
+                PriceDescription = 9000
+            };
+            return View(model);
+        }
+        public ActionResult InqilabthirdpageblackandwhiteAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab third page black and white advertisement",
+                PriceDescription = 7000
+            };
+            return View(model);
+        }
+        public ActionResult InqilabfifthpagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab fifth page color advertisement",
+                PriceDescription = 7500
+            };
+            return View(model);
+        }
+        public ActionResult InqilabfifthpageblackandwhiteAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab fifth page black and white advertisement",
+                PriceDescription = 5000
+            };
+            return View(model);
+        }
+        public ActionResult InqilabsportspagecolorAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab sports page color advertisement",
+                PriceDescription = 5500
+            };
+            return View(model);
+        }
+        public ActionResult Inqilabsportspageblackandwhiteadvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab sports page black and white Advertisement",
+                PriceDescription = 4000
+            };
+            return View(model);
+        }
+        public ActionResult InqilabpagebeforlastpageblackandwhiteAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab page befor last page black and white advertisement",
+                PriceDescription = 4500
+            };
+            return View(model);
+        }
+        public ActionResult InqilablastpagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -47,117 +135,26 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult GeneralDisplayAdvertisement_MainPage()
+        public ActionResult InqilabfirstpagespotAdvertisem_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab general display advertisement",
-                PriceDescription = 3600
+                AdLocation = "Inqilab first page spot advertisement",
+                PriceDescription = 20000
             };
             return View(model);
         }
-        public ActionResult ThirdPageColorAdvertisement_MainPage()
+        public ActionResult jankanthalastpagespotAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab third page color advertisement",
-                PriceDescription = 8000
+                AdLocation = "jankantha last page spot advertisement",
+                PriceDescription = 15000
             };
             return View(model);
         }
-        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab third page black and white advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
-        public ActionResult SecondPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab second page black and white advertisement",
-                PriceDescription = 4000
-            };
-            return View(model);
-        }
-        public ActionResult InnerPageColorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab inner page color advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
-        public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab inner page black and white advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
-        public ActionResult SportsPageColorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab sports page color advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
-        public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab sports page black and white advertisement",
-                PriceDescription = 4000
-            };
-            return View(model);
-        }
-        public ActionResult PageBeforeLastPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab page before last page black and white advertisement",
-                PriceDescription = 4000
-            };
-            return View(model);
-        }
-        public ActionResult EntertainmentPageColorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab entertainment page color advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
-        public ActionResult EntertainmentPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab entertainment page black and white advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
-
-
     }
 }
+

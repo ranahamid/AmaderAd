@@ -1,15 +1,11 @@
 ﻿@model AmaderAd.Models.Newspaper
 
 @{
-    /**/
-
-    /**/
-
     ViewBag.Title = "ClassifiedAdvertisement";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2> ইনকিলাবের ভেতরের পৃষ্ঠাতে সাদা কালো বিজ্ঞাপন দিন <br> Black & White Advertisement in inner page of Inqilab </h2>
+<h2> ইনকিলাবে সাধারন দর্শনীয় বিজ্ঞাপন দিন <br> General Display Advertisement in Inqilab</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -78,7 +74,5 @@
     }
 
 </script>
-
-
 
 

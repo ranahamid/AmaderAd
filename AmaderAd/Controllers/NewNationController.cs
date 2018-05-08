@@ -26,7 +26,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult newnationfrontpagecoloradvertisement_MainPage()
+        public ActionResult FrontPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -36,7 +36,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newnationbackpagecoloradvertisement_MainPage()
+        public ActionResult BackpageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -46,7 +46,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newnationthirdpagecoloradvertisement_MainPage()
+        public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -56,7 +56,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newnationthirdpageblackandwhiteadvertisement_MainPage()
+        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -66,7 +66,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newnationotherinsidepagecoloradvertisement_MainPage()
+        public ActionResult OtherInsidePageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -76,7 +76,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newnationcommercialdisplayadvertisement_MainPage()
+        public ActionResult CommercialDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
@@ -86,12 +86,12 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        public ActionResult Newnationhighcourtjudgecourtadvertisement_MainPage()
+        public ActionResult HighCourtJudgeCourtAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Nation",
-                AdLocation = "New Nation High Court Judge Court-Advertisement",
+                AdLocation = "New Nation High Court Judge Court Advertisement",
                 PriceDescription = 3000
             };
             return View(model);
