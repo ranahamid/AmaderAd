@@ -7,7 +7,7 @@ using AmaderAd.Models;
 
 namespace AmaderAd.Controllers
 {
-    public class JaiaidinController : BaseController
+    public class JaiJaidinController : BaseController
     {
 
         // GET: Jaijaidin
