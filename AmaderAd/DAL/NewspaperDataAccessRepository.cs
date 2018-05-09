@@ -25,7 +25,7 @@ namespace AmaderAd.DAL
                 NewsGuidId 	            = x.NewsGuidId 	            ,
                 NewspaperName           = x.NewspaperName            ,
                 AdLocation              = x.AdLocation               ,
-                PriceDescription                   = x.PriceDescription                    ,
+                PriceDescription        = x.PriceDescription                    ,
                 AdvertiserName          = x.AdvertiserName           ,
                 AdvertiserAddress       = x.AdvertiserAddress        ,
                 AdvertiserMobile        = x.AdvertiserMobile         ,
