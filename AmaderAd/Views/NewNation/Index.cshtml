@@ -1,0 +1,274 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "NewNation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>NewNation</h2>
+
+<div class="row" id="sortable_portlets">
+    <div class="col-md-12 column sortable">
+        <div class="portlet portlet-sortable  bg-inverse">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-puzzle font-red-flamingo"></i>
+
+                    <span class="caption-helper">Classified Advertisement</span>
+                </div>
+                <div class="tools">
+                    <a href="" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="" class="reload"> </a>
+                    <a href="" class="fullscreen"> </a>
+                    <a href="" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-chambray">
+                                <div class="mt-head-desc">Classified Advertisement</div>
+                                <span class="mt-head-date"></span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "ClassifiedAdvertisement", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- empty sortable porlet required for each columns! -->
+        <div class="portlet portlet-sortable-empty"> </div>
+    </div>
+</div>
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">Main Paper</span>
+                <span class="caption-helper"></span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>Specific Page</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-green-jungle">
+
+                                    <div class="mt-head-desc">Front Page (Color) </div>
+                                    <span class="mt-head-date">Minimum size 12 column inch and maximum size 40 clumn inch</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "FrontPageColorAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-green-jungle">
+
+                                    <div class="mt-head-desc"> Back Page (Color) </div>
+                                    <span class="mt-head-date">Minimum size 6 column inch and maximum size 96 clumn inch </span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "BackpageColorAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-green-jungle">
+
+                                    <div class="mt-head-desc">Third Page (Color)</div>
+                                    <span class="mt-head-date"> </span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "ThirdPageColorAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-green-jungle">
+
+                                    <div class="mt-head-desc">Third Page (Black and White)</div>
+                                    <span class="mt-head-date"></span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "ThirdPageBlackWhiteAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue">
+
+                                    <div class="mt-head-desc"> Other inside page (Color)</div>
+                                    <span class="mt-head-date"> </span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "OtherInsidePageColorAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue">
+
+                                    <div class="mt-head-desc"> Commercial Diplay Advertisement</div>
+                                    <span class="mt-head-date">Maximum 80 Column Inch</span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "CommercialDisplayAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue">
+
+                                    <div class="mt-head-desc"> Inner Page (color)</div>
+                                    <span class="mt-head-date"></span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "InnerPageColorAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue">
+
+                                    <div class="mt-head-desc">Inner Page (Black and White) </div>
+                                    <span class="mt-head-date"></span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "InnerPageBlackWhiteAdvertisement_MainPage(", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue-steel">
+
+                                    <div class="mt-head-desc">Different catagories advertyisements </div>
+                                    <span class="mt-head-date"></span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "DifferentCategoriesPageAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue-steel">
+
+                                    <div class="mt-head-desc"> Commercial Display Advertisement </div>
+                                    <span class="mt-head-date"> </span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "CommercialDisplayAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-blue-steel">
+
+                                    <div class="mt-head-desc">New Nation High Court Judge Court Advertisement   </div>
+                                    <span class="mt-head-date"></span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "HighCourtJudgeCourtAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="portlet-body">
+                    <div class="box-heading-green box-sections box-block">
+                        <p>স্পট বিজ্ঞাপন <small>Spot Advertisement</small></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-purple">
+
+                                    <div class="mt-head-desc">প্রথম পাতা</div>
+                                    <span class="mt-head-date">First Page  </span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "firstpagespotAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mt-widget-3">
+                                <div class="mt-head bg-purple">
+
+                                    <div class="mt-head-desc">শেষের পাতা</div>
+                                    <span class="mt-head-date">Last Page  </span>
+                                    <div class="mt-head-button">
+                                        @Html.ActionLink("Click here to place your Ad", "lastpagespotAdvertisement_MainPage", "NewNation", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- empty sortable porlet required for each columns! -->
+        <div class="portlet portlet-sortable-empty"> </div>
+    </div>
+
+
+
+
+
+    <script src="~/Content/metronic/portlet-draggable.js"></script>
