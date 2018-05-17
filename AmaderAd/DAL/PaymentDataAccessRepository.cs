@@ -59,22 +59,6 @@ namespace AmaderAd.DAL
             var entity = Db.PaymentTbls.Where(x => x.Id == id).Select(x => new Payment()
             {
                 Id = x.Id,
-                //NewspaperName = x.NewspaperName,
-                //AdLocation = x.AdLocation,
-                //Price = x.Price,
-                //AdvertiserName = x.AdvertiserName,
-                //AdvertiserAddress = x.AdvertiserAddress,
-                //AdvertiserMobile = x.AdvertiserMobile,
-                //AdvertiserEmail = x.AdvertiserEmail,
-                //DateofPublication = x.DateofPublication,
-                //ColumnSize = x.ColumnSize,
-                //Inch = x.Inch,
-                //TotalColumnInch = x.TotalColumnInch,
-                //TotalPrice = x.TotalPrice,
-                //Description = x.Description,
-
-                //MainImagePath = HttpUtility.UrlPathEncode(baseUrl + x.MainImagePath),
-                //RawDbImagePath = x.MainImagePath,
                 CreatedOnUtc = x.CreatedOnUtc,
                 UpdatedOnUtc = x.UpdatedOnUtc,
                 Active = x.Active,
@@ -91,11 +75,7 @@ namespace AmaderAd.DAL
                 PaymentAmount       = x.PaymentAmount
 
             }).SingleOrDefault();
-
-            //if (entity != null)
-            //{
-            //    entity.AdCategoryName = GetAdCategory(id.ToString());                
-            //}
+           
             return entity;
         }
 
