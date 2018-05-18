@@ -1,4 +1,11 @@
-﻿
+﻿@using AspNetSeo.Mvc
+
+@Html.SeoTitle()
+
+@Html.SeoLinkCanonical()
+@Html.SeoMetaDescription()
+@Html.SeoMetaKeywords()
+
 <meta charset="utf-8" />
 
 <!-- Tell the browser to be responsive to screen width -->
@@ -33,11 +40,6 @@
     <link href="~/Content/fullcalendar-3.8.2/fullcalendar.css" rel="stylesheet" />
     <link href="~/Content/metronic/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS -->
-
-
-
-
-
     <!-- BEGIN THEME GLOBAL STYLES -->
     <link href="~/Content/metronic/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
     <link href="~/Content/metronic/css/plugins.min.css" rel="stylesheet" type="text/css" />
@@ -126,8 +128,8 @@
 </div>
 
 <div class="buttonstyle">
-        <link href="~/Content/button-style/style1.css" rel="stylesheet" />
-        <link href="~/Content/button-style/style2.css" rel="stylesheet" />
+    <link href="~/Content/button-style/style1.css" rel="stylesheet" />
+    <link href="~/Content/button-style/style2.css" rel="stylesheet" />
 </div>
 
 

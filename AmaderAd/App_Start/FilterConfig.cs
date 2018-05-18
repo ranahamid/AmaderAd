@@ -1,4 +1,5 @@
 ﻿using AmaderAd.Filters;
+using AspNetSeo.Mvc;
 using System.Web.Mvc;
 
 namespace AmaderAd
@@ -11,6 +12,8 @@ namespace AmaderAd
              
             //ExceptionHandlerAttribute
             filters.Add(new ExceptionHandlerAttribute());
+            filters.Add(new SeoBaseTitleAttribute("Amader Ad"));
+            filters.Add(new SeoBaseLinkCanonicalAttribute("http://amaderad.net/"));
         }
     }
 }

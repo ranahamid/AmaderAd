@@ -14,13 +14,16 @@ using System.Threading.Tasks;
 using AmaderAd.DAL;
 using System.Configuration;
 using AmaderAd.Filters;
-
+using AspNetSeo.Mvc;
 
 namespace AmaderAd.Controllers
 {
     [ExceptionHandler]
+    [SeoBaseTitle("Amader Ad")]
+    [SeoBaseLinkCanonical("http://www.amaderad.net/")]
     public class HomeController : BaseController
-    {        
+    {
+        [SeoTitle("Homepage")]
         public ActionResult Index()
         {
             Log.Info("App started...");

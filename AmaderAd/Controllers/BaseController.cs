@@ -22,12 +22,12 @@ using System.Text.RegularExpressions;
 using Microsoft.AspNet.Identity;
 using System.Net.Mail;
 using System.Text;
-
+using AspNetSeo.Mvc;
 
 namespace AmaderAd.Controllers
 {
     [ExceptionHandler]
-    public class BaseController:Controller
+    public class BaseController: SeoController
     {
         public AmaderAdDataContext Db = new AmaderAdDataContext();
         public HttpClient client;
