@@ -65,7 +65,16 @@ namespace AmaderAd.Models
         [Display(Name = "আপনার মতামত")]
         public string Comments { get; set; }
 
+        [Display(Name = "Word Limit")]
+        public int WordLimit { get; set; }
 
+
+
+        public int FirstWordLimitBase { get; set; }
+
+        public int ExtraWordPrice { get; set; }
+
+        public double VAT { get; set; }
 
 
         [ScaffoldColumn(false)]

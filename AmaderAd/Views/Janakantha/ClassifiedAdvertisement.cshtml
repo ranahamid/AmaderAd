@@ -15,20 +15,17 @@
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         @Html.Partial("_NewspaperHeader", Model)
 
         @Html.Partial("_NewspaperAdCategory", Model)
 
+        @Html.Partial("_ClassifiedHeaderDescription", Model)
 
-        <h2>শ্রেণিভুক্ত বিজ্ঞাপন </h2>
-        <h2>Classified Advertisement</h2>
-
-        <p>শ্রেণিভুক্ত বিজ্ঞাপনে কোনো দর্শনীও শিরোনাম দেওয়া হয় না । এ জাতীয় বিজ্ঞাপনের মূল্য প্রথম ২০ শব্দের জন্য মোট ৩০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ২০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৬০ শব্দের মধ্যে হতে হবে ।</p>
-        <p>No noticable headline will be given on classified advertisement. For This type of advertisement first 20 words will be charged 300tk and after each word, 20 tk will be added with per word. The maximum word limit for classified ad is 60 words.</p>
         @Html.Partial("_NewspaperDescriptionAd", Model)
 
         @Html.Partial("_NewspaperTotalCostWithVat", Model)
-    
+
         @Html.Partial("_NewspaperNotice")
 
         <div class="form-group">
@@ -47,6 +44,15 @@
     $("#Description").bind('keyup keydown paste cut', function(e)
     {
         setTimeout(function () {
+            debugger
+            var maxWordCount = @Html.Raw(Model.WordLimit);
+            var priceDescription = @Html.Raw(Model.PriceDescription);
+
+            var firstWordLimitBase = @Html.Raw(Model.FirstWordLimitBase); //16
+            var extraWordPrice = @Html.Raw(Model.ExtraWordPrice); //40
+
+            var vat = @Html.Raw(Model.VAT); //0.15
+
 
             var value = $('#Description').val();
             if (value.length == 0) {
@@ -54,33 +60,34 @@
                 $('#wordLimiter').html(0);
                 return;
             }
+
             var regex = /\s+/gi;
             var wordcount = value.trim().replace(regex, ' ').split(' ').length;
 
-            var x = 300 * .15;
+            var priceWithVat = priceDescription * vat;
 
-            if (wordcount>=60) {
-                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ ৬০ শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum 60 words advertisement";
+            if (wordcount >= maxWordCount) {
+                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ " + maxWordCount + " শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum " + maxWordCount + " words advertisement";
             }
-            if (wordcount <60) {
+            if (wordcount < maxWordCount) {
                 $('#maxwords').empty();
             }
 
-            if ( wordcount > 60 ){
+            if (wordcount > maxWordCount ){
                 $("#submit-btn").attr("disabled", "disabled");
 
             } else {
                 $("#submit-btn").removeAttr("disabled");
             }
 
-            if (wordcount <= 20) {
-                amount = 300 + x;
+            if (wordcount <= firstWordLimitBase) {
+                amount = priceDescription + priceWithVat;
             }
-            else if (wordcount > 20) {
-                var extraWord = wordcount - 20;
-                var y = (extraWord *20) * 0.15;
-                var extraAmount = extraWord * 20 + y;
-                amount = 345 + extraAmount;
+            else if (wordcount > firstWordLimitBase) {
+                var extraWord = wordcount - firstWordLimitBase;
+                var extraPriceWithVat = (extraWord * extraWordPrice) * vat;
+                var extraAmount = extraWord * extraWordPrice + extraPriceWithVat;
+                amount = priceDescription + priceWithVat + extraAmount;
             }
 
             $('#TotalPrice').val(amount);
@@ -93,10 +100,10 @@
 
 
 <script>
-    var hour = new Date().getUTCHours()+6;
+    var hour = new Date().getUTCHours() + 6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
-        autoclose:true
-     });
+        autoclose: true
+    });
 
 </script>

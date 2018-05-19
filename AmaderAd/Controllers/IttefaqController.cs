@@ -4,9 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AmaderAd.Models;
+using AspNetSeo.Mvc;
 
 namespace AmaderAd.Controllers
 {
+    [SeoBaseTitle("Amader Ad")]
+    [SeoBaseLinkCanonical("http://www.amaderad.net/")]
     public class IttefaqController : BaseController
     {
         // GET: Ittefaq
@@ -17,11 +20,19 @@ namespace AmaderAd.Controllers
 
         #region classified        
         //classified advertisement
+        [SeoTitle("Classified Advertisement")]
         public ActionResult ClassifiedAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 16,                
+                PriceDescription = 600,
+                ExtraWordPrice = 40,
+                WordLimit = 50,
+
                 AdLocation = "Classified Advertisement",
                 AllAdCategory = GetAllAdCategory()
             };
