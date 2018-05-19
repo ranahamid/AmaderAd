@@ -35,6 +35,41 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
+        public ActionResult FinancialCourt()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+
+                AdLocation = "Financial Court, Sommons, Notice, Tender",
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                //FirstWordLimitBase = 16,
+                 PriceDescription = 3600,
+                //ExtraWordPrice = 40,
+                //WordLimit = 50,
+
+                AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+        public ActionResult EduReligious()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+
+                AdLocation = "Educational, Religious Advertisement",
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                //FirstWordLimitBase = 16,
+                PriceDescription = 2400,
+                //ExtraWordPrice = 40,
+                //WordLimit = 50,
+
+                AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
         public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper

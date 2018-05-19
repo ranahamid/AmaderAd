@@ -330,6 +330,8 @@
     <Compile Include="Controllers\BannersController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\DailyStarController.cs" />
+    <Compile Include="Controllers\DailySunController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\Api\Account-temp-ApiController.cs" />
     <Compile Include="Controllers\Api\LogApiController.cs" />
@@ -339,6 +341,7 @@
     <Compile Include="Controllers\IttefaqController.cs" />
     <Compile Include="Controllers\jaijaidinController.cs" />
     <Compile Include="Controllers\JanakanthaController.cs" />
+    <Compile Include="Controllers\KalerKanthoController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\ManabzaminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -352,6 +355,7 @@
     <Compile Include="Controllers\OrderPaymentMethodsController.cs" />
     <Compile Include="Controllers\OrderPaymentStatusController.cs" />
     <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\ProthomAloController.cs" />
     <Compile Include="Controllers\SamakalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\AccountDataAccessRepository.cs" />
@@ -4196,6 +4200,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\shopping-cart-2-responsive\css\" />
+    <Folder Include="Views\DailyStar\" />
+    <Folder Include="Views\DailySun\" />
+    <Folder Include="Views\KalerKantho\" />
+    <Folder Include="Views\ProthomAlo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AmaderAd.dll.config" />
@@ -4529,6 +4537,8 @@
     <Content Include="Views\NewNation\Index.cshtml" />
     <Content Include="Views\NewAge\ClassifiedAdvertisement.cshtml" />
     <Content Include="Views\Shared\_ClassifiedHeaderDescription.cshtml" />
+    <Content Include="Views\Inqilab\FinancialCourt.cshtml" />
+    <Content Include="Views\Inqilab\EduReligious.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

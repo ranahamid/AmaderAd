@@ -15,6 +15,7 @@ namespace AmaderAd.Controllers
             return View();
 
         }
+
         //classified advertisement
         public ActionResult ClassifiedAdvertisement()
         {
@@ -34,6 +35,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+
         public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
