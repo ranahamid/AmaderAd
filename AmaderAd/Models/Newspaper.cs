@@ -56,6 +56,13 @@ namespace AmaderAd.Models
         public int? TotalColumnInch { get; set; }
 
 
+        [Display(Name = "কলাম (Column)")]
+        public string ColumnSizeFloat { get; set; }
+
+        [Display(Name = "ইঞ্চি (Inch)")]
+        public string InchFloat { get; set; }
+
+
         [Display(Name = "Total Price")]
         public int? TotalPrice { get; set; }
 

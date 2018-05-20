@@ -4539,6 +4539,22 @@
     <Content Include="Views\Shared\_ClassifiedHeaderDescription.cshtml" />
     <Content Include="Views\Inqilab\FinancialCourt.cshtml" />
     <Content Include="Views\Inqilab\EduReligious.cshtml" />
+    <Content Include="Views\NewAge\FrontPage_Panel.cshtml" />
+    <Content Include="Views\Shared\_NewspaperBodyStringReadOnly.cshtml" />
+    <Content Include="Views\NewAge\BackPage_Panel.cshtml" />
+    <Content Include="Views\NewAge\InnerPage_Panel.cshtml" />
+    <Content Include="Views\NewAge\BusinessFrontPage_Panel.cshtml" />
+    <Content Include="Views\NewAge\SportsFrontPage_Panel.cshtml" />
+    <Content Include="Views\NewAge\FrontPage_Liner.cshtml" />
+    <Content Include="Views\NewAge\BackPage_Liner.cshtml" />
+    <Content Include="Views\NewAge\MetroPage_Liner.cshtml" />
+    <Content Include="Views\NewAge\BusinessPage_Liner.cshtml" />
+    <Content Include="Views\NewAge\SportsPage_Liner.cshtml" />
+    <Content Include="Views\NewAge\FrontPage_Spot.cshtml" />
+    <Content Include="Views\NewAge\BackPage_Spot.cshtml" />
+    <Content Include="Views\NewAge\MetroPage_Spot.cshtml" />
+    <Content Include="Views\NewAge\BusinessPage_Spot.cshtml" />
+    <Content Include="Views\NewAge\SportsPage_Spot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
