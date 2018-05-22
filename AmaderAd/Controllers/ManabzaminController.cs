@@ -40,6 +40,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin first page advertisement, manab zamin first page color advertisement, manab zamin 1st page advertisement,  manab zamin 1st page color advbertisement, manab zamin 1 number page advertisement, manab zamin one number page color advertisement, publish advertisement at manab zamin first page, advertisement cost at manab zamin first page, manab zamin first page advertisement rate, color advertisement at manab zamin first page")]
+        [SeoTitle("Through Amader Ad publish your color advertisement in manab zamin first page")]
+        [SeoMetaDescription("Publish color advertisement in manab zamin first page through amader ad")]
         public ActionResult FirstPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -50,6 +53,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin last page advertisement, manab zamin last page color advertisement, manab zamin 1st page advertisement,  manab zamin 1st page color advbertisement, manab zamin 1 number page advertisement, manab zamin one number page color advertisement, publish advertisement at manab zamin last page, advertisement cost at manab zamin last page, manab zamin last page advertisement rate, color advertisement at manab zamin last page")]
+        [SeoTitle("Publish color advertisement in manab zamin last page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin last page")]
         public ActionResult LastPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -60,7 +66,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-
+        [SeoMetaKeywords("amader ad manab zamin special display advertisement, manab zamin special display advertisement, manab zamin special display page advertisement, manab zamin one number page color advertisement, publish advertisement at manab zamin last page, advertisement cost at manab zamin special display advertisement, manab zamin special display advertisement rate")]
+        [SeoTitle("Publish special display advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your special display advertisement in manab zamin")]
         public ActionResult SpecialDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -71,6 +79,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin general display advertisement, manab zamin general display advertisement, publish general display advertisement in manab zamin, general display advertisement cost at manab zamin, manab zamin general display  advertisement rate, general display advertisement at manab zamin")]
+        [SeoTitle("Publish general display advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your general display advertisement in manab zamin")]
         public ActionResult GeneralDisplayAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -81,6 +92,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin educative religious affair advertisement, manab zamin educative religious affair advertisement, publish educative religious affair advertisement in manab zamin, educative religious affair advertisement cost at manab zamin, manab zamin educative religious affair  advertisement rate, educative religious affair advertisement at manab zamin")]
+        [SeoTitle("Publish educative religious affair advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your educative religious affair advertisement in manab zamin")]
         public ActionResult EducativeReligiousAffairAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -91,6 +105,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin third page advertisement, manab zamin third page color advertisement, manab zamin 3rd page advertisement,  manab zamin 3rd page color advbertisement, manab zamin 3 number page advertisement, manab zamin three number page color advertisement, publish advertisement at manab zamin third page, advertisement cost at manab zamin third page, manab zamin third page advertisement rate, color advertisement at manab zamin third page")]
+        [SeoTitle("Publish color advertisement in manab zamin third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -101,6 +118,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin third page advertisement, manab zamin third page black and white advertisement, manab zamin 3rd page advertisement,  manab zamin 3rd page black and white advbertisement, manab zamin 3 number page advertisement, manab zamin three number page black and white advertisement, publish advertisement at manab zamin third page, advertisement cost at manab zamin third page, manab zamin third page advertisement rate, black and white advertisement at manab zamin third page")]
+        [SeoTitle("Publish black and white advertisement in manab zamin third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in manab zamin third page")]
         public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -111,6 +131,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin entertainment page advertisement, manab zamin entertainment page color advertisement, manab zamin entertainment page advertisement, publish advertisement at manab zamin entertainment page, advertisement cost at manab zamin entertainment page, manab zamin entertainment page advertisement rate, color advertisement at manab zamin entertainment page")]
+        [SeoTitle("Publish color advertisement in manab zamin entertainment page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin entertainment page")]
         public ActionResult EntertainmentPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -121,6 +144,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin entertainment page advertisement, manab zamin entertainment page black and white advertisement, manab zamin 3rd page black and white advbertisement, publish black and white advertisement at manab zamin entertainment page, black and white advertisement cost at manab zamin entertainment page, manab zamin entertainment page black and white advertisement rate, black and white advertisement at manab zamin entertainment page")]
+        [SeoTitle("Publish black and white advertisement in manab zamin entertainment page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in manab zamin entertainment page")]
         public ActionResult EntertainmentPageBlackWhiteAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -131,6 +157,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin sport page advertisement, manab zamin sport page color advertisement, publish advertisement at manab zamin sport page, advertisement cost at manab zamin sport page, manab zamin sport page advertisement rate, color advertisement at manab zamin sport page")]
+        [SeoTitle("Publish color advertisement in manab zamin sport page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin sport page")]
         public ActionResult SportPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -141,6 +170,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin other page advertisement, manab zamin other page color advertisement, publish advertisement at manab zamin other page, advertisement cost at manab zamin other page, manab zamin other page advertisement rate, color advertisement at manab zamin other page")]
+        [SeoTitle("Publish color advertisement in manab zamin other page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin other page")]
         public ActionResult OtherPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -151,6 +183,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin first page spot advertisement, manab zamin first page spot advertisement, publish spot advertisement at manab zamin first page,spot advertisement cost at manab zamin first page, manab zamin first page spot advertisement rate, spot advertisement at manab zamin first page")]
+        [SeoTitle("Publish spot advertisement in manab zamin first page thourgh amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your spot advertisement in manab zamin first page")]
         public ActionResult FirstPageColorAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
@@ -161,6 +196,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin last page spot advertisement, manab zamin last page spot advertisement, publish spot advertisement at manab zamin last page,spot advertisement cost at manab zamin last page, manab zamin last page spot advertisement rate, spot advertisement at manab zamin last page")]
+        [SeoTitle("Publish spot advertisement in manab zamin last page thourgh amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your spot advertisement in manab zamin last page")]
         public ActionResult LastPageColorAdvertisement_Spot()
         {
             Newspaper model = new Newspaper
@@ -171,6 +209,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        [SeoMetaKeywords("amader ad manab zamin classified advertisement,manab zamin classified ad, manab zamin classified advertisement,  publish classied advertisement at manab zamin , classified advertisement cost at manab zamin, manab zamin classified advertisement rate, classified advertisement at manab zamin, মানবজমিনে  শ্রেণীভুক্ত বিজ্ঞাপন দিন,  rent at manab zamin,  house rent at manab zamin, publish rent advertisement at manab zamin, manab zamin rent advertisement, ইত্তেফাক বাড়ি ভাড়া বিজ্ঞাপন,  land slae advertisement at manab zamin, manab zamin land sale advertisement, manab zamin land sale ad cost, মানবজমিনে জমি বিক্রয়ের বিজ্ঞাপন দিন,  miscellaneous sales advertisement at manab zamin, manab zamin miscellaneous slaes advetisement,  miscellaneous sales cost at manab zamin, publish miscellaneous advertisement at manab zamin, miscellaneous at manab zamin, মানবজমিনে বিবিধ বিক্রয়ের বিজ্ঞাপন দিন, house sale advertisement at manab zamin, manab zamin alo house sales advertisement, house sales advertisement cost at manab zamin, publish house sale advertisement at manab zamin, house sale advertisement at manab zamin, মানবজমিনে বাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  shop sale advertisement at manab zamin, manab zamin shop sales advertisement, shop sales advertisement cost at manab zamin, publish shop sale advertisement at manab zamin, house shop advertisement at manab zamin, মানবজমিনে দোকান বিক্রয়ের বিজ্ঞাপন দিন,    car sale advertisement at manab zamin, manab zamin car sales advertisement, car sales advertisement cost at manab zamin, publish car sale advertisement at manab zamin, car sale advertisement at manab zamin, মানবজমিনে গাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  plot purchase advertisement at manab zamin, manab zamin plot purchase advertisement, plot purchase advertisement cost at manab zamin, publish plot purchase advertisement at manab zamin, plot purchase advertisement at manab zamin, মানবজমিনে প্লট ক্রয়ের  বিজ্ঞাপন দিন, 	 wanted advertisement at manab zamin, manab zamin wanted advertisement, wanted advertisement cost at manab zamin, publish wanted advertisement at manab zamin, wanted advertisement at manab zamin, 	 tution wanted advertisement at manab zamin, manab zamin tution wante advertisement, tution wanted advertisement cost at manab zamin, publish tution wanted advertisement at manab zamin, tuiton wanted advertisement at manab zamin, মানবজমিনে  পড়াতে চাই   বিজ্ঞাপন দিন,  groom wanted advertisement at manab zamin, manab zamin groom wanted advertisement, groom wanted advertisement cost at manab zamin, publish groom wanted advertisement at manab zamin, groom wnated advertisement at manab zamin, মানবজমিনে  পাত্র চাই  বিজ্ঞাপন দিন,  bride wanted advertisement at manab zamin, manab zamin plot bride wanted advertisement, bride wanted  advertisement cost at manab zamin, bride wanted purchase advertisement at manab zamin, bride wanted  advertisement at manab zamin, মানবজমিনে  পাত্রী চাই  বিজ্ঞাপন দিন")]
+        [SeoTitle("Publish first page panel advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish first page panel advertisement in manab zamin")]
         public ActionResult FirstPage_pannel()
         {
             Newspaper model = new Newspaper
