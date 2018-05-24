@@ -7,26 +7,22 @@
 
 <h2>ইনকিলাবে শ্রেণিভুক্ত  বিজ্ঞাপন দিন (Publish classified advertisement at Inqilab)</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
-
-@using (Html.BeginForm("Create", "Newspapers"))
+@using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
         @Html.Partial("_NewspaperHeader", Model)
 
-        @Html.Partial("_NewspaperAdCategory", Model)
+        @Html.Partial("_NewspaperBody", Model)
 
-        @Html.Partial("_ClassifiedHeaderDescription", Model)        
+        @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
 
-        @Html.Partial("_NewspaperDescriptionAd", Model)
+        @Html.Partial("_NewspaperComment")
 
-        @Html.Partial("_NewspaperTotalCostWithVat", Model)
-
-        @Html.Partial("_NewspaperNotice")
+        @Html.Partial("_NewspaperFileUploadCreate")
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -39,65 +35,6 @@
 @Html.Partial("_NewspaperSampleAd")
 
 
-<script>
-    var amount;
-    $("#Description").bind('keyup keydown paste cut', function(e)
-    {
-        setTimeout(function () {
-            debugger
-            var maxWordCount = @Html.Raw(Model.WordLimit);
-            var priceDescription = @Html.Raw(Model.PriceDescription);
-
-            var firstWordLimitBase = @Html.Raw(Model.FirstWordLimitBase); //16
-            var extraWordPrice = @Html.Raw(Model.ExtraWordPrice); //40
-
-            var vat = @Html.Raw(Model.VAT); //0.15
-
-
-            var value = $('#Description').val();
-            if (value.length == 0) {
-                $('#TotalPrice').val(0);
-                $('#wordLimiter').html(0);
-                return;
-            }
-
-            var regex = /\s+/gi;
-            var wordcount = value.trim().replace(regex, ' ').split(' ').length;
-
-            var priceWithVat = priceDescription * vat;
-
-            if (wordcount >= maxWordCount) {
-                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ " + maxWordCount + " শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum " + maxWordCount + " words advertisement";
-            }
-            if (wordcount < maxWordCount) {
-                $('#maxwords').empty();
-            }
-
-            if (wordcount > maxWordCount ){
-                $("#submit-btn").attr("disabled", "disabled");
-
-            } else {
-                $("#submit-btn").removeAttr("disabled");
-            }
-
-            if (wordcount <= firstWordLimitBase) {
-                amount = priceDescription + priceWithVat;
-            }
-            else if (wordcount > firstWordLimitBase) {
-                var extraWord = wordcount - firstWordLimitBase;
-                var extraPriceWithVat = (extraWord * extraWordPrice) * vat;
-                var extraAmount = extraWord * extraWordPrice + extraPriceWithVat;
-                amount = priceDescription + priceWithVat + extraAmount;
-            }
-
-            $('#TotalPrice').val(amount);
-
-            $('#wordLimiter').html(wordcount);
-        },100);
-    });
-
-</script>
-
 
 <script>
     var hour = new Date().getUTCHours() + 6;
@@ -105,5 +42,37 @@
         startDate: hour >= 18 ? '+2d' : '+1d',
         autoclose: true
     });
+</script>
+
+
+<script>
+    function myAmountLimit1() {
+
+        var columnSize = $("#ColumnSize").val();
+        var inchSize = $("#Inch").val();
+
+        var priceDescription = @Html.Raw(Model.PriceDescription);
+
+        //if ((columnSize * inchSize) < 6) {
+        //    $("#columninchwarning").html("এই পেজে  কমপক্ষে 6 কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You have to publish minimum 6 column inch advertisement here ");
+        //    $("#TotalPrice").html(0);
+        //    $("#TotalPrice").val(0);
+        //    $("#submit-btn").attr("disabled", "disabled");
+        //}
+        //else {
+            var totalColumnInch = columnSize * inchSize;
+            var totalPrice = columnSize * inchSize * priceDescription;
+            //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
+            $("#columninchwarning").empty();
+
+            $("#TotalColumnInch").html(totalColumnInch);
+            $("#TotalColumnInch").val(totalColumnInch);
+
+            $("#TotalPrice").html(totalPrice);
+            $("#TotalPrice").val(totalPrice);
+
+            //$("#submit-btn").removeAttr("disabled");
+        //}
+    }
 
 </script>
