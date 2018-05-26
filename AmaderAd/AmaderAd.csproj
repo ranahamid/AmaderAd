@@ -4201,7 +4201,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\shopping-cart-2-responsive\css\" />
     <Folder Include="Views\DailyStar\" />
-    <Folder Include="Views\DailySun\" />
     <Folder Include="Views\KalerKantho\" />
     <Folder Include="Views\ProthomAlo\" />
   </ItemGroup>
@@ -4555,6 +4554,16 @@
     <Content Include="Views\NewAge\MetroPage_Spot.cshtml" />
     <Content Include="Views\NewAge\BusinessPage_Spot.cshtml" />
     <Content Include="Views\NewAge\SportsPage_Spot.cshtml" />
+    <Content Include="Views\DailySun\FrontPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\BackPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\SecondPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\SecondPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\ThirdPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\ThirdPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\FifthPageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\FifthPageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\OtherInsidePageColorAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\DailySun\OtherInsidePageBlackWhiteAdvertisement_MainPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
