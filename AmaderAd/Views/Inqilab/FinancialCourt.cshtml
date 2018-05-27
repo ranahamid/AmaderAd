@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ইনকিলাবের প্রথম পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন</h2>
+<h2>ইনকিলাবে শ্রেণিভুক্ত  বিজ্ঞাপন দিন (Publish classified advertisement at Inqilab)</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
-
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
 {
     @Html.AntiForgeryToken()

@@ -8,6 +8,8 @@ using AspNetSeo.Mvc;
 
 namespace AmaderAd.Controllers
 {
+    [SeoBaseTitle("Publish advertisement in Janakantha through amader ad")]
+    [SeoBaseLinkCanonical("http://www.amaderad.net/Janakantha")]
     public class JanakanthaController : BaseController
     {
         // GET: Janakantha
@@ -16,7 +18,6 @@ namespace AmaderAd.Controllers
             return View();
         }
         //classified advertisement
-        [SeoBaseLinkCanonical("http://www.amaderad.net/janakantha")]
         [SeoBaseTitle("Publish advertisement in janakantha through amader ad")]
         [SeoMetaKeywords("amader ad জনকণ্ঠ, amader ad janakantha advertisement, আমাদের এড  জনকণ্ঠ , জনকণ্ঠ  বিজ্ঞাপন,   newspaper janakantha ad, janakantha newspaper advertisement, janakantha ad, janakantha advertisement, advertisement at janakantha, ad at janakantha, publish advertisement at janakantha, pubish janakantha advertisement, advertisment at janakantha,janakantha adverts, janakantha advertisement rate, janakantha ad cost,advertise in janakantha, janakantha ad cost, janakantha print ad, janakantha advertisement cost, advertisement for janakantha, advetise on janakantha, janakantha advertisement agency, janakantha ad price, color ad at janakantha, color advertisement at janakantha, janakantha color advertisement, janakantha color ad price, janakantha color ad cost, black and white ad at janakantha, black and white advertisement at janakantha, janakantha black and white advertisement, janakantha black and white advertisement price, janakantha black and white advertisement cost, publish advertisement on janakantha main paper, advertise on janakantha main paper,publish advertisement on janakantha feature paper, advertise on janakantha feature paper, janakantha normal page, janakantha normal page advertisement, janakantha column inch advertisement,")]
         [SeoMetaDescription("Publish your advertisement in janakantha from any where through amader ad")]
