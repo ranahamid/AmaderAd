@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>মানবজমিনের প্রথম পৃষ্ঠাতে প্যানেল বিজ্ঞাপন দিন<br>সপ্তাহে একবার করে বছরে কমপক্ষে ৫২ বার <br>Panel advertisement in first page of Manab Zamin <br>One advertisement per week ( Atleast 52 advertisements in a year )</h2>
+<h2>Color Advertisement in Business front page of New Age </h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -17,7 +17,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.Partial("_NewspaperHeader", Model)
 
-        @Html.Partial("_NewspaperBody", Model)
+        @Html.Partial("_NewspaperBodyStringReadOnly", Model)
 
         @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
 
@@ -46,5 +46,13 @@
 </script>
 
 
+<script>
 
+    $(function () {
+        var priceDescription = @Html.Raw(Model.PriceDescription);
+        $("#TotalPrice").html(priceDescription);
+        $("#TotalPrice").val(priceDescription);
 
+    });
+
+</script>

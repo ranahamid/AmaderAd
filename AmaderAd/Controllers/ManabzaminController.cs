@@ -218,10 +218,19 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Manabzamin",
                 AdLocation = "Manabzamin First page pannel",
-                PriceDescription = 7000
+                PriceDescription = 7000,
+
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                
+                ColumnSizeFloat = "2.00",
+                InchFloat = "3.00",
             };
             return View(model);
         }
+
+
+
 
     }
 }
