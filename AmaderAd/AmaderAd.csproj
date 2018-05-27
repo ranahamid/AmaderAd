@@ -4564,6 +4564,19 @@
     <Content Include="Views\DailySun\FifthPageBlackWhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\OtherInsidePageColorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\OtherInsidePageBlackWhiteAdvertisement_MainPage.cshtml" />
+    <Content Include="Views\NewAge\BackCover_Trends.cshtml" />
+    <Content Include="Views\NewAge\SecondCover_Trends.cshtml" />
+    <Content Include="Views\NewAge\ThirdCover_Trends.cshtml" />
+    <Content Include="Views\NewAge\InnerFullPage_Trends.cshtml" />
+    <Content Include="Views\NewAge\CenterSpread_Trends.cshtml" />
+    <Content Include="Views\NewAge\BackCover_Xtra.cshtml" />
+    <Content Include="Views\NewAge\SecondCover_Xtra.cshtml" />
+    <Content Include="Views\NewAge\ThirdCover_Xtra.cshtml" />
+    <Content Include="Views\NewAge\InnerFullPage_Xtra.cshtml" />
+    <Content Include="Views\NewAge\CenterSpread_Xtra.cshtml" />
+    <Content Include="Views\NewAge\FrontPage_Life.cshtml" />
+    <Content Include="Views\NewAge\BackPage_Life.cshtml" />
+    <Content Include="Views\NewAge\InnerPage_Life.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

@@ -675,19 +675,256 @@ namespace AmaderAd.Controllers
 
         #region Trends
 
+        public ActionResult BackCover_Trends()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Back Cover - TRENDS",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 35000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
 
 
+        public ActionResult SecondCover_Trends()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Second Cover - TRENDS",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 30000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult ThirdCover_Trends()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Third Cover - TRENDS",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 25000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+        public ActionResult InnerFullPage_Trends()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Inner Full Page - TRENDS",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 20000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+        public ActionResult CenterSpread_Trends()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Center Spread - TRENDS",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 45000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "15.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
 
         #endregion
 
 
         #region Xtra
+        public ActionResult BackCover_Xtra()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Back Cover - Xtra",
 
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 35000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+
+        public ActionResult SecondCover_Xtra()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Second Cover - Xtra",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 30000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult ThirdCover_Xtra()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Third Cover - Xtra",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 25000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+        public ActionResult InnerFullPage_Xtra()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Inner Full Page - Xtra",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 20000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "7.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+        public ActionResult CenterSpread_Xtra()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Center Spread - Xtra",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 45000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "15.00",
+                InchFloat = "9.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
         #endregion
 
 
         #region Culture & Living Weekly
 
+        public ActionResult FrontPage_Life()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Front Page- Life",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 3500,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+
+        public ActionResult BackPage_Life()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Back Page- Life",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 2500,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult InnerPage_Life()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Inner Page- Life",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 2000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
         #endregion
 
 
