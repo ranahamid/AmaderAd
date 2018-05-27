@@ -25,6 +25,11 @@ namespace AmaderAd.Models
         [Display(Name = "Price")]
         public int? PriceDescription { get; set; }
 
+        public int? PriceDescriptionLow { get; set; }
+        
+        public int? PriceDescriptionBlack { get; set; }
+
+
         [Required]
         [Display(Name = "বিজ্ঞাপনদাতার নাম (Advertiser Name)")]
         public string AdvertiserName { get; set; }
@@ -111,6 +116,8 @@ namespace AmaderAd.Models
         public DateTime? CreatedOnUtc { get; set; }
 
         public DateTime? UpdatedOnUtc { get; set; }
+
+        public bool? IsColor { get; set; }
 
         public bool? Active { get; set; }
     }

@@ -18,6 +18,10 @@ namespace AmaderAd.Controllers
             return View();
         }
 
+        #region  Classified
+
+
+
         //classified advertisement
         [SeoMetaKeywords("amader ad inqilab classified advertisement,inqilab classified ad, inqilab classified advertisement, publish classied advertisement at inqilab, classified advertisement cost at inqilab, inqilab classified advertisement rate, classified advertisement at inqilab, ইনকিলাবে শ্রেণীভুক্ত বিজ্ঞাপন দিন, rent at inqilab, house rent at inqilab, publish rent advertisement at inqilab, inqilab rent advertisement, ইত্তেফাক বাড়ি ভাড়া বিজ্ঞাপন, land slae advertisement at inqilab, inqilab land sale advertisement, inqilab land sale ad cost, ইনকিলাবে জমি বিক্রয়ের বিজ্ঞাপন দিন, miscellaneous sales advertisement at inqilab, inqilab miscellaneous slaes advetisement, miscellaneous sales cost at inqilab, publish miscellaneous advertisement at inqilab, miscellaneous at inqilab, ইনকিলাবে বিবিধ বিক্রয়ের বিজ্ঞাপন দিন, house sale advertisement at inqilab, inqilab alo house sales advertisement, house sales advertisement cost at inqilab, publish house sale advertisement at inqilab, house sale advertisement at inqilab, ইনকিলাবে বাড়ি বিক্রয়ের বিজ্ঞাপন দিন, shop sale advertisement at inqilab, inqilab shop sales advertisement, shop sales advertisement cost at inqilab, publish shop sale advertisement at inqilab, house shop advertisement at inqilab, ইনকিলাবে দোকান বিক্রয়ের বিজ্ঞাপন দিন, car sale advertisement at inqilab, inqilab car sales advertisement, car sales advertisement cost at inqilab, publish car sale advertisement at inqilab, car sale advertisement at inqilab, ইনকিলাবে গাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  plot purchase advertisement at inqilab, inqilab plot purchase advertisement, plot purchase advertisement cost at inqilab, publish plot purchase advertisement at inqilab, plot purchase advertisement at inqilab, ইনকিলাবে প্লট ক্রয়ের  বিজ্ঞাপন দিন,  wanted advertisement at inqilab, inqilab wanted advertisement, wanted advertisement cost at inqilab, publish wanted advertisement at inqilab, wanted advertisement at inqilab, tution wanted advertisement at inqilab, inqilab tution wante advertisement, tution wanted advertisement cost at inqilab, publish tution wanted advertisement at inqilab, tuiton wanted advertisement at inqilab, ইনকিলাবে  পড়াতে চাই   বিজ্ঞাপন দিন, groom wanted advertisement at inqilab, inqilab groom wanted advertisement, groom wanted advertisement cost at inqilab, publish groom wanted advertisement at inqilab, groom wnated advertisement at inqilab, ইনকিলাবে  পাত্র চাই  বিজ্ঞাপন দিন, bride wanted advertisement at inqilab, inqilab plot bride wanted advertisement, bride wanted advertisement cost at inqilab, bride wanted purchase advertisement at inqilab, bride wanted advertisement at inqilab, ইনকিলাবে  পাত্রী চাই  বিজ্ঞাপন দিন")]
         [SeoTitle("Publish classified advertisement in inqilab through amader ad")]
@@ -40,6 +44,10 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+
+        #endregion
+
+
         [SeoMetaKeywords("amader ad inqilab financial court summons notice advertisement, inqilab financial court summons notice advertisement, publish advertisement at inqilab financial court summons notice, advertisement cost at inqilab financial court summons notice, inqilab financial court summons notice advertisement rate, advertisement inqilab financial court summons notice ")]
         [SeoTitle("Publish financial court summons notice advertisement in inqilab through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your financial court summons notice advertisement inqilab")]
@@ -80,6 +88,14 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+
+
+
+        #region  main Paper
+
+
+
+
         [SeoMetaKeywords("amader ad inqilab first page advertisement, inqilab first page color advertisement, inqilab 1st page advertisement,  inqilab 1st page color advbertisement, inqilab 1 number page advertisement, inqilab one number page color advertisement, publish advertisement at inqilab first page, advertisement cost at inqilab first page, inqilab first page advertisement rate, color advertisement at inqilab first page")]
         [SeoTitle("Publish color advertisement in inqilab first page")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in inqilab first page")]
@@ -249,7 +265,91 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        #endregion
+
+        #region  Bishesh Koropotro
+
+        public ActionResult FeaturePaper()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Inqilab bishesh krorpotro",
+                PriceDescription = 10000,
+                PriceDescriptionBlack= 5000,
+                IsColor = true,
+            };
+            return View(model);
+        }
+
+        #endregion
+
+        #region  Spot Advertisement
+        public ActionResult FirstPage_SpotAdvertisement()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "First Page -Spot Advertisement",
+                PriceDescription = 40000,
+                PriceDescriptionLow = 30000
+            };
+            return View(model);
+        }
+
+        public ActionResult LastPage_SpotAdvertisement()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Last Page -Spot Advertisement",
+                PriceDescription = 30000,
+                PriceDescriptionLow = 25000
+            };
+            return View(model);
+        }
+
+        public ActionResult SportsPage_SpotAdvertisement()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Sports Page -Spot Advertisement",
+                PriceDescription = 10000,
+             
+            };
+            return View(model);
+        }
 
 
+        #endregion
+
+        #region Government Advertisement
+        public ActionResult Government()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Government Advertisement",
+                PriceDescription = 853,
+
+            };
+            return View(model);
+        }
+
+        public ActionResult Government_Commercial()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Inqilab",
+                AdLocation = "Government Commercial Advertisement",
+                PriceDescription = 853,
+
+            };
+            return View(model);
+        }
+
+        #endregion
     }
 }

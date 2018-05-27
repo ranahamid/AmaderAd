@@ -14,9 +14,12 @@
 
 @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
 
-@Html.Partial("_NewspaperComment")
+@Html.Partial("_NewspaperColorOption", Model)
 
-@Html.Partial("_NewspaperFileUploadCreate")
+
+@Html.Partial("_NewspaperComment", Model)
+
+@Html.Partial("_NewspaperFileUploadCreate", Model)
 
 
 

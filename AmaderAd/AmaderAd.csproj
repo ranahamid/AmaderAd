@@ -4577,6 +4577,13 @@
     <Content Include="Views\NewAge\FrontPage_Life.cshtml" />
     <Content Include="Views\NewAge\BackPage_Life.cshtml" />
     <Content Include="Views\NewAge\InnerPage_Life.cshtml" />
+    <Content Include="Views\Shared\_NewspaperColorOption.cshtml" />
+    <Content Include="Views\Inqilab\FeaturePaper.cshtml" />
+    <Content Include="Views\Inqilab\FirstPage_SpotAdvertisement.cshtml" />
+    <Content Include="Views\Inqilab\LastPage_SpotAdvertisement.cshtml" />
+    <Content Include="Views\Inqilab\SportsPage_SpotAdvertisement.cshtml" />
+    <Content Include="Views\Inqilab\Government.cshtml" />
+    <Content Include="Views\Inqilab\Government_Commercial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

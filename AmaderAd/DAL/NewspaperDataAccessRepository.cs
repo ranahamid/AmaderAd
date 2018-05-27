@@ -42,6 +42,7 @@ namespace AmaderAd.DAL
                 CreatedOnUtc            = x.CreatedOnUtc             ,
                 UpdatedOnUtc            = x.UpdatedOnUtc             ,
                 Active                  = x.Active                   ,
+                IsColor = x.IsColor,
 
             }).ToList();
             return entities;
@@ -72,6 +73,7 @@ namespace AmaderAd.DAL
                 CreatedOnUtc            = x.CreatedOnUtc             ,
                 UpdatedOnUtc            = x.UpdatedOnUtc             ,
                 Active                  = x.Active                   ,
+                IsColor = x.IsColor,
 
             }).SingleOrDefault();
             if (entity != null)
@@ -110,7 +112,8 @@ namespace AmaderAd.DAL
                 MainImagePath           = imgAddress                      ,
                 CreatedOnUtc            = DateTime.Now                    ,
                 UpdatedOnUtc            = DateTime.Now                    ,
-                Active                  = entity.Active                   ,           
+                Active                  = entity.Active                   ,
+                IsColor = entity.IsColor,
             });
             try
             {
@@ -153,7 +156,7 @@ namespace AmaderAd.DAL
             entitySingle.MainImagePath           = imgAddress                    ;
             entitySingle.UpdatedOnUtc            = DateTime.Now;                 ;
             entitySingle.Active                  = entity.Active                 ;
-
+            entitySingle.IsColor = entity.IsColor;
             try
             {
                 Db.SubmitChanges();
