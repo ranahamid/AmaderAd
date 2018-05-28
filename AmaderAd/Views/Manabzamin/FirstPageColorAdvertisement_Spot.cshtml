@@ -54,16 +54,16 @@
         var inchSize = $("#Inch").val();
 
         var priceDescription = @Html.Raw(Model.PriceDescription);
+        var totalColumnInch = columnSize * inchSize;
 
-        if ((columnSize * inchSize) > 4) {
+        if (totalColumnInch > 4 || totalColumnInch<1) {
             $("#columninchwarning").html("এই পেজে  কমপক্ষে ১ ও সর্বচ্চ ৪ কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You have to publish minimum 1 and maximum 4 column inch Advertisement here ");
             $("#TotalPrice").html(0);
             $("#TotalPrice").val(0);
             $("#submit-btn").attr("disabled", "disabled");
         }
-        else {
-            var totalColumnInch = columnSize * inchSize;
-            var totalPrice = columnSize * inchSize * priceDescription;
+        else {          
+            var totalPrice = totalColumnInch * priceDescription;
             //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
             $("#columninchwarning").empty();
 
