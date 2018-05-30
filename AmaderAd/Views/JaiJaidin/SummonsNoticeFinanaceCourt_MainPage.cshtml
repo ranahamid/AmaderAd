@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Color Advertisement in first page of New Age </h2>
+<h2>ইত্তেফাকের শেষ পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন<br> Color Advertisement in last page of Ittefaq </h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -56,14 +56,14 @@
 
         var totalColumnInch = columnSize * inchSize;
 
-        if (totalColumnInch < 12 || totalColumnInch > 80 ) {
-            $("#columninchwarning").html("You can publish atleast 12 column inch and maximum 80 column inch Advertisement here ");
-            $("#TotalPrice").html(0);
-            $("#TotalPrice").val(0);
-            $("#submit-btn").attr("disabled", "disabled");
-        }
-        else {
-          
+        //if (totalColumnInch < 6) {
+        //    $("#columninchwarning").html("এই পেজে  কমপক্ষে 6 কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You have to publish minimum 6 column inch advertisement here ");
+        //    $("#TotalPrice").html(0);
+        //    $("#TotalPrice").val(0);
+        //    $("#submit-btn").attr("disabled", "disabled");
+        //}
+        //else {
+
             var totalPrice = totalColumnInch * priceDescription;
             //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
             $("#columninchwarning").empty();
@@ -75,12 +75,7 @@
             $("#TotalPrice").val(totalPrice);
 
             $("#submit-btn").removeAttr("disabled");
-        }
+        //}
     }
 
 </script>
-
-
-
-
-

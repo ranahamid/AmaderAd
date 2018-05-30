@@ -4586,6 +4586,16 @@
     <Content Include="Views\Manabzamin\Student_OneByTwoHalf.cshtml" />
     <Content Include="Views\Manabzamin\Film_MainPage.cshtml" />
     <Content Include="Views\Ittefaq\OthersFixed.cshtml" />
+    <Content Include="Views\JaiJaidin\LastPage_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\GeneralDisplay_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\ThirdPage_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\FifthPage_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\SportsPage_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\InnerPage_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\FirstPageColor_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\SummonsNoticeFinanaceCourt_MainPage.cshtml" />
+    <Content Include="Views\JaiJaidin\FirstPage_Spot.cshtml" />
+    <Content Include="Views\JaiJaidin\LastPage_Spot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

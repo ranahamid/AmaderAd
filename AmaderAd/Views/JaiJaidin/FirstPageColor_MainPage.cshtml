@@ -54,17 +54,15 @@
 
         var priceDescription = @Html.Raw(Model.PriceDescription);
 
-        var totalColumnInch = columnSize * inchSize;
-
-        if (totalColumnInch < 12 || totalColumnInch > 80 ) {
+        if ((columnSize * inchSize) < 12 || (columnSize * inchSize) > 80 ) {
             $("#columninchwarning").html("You can publish atleast 12 column inch and maximum 80 column inch Advertisement here ");
             $("#TotalPrice").html(0);
             $("#TotalPrice").val(0);
             $("#submit-btn").attr("disabled", "disabled");
         }
         else {
-          
-            var totalPrice = totalColumnInch * priceDescription;
+            var totalColumnInch = columnSize * inchSize;
+            var totalPrice = columnSize * inchSize * priceDescription;
             //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
             $("#columninchwarning").empty();
 
@@ -79,8 +77,3 @@
     }
 
 </script>
-
-
-
-
-
