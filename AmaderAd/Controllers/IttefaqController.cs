@@ -85,53 +85,75 @@ namespace AmaderAd.Controllers
         [SeoMetaKeywords("amader ad ittefaq fifth page advertisement, ittefaq fifth page color advertisement, ittefaq 5th page advertisement,  ittefaq 5th page color advbertisement, ittefaq 5 number page advertisement, ittefaq five number page color advertisement, publish advertisement at ittefaq fifth page, advertisement cost at ittefaq fifth page, ittefaq fifth page advertisement rate, color advertisement at ittefaq fifth page")]
         [SeoTitle("Publish color advertisement in ittefaq fifth page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq fifth page")]
-        public ActionResult FifthPageColorAdvertisement_MainPage()
+        public ActionResult FifthPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Fifth Page Color",
-                PriceDescription = 7500
-            };
+                AdLocation = "Ittefaq Fifth Page",
+                PriceDescription = 7500,
+            
+                PriceDescriptionBlack = 5000,
+                IsColor = true,
+            
+        };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad ittefaq fifth page advertisement, ittefaq fifth page black and white advertisement, ittefaq 5th page advertisement, ittefaq 5th page black and white advbertisement, ittefaq 5 number page advertisement, ittefaq five number page black and white advertisement, publish advertisement at ittefaq fifth page, advertisement cost at ittefaq fifth page, ittefaq fifth page advertisement rate, black and white advertisement at ittefaq fifth page")]
-        [SeoTitle("Publish black and white advertisement in ittefaq fifth page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq fifth page")]
-        public ActionResult FifthPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Fifth Page Black & White",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad ittefaq fifth page advertisement, ittefaq fifth page black and white advertisement, ittefaq 5th page advertisement, ittefaq 5th page black and white advbertisement, ittefaq 5 number page advertisement, ittefaq five number page black and white advertisement, publish advertisement at ittefaq fifth page, advertisement cost at ittefaq fifth page, ittefaq fifth page advertisement rate, black and white advertisement at ittefaq fifth page")]
+        //[SeoTitle("Publish black and white advertisement in ittefaq fifth page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq fifth page")]
+        //public ActionResult FifthPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Ittefaq",
+        //        AdLocation = "Ittefaq Fifth Page Black & White",
+        //        PriceDescription = 5000
+        //    };
+        //    return View(model);
+        //}
 
         [SeoMetaKeywords("amader ad ittefaq second page advertisement, ittefaq second page color advertisement, ittefaq 2nd page advertisement, ittefaq 2nd page color advbertisement, ittefaq 2 number page advertisement, ittefaq second number page color advertisement, publish advertisement at ittefaq second page, advertisement cost at ittefaq second page, ittefaq second page advertisement rate, color advertisement at ittefaq second page")]
         [SeoTitle("Publish color advertisement in ittefaq second page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq second page")]
-        public ActionResult SecondPageColorAdvertisement_MainPage()
+        public ActionResult SecondPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Second Page Color",
-                PriceDescription = 6500
+                AdLocation = "Ittefaq Second Page",
+                PriceDescription = 6500,
+                PriceDescriptionBlack = 5000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad ittefaq second page advertisement, ittefaq second page black and white advertisement, ittefaq 2nd page advertisement,  ittefaq 2nd page black and white advbertisement, ittefaq 2 number page advertisement, ittefaq second number page black and white advertisement, publish advertisement at ittefaq second page, advertisement cost at ittefaq second page, ittefaq second page black and white advertisement rate, black and white advertisement at ittefaq second page")]
-        [SeoTitle("Publish black and white advertisement in ittefaq second page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq second page")]
-        public ActionResult SecondPageBlackWhiteAdvertisement_MainPage()
+        //[SeoMetaKeywords("amader ad ittefaq second page advertisement, ittefaq second page black and white advertisement, ittefaq 2nd page advertisement,  ittefaq 2nd page black and white advbertisement, ittefaq 2 number page advertisement, ittefaq second number page black and white advertisement, publish advertisement at ittefaq second page, advertisement cost at ittefaq second page, ittefaq second page black and white advertisement rate, black and white advertisement at ittefaq second page")]
+        //[SeoTitle("Publish black and white advertisement in ittefaq second page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq second page")]
+        //public ActionResult SecondPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Ittefaq",
+        //        AdLocation = "Ittefaq Second Page Black & White",
+        //        PriceDescription = 6500 //check the price
+        //    };
+        //    return View(model);
+        //}
+
+        [SeoMetaKeywords("amader ad ittefaq nineteenth page advertisement, ittefaq nineteenth page color advertisement, ittefaq 19th page advertisement,  ittefaq 19th page color advbertisement, ittefaq 19 number page advertisement, ittefaq nineteenth number page color advertisement, publish advertisement at ittefaq nineteenth page, advertisement cost at ittefaq nineteenth page, ittefaq nineteenth page advertisement rate, color advertisement at ittefaq nineteenth page, amader ad ittefaq tweentythird page advertisement, ittefaq tweentythird page color advertisement, ittefaq 23th page advertisement,  ittefaq 23th page color advbertisement, ittefaq 23 number page advertisement, ittefaq tweentythird number page color advertisement, publish advertisement at ittefaq tweentythird page, advertisement cost at ittefaq tweentythird page, ittefaq tweentythird page advertisement rate, color advertisement at ittefaq tweentythird page")]
+        [SeoTitle("Publish color advertisement in ittefaq nineteenth and tweentythird number page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq nineteenth and tweentythird page")]
+        public ActionResult NineteenthPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Second Page Black & White",
-                PriceDescription = 6500 //check the price
+                AdLocation = "Ittefaq Nineteenth Page",
+                PriceDescription = 6000,
+                PriceDescriptionBlack = 4500,
+                IsColor = true,
             };
             return View(model);
         }
@@ -139,59 +161,63 @@ namespace AmaderAd.Controllers
         [SeoMetaKeywords("amader ad ittefaq nineteenth page advertisement, ittefaq nineteenth page color advertisement, ittefaq 19th page advertisement,  ittefaq 19th page color advbertisement, ittefaq 19 number page advertisement, ittefaq nineteenth number page color advertisement, publish advertisement at ittefaq nineteenth page, advertisement cost at ittefaq nineteenth page, ittefaq nineteenth page advertisement rate, color advertisement at ittefaq nineteenth page, amader ad ittefaq tweentythird page advertisement, ittefaq tweentythird page color advertisement, ittefaq 23th page advertisement,  ittefaq 23th page color advbertisement, ittefaq 23 number page advertisement, ittefaq tweentythird number page color advertisement, publish advertisement at ittefaq tweentythird page, advertisement cost at ittefaq tweentythird page, ittefaq tweentythird page advertisement rate, color advertisement at ittefaq tweentythird page")]
         [SeoTitle("Publish color advertisement in ittefaq nineteenth and tweentythird number page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq nineteenth and tweentythird page")]
-        public ActionResult Nineteenth_TweentythirdPageColorAdvertisement_MainPage()
+        public ActionResult TwentyThreePage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Nineteenth & Tweentythird Page Color",
-                PriceDescription = 6000
+                AdLocation = "Ittefaq Tweentythird Page",
+                PriceDescription = 6000,
+                PriceDescriptionBlack = 4500,
+                IsColor = true,
             };
             return View(model);
         }
 
-        [SeoMetaKeywords("amader ad ittefaq nineteenth page advertisement, ittefaq nineteenth page black and white advertisement, ittefaq 19th page advertisement,  ittefaq 19th page black and white advbertisement, ittefaq 19 number page advertisement, ittefaq nineteenth number page black and white advertisement, publish advertisement at ittefaq nineteenth page, advertisement cost at ittefaq nineteenth page, ittefaq nineteenth page advertisement rate, black and white advertisement at ittefaq nineteenth page, amader ad ittefaq tweentythird page advertisement, ittefaq tweentythird page black and white advertisement, ittefaq 23th page advertisement,  ittefaq 23th page black and white advbertisement, ittefaq 23 number page advertisement, ittefaq tweentythird number page black and white advertisement, publish advertisement at ittefaq tweentythird page, advertisement cost at ittefaq tweentythird page, ittefaq tweentythird page advertisement rate, black and white advertisement at ittefaq tweentythird page")]
-        [SeoTitle("Publish black and white advertisement in ittefaq nineteenth and tweentythird number page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq nineteenth and tweentythird page")]
+        //[SeoMetaKeywords("amader ad ittefaq nineteenth page advertisement, ittefaq nineteenth page black and white advertisement, ittefaq 19th page advertisement,  ittefaq 19th page black and white advbertisement, ittefaq 19 number page advertisement, ittefaq nineteenth number page black and white advertisement, publish advertisement at ittefaq nineteenth page, advertisement cost at ittefaq nineteenth page, ittefaq nineteenth page advertisement rate, black and white advertisement at ittefaq nineteenth page, amader ad ittefaq tweentythird page advertisement, ittefaq tweentythird page black and white advertisement, ittefaq 23th page advertisement,  ittefaq 23th page black and white advbertisement, ittefaq 23 number page advertisement, ittefaq tweentythird number page black and white advertisement, publish advertisement at ittefaq tweentythird page, advertisement cost at ittefaq tweentythird page, ittefaq tweentythird page advertisement rate, black and white advertisement at ittefaq tweentythird page")]
+        //[SeoTitle("Publish black and white advertisement in ittefaq nineteenth and tweentythird number page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq nineteenth and tweentythird page")]
 
-        public ActionResult Nineteenth_TweentythirdPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Nineteenth & Tweentythird Page Black & White",
-                PriceDescription = 4500
-            };
-            return View(model);
-        }
+        //public ActionResult Nineteenth_TweentythirdPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Ittefaq",
+        //        AdLocation = "Ittefaq Nineteenth & Tweentythird Page Black & White",
+        //        PriceDescription = 4500
+        //    };
+        //    return View(model);
+        //}
 
         [SeoMetaKeywords("amader ad ittefaq sports page advertisement, ittefaq sports page color advertisement, ittefaq sports page advertisement, publish advertisement at ittefaq sports page, advertisement cost at ittefaq sports page, ittefaq sports page advertisement rate, color advertisement at ittefaq sports page")]
         [SeoTitle("Publish color advertisement in ittefaq sports page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq sports page")]
 
-        public ActionResult SportsPageColorAdvertisement_MainPage()
+        public ActionResult SportsPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
                 AdLocation = "Ittefaq Sports Page Color",
-                PriceDescription = 5000
+                PriceDescription = 5000,
+                PriceDescriptionBlack = 4000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad ittefaq sports page advertisement, ittefaq sports page black and white advertisement, ittefaq sports page advertisement, publish advertisement at ittefaq sports page, advertisement cost at ittefaq sports page, ittefaq sports page black and white advertisement rate, black and white advertisement at ittefaq sports page")]
-        [SeoTitle("Publish black and white advertisement in ittefaq sports page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq sports page")]
-        public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Sports Page Black & White",
-                PriceDescription = 4000 //check the price
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad ittefaq sports page advertisement, ittefaq sports page black and white advertisement, ittefaq sports page advertisement, publish advertisement at ittefaq sports page, advertisement cost at ittefaq sports page, ittefaq sports page black and white advertisement rate, black and white advertisement at ittefaq sports page")]
+        //[SeoTitle("Publish black and white advertisement in ittefaq sports page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq sports page")]
+        //public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Ittefaq",
+        //        AdLocation = "Ittefaq Sports Page Black & White",
+        //        PriceDescription = 4000 //check the price
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad ittefaq middle two page advertisement, ittefaq middle two page color advertisement, ittefaq middle two page advertisement, publish advertisement at ittefaq middle two page, advertisement cost at ittefaq middle two page, ittefaq middle two page advertisement rate, color advertisement at ittefaq middle two page")]
         [SeoTitle("Publish color advertisement in ittefaq middle two page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq middle two page")]
@@ -201,34 +227,36 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Ittefaq",
                 AdLocation = "Ittefaq Middle Two Page Color",
-                PriceDescription = 4500
+                PriceDescription = 4500,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad ittefaq inner page black and white advertisement, ittefaq inner page black and white advertisement,black and white advertisememnt at ittefaq inner page, ittefaq inner page black and white advertisement cost,publish black and white advertisement at ittefaq inner page, ittefaq inner page black and white advertisement rate")]
-        [SeoTitle("Publish black and white advertisement in ittefaq inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq inner page")]
-        public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Inner Page Black & White",
-                PriceDescription = 3000 //check the price
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad ittefaq inner page black and white advertisement, ittefaq inner page black and white advertisement,black and white advertisememnt at ittefaq inner page, ittefaq inner page black and white advertisement cost,publish black and white advertisement at ittefaq inner page, ittefaq inner page black and white advertisement rate")]
+        //[SeoTitle("Publish black and white advertisement in ittefaq inner page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in ittefaq inner page")]
+        //public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Ittefaq",
+        //        AdLocation = "Ittefaq Inner Page Black & White",
+        //        PriceDescription = 3000 //check the price
+        //    };
+        //    return View(model);
+        //}
 
         [SeoMetaKeywords("amader ad inquilab inner page color advertisement, inquilab inner page color advertisement,color advertisememnt at inquilab inner page, inquilab inner page color advertisement cost,publish color advertisement at inquilab inner page, inquilab inner page color advertisement rate")]
         [SeoTitle("Publish color advertisement in inquilab inner page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in inquilab inner page")]
-        public ActionResult InnerPageColorAdvertisement_MainPage()
+        public ActionResult InnerPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Inner Page Color",
-                PriceDescription = 4000
+                AdLocation = "Ittefaq Inner Page",
+                PriceDescription = 4000,
+                PriceDescriptionBlack = 3000,
+                IsColor = true,
             };
             return View(model);
         }
@@ -381,29 +409,31 @@ namespace AmaderAd.Controllers
         [SeoMetaKeywords("amader ad ittefaq korcha inner page advertisement,ittefaq korcha ad, korcha inner page advertisement, ittefaq korcha inner page color advertisement, ittefaq korcha inner page ad,  ittefaq korcha inner page color advertisement,  publish advertisement at ittefaq korcha inner page, advertisement cost at ittefaq korcha inner  page, ittefaq korcha inner page advertisement rate, color advertisement at ittefaq korcha inner page")]
         [SeoTitle("Publish color advertisement in korcha inner page at ittefaq through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in korcha inner page at ittefaq")]
-        public ActionResult InnerPageColorAdvertisement_Korcha()
+        public ActionResult InnerPage_Korcha()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
                 AdLocation = "Ittefaq Korcha Inner Page Advertisement",
-                PriceDescription = 3000
-            };
+                PriceDescription = 3000,
+                PriceDescriptionBlack = 2500,
+                IsColor = true,      
+             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad ittefaq korcha inner page advertisement,ittefaq korcha ad, korcha inner page advertisement, ittefaq korcha inner page black and white advertisement, ittefaq korcha inner page ad,  ittefaq korcha inner page black and white advertisement,  publish advertisement at ittefaq korcha inner page, advertisement cost at ittefaq korcha inner  page, ittefaq korcha inner page black and white advertisement rate, black and white advertisement at ittefaq korcha inner page")]
-        [SeoTitle("Publish black and white advertisement in korcha inner page at ittefaq through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in korcha inner page at ittefaq")]
-        public ActionResult InnerPageBlackWhiteAdvertisement_Korcha()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Korcha InnerPage Black & White Advertisement",
-                PriceDescription = 2500
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad ittefaq korcha inner page advertisement,ittefaq korcha ad, korcha inner page advertisement, ittefaq korcha inner page black and white advertisement, ittefaq korcha inner page ad,  ittefaq korcha inner page black and white advertisement,  publish advertisement at ittefaq korcha inner page, advertisement cost at ittefaq korcha inner  page, ittefaq korcha inner page black and white advertisement rate, black and white advertisement at ittefaq korcha inner page")]
+        //[SeoTitle("Publish black and white advertisement in korcha inner page at ittefaq through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in korcha inner page at ittefaq")]
+        //public ActionResult InnerPageBlackWhiteAdvertisement_Korcha()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Ittefaq",
+        //        AdLocation = "Ittefaq Korcha InnerPage Black & White Advertisement",
+        //        PriceDescription = 2500
+        //    };
+        //    return View(model);
+        //}
 
         #endregion
 
@@ -574,6 +604,13 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        #endregion
+
+        #region panel
+
+        
+
+    
         [SeoMetaKeywords("amader ad ittefaq last page panel advertisement, ittefaq last page panel advertisement,  publish panel  advertisement at ittefaq last page,last page panel advertisement cost at ittefaq, ittefaq last page panel advertisement rate, advertisement at ittefaq last page panel")]
         [SeoTitle("Publish last page panel  advertisement in ittefaq through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish last page panel advertisement in ittefaq")]
@@ -596,12 +633,31 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Ittefaq",
                 AdLocation = "Ittefaq Inner Page Panel Advertisement",
-                PriceDescription = 16000
+                PriceDescription = 8000
             };
             return View(model);
         }
 
+        #endregion
+        #region birthday
+        public ActionResult OthersFixed()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Ittefaq",
+                AdLocation = "নিঁখোজ, জন্মদিন, বৃত্তিপ্রাপ্তি উপলক্ষে",
 
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 1500,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "2.00",
+                InchFloat = "1.00",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
         #endregion
 
 

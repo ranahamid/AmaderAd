@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ইত্তেফাকের খেলার পৃষ্ঠাতে সাদা কালো বিজ্ঞাপন দিন <br> Black and White Advertisement in Sports page of Ittefaq </h2>
+<h2>ইত্তেফাকের খেলার পৃষ্ঠাতে বিজ্ঞাপন দিন  <br>Advertisement in Sports page of Ittefaq </h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -18,6 +18,8 @@
         @Html.Partial("_NewspaperHeader", Model)
 
         @Html.Partial("_NewspaperBody", Model)
+
+        @Html.Partial("_NewspaperColorOption", Model)
 
         @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
 
@@ -41,6 +43,8 @@
     var hour = new Date().getUTCHours() + 6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
+        //daysOfWeekDisabled: "0,1,2,3,5,6",
+        //daysOfWeekHighlighted: "4",
         autoclose: true
     });
 </script>
@@ -52,28 +56,32 @@
         var columnSize = $("#ColumnSize").val();
         var inchSize = $("#Inch").val();
 
+        var isColor = $('input[name=IsColor]:checked').val();
+
         var priceDescription = @Html.Raw(Model.PriceDescription);
 
-        //if ((columnSize * inchSize) < 6) {
-        //    $("#columninchwarning").html("এই পেজে  কমপক্ষে 6 কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You have to publish minimum 6 column inch advertisement here ");
-        //    $("#TotalPrice").html(0);
-        //    $("#TotalPrice").val(0);
-        //    $("#submit-btn").attr("disabled", "disabled");
-        //}
-        //else {
-            var totalColumnInch = columnSize * inchSize;
-            var totalPrice = columnSize * inchSize * priceDescription;
-            //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
-            $("#columninchwarning").empty();
+        if (isColor === "False") {
+            var priceDescriptionBlack = @Html.Raw(Model.PriceDescriptionBlack);
+            $("#PriceDescription").html(priceDescriptionBlack);
+            $("#PriceDescription").val(priceDescriptionBlack);
+            priceDescription = priceDescriptionBlack;
+        }
+        else if(isColor === "True") {
+             var priceDescriptionColor = @Html.Raw(Model.PriceDescription);
+            $("#PriceDescription").html(priceDescriptionColor);
+            $("#PriceDescription").val(priceDescriptionColor);
+            priceDescription = priceDescriptionColor;
+        }
+        $("#TotalPrice").html(0);
+        $("#TotalPrice").val(0);
+        var totalColumnInch = columnSize * inchSize;
+        var totalPrice = columnSize * inchSize * priceDescription;
+        $("#columninchwarning").empty();
 
-            $("#TotalColumnInch").html(totalColumnInch);
-            $("#TotalColumnInch").val(totalColumnInch);
+        $("#TotalColumnInch").html(totalColumnInch);
+        $("#TotalColumnInch").val(totalColumnInch);
 
-            $("#TotalPrice").html(totalPrice);
-            $("#TotalPrice").val(totalPrice);
-
-            //$("#submit-btn").removeAttr("disabled");
-        //}
+        $("#TotalPrice").html(totalPrice);
+        $("#TotalPrice").val(totalPrice);
     }
-
 </script>
