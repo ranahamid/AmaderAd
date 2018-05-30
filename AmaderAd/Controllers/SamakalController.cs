@@ -46,7 +46,7 @@ namespace AmaderAd.Controllers
         #endregion
 
         #region MainPage
-        
+        #endregion
         [SeoMetaKeywords("amader ad samakal first page advertisement, samakal first page color advertisement, samakal 1st page advertisement,  samakal 1st page color advbertisement, samakal 1 number page advertisement, samakal one number page color advertisement, publish advertisement at samakal first page, advertisement cost at samakal first page, samakal first page advertisement rate, color advertisement at samakal first page")]
         [SeoTitle("Publish color advertisement in samakal first page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal first page")]
