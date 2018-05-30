@@ -29,7 +29,6 @@ namespace AmaderAd.Controllers
                 ExtraWordPrice = 40,
                 WordLimit = 50,
                 VAT = 0.15,
-
                 AllAdCategory = GetAllAdCategory()
             };
             return View(model);

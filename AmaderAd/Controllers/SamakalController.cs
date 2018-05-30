@@ -18,6 +18,8 @@ namespace AmaderAd.Controllers
         {
             return View();
         }
+
+        #region Classified
         //classified advertisement
         [SeoBaseTitle("Publish classified advertisement in Samakal through amader ad")]
         [SeoMetaKeywords("amader ad samakal classified advertisement,samakal classified ad, samakal classified advertisement,  publish classied advertisement at samakal , classified advertisement cost at samakal, samakal classified advertisement rate, classified advertisement at samakal, সমকালে  শ্রেণীভুক্ত বিজ্ঞাপন দিন,  rent at samakal,  house rent at samakal, publish rent advertisement at samakal, samakal rent advertisement, সমকাল বাড়ি ভাড়া বিজ্ঞাপন,  land slae advertisement at samakal, samakal land sale advertisement, samakal land sale ad cost, সমকালে জমি বিক্রয়ের বিজ্ঞাপন দিন,  miscellaneous sales advertisement at samakal, samakal miscellaneous slaes advetisement,  miscellaneous sales cost at samakal, publish miscellaneous advertisement at samakal, miscellaneous at samakal, সমকালে বিবিধ বিক্রয়ের বিজ্ঞাপন দিন, house sale advertisement at samakal, samakal house sales advertisement, house sales advertisement cost at samakal, publish house sale advertisement at samakal, house sale advertisement at samakal, সমকালে বাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  shop sale advertisement at samakal, samakal shop sales advertisement, shop sales advertisement cost at samakal, publish shop sale advertisement at samakal, house shop advertisement at samakal, সমকালে দোকান বিক্রয়ের বিজ্ঞাপন দিন, car sale advertisement at samakal, samakal car sales advertisement, car sales advertisement cost at samakal, publish car sale advertisement at samakal, car sale advertisement at samakal, সমকালে গাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  plot purchase advertisement at samakal, samakal plot purchase advertisement, plot purchase advertisement cost at samakal, publish plot purchase advertisement at samakal, plot purchase advertisement at samakal, সমকালে প্লট ক্রয়ের  বিজ্ঞাপন দিন, wanted advertisement at samakal, samakal wanted advertisement, wanted advertisement cost at samakal, publish wanted advertisement at samakal, wanted advertisement at samakal, tution wanted advertisement at samakal, samakal tution wante advertisement, tution wanted advertisement cost at samakal, publish tution wanted advertisement at samakal, tuiton wanted advertisement at samakal, সমকালে  পড়াতে চাই   বিজ্ঞাপন দিন,  groom wanted advertisement at samakal, samakal groom wanted advertisement, groom wanted advertisement cost at samakal, publish groom wanted advertisement at samakal, groom wnated advertisement at samakal, সমকালে  পাত্র চাই  বিজ্ঞাপন দিন,  bride wanted advertisement at samakal, samakal plot bride wanted advertisement, bride wanted  advertisement cost at samakal, bride wanted purchase advertisement at samakal, bride wanted  advertisement at samakal, সমকালে  পাত্রী চাই  বিজ্ঞাপন দিন, ")]
@@ -31,16 +33,20 @@ namespace AmaderAd.Controllers
 
 
                 //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
-                FirstWordLimitBase = 16,
+                FirstWordLimitBase = 20,
                 PriceDescription = 400,
-                ExtraWordPrice = 40,
-                WordLimit = 60,
-
-
+                ExtraWordPrice = 25,
+                WordLimit = 10000,
+                VAT = 0.15,
                 AllAdCategory = GetAllAdCategory()
             };
             return View(model);
         }
+
+        #endregion
+
+        #region MainPage
+        
         [SeoMetaKeywords("amader ad samakal first page advertisement, samakal first page color advertisement, samakal 1st page advertisement,  samakal 1st page color advbertisement, samakal 1 number page advertisement, samakal one number page color advertisement, publish advertisement at samakal first page, advertisement cost at samakal first page, samakal first page advertisement rate, color advertisement at samakal first page")]
         [SeoTitle("Publish color advertisement in samakal first page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal first page")]
