@@ -43,9 +43,13 @@
     var hour = new Date().getUTCHours() + 6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
+        //monday
+        daysOfWeekDisabled: "0,2,3,4,5,6",
+        daysOfWeekHighlighted: "1",
         autoclose: true
     });
 </script>
+
 
 
 <script>

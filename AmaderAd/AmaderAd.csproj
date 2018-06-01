@@ -4596,6 +4596,10 @@
     <Content Include="Views\JaiJaidin\SummonsNoticeFinanaceCourt_MainPage.cshtml" />
     <Content Include="Views\JaiJaidin\FirstPage_Spot.cshtml" />
     <Content Include="Views\JaiJaidin\LastPage_Spot.cshtml" />
+    <Content Include="Views\Samakal\DehoGhori.cshtml" />
+    <Content Include="Views\Samakal\KichuBolteChai.cshtml" />
+    <Content Include="Views\Samakal\SuridoSomabesh.cshtml" />
+    <Content Include="Views\Samakal\Campus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

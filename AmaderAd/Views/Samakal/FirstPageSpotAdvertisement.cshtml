@@ -8,6 +8,7 @@
 <h2> সমকালের প্রথম পৃষ্ঠাতে স্পট বিজ্ঞাপন দিন  <br>Spot advertisement in first page of samakal</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
+
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
 {
     @Html.AntiForgeryToken()
@@ -53,12 +54,16 @@
         var inchSize = $("#Inch").val();
 
         var priceDescription = @Html.Raw(Model.PriceDescription);
+        var totalColumnInch = columnSize * inchSize;
 
-
-
+        if (totalColumnInch < 1 || totalColumnInch >4 ) {
+            $("#columninchwarning").html("এই বিভাগে সর্বনিম্ম এক এবং সর্বোচ্চ 4 কলাম ইঞ্চির  বিজ্ঞাপন দিতে হবে <br>You can publish minimum one columninch and maximum 4 columninch advertisement here here ");
             $("#TotalPrice").html(0);
             $("#TotalPrice").val(0);
-            var totalColumnInch = columnSize * inchSize;
+            $("#submit-btn").attr("disabled", "disabled");
+        }
+        else {
+
             var totalPrice = columnSize * inchSize * priceDescription;
             //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
             $("#columninchwarning").empty();
@@ -69,8 +74,8 @@
             $("#TotalPrice").html(totalPrice);
             $("#TotalPrice").val(totalPrice);
 
-
-
+            $("#submit-btn").removeAttr("disabled");
+        }
     }
 
 </script>

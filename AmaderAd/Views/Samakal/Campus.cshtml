@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>সমকালের শেষের পৃষ্ঠার আগের পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন<br> Color advertisement in page before last page of Samakal</h2>
+<h2>সমকালের মঞ্চের বাইরে, সুহৃদ সমাবেশ ও টেক লাইন ফিচার পাতায় বিজ্ঞাপন দিন<br>advertisement in Feature page Moncher Baire, Suhrid Shomabesh and Tech line of Samakal</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -38,13 +38,13 @@
 @Html.Partial("_NewspaperSampleAd")
 
 
-
 <script>
     var hour = new Date().getUTCHours() + 6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
-        //daysOfWeekDisabled: "0,1,2,3,5,6",
-        //daysOfWeekHighlighted: "4",
+        //thursday
+        daysOfWeekDisabled: "0,1,2,3,5,6",
+        daysOfWeekHighlighted: "4",
         autoclose: true
     });
 </script>

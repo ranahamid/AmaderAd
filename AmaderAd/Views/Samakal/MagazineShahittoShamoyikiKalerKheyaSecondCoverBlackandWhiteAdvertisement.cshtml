@@ -37,14 +37,18 @@
 
 
 
+
+
 <script>
     var hour = new Date().getUTCHours() + 6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
+        //friday
+        daysOfWeekDisabled: "0,1,2,3,4,6",
+        daysOfWeekHighlighted: "5",
         autoclose: true
     });
 </script>
-
 
 <script>
     function myAmountLimit1() {

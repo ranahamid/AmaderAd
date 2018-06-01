@@ -37,11 +37,13 @@
 @Html.Partial("_NewspaperSampleAd")
 
 
-
 <script>
     var hour = new Date().getUTCHours() + 6;
     $(".datetime").datepicker({
         startDate: hour >= 18 ? '+2d' : '+1d',
+        //wednesday
+        daysOfWeekDisabled: "0,1,2,4,5,6",
+        daysOfWeekHighlighted: "3",
         autoclose: true
     });
 </script>
