@@ -4200,7 +4200,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\shopping-cart-2-responsive\css\" />
-    <Folder Include="Views\DailyStar\" />
     <Folder Include="Views\KalerKantho\" />
     <Folder Include="Views\ProthomAlo\" />
   </ItemGroup>
@@ -4600,6 +4599,7 @@
     <Content Include="Views\Samakal\KichuBolteChai.cshtml" />
     <Content Include="Views\Samakal\SuridoSomabesh.cshtml" />
     <Content Include="Views\Samakal\Campus.cshtml" />
+    <Content Include="Views\DailyStar\PageFive.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

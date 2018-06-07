@@ -35,5 +35,27 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+
+        #region Display Advertisement
+        public ActionResult PageFive()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star Page Five",
+                PriceDescription = 6000,
+                PriceDescriptionBlack = 4500,
+
+                PriceDescriptionFriday = 7000,
+                PriceDescriptionBlackFriday =5500,
+                IsColor = true,
+                IsColorOption= true,
+            };
+            return View(model);
+        }
+        #endregion
+
+
     }
 }
