@@ -18,10 +18,10 @@
         @Html.Partial("_NewspaperHeader", Model)
 
         @Html.Partial("_NewspaperBody", Model)
-        
+
         @{
-            if( Model.IsColorOption == true)
-            {                
+            if (Model.IsColorOption == true)
+            {
                 @Html.Partial("_NewspaperColorOption", Model)
             }
         }
@@ -75,16 +75,15 @@
         var isColor = $('input[name=IsColor]:checked').val();
 
         //black & White
-        var priceDescriptionBlackFriday = @Html.Raw(Model.PriceDescriptionBlackFriday); // friday 
+        var priceDescriptionBlackFriday = @Html.Raw(Model.PriceDescriptionBlackFriday); // friday
         var priceDescriptionBlack = @Html.Raw(Model.PriceDescriptionBlack);// without friday
 
         //color
-        var priceDescriptionFriday = @Html.Raw(Model.PriceDescriptionFriday); // friday 
+        var priceDescriptionFriday = @Html.Raw(Model.PriceDescriptionFriday); // friday
         var priceDescription = @Html.Raw(Model.PriceDescription); // without friday
 
         if (isColor === "False") { //black white
             if (daysInWeek === 5) { //black white+ friday
-                debugger;           
                 $("#PriceDescription").html(priceDescriptionBlackFriday);
                 $("#PriceDescription").val(priceDescriptionBlackFriday);
                 if ("@Model.IsColorOption" === "True") {
@@ -92,7 +91,7 @@
                 } else {
                     $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday);
                 }
-          
+
             } else { //black white+ other day
                 $("#columninchwarning").empty();
                 $("#PriceDescription").html(priceDescriptionBlack);
@@ -103,14 +102,14 @@
         }
         else { //color
             if (daysInWeek === 5) { //color+ friday
-                debugger;           
+                debugger;
                 $("#PriceDescription").html(priceDescriptionFriday);
                 $("#PriceDescription").val(priceDescriptionFriday);
                 if ("@Model.IsColorOption" === "True") {
                     $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday + ", and black/white advertisement is: " + priceDescriptionBlackFriday);
                 } else {
                     $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday);
-                }          
+                }
             } else { //color+ other day
                 $("#columninchwarning").empty();
                 $("#PriceDescription").html(priceDescription);
@@ -119,20 +118,35 @@
         }
         var columnSize = $("#ColumnSize").val();
         var inchSize = $("#Inch").val();
-        priceDescription = $("#PriceDescription").val();
-        $("#TotalPrice").html(0);
-        $("#TotalPrice").val(0);
         var totalColumnInch = columnSize * inchSize;
-        var totalPrice = columnSize * inchSize * priceDescription;
+
+        var minColumn=@Html.Raw(Model.MinTotalColumnInch);
+        var maxColumn=@Html.Raw(Model.MaxTotalColumnInch);
+        var maxMinRestriction = "@Html.Raw(Model.MinMaxRestrictiion)";
 
 
-        $("#TotalColumnInch").html(totalColumnInch);
-        $("#TotalColumnInch").val(totalColumnInch);
+        if (maxMinRestriction === "True" && (totalColumnInch < minColumn || totalColumnInch > maxColumn) ){
+            $("#columninchwarning").html("এই পেজে কমপক্ষে " + minColumn + " কলাম ইঞ্চি ও সর্বোচ্চ " + maxColumn + " কলাম ইঞ্চির বিজ্ঞাপন দিতে হবে  <br>You can publish atleast " + minColumn + " column inch and maximum  " + maxColumn + "  column inch here ");
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
+            $("#submit-btn").attr("disabled", "disabled");
+        }
+        else {
+            priceDescription = $("#PriceDescription").val();
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
 
-        $("#TotalPrice").html(totalPrice);
-        $("#TotalPrice").val(totalPrice);
+            var totalPrice = totalColumnInch * priceDescription;
+
+
+            $("#TotalColumnInch").html(totalColumnInch);
+            $("#TotalColumnInch").val(totalColumnInch);
+
+            $("#TotalPrice").html(totalPrice);
+            $("#TotalPrice").val(totalPrice);
+        }
 
     }
 
-   
+
 </script>

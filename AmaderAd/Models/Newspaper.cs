@@ -28,7 +28,9 @@ namespace AmaderAd.Models
         public int? PriceDescriptionFriday { get; set; }
 
         public int? PriceDescriptionLow { get; set; }
-        
+
+        public int? PriceDescriptionLowFriday { get; set; }
+
         public int? PriceDescriptionBlack { get; set; }
 
         public int? PriceDescriptionBlackFriday { get; set; }
@@ -62,6 +64,10 @@ namespace AmaderAd.Models
 
         [Display(Name = "সর্বমোট কলামইঞ্চি (Total column inch)")]
         public int? TotalColumnInch { get; set; }
+
+        public int? MinTotalColumnInch { get; set; }
+        public int? MaxTotalColumnInch { get; set; }
+        public bool? MinMaxRestrictiion { get; set; }
 
 
         [Display(Name = "কলাম (Column)")]

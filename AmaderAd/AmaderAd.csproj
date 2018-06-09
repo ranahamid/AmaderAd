@@ -4599,7 +4599,9 @@
     <Content Include="Views\Samakal\KichuBolteChai.cshtml" />
     <Content Include="Views\Samakal\SuridoSomabesh.cshtml" />
     <Content Include="Views\Samakal\Campus.cshtml" />
-    <Content Include="Views\DailyStar\PageFive.cshtml" />
+    <Content Include="Views\DailyStar\PageFive_Display.cshtml" />
+    <Content Include="Views\DailyStar\Frontpage_Display.cshtml" />
+    <Content Include="Views\DailyStar\BirthdayTolet_Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
