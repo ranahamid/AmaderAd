@@ -47,7 +47,7 @@ namespace AmaderAd.Controllers
 
         #endregion
 
-
+        #region special place
         [SeoMetaKeywords("amader ad inqilab financial court summons notice advertisement, inqilab financial court summons notice advertisement, publish advertisement at inqilab financial court summons notice, advertisement cost at inqilab financial court summons notice, inqilab financial court summons notice advertisement rate, advertisement inqilab financial court summons notice ")]
         [SeoTitle("Publish financial court summons notice advertisement in inqilab through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your financial court summons notice advertisement inqilab")]
@@ -89,13 +89,9 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
-
+        #endregion
 
         #region  main Paper
-
-
-
-
         [SeoMetaKeywords("amader ad inqilab first page advertisement, inqilab first page color advertisement, inqilab 1st page advertisement,  inqilab 1st page color advbertisement, inqilab 1 number page advertisement, inqilab one number page color advertisement, publish advertisement at inqilab first page, advertisement cost at inqilab first page, inqilab first page advertisement rate, color advertisement at inqilab first page")]
         [SeoTitle("Publish color advertisement in inqilab first page")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in inqilab first page")]
@@ -105,7 +101,9 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab first page color advertisement",
-                PriceDescription = 14000
+                PriceDescription = 14000,
+                PriceDescriptionBlack = 12000,
+                IsColor = true,
             };
             return View(model);
         }
@@ -118,7 +116,9 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab last page color advertisement",
-                PriceDescription = 12000
+                PriceDescription = 12000,
+                PriceDescriptionBlack = 10000,
+                IsColor = true,
             };
             return View(model);
         }
@@ -144,23 +144,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab third page color advertisement",
-                PriceDescription = 8000
+                PriceDescription = 8000,
+                PriceDescriptionBlack = 5000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inqilab third page advertisement, inqilab third page black and white advertisement, inqilab 3rd page advertisement,  inqilab 3rd page black and white advbertisement, inqilab 3 number page advertisement, inqilab three number page black and white advertisement, publish advertisement at inqilab third page, advertisement cost at inqilab third page, inqilab third page black and white advertisement rate, black and white advertisement at inqilab third page")]
-        [SeoTitle("Publish black and white advertisement in inqilab third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab third page")]
-        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab third page black and white advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad inqilab third page advertisement, inqilab third page black and white advertisement, inqilab 3rd page advertisement,  inqilab 3rd page black and white advbertisement, inqilab 3 number page advertisement, inqilab three number page black and white advertisement, publish advertisement at inqilab third page, advertisement cost at inqilab third page, inqilab third page black and white advertisement rate, black and white advertisement at inqilab third page")]
+        //[SeoTitle("Publish black and white advertisement in inqilab third page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab third page")]
+        //public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Inqilab",
+        //        AdLocation = "Inqilab third page black and white advertisement",
+        //        PriceDescription = 5000
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad inqilab second page advertisement, inqilab second page black and white advertisement, inqilab 2nd page advertisement,  inqilab 2nd page black and white advbertisement, inqilab 2 number page advertisement, inqilab second number page black and white advertisement, publish advertisement at inqilab second page, advertisement cost at inqilab second page, inqilab second page black and white advertisement rate, black and white advertisement at inqilab second page")]
         [SeoTitle("Publish black and white advertisement in inqilab second page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab second page")]
@@ -183,23 +185,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab inner page color advertisement",
-                PriceDescription = 5000
+                PriceDescription = 5000,
+                PriceDescriptionBlack = 3000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inqilab inner page black and white advertisement, inqilab inner page black and white advertisement,black and white advertisememnt at inqilab inner page, inqilab inner page black and white advertisement cost,publish black and white advertisement at inqilab inner page, inqilab inner page black and white advertisement rate")]
-        [SeoTitle("Publish black and white advertisement in inqilab inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab inner page")]
-        public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab inner page black and white advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad inqilab inner page black and white advertisement, inqilab inner page black and white advertisement,black and white advertisememnt at inqilab inner page, inqilab inner page black and white advertisement cost,publish black and white advertisement at inqilab inner page, inqilab inner page black and white advertisement rate")]
+        //[SeoTitle("Publish black and white advertisement in inqilab inner page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab inner page")]
+        //public ActionResult InnerPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Inqilab",
+        //        AdLocation = "Inqilab inner page black and white advertisement",
+        //        PriceDescription = 3000
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad inqilab sports page advertisement, inqilab sports page color advertisement, inqilab sports page advertisement, publish advertisement at inqilab sports page, advertisement cost at inqilab sports page, inqilab sports page advertisement rate, color advertisement at inqilab sports page")]
         [SeoTitle("Publish color advertisement in inqilab sports page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in inqilab sports page")]
@@ -209,23 +213,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab sports page color advertisement",
-                PriceDescription = 5000
+                PriceDescription = 5000,
+                PriceDescriptionBlack = 4000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inqilab sports page advertisement, inqilab sports page black and white advertisement, inqilab sports page advertisement, publish advertisement at inqilab sports page, advertisement cost at inqilab sports page, inqilab sports page black and white advertisement rate, black and white advertisement at inqilab sports page")]
-        [SeoTitle("Publish black and white advertisement in inqilab sports page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab sports page")]
-        public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab sports page black and white advertisement",
-                PriceDescription = 4000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad inqilab sports page advertisement, inqilab sports page black and white advertisement, inqilab sports page advertisement, publish advertisement at inqilab sports page, advertisement cost at inqilab sports page, inqilab sports page black and white advertisement rate, black and white advertisement at inqilab sports page")]
+        //[SeoTitle("Publish black and white advertisement in inqilab sports page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab sports page")]
+        //public ActionResult SportsPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Inqilab",
+        //        AdLocation = "Inqilab sports page black and white advertisement",
+        //        PriceDescription = 4000
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad inqilab page before last page advertisement, inqilab page before last page black and white advertisement, inqilab page before last page advertisement, publish advertisement at inqilab page before last page, advertisement cost at inqilab page before last page, inqilab page before last page black and white advertisement rate, black and white advertisement at inqilab sports page")]
         [SeoTitle("Publish black and white advertisement in inqilab page before last page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your black and white advertisement page before last page in inqilab")]
@@ -234,7 +240,7 @@ namespace AmaderAd.Controllers
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab page before last page black and white advertisement",
+                AdLocation = "Inqilab page before last page black and white advertisement (15th Page)",
                 PriceDescription = 4000
             };
             return View(model);
@@ -248,23 +254,27 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab entertainment page color advertisement",
-                PriceDescription = 5000
+                PriceDescription = 5000,
+                PriceDescriptionBlack = 3000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inqilab entertainment page advertisement, inqilab entertainment page black and white advertisement, inqilab entertainment page advertisement, publish advertisement at inqilab entertainment page, advertisement cost at inqilab entertainment page, inqilab entertainment page black and white advertisement rate, black and white advertisement at inqilab entertainment page")]
-        [SeoTitle("Publish black and white advertisement in inqilab entertainment page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab entertainment page")]
-        public ActionResult EntertainmentPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab entertainment page black and white advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
+
+
+        //[SeoMetaKeywords("amader ad inqilab entertainment page advertisement, inqilab entertainment page black and white advertisement, inqilab entertainment page advertisement, publish advertisement at inqilab entertainment page, advertisement cost at inqilab entertainment page, inqilab entertainment page black and white advertisement rate, black and white advertisement at inqilab entertainment page")]
+        //[SeoTitle("Publish black and white advertisement in inqilab entertainment page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in inqilab entertainment page")]
+        //public ActionResult EntertainmentPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Inqilab",
+        //        AdLocation = "Inqilab entertainment page black and white advertisement",
+        //        PriceDescription = 3000
+        //    };
+        //    return View(model);
+        //}
         #endregion
 
         #region  Bishesh Koropotro
