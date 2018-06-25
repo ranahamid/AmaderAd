@@ -17,7 +17,7 @@ namespace AmaderAd.Controllers
         {
             return View();
         }
-        //classified advertisement
+        #region classified advertisement
         [SeoMetaKeywords("amader ad new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page advertisement, new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page color advertisement, new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page advertisement, publish advertisement at new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page, advertisement cost at new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page, new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page advertisement rate, color advertisement at new age birthday, book, magazine, good luck, scholarship, affedevit, good wishes, tolet, purchase, sale, tution,  lost, theatre page")]
         [SeoTitle("Publish your classified advertisement in new age through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your classified advertisement in new age")]
@@ -39,6 +39,8 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        #endregion
+        #region MainPage
         [SeoMetaKeywords("amader ad new age first page advertisement, new age first page color advertisement, new age 1st page advertisement,  new age 1st page color advbertisement, new age 1 number page advertisement, new age one number page color advertisement, publish advertisement at new age first page, advertisement cost at new age first page, new age first page advertisement rate, color advertisement at new age first page, new age front page color advertisement")]
         [SeoTitle("Publish color advertisement in New Age  front page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age first page")]
@@ -48,23 +50,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Age",
                 AdLocation = "New Age front page color advertisement",
-                PriceDescription = 10000
+                PriceDescription = 10000,
+                PriceDescriptionBlack = 7000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new age first page advertisement, new age first page black and white advertisement, new age 1st page advertisement,  new age 1st page black and white advbertisement, new age 1 number page advertisement, new age one number page black and white advertisement, publish advertisement at new age first page, advertisement cost at new age first page, new age first page advertisement rate, black and white advertisement at new age first page, new age front page black and white advertisement")]
-        [SeoTitle("Publish black and white advertisement in New Age  front page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age first page")]
-        public ActionResult FrontPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "New Age front page black and white advertisement",
-                PriceDescription = 7000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new age first page advertisement, new age first page black and white advertisement, new age 1st page advertisement,  new age 1st page black and white advbertisement, new age 1 number page advertisement, new age one number page black and white advertisement, publish advertisement at new age first page, advertisement cost at new age first page, new age first page advertisement rate, black and white advertisement at new age first page, new age front page black and white advertisement")]
+        //[SeoTitle("Publish black and white advertisement in New Age  front page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age first page")]
+        //public ActionResult FrontPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Age",
+        //        AdLocation = "New Age front page black and white advertisement",
+        //        PriceDescription = 7000
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new age backpage advertisement, new age backpage color advertisement, new age backpage advertisement,  new age backpage color advbertisement,  publish advertisement at new age backpage, advertisement cost at new age backpage, new age backpage advertisement rate, color advertisement at new age backpage, new age back page color advertisement")]
         [SeoTitle("Publish color advertisement in New Age  back page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age back page")]
@@ -74,23 +78,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Age",
                 AdLocation = "New Age back page color advertisement",
-                PriceDescription = 8000
+                PriceDescription = 8000,
+                PriceDescriptionBlack = 5500,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new age back page advertisement, new age back page black and white advertisement, new age back page advertisement,  new age back page black and white advbertisement,  publish advertisement at new age back page, advertisement cost at new age back page, new age back page advertisement rate, black and white advertisement at new age back page, new age back page black and white advertisement")]
-        [SeoTitle("Publish black and white advertisement in New Age  back page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age back page")]
-        public ActionResult BackPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "New Age back page black and white advertisement",
-                PriceDescription = 5500
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new age back page advertisement, new age back page black and white advertisement, new age back page advertisement,  new age back page black and white advbertisement,  publish advertisement at new age back page, advertisement cost at new age back page, new age back page advertisement rate, black and white advertisement at new age back page, new age back page black and white advertisement")]
+        //[SeoTitle("Publish black and white advertisement in New Age  back page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age back page")]
+        //public ActionResult BackPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Age",
+        //        AdLocation = "New Age back page black and white advertisement",
+        //        PriceDescription = 5500
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new age third page advertisement, new age third page color advertisement, new age 3rd page advertisement,  new age 3rd page color advbertisement, new age 3 number page advertisement, new age three number page color advertisement, publish advertisement at new age third page, advertisement cost at new age third page, new age third page advertisement rate, color advertisement at new age third page")]
         [SeoTitle("Publish color advertisement in New Age  third  page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age third page")]
@@ -100,23 +106,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Age",
                 AdLocation = "New Age Third page color advertisement",
-                PriceDescription = 5500
+                PriceDescription = 5500,
+                PriceDescriptionBlack = 3500,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new age third page advertisement, new age third page black and white advertisement, new age 3rd page advertisement,  new age 3rd page black and white advbertisement, new age 3 number page advertisement, new age three number page black and white advertisement, publish advertisement at new age third page, advertisement cost at new age third page, new age third page black and white advertisement rate, black and white advertisement at new age third page")]
-        [SeoTitle("Publish black and white advertisement in New Age  third  page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age third page")]
-        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "New Age Third page black and white advertisement",
-                PriceDescription = 3500
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new age third page advertisement, new age third page black and white advertisement, new age 3rd page advertisement,  new age 3rd page black and white advbertisement, new age 3 number page advertisement, new age three number page black and white advertisement, publish advertisement at new age third page, advertisement cost at new age third page, new age third page black and white advertisement rate, black and white advertisement at new age third page")]
+        //[SeoTitle("Publish black and white advertisement in New Age  third  page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age third page")]
+        //public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Age",
+        //        AdLocation = "New Age Third page black and white advertisement",
+        //        PriceDescription = 3500
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new age business front page advertisement, new age business front page color advertisement, new age business front page advertisement, publish advertisement at new age business front page, advertisement cost at new age business front page, new age business front page advertisement rate, color advertisement at new age business front page ")]
         [SeoTitle("Publish color advertisement in New Age business front page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age business front page")]
@@ -126,23 +134,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Age",
                 AdLocation = "New Age business front page color advertisement",
-                PriceDescription = 4500
+                PriceDescription = 4500,
+                PriceDescriptionBlack = 3000, // check the price
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new age business front page advertisement, new age business front page black and white advertisement, new age business front page advertisement, publish advertisement at new age business front page, advertisement cost at new age business front page, new age business front page black and white advertisement rate, black and white advertisement at new age business front page")]
-        [SeoTitle("Publish black and white  advertisement in New Age business front page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age business front page")]
-        public ActionResult BusinessFrontPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "New Age business front page black and white advertisement",
-                PriceDescription = 4500
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new age business front page advertisement, new age business front page black and white advertisement, new age business front page advertisement, publish advertisement at new age business front page, advertisement cost at new age business front page, new age business front page black and white advertisement rate, black and white advertisement at new age business front page")]
+        //[SeoTitle("Publish black and white  advertisement in New Age business front page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age business front page")]
+        //public ActionResult BusinessFrontPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Age",
+        //        AdLocation = "New Age business front page black and white advertisement",
+        //        PriceDescription = 4500
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new age business back page advertisement, new age business back page color advertisement, new age business back page advertisement, publish advertisement at new age business back page, advertisement cost at new age business back page, new age business back page advertisement rate, color advertisement at new age business back page")]
         [SeoTitle("Publish color advertisement in New Age business back page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age business back page")]
@@ -152,23 +162,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Age",
                 AdLocation = "New Age business back page color advertisement",
-                PriceDescription = 3500
+                PriceDescription = 3500,
+                PriceDescriptionBlack = 2500,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new age business back page advertisement, new age business back page black and white advertisement, new age business back page advertisement, publish advertisement at new age business back page, advertisement cost at new age business back page, new age business back page advertisement rate, black and white advertisement at new age business back page")]
-        [SeoTitle("Publish black and white  advertisement in New Age business back page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age business back page")]
-        public ActionResult BusinessBackPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "New Age business back page black and white advertisement",
-                PriceDescription = 2500
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new age business back page advertisement, new age business back page black and white advertisement, new age business back page advertisement, publish advertisement at new age business back page, advertisement cost at new age business back page, new age business back page advertisement rate, black and white advertisement at new age business back page")]
+        //[SeoTitle("Publish black and white  advertisement in New Age business back page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age business back page")]
+        //public ActionResult BusinessBackPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Age",
+        //        AdLocation = "New Age business back page black and white advertisement",
+        //        PriceDescription = 2500
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new age inner other page advertisement, new age inner other page color advertisement, new age inner other page advertisement, publish advertisement at new age inner other page, advertisement cost at new age inner other page, new age inner other page advertisement rate, color advertisement at new age inner other page,new age inner other page color advertisement")]
         [SeoTitle("Publish color advertisement in New Age  other inner page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age other inner page")]
@@ -178,23 +190,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Age",
                 AdLocation = "New Age other Inner page color advertisement",
-                PriceDescription = 3500
+                PriceDescription = 3500,
+                PriceDescriptionBlack = 2500,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new age inner other page advertisement, new age inner other page black and white advertisement, new age inner other page advertisement, publish advertisement at new age inner other page, advertisement cost at new age inner other page, new age inner other page black and white advertisement rate, black and white advertisement at new age inner other page,new age inner other page black and white advertisement")]
-        [SeoTitle("Publish black and white advertisement in New Age  other inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age other inner page")]
-        public ActionResult OtherInnerPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "New Age other Inner page black and white advertisement",
-                PriceDescription = 2500
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new age inner other page advertisement, new age inner other page black and white advertisement, new age inner other page advertisement, publish advertisement at new age inner other page, advertisement cost at new age inner other page, new age inner other page black and white advertisement rate, black and white advertisement at new age inner other page,new age inner other page black and white advertisement")]
+        //[SeoTitle("Publish black and white advertisement in New Age  other inner page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your black and white advertisement in new age other inner page")]
+        //public ActionResult OtherInnerPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Age",
+        //        AdLocation = "New Age other Inner page black and white advertisement",
+        //        PriceDescription = 2500
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page advertisement, new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page color advertisement, new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page advertisement, publish advertisement at new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page, advertisement cost at new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page, new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page advertisement rate, black and white advertisement at new age notice legal public appeal tender auction trademark announcement confidence meeting and attention page ")]
         [SeoTitle("Publish notice, legal, public, appeal, tender, auction, trademark, announcement, confidence, meeting and attention related black and white advertisement  in New Age through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age notice, legal, public, appeal, tender, auction, trademark, announcement, confidence, meeting and attention page")]
@@ -235,7 +249,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
-
+        #endregion
         #region Panel
         [SeoMetaKeywords("amader ad new age front page panel advertisement, new age  front page panel advertisement, publish panel advertisement at new age front page,front page panel advertisement cost at new age, new age  front page panel advertisement rate, advertisement at new age front page side panel")]
         [SeoTitle("Publish front page panel advertisement in new age  through amader ad")]

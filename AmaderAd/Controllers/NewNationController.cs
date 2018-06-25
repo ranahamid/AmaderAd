@@ -18,7 +18,7 @@ namespace AmaderAd.Controllers
             return View();
         }
 
-        //classified advertisement
+        #region classified advertisement
         [SeoMetaKeywords("amader ad new nation classified advertisement,new nation classified ad, new nation classified advertisement,  publish classified advertisement at new nation , classified advertisement cost at new nation, new nation classified advertisement rate, classified advertisement at new nation, নিউ নেশন  শ্রেণীভুক্ত বিজ্ঞাপন দিন,  rent at new nation,  house rent at new nation, publish rent advertisement at new nation, new nation rent advertisement, land slae advertisement at new nation, new nation land sale advertisement, new nation land sale ad cost, new nation জমি বিক্রয়ের বিজ্ঞাপন দিন,  miscellaneous sales advertisement at new nation, new nation miscellaneous slaes advetisement,  miscellaneous sales cost at new nation, publish miscellaneous advertisement at new nation, miscellaneous at new nation, house sale advertisement at new nation, new nation house sales advertisement, house sales advertisement cost at new nation, publish house sale advertisement at new nation, house sale advertisement at new nation, নিউ নেশন বাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  shop sale advertisement at new nation, new nation shop sales advertisement, shop sales advertisement cost at new nation, publish shop sale advertisement at new nation, house shop advertisement at new nation, new nation দোকান বিক্রয়ের বিজ্ঞাপন দিন,     car sale advertisement at new nation, new nation car sales advertisement, car sales advertisement cost at new nation, publish car sale advertisement at new nation, car sale advertisement at new nation, new nation গাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  plot purchase advertisement at new nation, new nation plot purchase advertisement, plot purchase advertisement cost at new nation, publish plot purchase advertisement at new nation, plot purchase advertisement at new nation, new nation প্লট ক্রয়ের  বিজ্ঞাপন দিন, 	 wanted advertisement at new nation, new nation wanted advertisement, wanted advertisement cost at new nation, publish wanted advertisement at new nation, wanted advertisement at new nation, 	 tution wanted advertisement at new nation, new nation tution wante advertisement, tution wanted advertisement cost at new nation, publish tution wanted advertisement at new nation, tuiton wanted advertisement at new nation, new nation পড়াতে চাই   বিজ্ঞাপন দিন,  groom wanted advertisement at new nation, new nation groom wanted advertisement, groom wanted advertisement cost at new nation, publish groom wanted advertisement at new nation, groom wnated advertisement at new nation,  bride wanted advertisement at new nation, new nation plot bride wanted advertisement, bride wanted  advertisement cost at new nation, bride wanted purchase advertisement at new nation, bride wanted  advertisement at new nation")]
         [SeoTitle("Publish classified advertisement in new nation through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your classified advertisement new nation")]
@@ -39,6 +39,8 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        #endregion
+        #region MainPage
         [SeoMetaKeywords("amader ad new nation first page advertisement, new nation first page color advertisement, new nation 1st page advertisement,  new nation 1st page color advbertisement, new nation 1 number page advertisement, new nation one number page color advertisement, publish advertisement at new nation first page, advertisement cost at new nation first page, new nation first page advertisement rate, color advertisement at new nation first page, new nation front page color advertisement")]
         [SeoTitle("Publish color advertisement in new nation  front page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new nation first page")]
@@ -74,23 +76,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "New Nation",
                 AdLocation = "New Nation third page color advertisement",
-                PriceDescription = 5000
+                PriceDescription = 5000,
+                PriceDescriptionBlack = 3000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new nation third page advertisement, new nation third page Black and White advertisement, new nation 3rd page advertisement,  new nation 3rd page Black and White advertisement, new nation 3 number page advertisement, new nation three number page Black and White advertisement, publish advertisement at new nation third page, advertisement cost at new nation third page, new nation third page advertisement rate, Black and White advertisement at new nation third page, new nation third page Black and White advertisement")]
-        [SeoTitle("Publish Black and White advertisement in new nation  third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in new nation third page")]
-        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Nation",
-                AdLocation = "New Nation third page black and white advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad new nation third page advertisement, new nation third page Black and White advertisement, new nation 3rd page advertisement,  new nation 3rd page Black and White advertisement, new nation 3 number page advertisement, new nation three number page Black and White advertisement, publish advertisement at new nation third page, advertisement cost at new nation third page, new nation third page advertisement rate, Black and White advertisement at new nation third page, new nation third page Black and White advertisement")]
+        //[SeoTitle("Publish Black and White advertisement in new nation  third page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in new nation third page")]
+        //public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "New Nation",
+        //        AdLocation = "New Nation third page black and white advertisement",
+        //        PriceDescription = 3000
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad new nation Other Inside page advertisement, new nation Other Inside page color advertisement, new nation other inside page advertisement,  new nation other inside page color advertisement, new nation other inside number page advertisement, publish advertisement at new nation Other Inside page, advertisement cost at new nation Other Inside page, new nation Other Inside page advertisement rate, color advertisement at new nation Other Inside page, new nation Other Inside page color advertisement")]
         [SeoTitle("Publish color advertisement in new nation  Other Inside page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in new nation Other Inside page")]
@@ -130,5 +134,6 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        #endregion
     }
 }

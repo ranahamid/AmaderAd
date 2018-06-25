@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>সমকালের ভেতরের অন্যান্য পৃষ্ঠাতে রঙিন বিজ্ঞাপন দিন<br> Color advertisement in other inner page of Samakal</h2>
+<h2>Publish Different Categories (Prospectus, Company notice, Legal notice,Public notice, appeal notice, Auction notice,Calendar, Announcement, Trademark notice,Election, Conference, Layoff notice,Seminar, Protest, Meeting) Advertisement in third page of News Today</h2>
 <p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
 
 @using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
@@ -52,15 +52,12 @@
         var columnSize = $("#ColumnSize").val();
         var inchSize = $("#Inch").val();
 
-        var priceDescription = @Html.Raw(Model.PriceDescription);
-
-
-
+        var priceDescription = @Html.Raw(Model.PriceDescription);=
             $("#TotalPrice").html(0);
             $("#TotalPrice").val(0);
             var totalColumnInch = columnSize * inchSize;
             var totalPrice = columnSize * inchSize * priceDescription;
-            //$("#columninchwarning").html(columnSize + " Column *" + inchSize + " Inch* " + priceDescription + "(ColumnInch) = " + totalPrice);
+            //$("#columninchwarning").html(columnSize + " Column " + inchSize + " Inch " + priceDescription + "(ColumnInch) = " + totalPrice);
             $("#columninchwarning").empty();
 
             $("#TotalColumnInch").html(totalColumnInch);
@@ -74,3 +71,9 @@
     }
 
 </script>
+
+
+
+
+
+
