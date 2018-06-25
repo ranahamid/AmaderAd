@@ -55,7 +55,7 @@ namespace AmaderAd.Controllers
                 // column inch restrictions
                 MinTotalColumnInch = 12,
                 MaxTotalColumnInch = 64,
-                MinMaxRestrictiion=true,
+                MinMaxRestrictiion = true,
 
                 IsColor = false,
                 IsColorOption = false,
@@ -126,7 +126,7 @@ namespace AmaderAd.Controllers
                 PriceDescriptionBlack = 4500,
 
                 PriceDescriptionFriday = 7000,
-                PriceDescriptionBlackFriday =5500,
+                PriceDescriptionBlackFriday = 5500,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -135,7 +135,7 @@ namespace AmaderAd.Controllers
 
 
                 IsColor = true,
-                IsColorOption= true,
+                IsColorOption = true,
             };
             return View(model);
         }
@@ -307,7 +307,7 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Birthday/ To-Let/ Purchase/ Sale/ Tution/ Lost/ Theatre",
 
                 //others day
-                PriceDescriptionLow= 1000,
+                PriceDescriptionLow = 1000,
                 PriceDescription = 3000, //color
                 PriceDescriptionBlack = 2000, //black & white
                 //Friday
@@ -327,6 +327,532 @@ namespace AmaderAd.Controllers
         }
         #endregion
 
+        #region Govt. Ad
+        public ActionResult FrontPage_SidePanel()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Side Panel- Front Page",
 
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 15000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "1.50",
+                InchFloat = "1.50",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult BackPage_SidePanel()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Side Panel- Back Page",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 15000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "1.50",
+                InchFloat = "6.429",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult BusinessPage_Panel()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Panel- Business Page",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 10000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "1.50",
+                InchFloat = "3.00",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult SportsPage_SidePanel()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Side Panel- Sports Page",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 5000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "1.50",
+                InchFloat = "3.00",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        public ActionResult BoxNumber_SidePanel()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Side Panel- Box Number Service Charge",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 1000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "-",
+                InchFloat = "-",
+                // AllAdCategory = GetAllAdCategory()
+            };
+            return View(model);
+        }
+        #endregion
+
+        #region Style
+        public ActionResult FrontPage_Style()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Page (Style)",
+
+                PriceDescription = 6500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult FrontInner_Style()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Inner (Style)",
+
+                PriceDescription = 4500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackPage_Style()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Page (Style)",
+
+                PriceDescription = 5500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackInner_Style()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Inner (Style)",
+
+                PriceDescription = 4500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult ThirdPage_Style()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Third Page (Style)",
+
+                PriceDescription = 3500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult InnerPage_Style()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Inner Page (Style)",
+
+                PriceDescription = 2500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        #endregion
+
+        #region Shout
+        public ActionResult FrontPage_Shout()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Page (Shout)",
+
+                PriceDescription = 4000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult FrontInner_Shout()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Inner (Shout)",
+
+                PriceDescription = 2500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackPage_Shout()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Page (Shout)",
+
+                PriceDescription = 3000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackInner_Shout()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Inner (Shout)",
+
+                PriceDescription = 2500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+
+        public ActionResult InnerPage_Shout()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Inner Page (Shout)",
+
+                PriceDescription = 2000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        #endregion
+
+        #region Showbiz
+        public ActionResult FrontPage_Showbiz()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Page (Showbiz)",
+
+                PriceDescription = 5000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult FrontInner_Showbiz()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Inner (Showbiz)",
+
+                PriceDescription = 3000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackPage_Showbiz()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Page (Showbiz)",
+
+                PriceDescription = 4000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackInner_Showbiz()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Inner (Showbiz)",
+
+                PriceDescription = 3000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+
+        public ActionResult InnerPage_Showbiz()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Inner Page (Showbiz)",
+
+                PriceDescription = 2000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        #endregion
+
+        #region StarWeekend
+        public ActionResult FrontPage_StarWeekend()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Page (Star Weekend)",
+
+                PriceDescription = 4500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult FrontInner_StarWeekend()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Front Inner (Star Weekend)",
+
+                PriceDescription = 2500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackPage_StarWeekend()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Page (Star Weekend)",
+
+                PriceDescription = 3500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        public ActionResult BackInner_StarWeekend()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Back Inner (Star Weekend)",
+
+                PriceDescription = 2500,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+
+        public ActionResult InnerPage_StarWeekend()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Inner Page (Star Weekend)",
+
+                PriceDescription = 2000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 1,
+                MaxTotalColumnInch = 72,
+                MinMaxRestrictiion = true,
+
+                IsColor = false,
+                IsColorOption = false,
+            };
+            return View(model);
+        }
+        #endregion
     }
 }
