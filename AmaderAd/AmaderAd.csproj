@@ -410,6 +410,8 @@
     <Content Include="bin\AmaderAd.dll" />
     <Content Include="bin\AmaderAd.pdb" />
     <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\AspNetSeo.dll" />
+    <Content Include="bin\AspNetSeo.Mvc.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="bin\log4net.dll" />
@@ -439,6 +441,7 @@
     <Content Include="bin\Microsoft.Practices.Unity.dll" />
     <Content Include="bin\Microsoft.Practices.Unity.RegistrationByConvention.dll" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Microsoft.Win32.Primitives.dll" />
     <Content Include="bin\Newtonsoft.Json.dll" />
     <Content Include="bin\Owin.dll" />
     <Content Include="bin\roslyn\csc.exe" />
@@ -480,8 +483,22 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.AppContext.dll" />
+    <Content Include="bin\System.Console.dll" />
     <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.Globalization.Calendars.dll" />
+    <Content Include="bin\System.IO.Compression.dll" />
+    <Content Include="bin\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\System.IO.FileSystem.dll" />
+    <Content Include="bin\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\System.Net.Http.dll" />
     <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Sockets.dll" />
+    <Content Include="bin\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\System.Security.Cryptography.X509Certificates.dll" />
     <Content Include="bin\System.Web.Helpers.dll" />
     <Content Include="bin\System.Web.Http.dll" />
     <Content Include="bin\System.Web.Http.Owin.dll" />
@@ -492,6 +509,7 @@
     <Content Include="bin\System.Web.WebPages.Deployment.dll" />
     <Content Include="bin\System.Web.WebPages.dll" />
     <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Xml.ReaderWriter.dll" />
     <Content Include="bin\Unity.WebApi.dll" />
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\assets\layouts\layout\img\ajax-loading.gif" />
@@ -1325,6 +1343,7 @@
     <Content Include="Content\images\payment\rocket-payment.png" />
     <Content Include="Content\images\right_arrow.png" />
     <Content Include="Content\Ionicons\css\ionicons.css" />
+    <Content Include="Content\Ionicons\fonts\ionicons %281%29.svg" />
     <Content Include="Content\Ionicons\fonts\ionicons.svg" />
     <Content Include="Content\jquery-clockpicker\bootstrap-clockpicker.css" />
     <Content Include="Content\jquery-clockpicker\bootstrap-clockpicker.js" />
@@ -4205,6 +4224,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AmaderAd.dll.config" />
+    <Content Include="Content\Ionicons\fonts\ionicons %281%29.eot" />
+    <Content Include="Content\Ionicons\fonts\ionicons %281%29.ttf" />
+    <Content Include="Content\Ionicons\fonts\ionicons %281%29.woff" />
     <None Include="packages.config" />
     <Content Include="Views\Newspapers\Create.cshtml" />
     <Content Include="Views\Newspapers\Delete.cshtml" />
