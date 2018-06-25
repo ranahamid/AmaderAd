@@ -4565,11 +4565,8 @@
     <Content Include="Views\DailySun\FrontPageColorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\BackPageColorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\SecondPageColorAdvertisement_MainPage.cshtml" />
-    <Content Include="Views\DailySun\SecondPageBlackWhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\ThirdPageColorAdvertisement_MainPage.cshtml" />
-    <Content Include="Views\DailySun\ThirdPageBlackWhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\FifthPageColorAdvertisement_MainPage.cshtml" />
-    <Content Include="Views\DailySun\FifthPageBlackWhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\OtherInsidePageColorAdvertisement_MainPage.cshtml" />
     <Content Include="Views\DailySun\OtherInsidePageBlackWhiteAdvertisement_MainPage.cshtml" />
     <Content Include="Views\NewAge\BackCover_Trends.cshtml" />

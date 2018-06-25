@@ -46,7 +46,12 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun front page color advertisement",
-                PriceDescription = 9000
+                PriceDescription = 9000,
+
+                // column inch restrictions
+                MinTotalColumnInch = 12,
+                MaxTotalColumnInch = 80,
+                MinMaxRestrictiion = true,
             };
             return View(model);
         }
@@ -60,7 +65,11 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun back page color advertisement",
-                PriceDescription = 8000
+                PriceDescription = 8000,
+                // column inch restrictions
+                MinTotalColumnInch = 4,
+                MaxTotalColumnInch = 80,
+                MinMaxRestrictiion = true,
             };
             return View(model);
         }
@@ -73,23 +82,26 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun Second page color advertisement",
-                PriceDescription = 3000
+                PriceDescription = 3000,
+                PriceDescriptionBlack = 2200,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad Daily Sun second page advertisement, Daily Sun second page Black and White advertisement, Daily Sun 2nd page advertisement, Daily Sun 2nd page Black and White advertisement, Daily Sun 2 number page advertisement, Daily Sun two number page Black and White advertisement, publish advertisement at Daily Sun second page, advertisement cost at Daily Sun second page, Daily Sun second page black and white advertisement rate, Black and White advertisement at Daily Sun second page, Daily Sun second page Black and White advertisement")]
-        [SeoTitle("Publish Black and White advertisement in Daily Sun  second page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun second page")]
-        public ActionResult SecondPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Second page black and white advertisement",
-                PriceDescription = 2200
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad Daily Sun second page advertisement, Daily Sun second page Black and White advertisement, Daily Sun 2nd page advertisement, Daily Sun 2nd page Black and White advertisement, Daily Sun 2 number page advertisement, Daily Sun two number page Black and White advertisement, publish advertisement at Daily Sun second page, advertisement cost at Daily Sun second page, Daily Sun second page black and white advertisement rate, Black and White advertisement at Daily Sun second page, Daily Sun second page Black and White advertisement")]
+        //[SeoTitle("Publish Black and White advertisement in Daily Sun  second page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun second page")]
+        //public ActionResult SecondPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Daily Sun",
+        //        AdLocation = "Daily Sun Second page black and white advertisement",
+        //        PriceDescription = 2200
+        //    };
+        //    return View(model);
+        //}
+
         [SeoMetaKeywords("amader ad Daily Sun third page advertisement, Daily Sun third page color advertisement, Daily Sun 3rd page advertisement, Daily Sun 3rd page color advertisement, Daily Sun 3 number page advertisement, Daily Sun three number page color advertisement, publish advertisement at Daily Sun third page, advertisement cost at Daily Sun third page, Daily Sun third page advertisement rate, color advertisement at Daily Sun third page, Daily Sun third page color advertisement")]
         [SeoTitle("Publish color advertisement in Daily Sun third page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun third page")]
@@ -99,23 +111,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun Third page color advertisement",
-                PriceDescription = 4500
+                PriceDescription = 4500,
+                PriceDescriptionBlack = 3000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad Daily Sun third page advertisement, Daily Sun third page Black and White advertisement, Daily Sun 3rd page advertisement,  Daily Sun 3rd page Black and White advertisement, Daily Sun 3 number page advertisement, Daily Sun three number page Black and White advertisement, publish advertisement at Daily Sun third page, advertisement cost at Daily Sun third page, Daily Sun third page black and white advertisement rate, Black and White advertisement at Daily Sun third page, Daily Sun third page Black and White advertisement")]
-        [SeoTitle("Publish Black and White advertisement in Daily Sun  third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun third page")]
-        public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Third page black and white advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad Daily Sun third page advertisement, Daily Sun third page Black and White advertisement, Daily Sun 3rd page advertisement,  Daily Sun 3rd page Black and White advertisement, Daily Sun 3 number page advertisement, Daily Sun three number page Black and White advertisement, publish advertisement at Daily Sun third page, advertisement cost at Daily Sun third page, Daily Sun third page black and white advertisement rate, Black and White advertisement at Daily Sun third page, Daily Sun third page Black and White advertisement")]
+        //[SeoTitle("Publish Black and White advertisement in Daily Sun  third page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun third page")]
+        //public ActionResult ThirdPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Daily Sun",
+        //        AdLocation = "Daily Sun Third page black and white advertisement",
+        //        PriceDescription = 3000
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad Daily Sun fifth page advertisement, Daily Sun fifth page color advertisement, Daily Sun 5th page advertisement,  Daily Sun 5th page color advertisement, Daily Sun 5 number page advertisement, Daily Sun five number page color advertisement, publish advertisement at Daily Sun fifth page, advertisement cost at Daily Sun fifth page, Daily Sun fifth page color advertisement rate, color advertisement at Daily Sun fifth page, Daily Sun fifth page color advertisement")]
         [SeoTitle("Publish color advertisement in Daily Sun  fifth page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun fifth page")]
@@ -125,23 +139,25 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun Fifth page Color advertisement",
-                PriceDescription = 3000
+                PriceDescription = 3000,
+                PriceDescriptionBlack = 2200,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad Daily Sun fifth page advertisement, Daily Sun fifth page Black and White advertisement, Daily Sun 5th page advertisement, Daily Sun 5th page Black and White advertisement, Daily Sun 5 number page advertisement, Daily Sun five number page Black and White advertisement, publish advertisement at Daily Sun fifth page, advertisement cost at Daily Sun fifth page, Daily Sun fifth page black and white advertisement rate, Black and White advertisement at Daily Sun fifth page, Daily Sun fifth page Black and White advertisement")]
-        [SeoTitle("Publish Black and White advertisement in Daily Sun  fifth page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun fifth page")]
-        public ActionResult FifthPageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Fifth page black and white advertisement",
-                PriceDescription = 2200
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad Daily Sun fifth page advertisement, Daily Sun fifth page Black and White advertisement, Daily Sun 5th page advertisement, Daily Sun 5th page Black and White advertisement, Daily Sun 5 number page advertisement, Daily Sun five number page Black and White advertisement, publish advertisement at Daily Sun fifth page, advertisement cost at Daily Sun fifth page, Daily Sun fifth page black and white advertisement rate, Black and White advertisement at Daily Sun fifth page, Daily Sun fifth page Black and White advertisement")]
+        //[SeoTitle("Publish Black and White advertisement in Daily Sun  fifth page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun fifth page")]
+        //public ActionResult FifthPageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Daily Sun",
+        //        AdLocation = "Daily Sun Fifth page black and white advertisement",
+        //        PriceDescription = 2200
+        //    };
+        //    return View(model);
+        //}
         [SeoMetaKeywords("amader ad Daily Sun Other Inside page advertisement, Daily Sun Other Inside page color advertisement, Daily Sun other inside page advertisement, Daily Sun other inside page color advertisement, Daily Sun other inside number page advertisement, publish advertisement at Daily Sun Other Inside page, advertisement cost at Daily Sun Other Inside page, Daily Sun Other Inside page color advertisement rate, color advertisement at Daily Sun Other Inside page, Daily Sun Other Inside page color advertisement")]
         [SeoTitle("Publish color advertisement in Daily Sun  Other Inside page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun Other Inside page")]
@@ -151,22 +167,24 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun Other Inside page color advertisement",
-                PriceDescription = 2800
+                PriceDescription = 2800,
+                PriceDescriptionBlack = 2000,
+                IsColor = true,
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad Daily Sun Other Inside page advertisement, Daily Sun Other Inside page Black and White advertisement, Daily Sun other inside page advertisement, Daily Sun other inside page Black and White advertisement, Daily Sun other inside number page advertisement, publish advertisement at Daily Sun Other Inside page, advertisement cost at Daily Sun Other Inside page, Daily Sun Other Inside page advertisement rate, Black and White advertisement at Daily Sun Other Inside page, Daily Sun Other Inside page Black and White advertisement")]
-        [SeoTitle("Publish Black and White advertisement in Daily Sun Other Inside page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun Other Inside page")]
-        public ActionResult OtherInsidePageBlackWhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Other Inside page black and White advertisement",
-                PriceDescription = 2000
-            };
-            return View(model);
-        }
+        //[SeoMetaKeywords("amader ad Daily Sun Other Inside page advertisement, Daily Sun Other Inside page Black and White advertisement, Daily Sun other inside page advertisement, Daily Sun other inside page Black and White advertisement, Daily Sun other inside number page advertisement, publish advertisement at Daily Sun Other Inside page, advertisement cost at Daily Sun Other Inside page, Daily Sun Other Inside page advertisement rate, Black and White advertisement at Daily Sun Other Inside page, Daily Sun Other Inside page Black and White advertisement")]
+        //[SeoTitle("Publish Black and White advertisement in Daily Sun Other Inside page through amader ad")]
+        //[SeoMetaDescription("Through Amader Ad publish your Black and White advertisement in Daily Sun Other Inside page")]
+        //public ActionResult OtherInsidePageBlackWhiteAdvertisement_MainPage()
+        //{
+        //    Newspaper model = new Newspaper
+        //    {
+        //        NewspaperName = "Daily Sun",
+        //        AdLocation = "Daily Sun Other Inside page black and White advertisement",
+        //        PriceDescription = 2000
+        //    };
+        //    return View(model);
+        //}
     }
 }
