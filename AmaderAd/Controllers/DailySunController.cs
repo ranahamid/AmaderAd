@@ -73,15 +73,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad Daily Sun second page advertisement, Daily Sun second page color advertisement, Daily Sun 2nd page advertisement,  Daily Sun 2nd page color advertisement, Daily Sun 2 number page advertisement, Daily Sun two number page color advertisement, publish advertisement at Daily Sun second page, advertisement cost at Daily Sun second page, Daily Sun second page color advertisement rate, color advertisement at Daily Sun second page, Daily Sun second page color advertisement")]
-        [SeoTitle("Publish color advertisement in Daily Sun  second page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun second page")]
+        [SeoMetaKeywords("amader ad Daily Sun second page advertisement, Daily Sun second page  advertisement, Daily Sun 2nd page advertisement,  Daily Sun 2nd page  advertisement, Daily Sun 2 number page advertisement, Daily Sun two number page color advertisement, publish advertisement at Daily Sun second page, advertisement cost at Daily Sun second page, Daily Sun second page color advertisement rate, color advertisement at Daily Sun second page, Daily Sun second page color advertisement")]
+        [SeoTitle("Publish  advertisement in Daily Sun  second page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in Daily Sun second page")]
         public ActionResult SecondPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Second page color advertisement",
+                AdLocation = "Daily Sun Second page advertisement",
                 PriceDescription = 3000,
                 PriceDescriptionBlack = 2200,
                 IsColor = true,
@@ -102,15 +102,15 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
 
-        [SeoMetaKeywords("amader ad Daily Sun third page advertisement, Daily Sun third page color advertisement, Daily Sun 3rd page advertisement, Daily Sun 3rd page color advertisement, Daily Sun 3 number page advertisement, Daily Sun three number page color advertisement, publish advertisement at Daily Sun third page, advertisement cost at Daily Sun third page, Daily Sun third page advertisement rate, color advertisement at Daily Sun third page, Daily Sun third page color advertisement")]
-        [SeoTitle("Publish color advertisement in Daily Sun third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun third page")]
+        [SeoMetaKeywords("amader ad Daily Sun third page advertisement, Daily Sun third page  advertisement, Daily Sun 3rd page advertisement, Daily Sun 3rd page color advertisement, Daily Sun 3 number page advertisement, Daily Sun three number page color advertisement, publish advertisement at Daily Sun third page, advertisement cost at Daily Sun third page, Daily Sun third page advertisement rate, color advertisement at Daily Sun third page, Daily Sun third page color advertisement")]
+        [SeoTitle("Publish advertisement in Daily Sun third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in Daily Sun third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Third page color advertisement",
+                AdLocation = "Daily Sun Third page  advertisement",
                 PriceDescription = 4500,
                 PriceDescriptionBlack = 3000,
                 IsColor = true,
@@ -130,15 +130,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad Daily Sun fifth page advertisement, Daily Sun fifth page color advertisement, Daily Sun 5th page advertisement,  Daily Sun 5th page color advertisement, Daily Sun 5 number page advertisement, Daily Sun five number page color advertisement, publish advertisement at Daily Sun fifth page, advertisement cost at Daily Sun fifth page, Daily Sun fifth page color advertisement rate, color advertisement at Daily Sun fifth page, Daily Sun fifth page color advertisement")]
-        [SeoTitle("Publish color advertisement in Daily Sun  fifth page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun fifth page")]
+        [SeoMetaKeywords("amader ad Daily Sun fifth page advertisement, Daily Sun fifth page  advertisement, Daily Sun 5th page advertisement,  Daily Sun 5th page color advertisement, Daily Sun 5 number page advertisement, Daily Sun five number page color advertisement, publish advertisement at Daily Sun fifth page, advertisement cost at Daily Sun fifth page, Daily Sun fifth page color advertisement rate, color advertisement at Daily Sun fifth page, Daily Sun fifth page color advertisement")]
+        [SeoTitle("Publish advertisement in Daily Sun  fifth page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in Daily Sun fifth page")]
         public ActionResult FifthPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Fifth page Color advertisement",
+                AdLocation = "Daily Sun Fifth page advertisement",
                 PriceDescription = 3000,
                 PriceDescriptionBlack = 2200,
                 IsColor = true,
@@ -158,15 +158,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad Daily Sun Other Inside page advertisement, Daily Sun Other Inside page color advertisement, Daily Sun other inside page advertisement, Daily Sun other inside page color advertisement, Daily Sun other inside number page advertisement, publish advertisement at Daily Sun Other Inside page, advertisement cost at Daily Sun Other Inside page, Daily Sun Other Inside page color advertisement rate, color advertisement at Daily Sun Other Inside page, Daily Sun Other Inside page color advertisement")]
-        [SeoTitle("Publish color advertisement in Daily Sun  Other Inside page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in Daily Sun Other Inside page")]
+        [SeoMetaKeywords("amader ad Daily Sun Other Inside page advertisement, Daily Sun Other Inside page  advertisement, Daily Sun other inside page advertisement, Daily Sun other inside page color advertisement, Daily Sun other inside number page advertisement, publish advertisement at Daily Sun Other Inside page, advertisement cost at Daily Sun Other Inside page, Daily Sun Other Inside page color advertisement rate, color advertisement at Daily Sun Other Inside page, Daily Sun Other Inside page color advertisement")]
+        [SeoTitle("Publish advertisement in Daily Sun  Other Inside page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in Daily Sun Other Inside page")]
         public ActionResult OtherInsidePageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Daily Sun",
-                AdLocation = "Daily Sun Other Inside page color advertisement",
+                AdLocation = "Daily Sun Other Inside page advertisement",
                 PriceDescription = 2800,
                 PriceDescriptionBlack = 2000,
                 IsColor = true,

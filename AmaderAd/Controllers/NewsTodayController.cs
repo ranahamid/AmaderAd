@@ -44,15 +44,15 @@ namespace AmaderAd.Controllers
 
         #endregion
         #region MainPag
-        [SeoMetaKeywords("amader ad news today front page advertisement, news today front page color advertisement, news today 1st page advertisement,  news today 1st page color advbertisement, news today 1 number page advertisement, news today one number page color advertisement, publish advertisement at news today first page, advertisement cost at news today front page, news today front page advertisement rate, color advertisement at news today front page")]
-        [SeoTitle("Publish color advertisement in News Today front page through amader ad")]
+        [SeoMetaKeywords("amader ad news today front page advertisement, news today front page advertisement, news today 1st page advertisement,  news today 1st page advbertisement, news today 1 number page advertisement, news today one number page color advertisement, publish advertisement at news today first page, advertisement cost at news today front page, news today front page advertisement rate, color advertisement at news today front page")]
+        [SeoTitle("Publish advertisement in News Today front page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in news today front page")]
         public ActionResult FrontPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "News Today",
-                AdLocation = "News Today front page color advertisement",
+                AdLocation = "News Today front page advertisement",
                 PriceDescription = 9500,
                 PriceDescriptionBlack = 6000,
                 IsColor = true,
@@ -72,15 +72,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad news today back page advertisement, news today back  page color advertisement, news today back page advertisement,  news today back page color advbertisement, publish advertisement at news today back page, advertisement cost at news today last page, news today back page advertisement rate, color advertisement at news today back page")]
-        [SeoTitle("Publish color advertisement in News Today back page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in news today back page")]
+        [SeoMetaKeywords("amader ad news today back page advertisement, news today back  page advertisement, news today back page advertisement,  news today back page advbertisement, publish advertisement at news today back page, advertisement cost at news today last page, news today back page advertisement rate, color advertisement at news today back page")]
+        [SeoTitle("Publish advertisement in News Today back page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in news today back page")]
         public ActionResult BackPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "News Today",
-                AdLocation = "News Today back page color advertisement",
+                AdLocation = "News Today back page advertisement",
                 PriceDescription = 8000,
                 PriceDescriptionBlack = 5000,
                 IsColor = true,
@@ -100,15 +100,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad news today third page advertisement, news today third page color advertisement, news today 3rd page advertisement,  news today 3rd page color advbertisement, news today 3 number page advertisement, news today three number page color advertisement, publish advertisement at news today third page, advertisement cost at news today third page, news today third page advertisement rate, color advertisement at news today third page")]
-        [SeoTitle("Publish color advertisement in News Today third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in news today third page")]
+        [SeoMetaKeywords("amader ad news today third page advertisement, news today third page advertisement, news today 3rd page advertisement,  news today 3rd page advbertisement, news today 3 number page advertisement, news today three number page color advertisement, publish advertisement at news today third page, advertisement cost at news today third page, news today third page advertisement rate, color advertisement at news today third page")]
+        [SeoTitle("Publish advertisement in News Today third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in news today third page")]
         public ActionResult ThirdPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "News Today",
-                AdLocation = "News Today third page color advertisement",
+                AdLocation = "News Today third page advertisement",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 3000,
                 IsColor = true,
@@ -128,15 +128,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad news today inner page advertisement, news today inner page color advertisement, news today inner page advertisement, publish advertisement at news today inner  page, advertisement cost at news today inside page, news today inner page advertisement rate, color advertisement at news today inner page")]
-        [SeoTitle("Publish color advertisement in News Today inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in news today inner page")]
+        [SeoMetaKeywords("amader ad news today inner page advertisement, news today inner page advertisement, news today inner page advertisement, publish advertisement at news today inner  page, advertisement cost at news today inside page, news today inner page advertisement rate, color advertisement at news today inner page")]
+        [SeoTitle("Publish advertisement in News Today inner page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in news today inner page")]
         public ActionResult InnerPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "News Today",
-                AdLocation = "News Today inner page color advertisement",
+                AdLocation = "News Today inner page advertisement",
                 PriceDescription = 3500,
                 PriceDescriptionBlack = 2500,
                 IsColor = true,

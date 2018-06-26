@@ -135,15 +135,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inquilab third page advertisement, inquilab third page color advertisement, inquilab 3rd page advertisement, inquilab 3rd page color advbertisement, inquilab 3 number page advertisement, inquilab three number page color advertisement, publish advertisement at inquilab third page, advertisement cost at inquilab third page, inquilab third page advertisement rate, color advertisement at inquilab third page")]
-        [SeoTitle("Publish color advertisement in inqilab third page thrrough amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in inquilab third page")]
+        [SeoMetaKeywords("amader ad inquilab third page advertisement, inquilab third page advertisement, inquilab 3rd page advertisement, inquilab 3rd page advbertisement, inquilab 3 number page advertisement, inquilab three number page color advertisement, publish advertisement at inquilab third page, advertisement cost at inquilab third page, inquilab third page advertisement rate, color advertisement at inquilab third page")]
+        [SeoTitle("Publish advertisement in inqilab third page thrrough amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in inquilab third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab third page color advertisement",
+                AdLocation = "Inqilab third page  advertisement",
                 PriceDescription = 8000,
                 PriceDescriptionBlack = 5000,
                 IsColor = true,
@@ -176,15 +176,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inqilab inner page color advertisement, inqilab inner page color advertisement,color advertisememnt at inqilab inner page, inqilab inner page color advertisement cost,publish color advertisement at inqilab inner page, inqilab inner page color advertisement rate")]
-        [SeoTitle("Publish color advertisement in inqilab inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in inqilab inner page")]
+        [SeoMetaKeywords("amader ad inqilab inner page advertisement, inqilab inner page color advertisement, advertisememnt at inqilab inner page, inqilab inner page color advertisement cost,publish color advertisement at inqilab inner page, inqilab inner page color advertisement rate")]
+        [SeoTitle("Publish advertisement in inqilab inner page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in inqilab inner page")]
         public ActionResult InnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab inner page color advertisement",
+                AdLocation = "Inqilab inner page advertisement",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 3000,
                 IsColor = true,
@@ -204,15 +204,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad inqilab sports page advertisement, inqilab sports page color advertisement, inqilab sports page advertisement, publish advertisement at inqilab sports page, advertisement cost at inqilab sports page, inqilab sports page advertisement rate, color advertisement at inqilab sports page")]
-        [SeoTitle("Publish color advertisement in inqilab sports page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in inqilab sports page")]
+        [SeoMetaKeywords("amader ad inqilab sports page advertisement, inqilab sports page advertisement, inqilab sports page advertisement, publish advertisement at inqilab sports page, advertisement cost at inqilab sports page, inqilab sports page advertisement rate, color advertisement at inqilab sports page")]
+        [SeoTitle("Publish advertisement in inqilab sports page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in inqilab sports page")]
         public ActionResult SportsPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab sports page color advertisement",
+                AdLocation = "Inqilab sports page advertisement",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
@@ -245,15 +245,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad inqilab entertainment page advertisement, inqilab entertainment page color advertisement, inqilab entertainment page advertisement, publish advertisement at inqilab entertainment page, advertisement cost at inqilab entertainment page, inqilab entertainment page color advertisement rate, color advertisement at inqilab entertainment page")]
-        [SeoTitle("Publish color advertisement in inqilab entertainment page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in inqilab entertainment page")]
+        [SeoMetaKeywords("amader ad inqilab entertainment page advertisement, inqilab entertainment page  advertisement, inqilab entertainment page advertisement, publish advertisement at inqilab entertainment page, advertisement cost at inqilab entertainment page, inqilab entertainment page color advertisement rate, color advertisement at inqilab entertainment page")]
+        [SeoTitle("Publish  advertisement in inqilab entertainment page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in inqilab entertainment page")]
         public ActionResult EntertainmentPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Inqilab entertainment page color advertisement",
+                AdLocation = "Inqilab entertainment page advertisement",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 3000,
                 IsColor = true,

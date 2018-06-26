@@ -67,15 +67,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad new nation third page advertisement, new nation third page color advertisement, new nation 3rd page advertisement,  new nation 3rd page color advertisement, new nation 3 number page advertisement, new nation three number page color advertisement, publish advertisement at new nation third page, advertisement cost at new nation third page, new nation third page advertisement rate, color advertisement at new nation third page, new nation third page color advertisement")]
-        [SeoTitle("Publish color advertisement in new nation  third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new nation third page")]
+        [SeoMetaKeywords("amader ad new nation third page advertisement, new nation third page advertisement, new nation 3rd page advertisement,  new nation 3rd page advertisement, new nation 3 number page advertisement, new nation three number page color advertisement, publish advertisement at new nation third page, advertisement cost at new nation third page, new nation third page advertisement rate, color advertisement at new nation third page, new nation third page color advertisement")]
+        [SeoTitle("Publish advertisement in new nation  third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new nation third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Nation",
-                AdLocation = "New Nation third page color advertisement",
+                AdLocation = "New Nation third page advertisement",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 3000,
                 IsColor = true,

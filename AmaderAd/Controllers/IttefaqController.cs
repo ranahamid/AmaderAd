@@ -113,9 +113,9 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
 
-        [SeoMetaKeywords("amader ad ittefaq second page advertisement, ittefaq second page color advertisement, ittefaq 2nd page advertisement, ittefaq 2nd page color advbertisement, ittefaq 2 number page advertisement, ittefaq second number page color advertisement, publish advertisement at ittefaq second page, advertisement cost at ittefaq second page, ittefaq second page advertisement rate, color advertisement at ittefaq second page")]
-        [SeoTitle("Publish color advertisement in ittefaq second page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq second page")]
+        [SeoMetaKeywords("amader ad ittefaq second page advertisement, ittefaq second page advertisement, ittefaq 2nd page advertisement, ittefaq 2nd page color advbertisement, ittefaq 2 number page advertisement, ittefaq second number page color advertisement, publish advertisement at ittefaq second page, advertisement cost at ittefaq second page, ittefaq second page advertisement rate, color advertisement at ittefaq second page")]
+        [SeoTitle("Publish advertisement in ittefaq second page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in ittefaq second page")]
         public ActionResult SecondPage_MainPage()
         {
             Newspaper model = new Newspaper
@@ -189,16 +189,16 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
 
-        [SeoMetaKeywords("amader ad ittefaq sports page advertisement, ittefaq sports page color advertisement, ittefaq sports page advertisement, publish advertisement at ittefaq sports page, advertisement cost at ittefaq sports page, ittefaq sports page advertisement rate, color advertisement at ittefaq sports page")]
-        [SeoTitle("Publish color advertisement in ittefaq sports page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in ittefaq sports page")]
+        [SeoMetaKeywords("amader ad ittefaq sports page advertisement, ittefaq sports page advertisement, ittefaq sports page advertisement, publish advertisement at ittefaq sports page, advertisement cost at ittefaq sports page, ittefaq sports page advertisement rate, color advertisement at ittefaq sports page")]
+        [SeoTitle("Publish advertisement in ittefaq sports page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in ittefaq sports page")]
 
         public ActionResult SportsPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Sports Page Color",
+                AdLocation = "Ittefaq Sports Page",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
@@ -226,7 +226,7 @@ namespace AmaderAd.Controllers
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Ittefaq",
-                AdLocation = "Ittefaq Middle Two Page Color",
+                AdLocation = "Ittefaq Middle Two Page",
                 PriceDescription = 4500,
             };
             return View(model);

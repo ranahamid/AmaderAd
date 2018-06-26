@@ -144,9 +144,9 @@ namespace AmaderAd.Controllers
             return View(model);
         }
        
-        [SeoMetaKeywords("amader ad manab zamin third page advertisement, manab zamin third page color advertisement, manab zamin 3rd page advertisement,  manab zamin 3rd page color advbertisement, manab zamin 3 number page advertisement, manab zamin three number page color advertisement, publish advertisement at manab zamin third page, advertisement cost at manab zamin third page, manab zamin third page advertisement rate, color advertisement at manab zamin third page")]
-        [SeoTitle("Publish color advertisement in manab zamin third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin third page")]
+        [SeoMetaKeywords("amader ad manab zamin third page advertisement, manab zamin third page advertisement, manab zamin 3rd page advertisement,  manab zamin 3rd page color advbertisement, manab zamin 3 number page advertisement, manab zamin three number page color advertisement, publish advertisement at manab zamin third page, advertisement cost at manab zamin third page, manab zamin third page advertisement rate, color advertisement at manab zamin third page")]
+        [SeoTitle("Publish advertisement in manab zamin third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in manab zamin third page")]
         public ActionResult ThirdPageAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -172,9 +172,9 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad manab zamin entertainment page advertisement, manab zamin entertainment page color advertisement, manab zamin entertainment page advertisement, publish advertisement at manab zamin entertainment page, advertisement cost at manab zamin entertainment page, manab zamin entertainment page advertisement rate, color advertisement at manab zamin entertainment page")]
-        [SeoTitle("Publish color advertisement in manab zamin entertainment page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in manab zamin entertainment page")]
+        [SeoMetaKeywords("amader ad manab zamin entertainment page advertisement, manab zamin entertainment page advertisement, manab zamin entertainment page advertisement, publish advertisement at manab zamin entertainment page, advertisement cost at manab zamin entertainment page, manab zamin entertainment page advertisement rate, advertisement at manab zamin entertainment page")]
+        [SeoTitle("Publish advertisement in manab zamin entertainment page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in manab zamin entertainment page")]
         public ActionResult Entertainment_MainPage()
         {
             Newspaper model = new Newspaper
