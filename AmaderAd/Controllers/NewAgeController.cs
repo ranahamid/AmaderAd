@@ -41,15 +41,15 @@ namespace AmaderAd.Controllers
         }
         #endregion
         #region MainPage
-        [SeoMetaKeywords("amader ad new age first page advertisement, new age first page color advertisement, new age 1st page advertisement,  new age 1st page color advbertisement, new age 1 number page advertisement, new age one number page color advertisement, publish advertisement at new age first page, advertisement cost at new age first page, new age first page advertisement rate, color advertisement at new age first page, new age front page color advertisement")]
-        [SeoTitle("Publish color advertisement in New Age  front page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age first page")]
+        [SeoMetaKeywords("amader ad new age first page advertisement, new age first page advertisement, new age 1st page advertisement,  new age 1st page color advbertisement, new age 1 number page advertisement, new age one number page color advertisement, publish advertisement at new age first page, advertisement cost at new age first page, new age first page advertisement rate, color advertisement at new age first page, new age front page color advertisement")]
+        [SeoTitle("Publish advertisement in New Age  front page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new age first page")]
         public ActionResult FrontPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Age",
-                AdLocation = "New Age front page color advertisement",
+                AdLocation = "New Age front page advertisement",
                 PriceDescription = 10000,
                 PriceDescriptionBlack = 7000,
                 IsColor = true,
@@ -69,15 +69,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad new age backpage advertisement, new age backpage color advertisement, new age backpage advertisement,  new age backpage color advbertisement,  publish advertisement at new age backpage, advertisement cost at new age backpage, new age backpage advertisement rate, color advertisement at new age backpage, new age back page color advertisement")]
-        [SeoTitle("Publish color advertisement in New Age  back page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age back page")]
+        [SeoMetaKeywords("amader ad new age backpage advertisement, new age backpage color advertisement, new age backpage advertisement,  new age backpage advbertisement,  publish advertisement at new age backpage, advertisement cost at new age backpage, new age backpage advertisement rate, color advertisement at new age backpage, new age back page color advertisement")]
+        [SeoTitle("Publish advertisement in New Age  back page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new age back page")]
         public ActionResult BackPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Age",
-                AdLocation = "New Age back page color advertisement",
+                AdLocation = "New Age back page advertisement",
                 PriceDescription = 8000,
                 PriceDescriptionBlack = 5500,
                 IsColor = true,
@@ -97,15 +97,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad new age third page advertisement, new age third page color advertisement, new age 3rd page advertisement,  new age 3rd page color advbertisement, new age 3 number page advertisement, new age three number page color advertisement, publish advertisement at new age third page, advertisement cost at new age third page, new age third page advertisement rate, color advertisement at new age third page")]
-        [SeoTitle("Publish color advertisement in New Age  third  page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age third page")]
+        [SeoMetaKeywords("amader ad new age third page advertisement, new age third page advertisement, new age 3rd page advertisement,  new age 3rd page advbertisement, new age 3 number page advertisement, new age three number page color advertisement, publish advertisement at new age third page, advertisement cost at new age third page, new age third page advertisement rate, color advertisement at new age third page")]
+        [SeoTitle("Publish advertisement in New Age  third  page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new age third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Age",
-                AdLocation = "New Age Third page color advertisement",
+                AdLocation = "New Age Third page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 3500,
                 IsColor = true,
@@ -125,15 +125,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad new age business front page advertisement, new age business front page color advertisement, new age business front page advertisement, publish advertisement at new age business front page, advertisement cost at new age business front page, new age business front page advertisement rate, color advertisement at new age business front page ")]
-        [SeoTitle("Publish color advertisement in New Age business front page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age business front page")]
+        [SeoMetaKeywords("amader ad new age business front page advertisement, new age business front page advertisement, new age business front page advertisement, publish advertisement at new age business front page, advertisement cost at new age business front page, new age business front page advertisement rate, color advertisement at new age business front page ")]
+        [SeoTitle("Publish advertisement in New Age business front page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new age business front page")]
         public ActionResult BusinessFrontPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Age",
-                AdLocation = "New Age business front page color advertisement",
+                AdLocation = "New Age business front page advertisement",
                 PriceDescription = 4500,
                 PriceDescriptionBlack = 3000, // check the price
                 IsColor = true,
@@ -153,15 +153,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad new age business back page advertisement, new age business back page color advertisement, new age business back page advertisement, publish advertisement at new age business back page, advertisement cost at new age business back page, new age business back page advertisement rate, color advertisement at new age business back page")]
-        [SeoTitle("Publish color advertisement in New Age business back page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age business back page")]
+        [SeoMetaKeywords("amader ad new age business back page advertisement, new age business back page advertisement, new age business back page advertisement, publish advertisement at new age business back page, advertisement cost at new age business back page, new age business back page advertisement rate, color advertisement at new age business back page")]
+        [SeoTitle("Publish advertisement in New Age business back page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new age business back page")]
         public ActionResult BusinessBackPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Age",
-                AdLocation = "New Age business back page color advertisement",
+                AdLocation = "New Age business back page advertisement",
                 PriceDescription = 3500,
                 PriceDescriptionBlack = 2500,
                 IsColor = true,
@@ -181,15 +181,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad new age inner other page advertisement, new age inner other page color advertisement, new age inner other page advertisement, publish advertisement at new age inner other page, advertisement cost at new age inner other page, new age inner other page advertisement rate, color advertisement at new age inner other page,new age inner other page color advertisement")]
-        [SeoTitle("Publish color advertisement in New Age  other inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in new age other inner page")]
+        [SeoMetaKeywords("amader ad new age inner other page advertisement, new age inner other page advertisement, new age inner other page advertisement, publish advertisement at new age inner other page, advertisement cost at new age inner other page, new age inner other page advertisement rate, color advertisement at new age inner other page,new age inner other page color advertisement")]
+        [SeoTitle("Publish advertisement in New Age  other inner page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in new age other inner page")]
         public ActionResult OtherInnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "New Age",
-                AdLocation = "New Age other Inner page color advertisement",
+                AdLocation = "New Age other Inner page advertisement",
                 PriceDescription = 3500,
                 PriceDescriptionBlack = 2500,
                 IsColor = true,

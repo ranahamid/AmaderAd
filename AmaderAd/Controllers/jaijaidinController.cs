@@ -71,7 +71,7 @@ namespace AmaderAd.Controllers
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Jaijaidin",
-                AdLocation = "Jaijaidin last page color advertisement",
+                AdLocation = "Jaijaidin last page advertisement",
                 PriceDescription = 10000,
 
                 PriceDescriptionBlack = 8000,
@@ -93,14 +93,14 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         [SeoMetaKeywords("amader ad jaijaidin general display color advertisement, jaijaidin general display color advertisement, publish general display color  advertisement in jaijaidin , general display color  advertisement cost at jaijaidin , jaijaidin general display color advertisement rate, general display color advertisement at jaijaidin")]
-        [SeoTitle("Publish general display color  advertisement in jaijaidin through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your general display color advertisement in jaijaidin")]
+        [SeoTitle("Publish general display  advertisement in jaijaidin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your general display advertisement in jaijaidin")]
         public ActionResult GeneralDisplay_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Jaijaidin",
-                AdLocation = "Jaijaidin general display color advertisement",
+                AdLocation = "Jaijaidin general display advertisement",
                 PriceDescription = 4000,
 
                 PriceDescriptionBlack = 3000,
@@ -121,15 +121,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad jaijaidin third page advertisement, jaijaidin third page color advertisement, jaijaidin 3rd page advertisement, jaijaidin 3rd page color advbertisement, jaijaidin 3 number page advertisement, jaijaidin three number page color advertisement, publish advertisement at jaijaidin third page, advertisement cost at jaijaidin third page, jaijaidin third page advertisement rate, color advertisement at jaijaidin third page")]
-        [SeoTitle("Publish color advertisement in jaijaidin third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in jaijaidin third page")]
+        [SeoMetaKeywords("amader ad jaijaidin third page advertisement, jaijaidin third page advertisement, jaijaidin 3rd page advertisement, jaijaidin 3rd page color advbertisement, jaijaidin 3 number page advertisement, jaijaidin three number page color advertisement, publish advertisement at jaijaidin third page, advertisement cost at jaijaidin third page, jaijaidin third page advertisement rate, color advertisement at jaijaidin third page")]
+        [SeoTitle("Publish advertisement in jaijaidin third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in jaijaidin third page")]
         public ActionResult ThirdPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Jaijaidin",
-                AdLocation = "Jaijaidin third page color advertisement",
+                AdLocation = "Jaijaidin third page advertisement",
                 PriceDescription = 8000,
 
                 PriceDescriptionBlack = 6000,
@@ -150,15 +150,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad jaijaidin fifth page advertisement, jaijaidin fifth page color advertisement, jaijaidin 5th page advertisement, jaijaidin 5th page color advbertisement, jaijaidin 5 number page advertisement, jaijaidin five number page color advertisement, publish advertisement at jaijaidin fifth page, advertisement cost at jaijaidin fifth page, jaijaidin fifth page color advertisement rate, color advertisement at jaijaidin fifth page")]
-        [SeoTitle("Publish color advertisement in jaijaidin fifth page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in jaijaidin third page")]
+        [SeoMetaKeywords("amader ad jaijaidin fifth page advertisement, jaijaidin fifth page  advertisement, jaijaidin 5th page advertisement, jaijaidin 5th page advbertisement, jaijaidin 5 number page advertisement, jaijaidin five number page color advertisement, publish advertisement at jaijaidin fifth page, advertisement cost at jaijaidin fifth page, jaijaidin fifth page color advertisement rate, color advertisement at jaijaidin fifth page")]
+        [SeoTitle("Publish advertisement in jaijaidin fifth page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in jaijaidin third page")]
         public ActionResult FifthPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Jaijaidin",
-                AdLocation = "jaijaidin fifth page color advertisement",
+                AdLocation = "jaijaidin fifth page advertisement",
                 PriceDescription = 7000,
 
                 PriceDescriptionBlack = 4000,
@@ -179,15 +179,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad jaijaidin sports page advertisement, jaijaidin sports page color advertisement, jaijaidin sports page advertisement, publish advertisement at jaijaidin sports page, advertisement cost at jaijaidin sports page, jaijaidin sports page color advertisement rate, color advertisement at jaijaidin sports page")]
-        [SeoTitle("Publish color advertisement in jaijaidin sports page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in jaijaidin sports page")]
+        [SeoMetaKeywords("amader ad jaijaidin sports page advertisement, jaijaidin sports page advertisement, jaijaidin sports page advertisement, publish advertisement at jaijaidin sports page, advertisement cost at jaijaidin sports page, jaijaidin sports page color advertisement rate, color advertisement at jaijaidin sports page")]
+        [SeoTitle("Publish advertisement in jaijaidin sports page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in jaijaidin sports page")]
         public ActionResult SportsPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Jaijaidin",
-                AdLocation = "Jaijaidin sports page color advertisement",
+                AdLocation = "Jaijaidin sports page advertisement",
                 PriceDescription = 6000,
 
                 PriceDescriptionBlack = 3000,
@@ -208,15 +208,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad jaijaidin inner page advertisement, jaijaidin inner page color advertisement, jaijaidin inner page advertisement, publish advertisement at jaijaidin inner  page, advertisement cost at jaijaidin inner page, jaijaidin inner page color advertisement rate, color advertisement at jaijaidin inner page")]
+        [SeoMetaKeywords("amader ad jaijaidin inner page advertisement, jaijaidin inner page  advertisement, jaijaidin inner page advertisement, publish advertisement at jaijaidin inner  page, advertisement cost at jaijaidin inner page, jaijaidin inner page color advertisement rate, color advertisement at jaijaidin inner page")]
         [SeoTitle("Publish color advertisement in jaijaidin inner page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in jaijaidin inner page")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in jaijaidin inner page")]
         public ActionResult InnerPage_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Jaijaidin",
-                AdLocation = "jaijaidin inner page color advertisement",
+                AdLocation = "jaijaidin inner page advertisement",
                 PriceDescription = 4000,
 
                 PriceDescriptionBlack = 3000,

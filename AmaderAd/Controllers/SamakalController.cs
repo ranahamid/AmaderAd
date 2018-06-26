@@ -63,9 +63,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad samakal third page advertisement, samakal third page color advertisement, samakal 3rd page advertisement,  samakal 3rd page color advbertisement, samakal 3 number page advertisement, samakal three number page color advertisement, publish advertisement at samakal third page, advertisement cost at samakal third page, samakal third page advertisement rate, color advertisement at samakal third page")]
-        [SeoTitle("Publish color advertisement in samakal third page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal third page")]
+        [SeoMetaKeywords("amader ad samakal third page advertisement, samakal third page advertisement, samakal 3rd page advertisement,  samakal 3rd page advbertisement, samakal 3 number page advertisement, samakal three number page color advertisement, publish advertisement at samakal third page, advertisement cost at samakal third page, samakal third page advertisement rate, color advertisement at samakal third page")]
+        [SeoTitle("Publish advertisement in samakal third page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -92,15 +92,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad samakal fifth page advertisement, samakal fifth page color advertisement, samakal 5th page advertisement,  samakal 5th page color advbertisement, samakal 5 number page advertisement, samakal five number page color advertisement, publish advertisement at samakal fifth page, advertisement cost at samakal fifth page, samakal fifth page advertisement rate, color advertisement at samakal fifth page")]
-        [SeoTitle("Publish color advertisement in samakal fifth page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal fifth page")]
+        [SeoMetaKeywords("amader ad samakal fifth page advertisement, samakal fifth page advertisement, samakal 5th page advertisement,  samakal 5th page advbertisement, samakal 5 number page advertisement, samakal five number page color advertisement, publish advertisement at samakal fifth page, advertisement cost at samakal fifth page, samakal fifth page advertisement rate, color advertisement at samakal fifth page")]
+        [SeoTitle("Publish advertisement in samakal fifth page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal fifth page")]
         public ActionResult FifthPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "Samakal fifth Page Color",
+                AdLocation = "Samakal fifth Page",
                 PriceDescription = 7500,
 
                 PriceDescriptionBlack = 5000,
@@ -121,15 +121,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad samakal entertainment page advertisement, samakal entertainment page color advertisement, samakal entertainment page advertisement, publish advertisement at samakal entertainment page, advertisement cost at samakal entertainment page, samakal entertainment page advertisement rate, color advertisement at samakal entertainment page")]
-        [SeoTitle("Publish color advertisement in samakal entertainment page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal entertainment page")]
+        [SeoMetaKeywords("amader ad samakal entertainment page advertisement, samakal entertainment page advertisement, samakal entertainment page advertisement, publish advertisement at samakal entertainment page, advertisement cost at samakal entertainment page, samakal entertainment page advertisement rate, color advertisement at samakal entertainment page")]
+        [SeoTitle("Publish advertisement in samakal entertainment page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal entertainment page")]
         public ActionResult EntertainmentPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "Samakal entertainment Page color",
+                AdLocation = "Samakal entertainment Page",
                 PriceDescription = 7000,
 
                 PriceDescriptionBlack = 4500,
@@ -150,15 +150,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad samakal sports page advertisement, samakal sports page color advertisement, samakal sports page advertisement, publish advertisement at samakal sports page, advertisement cost at samakal sports page, samakal sports page advertisement rate, color advertisement at samakal sports page")]
-        [SeoTitle("Publish color advertisement in samakal sports page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal sports page")]
+        [SeoMetaKeywords("amader ad samakal sports page advertisement, samakal sports page advertisement, samakal sports page advertisement, publish advertisement at samakal sports page, advertisement cost at samakal sports page, samakal sports page advertisement rate, color advertisement at samakal sports page")]
+        [SeoTitle("Publish advertisement in samakal sports page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal sports page")]
         public ActionResult SportsPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "Samakal sports Page color",
+                AdLocation = "Samakal sports Page",
                 PriceDescription = 6500,
 
                 PriceDescriptionBlack = 5500,
@@ -179,15 +179,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad samakal second page advertisement, samakal second page color advertisement, samakal 2nd page advertisement,  samakal 2nd page color advertisement, samakal 2 number page advertisement, samakal second number page color advertisement, publish advertisement at samakal second page, advertisement cost at samakal second page, samakal second page advertisement rate, color advertisement at samakal second page")]
-        [SeoTitle("Publish color advertisement in samakal second page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal second page")]
+        [SeoMetaKeywords("amader ad samakal second page advertisement, samakal second page advertisement, samakal 2nd page advertisement,  samakal 2nd page advertisement, samakal 2 number page advertisement, samakal second number page color advertisement, publish advertisement at samakal second page, advertisement cost at samakal second page, samakal second page advertisement rate, color advertisement at samakal second page")]
+        [SeoTitle("Publish advertisement in samakal second page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal second page")]
         public ActionResult SecondPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal second page color advertisement",
+                AdLocation = "samakal second page advertisement",
                 PriceDescription = 8000,
 
                 PriceDescriptionBlack = 6000,
@@ -208,15 +208,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad samakal page befor last page advertisement, samakal page befor last page color advertisement, samakal page befor last page advertisement, publish advertisement at samakal page befor last page, advertisement cost at samakal page befor last page, samakal page befor last page advertisement rate, color advertisement at samakal page befor last page")]
-        [SeoTitle("Publish color advertisement in samakal page before last page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal page befor last page")]
+        [SeoMetaKeywords("amader ad samakal page befor last page advertisement, samakal page befor last page advertisement, samakal page befor last page advertisement, publish advertisement at samakal page befor last page, advertisement cost at samakal page befor last page, samakal page befor last page advertisement rate, color advertisement at samakal page befor last page")]
+        [SeoTitle("Publish advertisement in samakal page before last page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal page befor last page")]
         public ActionResult PageBeforeLastPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal page befor last page color advertisement",
+                AdLocation = "samakal page befor last page advertisement",
                 PriceDescription = 7500,
 
                 PriceDescriptionBlack = 5500,
@@ -237,15 +237,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoMetaKeywords("amader ad samakal inner other page advertisement, samakal inner other page color advertisement, samakal inner other page advertisement, publish advertisement at samakal inner other page, advertisement cost at samakal inner other page, samakal inner other page advertisement rate, color advertisement at samakal inner other page")]
-        [SeoTitle("Publish color advertisement in samakal inner other page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal inner other page")]
+        [SeoMetaKeywords("amader ad samakal inner other page advertisement, samakal inner other page advertisement, samakal inner other page advertisement, publish advertisement at samakal inner other page, advertisement cost at samakal inner other page, samakal inner other page advertisement rate, color advertisement at samakal inner other page")]
+        [SeoTitle("Publish advertisement in samakal inner other page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal inner other page")]
         public ActionResult InnerOtherPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal inner other page color advertisement",
+                AdLocation = "samakal inner other page advertisement",
                 PriceDescription = 5000,
 
                 PriceDescriptionBlack = 4000,
@@ -271,8 +271,8 @@ namespace AmaderAd.Controllers
         #region KalerKheya
 
         [SeoMetaKeywords("amader ad samakal magazine shahitto shamoyiki kaler kheya inner full page advertisement, samakal magazine shahitto shamoyiki kaler kheya inner full page color advertisement, samakal magazine shahitto shamoyiki kaler kheya inner full page advertisement, publish advertisement at samakal magazine shahitto shamoyiki kaler kheya inner full page, advertisement cost at samakal magazine shahitto shamoyiki kaler kheya inner full page, samakal magazine shahitto shamoyiki kaler kheya inner full page advertisement rate, color advertisement at samakal magazine shahitto shamoyiki kaler kheya inner full page")]
-        [SeoTitle("Publish color advertisement in samakal magazine shahitto shamoyiki kaler kheya inner full page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal magazine shahitto shamoyiki kaler kheya inner full page")]
+        [SeoTitle("Publish advertisement in samakal magazine shahitto shamoyiki kaler kheya inner full page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal magazine shahitto shamoyiki kaler kheya inner full page")]
         public ActionResult MagazineShahittoShamoyikikalerkheyaInnerFullPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
@@ -299,14 +299,14 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         [SeoMetaKeywords("amader ad samakal magazine shahitto shamoyiki kaler kheya inner half page advertisement, samakal magazine shahitto shamoyiki kaler kheya inner half page color advertisement, samakal magazine shahitto shamoyiki kaler kheya inner half page advertisement, publish advertisement at samakal magazine shahitto shamoyiki kaler kheya inner half page, advertisement cost at samakal magazine shahitto shamoyiki kaler kheya inner half page, samakal magazine shahitto shamoyiki kaler kheya inner half page advertisement rate, color advertisement at samakal magazine shahitto shamoyiki kaler kheya inner half page")]
-        [SeoTitle("Publish color advertisement in samakal magazine shahitto shamoyiki kaler kheya inner half page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal magazine shahitto shamoyiki kaler kheya inner half page")]
+        [SeoTitle("Publish advertisement in samakal magazine shahitto shamoyiki kaler kheya inner half page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal magazine shahitto shamoyiki kaler kheya inner half page")]
         public ActionResult MagazineshahittoShamoyikikalerkheyaInnerHalfPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal magazine shahitto shamoyiki kaler kheya inner half page color advertisement",
+                AdLocation = "samakal magazine shahitto shamoyiki kaler kheya inner half page advertisement",
                 PriceDescription = 15000,
                 PriceDescriptionBlack = 10000,
                 IsColor = true,
@@ -327,14 +327,14 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         [SeoMetaKeywords("amader ad samakal magazine shahitto shamoyiki kaler kheya first cover page advertisement, samakal magazine shahitto shamoyiki kaler kheya first cover page color advertisement, samakal magazine shahitto shamoyiki kaler kheya first cover page advertisement, publish advertisement at samakal magazine shahitto shamoyiki kaler kheya first cover page, advertisement cost at samakal magazine shahitto shamoyiki kaler kheya first cover page, samakal magazine shahitto shamoyiki kaler kheya first cover page advertisement rate, color advertisement at samakal magazine shahitto shamoyiki kaler kheya first cover page")]
-        [SeoTitle("Publish color advertisement in samakal magazine shahitto shamoyiki kaler kheya first cover through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal magazine shahitto shamoyiki kaler kheya first cover page")]
+        [SeoTitle("Publish advertisement in samakal magazine shahitto shamoyiki kaler kheya first cover through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal magazine shahitto shamoyiki kaler kheya first cover page")]
         public ActionResult MagazineShahittoShamoyikiKalerKheyaFirstCoverColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal magazine shahitto shamoyiki kaler kheya first cover color advertisement",
+                AdLocation = "samakal magazine shahitto shamoyiki kaler kheya first cover advertisement",
                 PriceDescription = 50000,
                 PriceDescriptionBlack = 10000,
                 IsColor = true,
@@ -399,14 +399,14 @@ namespace AmaderAd.Controllers
 
 
         [SeoMetaKeywords("amader ad samakal magazine rommo shamoyiki pechal inner full page advertisement, samakal magazine rommo shamoyiki pechal inner full page color advertisement, samakal magazine rommo shamoyiki pechal inner full page advertisement, publish advertisement at samakal magazine rommo shamoyiki pechal inner full page, advertisement cost at samakal magazine rommo shamoyiki pechal inner full page, samakal magazine rommo shamoyiki pechal inner full page advertisement rate, color advertisement at samakal magazine rommo shamoyiki pechal inner full page")]
-        [SeoTitle("Publish color advertisement in samakal magazine rommo shamoyiki pechal inner full page through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal magazine rommo shamoyiki pechal inner full page")]
+        [SeoTitle("Publish advertisement in samakal magazine rommo shamoyiki pechal inner full page through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal magazine rommo shamoyiki pechal inner full page")]
         public ActionResult MagazineRommoShamoyikiPechalInnerFullPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal magazine rommo shamoyiki pechal inner full page color advertisement",
+                AdLocation = "samakal magazine rommo shamoyiki pechal inner full page advertisement",
                 PriceDescription = 25000
             };
             return View(model);
@@ -545,15 +545,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad samakal shoily inner page advertisement, samakal shoily inner page color advertisement, samakal shoily inner page advertisement, publish advertisement at samakal shoily inner page, advertisement cost at samakal shoily inner page, samakal shoily inner page advertisement rate, color advertisement at samakal shoily inner page")]
-        [SeoTitle("Publish color advertisement in shoily inner page at samakal through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal shoily inner page")]
+        [SeoMetaKeywords("amader ad samakal shoily inner page advertisement, samakal shoily inner page advertisement, samakal shoily inner page advertisement, publish advertisement at samakal shoily inner page, advertisement cost at samakal shoily inner page, samakal shoily inner page advertisement rate, color advertisement at samakal shoily inner page")]
+        [SeoTitle("Publish advertisement in shoily inner page at samakal through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal shoily inner page")]
         public ActionResult ShoiliInnerPageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal shoili inner page color advertisement",
+                AdLocation = "samakal shoili inner page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
@@ -612,7 +612,7 @@ namespace AmaderAd.Controllers
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal nondon shonskriti o binodon shamoyiki inner page color advertisement",
+                AdLocation = "samakal nondon shonskriti o binodon shamoyiki inner page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
@@ -639,14 +639,14 @@ namespace AmaderAd.Controllers
 
 
         [SeoMetaKeywords("amader ad samakal khola hawa ghash foring biggan boloy and dehoghori page advertisement, samakal khola hawa ghash foring biggan boloy and dehoghori page color advertisement, samakal khola hawa, ghash foring, biggan boloy and dehoghori page advertisement, publish advertisement at samakal khola hawa, ghash foring, biggan boloy and dehoghori page, advertisement cost at samakal khola hawa, ghash foring, biggan boloy and dehoghori page, samakal khola hawa ghash foring biggan boloy and dehoghori page advertisement rate, color advertisement at samakal khola hawa ghash foring biggan boloy and dehoghori page")]
-        [SeoTitle("Publish color advertisement in samakal feature page khola hawa, ghash foring, biggan boloy and dehoghori through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal khola hawa, ghash foring, biggan boloy and dehoghori page")]
+        [SeoTitle("Publish advertisement in samakal feature page khola hawa, ghash foring, biggan boloy and dehoghori through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal khola hawa, ghash foring, biggan boloy and dehoghori page")]
         public ActionResult KholaHawaGhashForingBigganBoloyDehoghoriFeaturePagecoloradvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal khola hawa ghash foring biggan boloy deho ghori feature page color advertisement",
+                AdLocation = "samakal khola hawa ghash foring biggan boloy deho ghori feature page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
@@ -672,15 +672,15 @@ namespace AmaderAd.Controllers
 
         #region AlorPothJatri
 
-        [SeoMetaKeywords("amader ad samakal alor poth jatri page advertisement, samakal alor poth jatri page color advertisement, samakal alor poth jatri page advertisement, publish advertisement at samakal alor poth jatri page, advertisement cost at samakal alor poth jatri page, samakal alor poth jatri page advertisement rate, color advertisement at samakal alor poth jatri page")]
-        [SeoTitle("Publish color advertisement in samakal feature page alor poth jatri through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal alor poth jatri page")]
+        [SeoMetaKeywords("amader ad samakal alor poth jatri page advertisement, samakal alor poth jatri page advertisement, samakal alor poth jatri page advertisement, publish advertisement at samakal alor poth jatri page, advertisement cost at samakal alor poth jatri page, samakal alor poth jatri page advertisement rate, color advertisement at samakal alor poth jatri page")]
+        [SeoTitle("Publish advertisement in samakal feature page alor poth jatri through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal alor poth jatri page")]
         public ActionResult AlorPothJatriFeaturePageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal alor poth jatri feature page color advertisement",
+                AdLocation = "samakal alor poth jatri feature page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
@@ -703,15 +703,15 @@ namespace AmaderAd.Controllers
         #endregion
 
         #region MoncherbaireSuhridShomabeshTech
-        [SeoMetaKeywords("amader ad samakal moncher baire suhrid shomabesh and tech line page advertisement, samakal moncher baire suhrid shomabesh and tech line page color advertisement, samakal moncher baire suhrid shomabesh and tech line page advertisement, publish advertisement at samakal moncher baire suhrid shomabesh and tech line page, advertisement cost at samakal moncher baire suhrid shomabesh and tech line page, samakal moncher baire suhrid shomabesh and tech line page advertisement rate, color advertisement at samakal moncher baire suhrid shomabesh and tech line page")]
-        [SeoTitle("Publish color advertisement in samakal feature page moncher baire suhrid shomabesh and tech line through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in samakal moncher baire suhrid shomabesh and tech line page")]
+        [SeoMetaKeywords("amader ad samakal moncher baire suhrid shomabesh and tech line page advertisement, samakal moncher baire suhrid shomabesh and tech line page advertisement, samakal moncher baire suhrid shomabesh and tech line page advertisement, publish advertisement at samakal moncher baire suhrid shomabesh and tech line page, advertisement cost at samakal moncher baire suhrid shomabesh and tech line page, samakal moncher baire suhrid shomabesh and tech line page advertisement rate, color advertisement at samakal moncher baire suhrid shomabesh and tech line page")]
+        [SeoTitle("Publish advertisement in samakal feature page moncher baire suhrid shomabesh and tech line through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in samakal moncher baire suhrid shomabesh and tech line page")]
         public ActionResult MoncherbaireSuhridShomabeshTechLineFeaturePageColorAdvertisement()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Samakal",
-                AdLocation = "samakal moncher baire suhrid shomabesh tech line feature page color advertisement",
+                AdLocation = "samakal moncher baire suhrid shomabesh tech line feature page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,

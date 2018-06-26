@@ -83,15 +83,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoBaseTitle("Puhblish color advertisement in janakantha third page through amader ad")]
-        [SeoMetaKeywords("amader ad janakantha third page advertisement, janakantha third page color advertisement, janakantha 3rd page advertisement,  janakantha 3rd page color advbertisement, janakantha 3 number page advertisement, janakantha three number page color advertisement, publish advertisement at janakantha third page, advertisement cost at janakantha third page, janakantha third page advertisement rate, color advertisement at janakantha third page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in janakantha third page")]
+        [SeoBaseTitle("Puhblish advertisement in janakantha third page through amader ad")]
+        [SeoMetaKeywords("amader ad janakantha third page advertisement, janakantha third page advertisement, janakantha 3rd page advertisement,  janakantha 3rd page advbertisement, janakantha 3 number page advertisement, janakantha three number page color advertisement, publish advertisement at janakantha third page, advertisement cost at janakantha third page, janakantha third page advertisement rate, color advertisement at janakantha third page")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in janakantha third page")]
         public ActionResult thirdpagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Janakantha",
-                AdLocation = "Janakantha third page color Advertisement",
+                AdLocation = "Janakantha third page Advertisement",
                 PriceDescription = 9000,
                 PriceDescriptionBlack = 7000,
                 IsColor = true,
@@ -111,15 +111,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoBaseTitle("Publish color advertisement in janakantha fifth page through amader ad")]
-        [SeoMetaKeywords("amader ad janakantha fifth page advertisement, janakantha fifth page color advertisement, janakantha 5th page advertisement,  janakantha 5th page color advbertisement, janakantha 5 number page advertisement, janakantha five number page color advertisement, publish advertisement at janakantha fifth page, advertisement cost at janakantha fifth page, janakantha fifth page advertisement rate, color advertisement at janakantha fifth page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in janakantha fifth page")]
+        [SeoBaseTitle("Publish advertisement in janakantha fifth page through amader ad")]
+        [SeoMetaKeywords("amader ad janakantha fifth page advertisement, janakantha fifth page advertisement, janakantha 5th page advertisement,  janakantha 5th page advbertisement, janakantha 5 number page advertisement, janakantha five number page color advertisement, publish advertisement at janakantha fifth page, advertisement cost at janakantha fifth page, janakantha fifth page advertisement rate, color advertisement at janakantha fifth page")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in janakantha fifth page")]
         public ActionResult fifthpagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Janakantha",
-                AdLocation = "janakantha fifth page color advertisement",
+                AdLocation = "janakantha fifth page advertisement",
                 PriceDescription = 7500,
                 PriceDescriptionBlack = 5000,
                 IsColor = true,
@@ -139,15 +139,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoBaseTitle("Publish color advertisement in janakantha sports page through amader ad")]
-        [SeoMetaKeywords("amader ad janakantha sports page advertisement, janakantha sports page color advertisement, janakantha sports page advertisement, publish advertisement at janakantha sports page, advertisement cost at janakantha sports page, janakantha sports page advertisement rate, color advertisement at janakantha sports page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in janakantha sports page")]
+        [SeoBaseTitle("Publish advertisement in janakantha sports page through amader ad")]
+        [SeoMetaKeywords("amader ad janakantha sports page advertisement, janakantha sports page advertisement, janakantha sports page advertisement, publish advertisement at janakantha sports page, advertisement cost at janakantha sports page, janakantha sports page advertisement rate, color advertisement at janakantha sports page")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in janakantha sports page")]
         public ActionResult sportspagecolorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Janakantha",
-                AdLocation = "janakantha sports page color advertisement",
+                AdLocation = "janakantha sports page advertisement",
                 PriceDescription = 5500,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,

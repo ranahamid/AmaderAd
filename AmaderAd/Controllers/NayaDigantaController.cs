@@ -80,15 +80,15 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoMetaKeywords("amader ad naya diganta last page advertisement, naya diganta last page color advertisement, naya diganta last page advertisement, publish advertisement at naya diganta last  page, advertisement cost at naya diganta last page, naya diganta last page advertisement rate, color advertisement at naya diganta last page")]
-        [SeoTitle("Publish color advertisement in naya diganta last page thourgh amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in naya diganta last page")]
+        [SeoMetaKeywords("amader ad naya diganta last page advertisement, naya diganta last page advertisement, naya diganta last page advertisement, publish advertisement at naya diganta last  page, advertisement cost at naya diganta last page, naya diganta last page advertisement rate, color advertisement at naya diganta last page")]
+        [SeoTitle("Publish advertisement in naya diganta last page thourgh amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your advertisement in naya diganta last page")]
         public ActionResult LastPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Naya Diganta",
-                AdLocation = "Naya Diganta last page color advertisement.",
+                AdLocation = "Naya Diganta last page advertisement.",
                 PriceDescription = 12500,
                 PriceDescriptionBlack = 10000,
                 IsColor = true,

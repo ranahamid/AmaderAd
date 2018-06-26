@@ -83,9 +83,9 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-        [SeoBaseTitle("Publish color advertisement in amader shomoy third page through amader ad")]
-        [SeoMetaKeywords("amader ad amader shomoy third page advertisement, amader shomoy third page color advertisement, amader shomoy 3rd page advertisement,  amader shomoy 3rd page color advbertisement, amader shomoy 3 number page advertisement, amader shomoy three number page color advertisement, publish advertisement at amader shomoy third page, advertisement cost at amader shomoy third page, amader shomoy third page advertisement rate, color advertisement at amader shomoy third page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in amader shomoy third page")]
+        [SeoBaseTitle("Publish advertisement in amader shomoy third page through amader ad")]
+        [SeoMetaKeywords("amader ad amader shomoy third page advertisement, amader shomoy third page  advertisement, amader shomoy 3rd page advertisement,  amader shomoy 3rd page color advbertisement, amader shomoy 3 number page advertisement, amader shomoy three number page advertisement, publish advertisement at amader shomoy third page, advertisement cost at amader shomoy third page, amader shomoy third page advertisement rate,  advertisement at amader shomoy third page")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in amader shomoy third page")]
         public ActionResult ThirdPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
@@ -112,14 +112,14 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         [SeoBaseTitle("Publish color advertisement in amader shomoy fifth page through amader ad")]
-        [SeoMetaKeywords("amader ad amader shomoy fifth page advertisement, amader shomoy fifth page color advertisement, amader shomoy 1st page advertisement,  amader shomoy 1st page color advbertisement, amader shomoy 5 number page advertisement, amader shomoy five number page color advertisement, publish advertisement at amader shomoy fifth page, advertisement cost at amader shomoy fifth page, amader shomoy fifth page advertisement rate, color advertisement at amader shomoy fifth page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in amader shomoy fifth page")]
+        [SeoMetaKeywords("amader ad amader shomoy fifth page advertisement, amader shomoy fifth page  advertisement, amader shomoy 1st page advertisement,  amader shomoy 1st page color advbertisement, amader shomoy 5 number page advertisement, amader shomoy five number page color advertisement, publish advertisement at amader shomoy fifth page, advertisement cost at amader shomoy fifth page, amader shomoy fifth page advertisement rate, color advertisement at amader shomoy fifth page")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in amader shomoy fifth page")]
         public ActionResult FifthPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Amader Shomoy",
-                AdLocation = "Amader Shomoy fifth page color advertisement",
+                AdLocation = "Amader Shomoy fifth page advertisement",
                 PriceDescription = 6500 ,
                 PriceDescriptionBlack = 5500,
                 IsColor = true,
@@ -193,15 +193,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoBaseTitle("Publish color advertisement in amader shomoy eleven page through amader ad")]
-        [SeoMetaKeywords("amader ad amader shomoy eleven page advertisement, amader shomoy eleven page color advertisement, amader shomoy 11th page advertisement,  amader shomoy 11th page color advbertisement, amader shomoy 11 number page advertisement, amader shomoy eleven number page color advertisement, publish advertisement at amader shomoy eleven page, advertisement cost at amader shomoy eleven page, amader shomoy eleven page advertisement rate, color advertisement at amader shomoy eleven page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in amader shomoy eleven page")]
+        [SeoBaseTitle("Publish  advertisement in amader shomoy eleven page through amader ad")]
+        [SeoMetaKeywords("amader ad amader shomoy eleven page advertisement, amader shomoy eleven page  advertisement, amader shomoy 11th page advertisement,  amader shomoy 11th page color advbertisement, amader shomoy 11 number page advertisement, amader shomoy eleven number page color advertisement, publish advertisement at amader shomoy eleven page, advertisement cost at amader shomoy eleven page, amader shomoy eleven page advertisement rate, color advertisement at amader shomoy eleven page")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in amader shomoy eleven page")]
         public ActionResult ElevenPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Amader Shomoy",
-                AdLocation = "Amader Shomoy eleven page color advertisement",
+                AdLocation = "Amader Shomoy eleven page  advertisement",
                 PriceDescription = 6000,
                 PriceDescriptionBlack = 4500,
                 IsColor = true,
@@ -221,15 +221,15 @@ namespace AmaderAd.Controllers
         //    };
         //    return View(model);
         //}
-        [SeoBaseTitle("Publish color advertisement in inner page of Amader Shomoy through amader ad")]
-        [SeoMetaKeywords("amader ad amader shomoy inner page advertisement, amader shomoy inner page color advertisement, amader shomoy inner page advertisement, publish advertisement at amader shomoy inner page, advertisement cost at amader shomoy inner page, amader shomoy inner page advertisement rate, color advertisement at amader shomoy inner page")]
-        [SeoMetaDescription("Through Amader Ad publish your color advertisement in amader shomoy inner page")]
+        [SeoBaseTitle("Publish advertisement in inner page of Amader Shomoy through amader ad")]
+        [SeoMetaKeywords("amader ad amader shomoy inner page advertisement, amader shomoy inner page  advertisement, amader shomoy inner page advertisement, publish advertisement at amader shomoy inner page, advertisement cost at amader shomoy inner page, amader shomoy inner page advertisement rate, color advertisement at amader shomoy inner page")]
+        [SeoMetaDescription("Through Amader Ad publish your  advertisement in amader shomoy inner page")]
         public ActionResult InnerPageColorAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Amader Shomoy",
-                AdLocation = "Amader Shomoy inner page color advertisement",
+                AdLocation = "Amader Shomoy inner page advertisement",
                 PriceDescription = 5000,
                 PriceDescriptionBlack = 4000,
                 IsColor = true,
