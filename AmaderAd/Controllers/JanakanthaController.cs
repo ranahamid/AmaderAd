@@ -75,6 +75,7 @@ namespace AmaderAd.Controllers
         [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in janakantha second page")]
         public ActionResult SecondpageblackandwhiteAdvertisement_MainPage()
         {
+            https://www.facebook.com/publishadvertisement/?hc_ref=ARSt7OOoIzsSkLkHCLbRBMruDv8h9seFXq9eZdB5ww2BgsvZoFJTm8VI0FNcw0cEFzE
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Janakantha",

@@ -4630,6 +4630,7 @@
     <Content Include="Views\DailyStar\PageThree_Display.cshtml" />
     <Content Include="Views\DailyStar\SportsPage_SidePanel.cshtml" />
     <Content Include="Views\DailyStar\ThirdPage_Style.cshtml" />
+    <Content Include="Views\JaiJaidin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
