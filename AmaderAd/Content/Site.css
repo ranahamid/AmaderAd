@@ -850,7 +850,7 @@ a {
 }
 
 address {
-   /*color: #fff;*/
+
     display: inline-block;
 }
 
@@ -859,7 +859,7 @@ address {
     }
 
     address a {
-        /*color: #fff;*/
+     
     }
 
         address a:hover {

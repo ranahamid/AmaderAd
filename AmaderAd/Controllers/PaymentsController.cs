@@ -185,8 +185,13 @@ namespace AmaderAd.Controllers
         public async Task<ActionResult> Invoice(int? id)
         {
             var entity = await GetPayment(id);
-            entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
-            return View(entity);
+            if(entity.OrderId!=null)
+            {
+                entity.NewspaperCls = await GetNewsPaperData(entity.OrderId);
+                return View(entity);
+            }
+
+            return RedirectToAction("List");
         }
 
         
