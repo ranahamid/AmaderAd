@@ -151,39 +151,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item  " style="display: none;">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="icon-docs"></i>
-                    <span class="title">Health Section</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item  ">
-                        <a href="@Url.Action("Index", "Medicines")">
-                            <i class="icon-clock"></i>
-                            <span class="title">Medicines</span>
-                            <span class="badge badge-success">6</span>
-                        </a>
-
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="@Url.Action("Index", "Doctors")">
-                            <i class="icon-check"></i>
-                            <span class="title">Doctors</span>
-                            <span class="badge badge-success">6</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="@Url.Action("Index", "Appointments")">
-                            <i class="icon-calendar"></i>
-                            <span class="title">Appoinments</span>
-                            <span class="badge badge-success">6</span>
-                        </a>
-
-                    </li>
-
-                </ul>
-            </li>
+           
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-user"></i>
@@ -219,30 +187,17 @@
                         <a href="@Url.Action("Index", "RolesAdmin")">
                             <i class="icon-user-female"></i>
                             <span class="title">Roles Admin</span>
-                            <span class="badge badge-success">6</span>
+                            <span class="badge badge-success" id="totalRoles">6</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
                         <a href="@Url.Action("Index", "UsersAdmin")">
                             <i class="icon-user"></i>
                             <span class="title">Users Admin</span>
-                            <span class="badge badge-success">6</span>
+                            <span class="badge badge-success" id="totalUserAdmin">6</span>
                         </a>
                     </li>
-                    <li class="nav-item  ">
-                        <a href="@Url.Action("Index", "Merchants")">
-                            <i class="icon-user"></i>
-                            <span class="title">Merchants</span>
-                            <span class="badge badge-success">6</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="@Url.Action("Index", "Brands")">
-                            <i class="icon-user"></i>
-                            <span class="title">Brands</span>
-                            <span class="badge badge-success">6</span>
-                        </a>
-                    </li>
+                 
                 </ul>
             </li>
             <li class="nav-item">
@@ -315,7 +270,7 @@
                         <a href="@Url.Action("Index", "Logs")">
                             <i class="icon-camera"></i>
                             <span class="title">Logs</span>
-                            <span class="badge badge-success">6</span>
+                            <span class="badge badge-success" id="totalLogs">0</span>
                         </a>
                     </li>
                 </ul>
@@ -327,13 +282,7 @@
                     <span class="arrow "></span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="@Url.Action("Index", "DoctorWorkingAreas")">
-                            <i class="icon-camera"></i>
-                            <span class="title">Doctor Working Areas</span>
-                            <span class="badge badge-success">0</span>
-                        </a>
-                    </li>
+                 
                     <li class="nav-item">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-settings"></i> Order

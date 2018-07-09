@@ -89,16 +89,40 @@ namespace AmaderAd.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(OrderPaymentMethod entity)
+        public ActionResult Create(OrderPaymentMethod entity)
         {
             if (!ModelState.IsValid) return View(entity);
-            var responseMessage = await client.PostAsJsonAsync(url, entity);
-            if (responseMessage.IsSuccessStatusCode)
+
+            var imgAddress = string.Empty;
+            if (entity.InstructionsImageUrl != null)
             {
-                return RedirectToAction("Index");
+                imgAddress = entity.InstructionsImageUrl.TrimStart('/');
             }
 
-            return View(entity);
+            Db.OrderPaymentMethodTbls.InsertOnSubmit(new OrderPaymentMethodTbl
+            {
+                Name = entity.Name,
+                Instructions = entity.Instructions,
+                InstructionsImageUrl = imgAddress,
+                Published = entity.Published,
+
+            });
+            try
+            {
+                Db.SubmitChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+
+            //var responseMessage = await client.PostAsJsonAsync(url, entity);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+         
         }
 
         [HttpPost]
@@ -136,18 +160,45 @@ namespace AmaderAd.Controllers
         }
 
 
-    
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, OrderPaymentMethod entity)
+        public ActionResult Edit(int id, OrderPaymentMethod entity)
         {
             if (!ModelState.IsValid) return View(entity);
-            HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
-            if (responseMessage.IsSuccessStatusCode)
+            var imgAddress = string.Empty;
+            if (entity.RawDbImagePath != null)
             {
+                imgAddress = entity.RawDbImagePath.TrimStart('/');
+            }
+
+            var isEntity = from x in Db.OrderPaymentMethodTbls
+                           where x.Id == entity.Id
+                           select x;
+
+            var entitySingle = isEntity.Single();
+
+            entitySingle.Name = entity.Name;
+            entitySingle.Instructions = entity.Instructions;
+            entitySingle.InstructionsImageUrl = imgAddress;
+            entitySingle.Published = entity.Published;
+
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
             }
-            return View(entity);
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+
+            //HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+
         }
 
 
@@ -167,14 +218,33 @@ namespace AmaderAd.Controllers
         // POST: OrderPaymentMethods/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            var responseMessage = await client.DeleteAsync(url + "/" + id);
-            if (responseMessage.IsSuccessStatusCode)
+            var query = from x in Db.OrderPaymentMethodTbls
+                        where x.Id == id
+                        select x;
+
+            if (query.Count() == 1)
             {
+                var entity = query.SingleOrDefault();
+                Db.OrderPaymentMethodTbls.DeleteOnSubmit(entity ?? throw new InvalidOperationException());
+            }
+
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
             }
-            throw new Exception("Exception");
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+            //var responseMessage = await client.DeleteAsync(url + "/" + id);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+            //throw new Exception("Exception");
         }
 
         protected override void Dispose(bool disposing)

@@ -11,6 +11,7 @@ using System.Web;
 using System.Web.Mvc;
 using AmaderAd.Filters;
 using System.Text.RegularExpressions;
+using System.Data.Entity;
 
 namespace AmaderAd.Controllers
 {
@@ -40,7 +41,21 @@ namespace AmaderAd.Controllers
         }
         #endregion
 
-      
+
+        public int TotalRoles()
+        {
+            var rolesCount = RoleManager.Roles.Count(); ;
+            return rolesCount;
+
+        }
+
+        public async Task<int> TotalUserAdminAsync()
+        {
+            var userAdmin = await UserManager.Users.ToListAsync();
+            var userCount = userAdmin.Count();
+            return userCount;
+
+        }
 
         #region GetUserInfoById
         public ActionResult GetUserInfoById(Guid? Id)

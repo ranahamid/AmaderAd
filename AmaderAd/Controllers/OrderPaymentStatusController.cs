@@ -59,16 +59,32 @@ namespace AmaderAd.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(OrderPaymentStatus entity)
+        public ActionResult Create(OrderPaymentStatus entity)
         {
             if (!ModelState.IsValid) return View(entity);
-            var responseMessage = await client.PostAsJsonAsync(url, entity);
-            if (responseMessage.IsSuccessStatusCode)
+            Db.OrderPaymentStatusTbls.InsertOnSubmit(new OrderPaymentStatusTbl
             {
+                //   Id              = entity.Id,           
+                Name = entity.Name,
+                DefaultStatus = entity.DefaultStatus,
+
+            });
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
             }
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+            //var responseMessage = await client.PostAsJsonAsync(url, entity);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
 
-            return View(entity);
+            //return View(entity);
         }
 
         // GET: OrderPaymentStatuss/Edit/5
@@ -85,15 +101,43 @@ namespace AmaderAd.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, OrderPaymentStatus entity)
+        public ActionResult Edit(int id, OrderPaymentStatus entity)
         {
             if (!ModelState.IsValid) return View(entity);
-            var responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
-            if (responseMessage.IsSuccessStatusCode)
+
+            var isEntity = from x in Db.OrderPaymentStatusTbls
+                           where x.Id == entity.Id
+                           select x;
+
+            if (isEntity == null)
             {
+                return View(entity);
+            }
+
+            if (isEntity != null)
+            {
+                OrderPaymentStatusTbl entitySingle = isEntity.Single();
+
+                entitySingle.Name = entity.Name;
+                entitySingle.DefaultStatus = entity.DefaultStatus;
+            }
+
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
             }
-            return View(entity);
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+
+            //var responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+            //return View(entity);
         }
 
 
@@ -111,14 +155,33 @@ namespace AmaderAd.Controllers
         // POST: OrderPaymentStatuss/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            var responseMessage = await client.DeleteAsync(url + "/" + id);
-            if (responseMessage.IsSuccessStatusCode)
+            var query = from x in Db.OrderPaymentStatusTbls
+                        where x.Id == id
+                        select x;
+
+            if (query != null && query.Count() == 1)
             {
+                OrderPaymentStatusTbl entity = query.SingleOrDefault();
+                Db.OrderPaymentStatusTbls.DeleteOnSubmit(entity);
+            }
+
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
             }
-            throw new Exception("Exception");
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+            //var responseMessage = await client.DeleteAsync(url + "/" + id);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+            //throw new Exception("Exception");
         }
 
         protected override void Dispose(bool disposing)

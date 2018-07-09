@@ -102,7 +102,7 @@ namespace AmaderAd.Controllers
         [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DoPayment(Payment entity)
+        public ActionResult DoPayment(Payment entity)
         {
             // Home is default controller
             var controller = string.Empty;
@@ -124,12 +124,34 @@ namespace AmaderAd.Controllers
                 entity.PaymentGuidId = Guid.NewGuid();
                 //
 
-                //end 
-                var responseMessage = await client.PostAsJsonAsync(url, entity);
-                if (responseMessage.IsSuccessStatusCode)
+                Db.PaymentTbls.InsertOnSubmit(new PaymentTbl
                 {
+                    CreatedOnUtc = DateTime.Now,
+                    UpdatedOnUtc = DateTime.Now,
+                    Active = entity.Active,
+                    PaymentGuidId = entity.PaymentGuidId,
+                    OrderId = entity.OrderId,
+                    PaymentChannel = entity.PaymentChannel,
+                    PaymentMobile = entity.PaymentMobile,
+                    PaymentTrxId = entity.PaymentTrxId,
+                    PaymentAmount = entity.PaymentAmount
+
+                });
+                try
+                {
+                    Db.SubmitChanges();
                     return RedirectToAction("Success", "Payments", entity);
                 }
+                catch (Exception)
+                {
+                    throw new Exception("Exception");
+                }
+                //end 
+                //var responseMessage = await client.PostAsJsonAsync(url, entity);
+                //if (responseMessage.IsSuccessStatusCode)
+                //{
+                //    return RedirectToAction("Success", "Payments", entity);
+                //}
             }
             return RedirectToAction(action, controller, entity);
         }
@@ -203,11 +225,65 @@ namespace AmaderAd.Controllers
         {
             if (ModelState.IsValid)
             {
-                HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
-                if (responseMessage.IsSuccessStatusCode)
+                var isEntity = from x in Db.PaymentTbls
+                               where x.Id == entity.Id
+                               select x;
+
+                var entitySingle = isEntity.Single();
+
+
+                entitySingle.UpdatedOnUtc = DateTime.Now; ;
+                entitySingle.Active = entity.Active;
+                entitySingle.PaymentGuidId = entity.PaymentGuidId;
+                entitySingle.OrderId = entity.OrderId;
+                entitySingle.PaymentChannel = entity.PaymentChannel;
+                entitySingle.PaymentMobile = entity.PaymentMobile;
+                entitySingle.PaymentTrxId = entity.PaymentTrxId;
+                entitySingle.PaymentAmount = entity.PaymentAmount;
+
+                //newspapere table
+                var isEntity2 = from x in Db.NewspaperTbls
+                                where x.Id == entity.OrderId
+                                select x;
+                var imgAddress = string.Empty;
+                if (entity.RawDbImagePath != null)
                 {
+                    imgAddress = entity.RawDbImagePath.TrimStart('/');
+                }
+                var entitySingle2 = isEntity2.Single();
+
+                entitySingle2.NewspaperName = entity.NewspaperName;
+                entitySingle2.AdLocation = entity.AdLocation;
+                entitySingle2.PriceDescription = entity.PriceDescription;
+                entitySingle2.AdvertiserName = entity.AdvertiserName;
+                entitySingle2.AdvertiserAddress = entity.AdvertiserAddress;
+                entitySingle2.AdvertiserMobile = entity.AdvertiserMobile;
+                entitySingle2.AdvertiserEmail = entity.AdvertiserEmail;
+                entitySingle2.DateofPublication = entity.DateofPublication;
+                entitySingle2.ColumnSize = entity.ColumnSize;
+                entitySingle2.Inch = entity.Inch;
+                entitySingle2.TotalColumnInch = entity.TotalColumnInch;
+                entitySingle2.TotalPrice = entity.TotalPrice;
+                entitySingle2.Description = entity.Description;
+                entitySingle2.AdCategoryId = entity.AdCategoryId;
+                entitySingle2.MainImagePath = imgAddress;
+                entitySingle2.UpdatedOnUtc = DateTime.Now; ;
+                entitySingle2.Active = entity.Active;
+
+                try
+                {
+                    Db.SubmitChanges();
                     return RedirectToAction("List");
                 }
+                catch (Exception)
+                {
+                    throw new Exception("Exception");
+                }
+                //HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
+                //if (responseMessage.IsSuccessStatusCode)
+                //{
+                //    return RedirectToAction("List");
+                //}
             }
         
             var entityOrderPayment = await GetPaymentMethods();
@@ -229,15 +305,34 @@ namespace AmaderAd.Controllers
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
+            var entity = (from x in Db.PaymentTbls
+                          where x.Id == id
+                          select x).SingleOrDefault();
 
-            HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
-            if (responseMessage.IsSuccessStatusCode)
+            if (entity != null)
             {
-                return RedirectToAction("List");
+
+                Db.PaymentTbls.DeleteOnSubmit(entity ?? throw new InvalidOperationException());
             }
-            throw new Exception("Exception");
+
+            try
+            {
+                Db.SubmitChanges(); return
+                    RedirectToAction("List");
+            }
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+
+            //HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("List");
+            //}
+            //throw new Exception("Exception");
         }
 
         protected override void Dispose(bool disposing)

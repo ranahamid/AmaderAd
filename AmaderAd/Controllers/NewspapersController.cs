@@ -110,22 +110,10 @@ namespace AmaderAd.Controllers
                  controller = (Request.UrlReferrer.Segments.Skip(1).Take(1).SingleOrDefault() ?? "Home").Trim('/');
             }
 
-            // Index is default action 
             if (Request.UrlReferrer != null)
             {
                  action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
             }
-            //start method
-       
-            if (entity.MainImagePath == null || entity.MainImagePath.ContentLength == 0)
-            {
-                ModelState.AddModelError("ImageUpload", "This field is required");
-            }
-            else if (!ValidImageTypes.Contains(entity.MainImagePath.ContentType))
-            {
-                ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
-            }
-
 
             if (ModelState.IsValid)
             {
@@ -134,11 +122,52 @@ namespace AmaderAd.Controllers
                 entity.RawDbImagePath= UploadFile(entity);
                 entity.NewsGuidId=Guid.NewGuid();
                 entity.MainImagePath = null;
-                var responseMessage = await client.PostAsJsonAsync(url, entity);
-                if (responseMessage.IsSuccessStatusCode)
+
+                var imgAddress = string.Empty;
+                if (entity.RawDbImagePath != null)
                 {
+                    imgAddress = entity.RawDbImagePath.TrimStart('~').TrimStart('/');
+                }
+
+                Db.NewspaperTbls.InsertOnSubmit(new NewspaperTbl
+                {
+
+                    NewsGuidId = entity.NewsGuidId,
+                    NewspaperName = entity.NewspaperName,
+                    AdLocation = entity.AdLocation,
+                    PriceDescription = entity.PriceDescription,
+                    AdvertiserName = entity.AdvertiserName,
+                    AdvertiserAddress = entity.AdvertiserAddress,
+                    AdvertiserMobile = entity.AdvertiserMobile,
+                    AdvertiserEmail = entity.AdvertiserEmail,
+                    DateofPublication = entity.DateofPublication,
+                    ColumnSize = entity.ColumnSize,
+                    Inch = entity.Inch,
+                    TotalColumnInch = entity.TotalColumnInch,
+                    TotalPrice = entity.TotalPrice,
+                    Description = entity.Description,
+                    AdCategoryId = entity.AdCategoryId,
+                    MainImagePath = imgAddress,
+                    CreatedOnUtc = DateTime.Now,
+                    UpdatedOnUtc = DateTime.Now,
+                    Active = entity.Active,
+                    IsColor = entity.IsColor,
+                });
+                try
+                {
+                    Db.SubmitChanges();
                     return RedirectToAction("DoPayment", "Payments", entity);
                 }
+                catch (Exception)
+                {
+                    throw new Exception("Exception");
+                }
+
+                //var responseMessage = await client.PostAsJsonAsync(url, entity);
+                //if (responseMessage.IsSuccessStatusCode)
+                //{
+                //    return RedirectToAction("DoPayment", "Payments", entity);
+                //}
             }
             return RedirectToAction(action, controller, entity);          
         }
@@ -193,7 +222,7 @@ namespace AmaderAd.Controllers
         [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, Newspaper entity)
+        public ActionResult Edit(int id, Newspaper entity)
         {
             if (entity.MainImagePath == null || entity.MainImagePath.ContentLength == 0)
             {
@@ -207,14 +236,52 @@ namespace AmaderAd.Controllers
             {
                 entity.RawDbImagePath = UploadFile(entity);
                 entity.MainImagePath = null;
-
-                HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
-                if (responseMessage.IsSuccessStatusCode)
+                var isEntity = from x in Db.NewspaperTbls
+                               where x.Id == entity.Id
+                               select x;
+                var imgAddress = string.Empty;
+                if (entity.RawDbImagePath != null)
                 {
+                    imgAddress = entity.RawDbImagePath.TrimStart('~').TrimStart('/');
+                }
+
+
+                var entitySingle = isEntity.Single();
+
+                entitySingle.NewspaperName = entity.NewspaperName;
+                entitySingle.AdLocation = entity.AdLocation;
+                entitySingle.PriceDescription = entity.PriceDescription;
+                entitySingle.AdvertiserName = entity.AdvertiserName;
+                entitySingle.AdvertiserAddress = entity.AdvertiserAddress;
+                entitySingle.AdvertiserMobile = entity.AdvertiserMobile;
+                entitySingle.AdvertiserEmail = entity.AdvertiserEmail;
+                entitySingle.DateofPublication = entity.DateofPublication;
+                entitySingle.ColumnSize = entity.ColumnSize;
+                entitySingle.Inch = entity.Inch;
+                entitySingle.TotalColumnInch = entity.TotalColumnInch;
+                entitySingle.TotalPrice = entity.TotalPrice;
+                entitySingle.Description = entity.Description;
+                entitySingle.AdCategoryId = entity.AdCategoryId;
+                entitySingle.MainImagePath = imgAddress;
+                entitySingle.UpdatedOnUtc = DateTime.Now; ;
+                entitySingle.Active = entity.Active;
+                entitySingle.IsColor = entity.IsColor;
+                try
+                {
+                    Db.SubmitChanges();
                     return RedirectToAction("Index");
                 }
+                catch (Exception)
+                {
+                    throw new Exception("Exception");
+                }
+                //HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
+                //if (responseMessage.IsSuccessStatusCode)
+                //{
+                //    return RedirectToAction("Index");
+                //}
             }
-            
+
             return View(entity);
         }
 
@@ -237,15 +304,33 @@ namespace AmaderAd.Controllers
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
+            var entity = (from x in Db.NewspaperTbls
+                          where x.Id == id
+                          select x).SingleOrDefault();
 
-            HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
-            if (responseMessage.IsSuccessStatusCode)
+            if (entity != null)
             {
+
+                Db.NewspaperTbls.DeleteOnSubmit(entity ?? throw new InvalidOperationException());
+            }
+
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
             }
-            throw new Exception("Exception");
+            catch (Exception)
+            {
+                throw new Exception("Exception");
+            }
+            //HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+            //throw new Exception("Exception");
         }
 
         protected override void Dispose(bool disposing)

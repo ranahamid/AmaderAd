@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AmaderAd.Filters;
 using AmaderAd.Models;
 using AspNetSeo.Mvc;
 
 namespace AmaderAd.Controllers
 {
+    [ExceptionHandler]
     [SeoBaseTitle("Publish advertisement in Janakantha through amader ad")]
     [SeoBaseLinkCanonical("http://www.amaderad.net/Janakantha")]
     public class JanakanthaController : BaseController

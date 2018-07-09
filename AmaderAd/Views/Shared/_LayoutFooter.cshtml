@@ -75,13 +75,13 @@
         });
 
         // Manual operations
-        $('#button-a').click(function(e){
+        $('#button-a').click(function (e) {
             // Have to stop propagation here
             e.stopPropagation();
             inputa.clockpicker('show')
                 .clockpicker('toggleView', 'minutes');
         });
-        $('#button-b').click(function(e){
+        $('#button-b').click(function (e) {
             // Have to stop propagation here
             e.stopPropagation();
             inputa.clockpicker('show')
@@ -95,18 +95,18 @@
         });
 
         // Manual operations
-        $('#button-c').click(function(e){
+        $('#button-c').click(function (e) {
             // Have to stop propagation here
             e.stopPropagation();
             inputb.clockpicker('show')
                 .clockpicker('toggleView', 'minutes');
         });
-        $('#button-d').click(function(e){
+        $('#button-d').click(function (e) {
             // Have to stop propagation here
             e.stopPropagation();
             inputb.clockpicker('show')
                 .clockpicker('toggleView', 'hours');
-        });      
+        });
 
     </script>
 </div>
@@ -114,4 +114,44 @@
 
 
 
+<script>
+    $.ajax({
+        url: "/Dashboard/TotalLogs",
+        type: "get",
+        async: true,
+        success: function (result) {
+
+            $("#totalLogs").html(result);
+        },
+        error: function () {
+
+        }
+    });
+
+
+    $.ajax({
+        url: "/Account/TotalUserAdminAsync",
+        type: "get",
+        async: true,
+        success: function (result) {
+
+            $("#totalUserAdmin").html(result);
+        },
+        error: function () {
+
+        }
+    });
+    $.ajax({
+        url: "/Account/TotalRoles",
+        type: "get",
+        async: true,
+        success: function (result) {
+
+            $("#totalRoles").html(result);
+        },
+        error: function () {
+
+        }
+    });
+</script>
 

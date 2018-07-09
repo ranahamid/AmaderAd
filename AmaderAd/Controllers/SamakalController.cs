@@ -1,10 +1,12 @@
-﻿using AmaderAd.Models;
+﻿using AmaderAd.Filters;
+using AmaderAd.Models;
 using AspNetSeo.Mvc;
 using System.Web.Mvc;
 
 
 namespace AmaderAd.Controllers
 {
+    [ExceptionHandler]
     public class SamakalController : BaseController
     {
         // GET: Samakal

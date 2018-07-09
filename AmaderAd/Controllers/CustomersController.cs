@@ -10,10 +10,12 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using AmaderAd.Filters;
 
 namespace AmaderAd.Controllers
 {
     [Authorize(Roles = "Admin")]
+    [ExceptionHandler]
     public class CustomersController : BaseController
     {
         // GET: Customers

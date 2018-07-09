@@ -89,36 +89,12 @@ namespace AmaderAd.DAL
 
         public void Post(Payment entity)
         {
-            //var imgAddress = string.Empty;
-            //if (entity.MainImagePath != null)
-            //{
-            //    imgAddress = entity.MainImagePath.TrimStart('/');
-            //}
 
             Db.PaymentTbls.InsertOnSubmit(new PaymentTbl
             {
-                //NewspaperName = entity.NewspaperName,
-                //AdLocation = entity.AdLocation,
-                //Price = entity.Price,
-                //AdvertiserName = entity.AdvertiserName,
-                //AdvertiserAddress = entity.AdvertiserAddress,
-                //AdvertiserMobile = entity.AdvertiserMobile,
-                //AdvertiserEmail = entity.AdvertiserEmail,
-                //DateofPublication = entity.DateofPublication,
-                //ColumnSize = entity.ColumnSize,
-                //Inch = entity.Inch,
-                //TotalColumnInch = entity.TotalColumnInch,
-                //TotalPrice = entity.TotalPrice,
-                //Description = entity.Description,
-
-                //MainImagePath = imgAddress,
-          
                 CreatedOnUtc = DateTime.Now,
                 UpdatedOnUtc = DateTime.Now,
                 Active = entity.Active,
-
-                //AdCategoryId        = entity.AdCategoryId,
-
                 PaymentGuidId       = entity.PaymentGuidId,
                 OrderId             = entity.OrderId,
                 PaymentChannel      = entity.PaymentChannel,
@@ -148,9 +124,6 @@ namespace AmaderAd.DAL
            
             entitySingle.UpdatedOnUtc = DateTime.Now; ;
             entitySingle.Active = entity.Active;
-
-
-            //entitySingle.AdCategoryId        = entity.AdCategoryId;
             entitySingle.PaymentGuidId       = entity.PaymentGuidId;
             entitySingle.OrderId             = entity.OrderId;
             entitySingle.PaymentChannel      = entity.PaymentChannel;
@@ -167,11 +140,6 @@ namespace AmaderAd.DAL
             {
                 imgAddress = entity.RawDbImagePath.TrimStart('/');
             }
-            //else if (entity.MainImagePath != null)
-            //{                
-            //        imgAddress = entity.MainImagePath.TrimStart('/');                
-            //}
-
             var entitySingle2 = isEntity2.Single();
 
             entitySingle2.NewspaperName           = entity.NewspaperName          ;

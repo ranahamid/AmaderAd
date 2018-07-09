@@ -1,4 +1,5 @@
-﻿using AmaderAd.Models;
+﻿using AmaderAd.Filters;
+using AmaderAd.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 namespace AmaderAd.Controllers
 {
     [Authorize]
+    [ExceptionHandler]
     public class ManageController : Controller
     {
         public ManageController()

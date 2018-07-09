@@ -138,14 +138,27 @@ namespace AmaderAd.Controllers
         // POST: Banners/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Banner entity)
+        public ActionResult Create(Banner entity)
         {
             if (ModelState.IsValid)
             {
-                HttpResponseMessage responseMessage = await client.PostAsJsonAsync(url, entity);
-                if (responseMessage.IsSuccessStatusCode)
+                Db.BannerTbls.InsertOnSubmit(new BannerTbl
                 {
+                    //   Id              = entity.Id,       
+                    GuidId = entity.GuidId,
+                    Name = entity.Name,
+                    CreatedOnUtc = DateTime.Now,
+                    UpdatedOnUtc = DateTime.Now,
+                    Published = entity.Published,
+                });
+                try
+                {
+                    Db.SubmitChanges();
                     return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Exception");
                 }
             }
             return View(entity);
@@ -269,15 +282,31 @@ namespace AmaderAd.Controllers
         // POST: Banners/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, Banner entity)
+        public ActionResult Edit(int id, Banner entity)
         {
             if (ModelState.IsValid)
             {
-                HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, entity);
-                if (responseMessage.IsSuccessStatusCode)
+                var isEntity = from x in Db.BannerTbls
+                               where x.Id == entity.Id
+                               select x;
+
+
+                var entitySingle = isEntity.Single();
+
+                entitySingle.Name = entity.Name;
+                entitySingle.UpdatedOnUtc = DateTime.Now;
+                entitySingle.Published = entity.Published;
+
+                try
                 {
+                    Db.SubmitChanges();
                     return RedirectToAction("Index");
                 }
+                catch (Exception)
+                {
+                    throw new Exception("Exception");
+                }
+
             }
             throw new Exception("Exception");
         }
@@ -298,12 +327,42 @@ namespace AmaderAd.Controllers
         // POST: Banners/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
-            if (responseMessage.IsSuccessStatusCode)
+            var entity = (from x in Db.BannerTbls
+                          where x.Id == id
+                          select x).SingleOrDefault();
+
+            if (entity != null)
             {
+                if (entity.IsHomePageBanner == true)
+                {
+                    ViewBag.Title = "Can't delete activated home page banner.";
+                    return RedirectToAction("Delete");
+                }
+
+
+                Db.BannerTbls.DeleteOnSubmit(entity ?? throw new InvalidOperationException());
+
+                var bannerImages = (from x in Db.BannerImageTbls
+                                    where x.BannerGuidId == entity.GuidId
+                                    select x).ToList();
+
+                foreach (var item in bannerImages)
+                {
+                    Db.BannerImageTbls.DeleteOnSubmit(item ?? throw new InvalidOperationException());
+                }
+
+            }
+
+            try
+            {
+                Db.SubmitChanges();
                 return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                throw new Exception("Exception");
             }
             throw new Exception("Exception");
         }
