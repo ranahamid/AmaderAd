@@ -10,82 +10,87 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
-    <tr>
-   
-        <th>
-            @Html.DisplayNameFor(model => model.NewspaperName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AdLocation)
-        </th>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NewspaperName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdLocation)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.AdvertiserName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.AdvertiserMobile)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DateofPublication)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOnUtc)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
   
-        <th>
-            @Html.DisplayNameFor(model => model.AdvertiserName)
-        </th>
-     
-        <th>
-            @Html.DisplayNameFor(model => model.AdvertiserMobile)
-        </th>
-       
-        <th>
-            @Html.DisplayNameFor(model => model.DateofPublication)
-        </th>
-     
-        <th>
-            @Html.DisplayNameFor(model => model.TotalPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-     
-       
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedOnUtc)
-        </th>
-     
-        <th></th>
-    </tr>
+    <tbody>
 
-@foreach (var item in Model) {
-    <tr>
- 
-        <td>
-            @Html.DisplayFor(modelItem => item.NewspaperName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdLocation)
-        </td>
-    
-        <td>
-            @Html.DisplayFor(modelItem => item.AdvertiserName)
-        </td>
-      
-        <td>
-            @Html.DisplayFor(modelItem => item.AdvertiserMobile)
-        </td>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.DateofPublication)
-        </td>
-    
- 
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedOnUtc)
-        </td>
-    
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
 
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NewspaperName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdLocation)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvertiserName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvertiserMobile)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateofPublication)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOnUtc)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

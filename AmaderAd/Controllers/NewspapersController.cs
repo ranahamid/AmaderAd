@@ -99,28 +99,28 @@ namespace AmaderAd.Controllers
         [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Newspaper entity)
-        {            
+        public ActionResult Create(Newspaper entity)
+        {
             // Home is default controller
             string controller = string.Empty;
             string action = string.Empty;
 
             if (Request.UrlReferrer != null)
             {
-                 controller = (Request.UrlReferrer.Segments.Skip(1).Take(1).SingleOrDefault() ?? "Home").Trim('/');
+                controller = (Request.UrlReferrer.Segments.Skip(1).Take(1).SingleOrDefault() ?? "Home").Trim('/');
             }
 
             if (Request.UrlReferrer != null)
             {
-                 action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
+                action = (Request.UrlReferrer.Segments.Skip(2).Take(1).SingleOrDefault() ?? "Index").Trim('/');
             }
 
             if (ModelState.IsValid)
             {
                 //test
                 //end of test
-                entity.RawDbImagePath= UploadFile(entity);
-                entity.NewsGuidId=Guid.NewGuid();
+                entity.RawDbImagePath = UploadFile(entity);
+                entity.NewsGuidId = Guid.NewGuid();
                 entity.MainImagePath = null;
 
                 var imgAddress = string.Empty;
@@ -169,10 +169,10 @@ namespace AmaderAd.Controllers
                 //    return RedirectToAction("DoPayment", "Payments", entity);
                 //}
             }
-            return RedirectToAction(action, controller, entity);          
+            return RedirectToAction(action, controller, entity);
         }
 
-   
+
 
 
 

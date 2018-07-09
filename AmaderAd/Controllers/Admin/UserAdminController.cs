@@ -150,8 +150,11 @@ namespace AmaderAd.Controllers
                 user.UserName = editUser.PhoneNumber;
                 user.Email = editUser.Email;
                 user.PhoneNumber = editUser.PhoneNumber;
-                user.Name = user.Name;
-                user.Address = user.Address;
+                user.Name = editUser.Name;
+                user.Address = editUser.Address;
+
+                // Apply the changes if any to the db
+                UserManager.Update(user);
 
                 var userRoles = await UserManager.GetRolesAsync(user.Id);
 

@@ -76,8 +76,7 @@ namespace AmaderAd.Controllers
         [SeoMetaKeywords("amader ad janakantha second page advertisement, janakantha second page black and white advertisement, janakantha 2nd page advertisement,  janakantha 2nd page black and white advbertisement, janakantha 2 number page advertisement, janakantha second number page black and white advertisement, publish advertisement at janakantha second page, advertisement cost at janakantha second page, janakantha second page advertisement rate, black and white advertisement at janakantha second page")]
         [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in janakantha second page")]
         public ActionResult SecondpageblackandwhiteAdvertisement_MainPage()
-        {
-            https://www.facebook.com/publishadvertisement/?hc_ref=ARSt7OOoIzsSkLkHCLbRBMruDv8h9seFXq9eZdB5ww2BgsvZoFJTm8VI0FNcw0cEFzE
+        {            
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Janakantha",
