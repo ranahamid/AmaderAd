@@ -1,0 +1,150 @@
+﻿@model AmaderAd.Models.Newspaper
+
+@{
+    ViewBag.Title = "ClassifiedAdvertisement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Govt. Advertisement In Daily Star</h2>
+<p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
+
+
+@using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Partial("_NewspaperHeader", Model)
+
+    @Html.Partial("_NewspaperBody", Model)
+
+    @{
+        if (Model.IsColorOption == true)
+        {
+            @Html.Partial("_NewspaperColorOptionGovt", Model)
+        }
+    }
+
+    @{
+        if (Model.IsGovtPageOption == true)
+        {
+            @Html.Partial("_NewspaperGovtPageOption", Model)
+        }
+    }
+
+
+    @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
+
+    @Html.Partial("_NewspaperComment")
+
+    @Html.Partial("_NewspaperFileUploadCreate")
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+        </div>
+    </div>
+</div>
+}
+
+@Html.Partial("_NewspaperSampleAd")
+
+
+
+<script>
+    var hour = new Date().getUTCHours() + 6;
+    $(".datetime").datepicker({
+        startDate: hour >= 18 ? '+2d' : '+1d',
+        //daysOfWeekDisabled: "0,1,2,3,5,6",
+        //daysOfWeekHighlighted: "4",
+        autoclose: true
+    });
+</script>
+
+
+<script>
+    function myAmountLimit1() {
+
+        var columnSize = $("#ColumnSize").val();
+        var inchSize = $("#Inch").val();
+        var totalColumnInch = columnSize * inchSize;
+
+        var isColor = $('input[name=IsColor]:checked').val();
+
+        var GovtPageOption = $('input[name=GovtPageOption]:checked').val();
+        console.log("GovtPageOption: " + GovtPageOption);
+
+        var priceDescription = @Html.Raw(Model.PriceDescription);
+
+        if (isColor === "False")
+        {
+            var priceDescriptionBlack = @Html.Raw(Model.PriceDescription);
+            var priceDescriptionGovt = 0;
+            switch (GovtPageOption) {
+                case '0':
+                    priceDescriptionGovt = priceDescriptionBlack;
+                    break;
+                case '1':
+                    priceDescriptionGovt = priceDescriptionBlack + priceDescriptionBlack*1.00;
+                    break;
+                case '2':
+                    priceDescriptionGovt = priceDescriptionBlack + priceDescriptionBlack * 0.50;
+                    break;
+                default:
+                    priceDescriptionGovt = priceDescriptionBlack;
+            }
+
+            $("#PriceDescription").html(priceDescriptionGovt);
+            $("#PriceDescription").val(priceDescriptionGovt);
+            priceDescription = priceDescriptionGovt;
+        }
+        else if (isColor === "True")
+        {
+            var priceDescriptionColorWithOut = @Html.Raw(Model.PriceDescription);
+            var priceDescriptionColor = priceDescriptionColorWithOut + priceDescriptionColorWithOut * 0.45;
+            var priceDescriptionGovt = 0;
+            switch (GovtPageOption) {
+                case '0':
+                    priceDescriptionGovt = priceDescriptionColor;
+                    break;
+                case '1':
+                    priceDescriptionGovt = priceDescriptionColor + priceDescriptionColor * 1.00;
+                    break;
+                case '2':
+                    priceDescriptionGovt = priceDescriptionColor + priceDescriptionColor * 0.50;
+                    break;
+                default:
+                    priceDescriptionGovt = priceDescriptionColor;
+            }
+
+            $("#PriceDescription").html(priceDescriptionGovt);
+            $("#PriceDescription").val(priceDescriptionGovt);
+            priceDescription = priceDescriptionGovt;
+            
+        }
+
+        var minColumn=@Html.Raw(Model.MinTotalColumnInch);
+        var maxColumn=@Html.Raw(Model.MaxTotalColumnInch);
+        var maxMinRestriction = "@Html.Raw(Model.MinMaxRestrictiion)";
+
+
+        if (maxMinRestriction === "True" && (totalColumnInch < minColumn || totalColumnInch > maxColumn) ){
+            $("#columninchwarning").html("এই পেজে কমপক্ষে " + minColumn + " কলাম ইঞ্চি ও সর্বোচ্চ " + maxColumn + " কলাম ইঞ্চির বিজ্ঞাপন দিতে হবে  <br>You can publish atleast " + minColumn + " column inch and maximum  " + maxColumn + "  column inch here ");
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
+            $("#submit-btn").attr("disabled", "disabled");
+        }
+        else {
+            priceDescription = $("#PriceDescription").val();
+            $("#columninchwarning").empty();
+            var totalPrice = Math.floor(totalColumnInch * priceDescription);
+            $("#TotalColumnInch").html(totalColumnInch);
+            $("#TotalColumnInch").val(totalColumnInch);
+            $("#TotalPrice").html(totalPrice);
+            $("#TotalPrice").val(totalPrice);
+        }
+
+    }
+</script>

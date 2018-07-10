@@ -126,9 +126,19 @@ namespace AmaderAd.Models
 
         public DateTime? UpdatedOnUtc { get; set; }
 
+        //color option
+        [Display(Name = "Is Color?")]
         public bool? IsColor { get; set; }
 
         public bool? IsColorOption { get; set; }
+
+        // page choose
+
+        [Display(Name = "Choose page")]
+        public string GovtPageOption { get; set; }
+
+        public bool? IsGovtPageOption { get; set; }
+
 
         public bool? Active { get; set; }
     }

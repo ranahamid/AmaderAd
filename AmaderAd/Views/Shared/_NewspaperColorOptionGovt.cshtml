@@ -4,11 +4,13 @@
     @Html.LabelFor(model => model.IsColor, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
         <div class="checkbox">
-            @Html.RadioButtonFor(model => model.IsColor, !Model.IsColor, new { @class = "IsColor" })
-            @Html.LabelFor(model => model.IsColor, " Black & White")
-           
+
             @Html.RadioButtonFor(model => model.IsColor, Model.IsColor, new { @class = "IsColor" })
+            @Html.LabelFor(model => model.IsColor, "Black & White")
+
+            @Html.RadioButtonFor(model => model.IsColor, !Model.IsColor, new { @class = "IsColor" })
             @Html.LabelFor(model => model.IsColor, "Color")
+
 
         </div>
     </div>

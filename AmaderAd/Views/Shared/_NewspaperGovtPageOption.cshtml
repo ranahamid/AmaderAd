@@ -1,0 +1,20 @@
+﻿@model AmaderAd.Models.Newspaper
+
+<div class="form-group">
+    @Html.LabelFor(model => model.GovtPageOption, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        <div class="checkbox">
+            @Html.RadioButtonFor(model => model.GovtPageOption, Model.GovtPageOption, new { @class = "GovtPageOption" })
+            @Html.LabelFor(model => model.GovtPageOption, "Inner Page")
+
+            @Html.RadioButtonFor(model => model.GovtPageOption, "1", new { @class = "GovtPageOption" })
+            @Html.LabelFor(model => model.GovtPageOption, "Front Page")
+
+
+            @Html.RadioButtonFor(model => model.GovtPageOption, "2", new { @class = "GovtPageOption" })
+            @Html.LabelFor(model => model.GovtPageOption, "Back Page")
+
+        </div>
+    </div>
+</div>
+

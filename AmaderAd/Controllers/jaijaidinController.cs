@@ -289,9 +289,6 @@ namespace AmaderAd.Controllers
         }
 
         #endregion
-
-
-
-
+        
     }
 }

@@ -9,7 +9,7 @@
 input,
 select,
 textarea {
-    max-width: 45%;
+    /*max-width: 45%;*/
 }
 
 /* styles for validation helpers */
