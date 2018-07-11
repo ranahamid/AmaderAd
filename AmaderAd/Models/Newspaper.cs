@@ -139,6 +139,7 @@ namespace AmaderAd.Models
 
         public bool? IsGovtPageOption { get; set; }
 
+        public string TitleDescription { get; set; }
 
         public bool? Active { get; set; }
     }

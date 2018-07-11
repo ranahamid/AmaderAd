@@ -865,6 +865,7 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star Govt. Advertisement",
+                TitleDescription = "Govt. Advertisement At Daily Star",
                 PriceDescription = 533,
 
                 // column inch restrictions
@@ -881,8 +882,41 @@ namespace AmaderAd.Controllers
                 IsGovtPageOption =true,
 
             };
-            return View(model);
+            return PartialView("GovtAd", model);
         }
+
+        public ActionResult GovtCommercialAd()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star- Govt. Commercial Advertisement",
+                TitleDescription = "Govt. Commercial Advertisement At Daily Star",
+                PriceDescription = 799,
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
+
+            };
+            return PartialView("GovtCommercialAd", model);
+        }
+
+
+
+
         #endregion
+
+
     }
 }

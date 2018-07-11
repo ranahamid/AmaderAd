@@ -336,32 +336,61 @@ namespace AmaderAd.Controllers
 
 
         #endregion
-
-        #region Government Advertisement
-        public ActionResult Government()
+        #region Govt. Ad
+        public ActionResult GovtAd()
         {
+            // black-white / color
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Government Advertisement",
-                PriceDescription = 853,
+                AdLocation = "Inqilab Govt. Advertisement",
+                TitleDescription = "Govt. Advertisement At Inqilab",
+                PriceDescription = 533,
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
 
             };
-            return View(model);
+            return PartialView("GovtAd", model);
         }
 
-        public ActionResult Government_Commercial()
+        public ActionResult GovtCommercialAd()
         {
+            // black-white / color
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Inqilab",
-                AdLocation = "Government Commercial Advertisement",
-                PriceDescription = 853,
+                AdLocation = "Inqilab- Govt. Commercial Advertisement",
+                TitleDescription = "Govt. Commercial Advertisement At Inqilab",
+                PriceDescription = 799,
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
 
             };
-            return View(model);
+            return PartialView("GovtCommercialAd", model);
         }
-
         #endregion
+
     }
 }

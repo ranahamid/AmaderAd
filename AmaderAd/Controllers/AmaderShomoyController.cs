@@ -380,6 +380,66 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+        #region Govt. Ad
+        public ActionResult GovtAd()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy Govt. Advertisement",
+                TitleDescription = "Govt. Advertisement At Amader Shomoy",
+                PriceDescription = 533,
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
+
+            };
+            return PartialView("GovtAd", model);
+        }
+
+        public ActionResult GovtCommercialAd()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Amader Shomoy",
+                AdLocation = "Amader Shomoy- Govt. Commercial Advertisement",
+                TitleDescription = "Govt. Commercial Advertisement At Amader Shomoy",
+                PriceDescription = 799,
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
+
+            };
+            return PartialView("GovtCommercialAd", model);
+        }
+
+
+
+
+        #endregion
+
     }
 
 }

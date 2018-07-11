@@ -404,7 +404,61 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+        #region Govt. Ad
+        public ActionResult GovtAd()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Manabzamin",
+                AdLocation = "Manabzamin Govt. Advertisement",
+                TitleDescription = "Govt. Advertisement At Manabzamin",
+                PriceDescription = 533,
 
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
+
+            };
+            return PartialView("GovtAd", model);
+        }
+
+        public ActionResult GovtCommercialAd()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Manabzamin",
+                AdLocation = "Manabzamin- Govt. Commercial Advertisement",
+                TitleDescription = "Govt. Commercial Advertisement At Manabzamin",
+                PriceDescription = 799,
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                //color
+                IsColor = false,
+                IsColorOption = true,
+
+                // page - choose
+                GovtPageOption = "0",
+                IsGovtPageOption = true,
+
+            };
+            return PartialView("GovtCommercialAd", model);
+        }
+        #endregion
 
     }
 }

@@ -3714,8 +3714,6 @@
     <Content Include="Views\Inqilab\FirstPage_SpotAdvertisement.cshtml" />
     <Content Include="Views\Inqilab\LastPage_SpotAdvertisement.cshtml" />
     <Content Include="Views\Inqilab\SportsPage_SpotAdvertisement.cshtml" />
-    <Content Include="Views\Inqilab\Government.cshtml" />
-    <Content Include="Views\Inqilab\Government_Commercial.cshtml" />
     <Content Include="Views\Manabzamin\LastPage1St_pannel.cshtml" />
     <Content Include="Views\Manabzamin\LastPage2nd_pannel.cshtml" />
     <Content Include="Views\Manabzamin\LastPage3rd_pannel.cshtml" />
@@ -3777,9 +3775,10 @@
     <Content Include="Views\DailyStar\SportsPage_SidePanel.cshtml" />
     <Content Include="Views\DailyStar\ThirdPage_Style.cshtml" />
     <Content Include="Views\JaiJaidin\Index.cshtml" />
-    <Content Include="Views\DailyStar\GovtAd.cshtml" />
     <Content Include="Views\Shared\_NewspaperGovtPageOption.cshtml" />
     <Content Include="Views\Shared\_NewspaperColorOptionGovt.cshtml" />
+    <Content Include="Views\Shared\GovtAd.cshtml" />
+    <Content Include="Views\Shared\GovtCommercialAd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
