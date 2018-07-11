@@ -389,7 +389,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Amader Shomoy",
                 AdLocation = "Amader Shomoy Govt. Advertisement",
                 TitleDescription = "Govt. Advertisement At Amader Shomoy",
-                PriceDescription = 533,
+                PriceDescription = 900,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -416,7 +416,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Amader Shomoy",
                 AdLocation = "Amader Shomoy- Govt. Commercial Advertisement",
                 TitleDescription = "Govt. Commercial Advertisement At Amader Shomoy",
-                PriceDescription = 799,
+                PriceDescription = 1350,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,

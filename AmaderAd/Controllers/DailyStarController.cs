@@ -45,13 +45,12 @@ namespace AmaderAd.Controllers
             Newspaper model = new Newspaper
             {
                 NewspaperName = "Daily Star",
-                AdLocation = "Daily Star- Front Page",
-
+                AdLocation = "Daily Star- Color Advertisement Front Page",
                 //others day
-                PriceDescription = 13500, //color
+                PriceDescription = 18000, //color
                 PriceDescriptionBlack = 0, //black & white
                 //Friday
-                PriceDescriptionFriday = 14500, //color
+                PriceDescriptionFriday = 19000, //color
                 PriceDescriptionBlackFriday = 0, //black & white
 
                 // column inch restrictions
@@ -74,10 +73,10 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star- Back Page",
 
                 //others day
-                PriceDescription = 10500, //color
+                PriceDescription = 14000, //color
                 PriceDescriptionBlack = 0, //black & white
                 //Friday
-                PriceDescriptionFriday = 11500, //color
+                PriceDescriptionFriday = 15000, //color
                 PriceDescriptionBlackFriday = 0, //black & white
 
                 // column inch restrictions
@@ -100,10 +99,10 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star Page Three",
 
                 //others day
-                PriceDescription = 7500, //color
+                PriceDescription = 10000, //color
                 PriceDescriptionBlack = 0, //black & white
                 //Friday
-                PriceDescriptionFriday = 8500, //color
+                PriceDescriptionFriday = 11000, //color
                 PriceDescriptionBlackFriday = 0, //black & white
 
                 // column inch restrictions
@@ -124,11 +123,11 @@ namespace AmaderAd.Controllers
             {
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star Page Five",
-                PriceDescription = 6000,
-                PriceDescriptionBlack = 4500,
+                PriceDescription = 8000,
+                PriceDescriptionBlack = 6500,
 
-                PriceDescriptionFriday = 7000,
-                PriceDescriptionBlackFriday = 5500,
+                PriceDescriptionFriday = 9000,
+                PriceDescriptionBlackFriday = 7500,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -153,11 +152,11 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star Page Seven",
 
                 //others day
-                PriceDescription = 4800, //color
-                PriceDescriptionBlack = 3600, //black & white
+                PriceDescription = 6000, //color
+                PriceDescriptionBlack = 4800, //black & white
                 //Friday
-                PriceDescriptionFriday = 5300, //color
-                PriceDescriptionBlackFriday = 4100, //black & white
+                PriceDescriptionFriday = 6500, //color
+                PriceDescriptionBlackFriday = 5300, //black & white
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -179,10 +178,10 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Business Page (Front Page Color)",
 
                 //others day
-                PriceDescription = 6000, //color
+                PriceDescription = 8000, //color
                 PriceDescriptionBlack = 0, //black & white
                 //Friday
-                PriceDescriptionFriday = 7000, //color
+                PriceDescriptionFriday = 9000, //color
                 PriceDescriptionBlackFriday = 0, //black & white
 
                 // column inch restrictions
@@ -205,10 +204,10 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Business Page (Back Page Color)",
 
                 //others day
-                PriceDescription = 4500, //color
+                PriceDescription = 6000, //color
                 PriceDescriptionBlack = 0, //black & white
                 //Friday
-                PriceDescriptionFriday = 5500, //color
+                PriceDescriptionFriday = 7000, //color
                 PriceDescriptionBlackFriday = 0, //black & white
 
                 // column inch restrictions
@@ -231,11 +230,11 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Business Page (Inner Page)",
 
                 //others day
-                PriceDescription = 4000, //color
-                PriceDescriptionBlack = 3000, //black & white
+                PriceDescription = 5500, //color
+                PriceDescriptionBlack = 4500, //black & white
                 //Friday
-                PriceDescriptionFriday = 4500, //color
-                PriceDescriptionBlackFriday = 3500, //black & white
+                PriceDescriptionFriday = 6000, //color
+                PriceDescriptionBlackFriday = 5000, //black & white
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -257,11 +256,36 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Other Inside Pages",
 
                 //others day
-                PriceDescription = 4200, //color
-                PriceDescriptionBlack = 3200, //black & white
+                PriceDescription = 5500, //color
+                PriceDescriptionBlack = 4500, //black & white
                 //Friday
-                PriceDescriptionFriday = 4700, //color
-                PriceDescriptionBlackFriday = 3600, //black & white
+                PriceDescriptionFriday = 6000, //color
+                PriceDescriptionBlackFriday = 5000, //black & white
+
+                // column inch restrictions
+                MinTotalColumnInch = 0,
+                MaxTotalColumnInch = 0,
+                MinMaxRestrictiion = false,
+
+                IsColor = true,
+                IsColorOption = true,
+            };
+            return View(model);
+        }
+        public ActionResult AcademicNotice_Display()
+        {
+            // black-white / color
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Daily Star",
+                AdLocation = "Daily Star -Academic Notice",
+
+                //others day
+                PriceDescription = 4500, //color
+                PriceDescriptionBlack = 3500, //black & white
+                //Friday
+                PriceDescriptionFriday = 5000, //color
+                PriceDescriptionBlackFriday = 4000, //black & white
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -274,6 +298,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 
+
         public ActionResult CareerNotice_Display()
         {
             // black-white / color
@@ -283,11 +308,11 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Career Opportunity/ Job Search/ Notice (Tender, Legal, Announcement, Affidavit)",
 
                 //others day
-                PriceDescription = 3300, //color
-                PriceDescriptionBlack = 2400, //black & white
+                PriceDescription = 4500, //color
+                PriceDescriptionBlack = 3500, //black & white
                 //Friday
-                PriceDescriptionFriday = 3800, //color
-                PriceDescriptionBlackFriday = 2800, //black & white
+                PriceDescriptionFriday = 5000, //color
+                PriceDescriptionBlackFriday = 4000, //black & white
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -309,13 +334,13 @@ namespace AmaderAd.Controllers
                 AdLocation = "Daily Star -Birthday/ To-Let/ Purchase/ Sale/ Tution/ Lost/ Theatre",
 
                 //others day
-                PriceDescriptionLow = 1000,
-                PriceDescription = 3000, //color
-                PriceDescriptionBlack = 2000, //black & white
+                PriceDescriptionLow = 1500,
+                PriceDescription = 5500, //color
+                PriceDescriptionBlack = 4500, //black & white
                 //Friday
-                PriceDescriptionLowFriday = 1200,
-                PriceDescriptionFriday = 3500, //color
-                PriceDescriptionBlackFriday = 2500, //black & white
+                PriceDescriptionLowFriday = 1700,
+                PriceDescriptionFriday = 6000, //color
+                PriceDescriptionBlackFriday = 5000, //black & white
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -329,7 +354,7 @@ namespace AmaderAd.Controllers
         }
         #endregion
 
-        #region Govt. Ad
+        #region side panel
         public ActionResult FrontPage_SidePanel()
         {
             Newspaper model = new Newspaper
@@ -339,7 +364,7 @@ namespace AmaderAd.Controllers
 
                 //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
                 FirstWordLimitBase = 0,
-                PriceDescription = 15000,
+                PriceDescription = 20000,
                 ExtraWordPrice = 0,
                 WordLimit = 0,
                 ColumnSizeFloat = "1.50",
@@ -357,7 +382,7 @@ namespace AmaderAd.Controllers
 
                 //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
                 FirstWordLimitBase = 0,
-                PriceDescription = 15000,
+                PriceDescription = 20000,
                 ExtraWordPrice = 0,
                 WordLimit = 0,
                 ColumnSizeFloat = "1.50",
@@ -375,7 +400,7 @@ namespace AmaderAd.Controllers
 
                 //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
                 FirstWordLimitBase = 0,
-                PriceDescription = 10000,
+                PriceDescription = 15000,
                 ExtraWordPrice = 0,
                 WordLimit = 0,
                 ColumnSizeFloat = "1.50",
@@ -393,7 +418,7 @@ namespace AmaderAd.Controllers
 
                 //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
                 FirstWordLimitBase = 0,
-                PriceDescription = 5000,
+                PriceDescription = 10000,
                 ExtraWordPrice = 0,
                 WordLimit = 0,
                 ColumnSizeFloat = "1.50",
@@ -411,7 +436,7 @@ namespace AmaderAd.Controllers
 
                 //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
                 FirstWordLimitBase = 0,
-                PriceDescription = 1000,
+                PriceDescription = 5000,
                 ExtraWordPrice = 0,
                 WordLimit = 0,
                 ColumnSizeFloat = "-",
@@ -431,7 +456,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Front Page (Style)",
 
-                PriceDescription = 6500,
+                PriceDescription = 8000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -451,7 +476,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Front Inner (Style)",
 
-                PriceDescription = 4500,
+                PriceDescription = 6000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -471,7 +496,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Back Page (Style)",
 
-                PriceDescription = 5500,
+                PriceDescription = 7000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -491,7 +516,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Back Inner (Style)",
 
-                PriceDescription = 4500,
+                PriceDescription = 5500,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -511,7 +536,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Third Page (Style)",
 
-                PriceDescription = 3500,
+                PriceDescription = 4500,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -531,7 +556,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Inner Page (Style)",
 
-                PriceDescription = 2500,
+                PriceDescription = 3000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -658,7 +683,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Front Page (Showbiz)",
 
-                PriceDescription = 5000,
+                PriceDescription = 6000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -678,7 +703,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Front Inner (Showbiz)",
 
-                PriceDescription = 3000,
+                PriceDescription = 4000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -698,7 +723,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Back Page (Showbiz)",
 
-                PriceDescription = 4000,
+                PriceDescription = 5000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -718,7 +743,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Back Inner (Showbiz)",
 
-                PriceDescription = 3000,
+                PriceDescription = 4000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,
@@ -739,7 +764,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Star",
                 AdLocation = "Daily Star -Inner Page (Showbiz)",
 
-                PriceDescription = 2000,
+                PriceDescription = 3000,
 
                 // column inch restrictions
                 MinTotalColumnInch = 1,

@@ -198,7 +198,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Daily Sun",
                 AdLocation = "Daily Sun Govt. Advertisement",
                 TitleDescription = "Govt. Advertisement At Daily Sun",
-                PriceDescription = 533,
+                PriceDescription = 533, 
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,

@@ -953,7 +953,7 @@ namespace AmaderAd.Controllers
                 TitleDescription = "Govt. Advertisement At New Age",
                 PriceDescription = 533,
 
-                // column inch restrictions
+                // column inch restrictions 
                 MinTotalColumnInch = 0,
                 MaxTotalColumnInch = 0,
                 MinMaxRestrictiion = false,

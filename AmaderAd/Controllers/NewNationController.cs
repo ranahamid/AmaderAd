@@ -146,7 +146,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "New Nation",
                 AdLocation = "New Nation Govt. Advertisement",
                 TitleDescription = "Govt. Advertisement At New Nation",
-                PriceDescription = 533,
+                PriceDescription = 533, 
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,

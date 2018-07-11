@@ -1,0 +1,152 @@
+﻿@model AmaderAd.Models.Newspaper
+
+@{
+    ViewBag.Title = "ClassifiedAdvertisement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Publish  Academic Notice in Daily Star</h2>
+<p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
+
+@using (Html.BeginForm("Create", "Newspapers", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "on", oninput = "myAmountLimit1()" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Partial("_NewspaperHeader", Model)
+
+        @Html.Partial("_NewspaperBody", Model)
+
+        @{
+            if (Model.IsColorOption == true)
+            {
+                @Html.Partial("_NewspaperColorOption", Model)
+            }
+        }
+
+        @Html.Partial("_NewspaperTotalCostWithoutVat", Model)
+
+        @Html.Partial("_NewspaperComment")
+
+        @Html.Partial("_NewspaperFileUploadCreate")
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+            </div>
+        </div>
+    </div>
+}
+
+@Html.Partial("_NewspaperSampleAd")
+
+
+
+<script>
+    var hour = new Date().getUTCHours() + 6;
+    $(".datetime").datepicker({
+        startDate: hour >= 18 ? '+2d' : '+1d',
+        //daysOfWeekDisabled: "0,1,2,3,5,6",
+        daysOfWeekHighlighted: "5",
+        autoclose: true
+    }).on('changeDate', dateChanged);
+
+    function dateChanged(event) {
+        var date = event.date;
+        CalcPrice(date);
+    }
+
+
+    function myAmountLimit1() {
+        var date = $(".datetime").datepicker("getDate");
+        CalcPrice(date);
+    }
+
+    function CalcPrice(date) {
+        var daysInWeek;
+        if (date != null) {
+            daysInWeek = date.getDay();
+        } else {
+            daysInWeek = -1;
+        }
+
+        var isColor = $('input[name=IsColor]:checked').val();
+
+        //black & White
+        var priceDescriptionBlackFriday = @Html.Raw(Model.PriceDescriptionBlackFriday); // friday
+        var priceDescriptionBlack = @Html.Raw(Model.PriceDescriptionBlack);// without friday
+
+        //color
+        var priceDescriptionFriday = @Html.Raw(Model.PriceDescriptionFriday); // friday
+        var priceDescription = @Html.Raw(Model.PriceDescription); // without friday
+
+        if (isColor === "False") { //black white
+            if (daysInWeek === 5) { //black white+ friday
+                $("#PriceDescription").html(priceDescriptionBlackFriday);
+                $("#PriceDescription").val(priceDescriptionBlackFriday);
+                if ("@Model.IsColorOption" === "True") {
+                    $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday + ", and black/white advertisement is: " + priceDescriptionBlackFriday);
+                } else {
+                    $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday);
+                }
+
+            } else { //black white+ other day
+                $("#columninchwarning").empty();
+                $("#PriceDescription").html(priceDescriptionBlack);
+                $("#PriceDescription").val(priceDescriptionBlack);
+
+            }
+
+        }
+        else { //color
+            if (daysInWeek === 5) { //color+ friday
+                debugger;
+                $("#PriceDescription").html(priceDescriptionFriday);
+                $("#PriceDescription").val(priceDescriptionFriday);
+                if ("@Model.IsColorOption" === "True") {
+                    $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday + ", and black/white advertisement is: " + priceDescriptionBlackFriday);
+                } else {
+                    $("#columninchwarning").html("For Friday, The price for color advertisement is : " + priceDescriptionFriday);
+                }
+            } else { //color+ other day
+                $("#columninchwarning").empty();
+                $("#PriceDescription").html(priceDescription);
+                $("#PriceDescription").val(priceDescription);
+            }
+        }
+        var columnSize = $("#ColumnSize").val();
+        var inchSize = $("#Inch").val();
+        var totalColumnInch = columnSize * inchSize;
+
+        var minColumn=@Html.Raw(Model.MinTotalColumnInch);
+        var maxColumn=@Html.Raw(Model.MaxTotalColumnInch);
+        var maxMinRestriction = "@Html.Raw(Model.MinMaxRestrictiion)";
+
+
+        if (maxMinRestriction === "True" && (totalColumnInch < minColumn || totalColumnInch > maxColumn) ){
+            $("#columninchwarning").html("এই পেজে কমপক্ষে " + minColumn + " কলাম ইঞ্চি ও সর্বোচ্চ " + maxColumn + " কলাম ইঞ্চির বিজ্ঞাপন দিতে হবে  <br>You can publish atleast " + minColumn + " column inch and maximum  " + maxColumn + "  column inch here ");
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
+            $("#submit-btn").attr("disabled", "disabled");
+        }
+        else {
+            priceDescription = $("#PriceDescription").val();
+            $("#TotalPrice").html(0);
+            $("#TotalPrice").val(0);
+
+            var totalPrice = totalColumnInch * priceDescription;
+
+
+            $("#TotalColumnInch").html(totalColumnInch);
+            $("#TotalColumnInch").val(totalColumnInch);
+
+            $("#TotalPrice").html(totalPrice);
+            $("#TotalPrice").val(totalPrice);
+        }
+
+    }
+
+
+</script>

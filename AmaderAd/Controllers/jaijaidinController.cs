@@ -298,7 +298,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Jaijaidin",
                 AdLocation = "Jaijaidin Govt. Advertisement",
                 TitleDescription = "Govt. Advertisement At Jaijaidin",
-                PriceDescription = 533,
+                PriceDescription = 450,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -325,7 +325,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Jaijaidin",
                 AdLocation = "Jaijaidin- Govt. Commercial Advertisement",
                 TitleDescription = "Govt. Commercial Advertisement At Jaijaidin",
-                PriceDescription = 799,
+                PriceDescription = 675,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,

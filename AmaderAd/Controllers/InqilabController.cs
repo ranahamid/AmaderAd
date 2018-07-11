@@ -345,7 +345,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab Govt. Advertisement",
                 TitleDescription = "Govt. Advertisement At Inqilab",
-                PriceDescription = 533,
+                PriceDescription = 853,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
@@ -372,7 +372,7 @@ namespace AmaderAd.Controllers
                 NewspaperName = "Inqilab",
                 AdLocation = "Inqilab- Govt. Commercial Advertisement",
                 TitleDescription = "Govt. Commercial Advertisement At Inqilab",
-                PriceDescription = 799,
+                PriceDescription = 1280,
 
                 // column inch restrictions
                 MinTotalColumnInch = 0,
