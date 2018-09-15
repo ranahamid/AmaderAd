@@ -47,76 +47,7 @@ namespace AmaderAd.Controllers
 
         #endregion
 
-        #region SpecialDisplay
 
-        [SeoMetaKeywords("amader ad manab zamin special display advertisement, manab zamin special display advertisement, manab zamin special display page advertisement, manab zamin one number page color advertisement, publish advertisement at manab zamin last page, advertisement cost at manab zamin special display advertisement, manab zamin special display advertisement rate")]
-        [SeoTitle("Publish special display advertisement in manab zamin through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your special display advertisement in manab zamin")]
-        public ActionResult SpecialDisplayAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Manabzamin",
-                AdLocation = "Manabzamin special display advertisement",
-                PriceDescription = 4000
-            };
-            return View(model);
-        }
-
-        #endregion
-
-        #region GeneralDisplay
-
-        [SeoMetaKeywords("amader ad manab zamin general display advertisement, manab zamin general display advertisement, publish general display advertisement in manab zamin, general display advertisement cost at manab zamin, manab zamin general display  advertisement rate, general display advertisement at manab zamin")]
-        [SeoTitle("Publish general display advertisement in manab zamin through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your general display advertisement in manab zamin")]
-        public ActionResult GeneralDisplayAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Manabzamin",
-                AdLocation = "Manabzamin general display advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
-
-        #endregion
-
-        #region Film
-
-        [SeoMetaKeywords("amader ad manab zamin general display advertisement, manab zamin general display advertisement, publish general display advertisement in manab zamin, general display advertisement cost at manab zamin, manab zamin general display  advertisement rate, general display advertisement at manab zamin")]
-        [SeoTitle("Publish general display advertisement in manab zamin through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your general display advertisement in manab zamin")]
-        public ActionResult Film_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Manabzamin",
-                AdLocation = "Manabzamin general display advertisement",
-                PriceDescription = 1500
-            };
-            return View(model);
-        }
-
-        #endregion
-
-        #region  EducativeReligiousAffair
-        [SeoMetaKeywords("amader ad manab zamin educative religious affair advertisement, manab zamin educative religious affair advertisement, publish educative religious affair advertisement in manab zamin, educative religious affair advertisement cost at manab zamin, manab zamin educative religious affair  advertisement rate, educative religious affair advertisement at manab zamin")]
-        [SeoTitle("Publish educative religious affair advertisement in manab zamin through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your educative religious affair advertisement in manab zamin")]
-        public ActionResult EduReliAffai_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Manabzamin",
-                AdLocation = "Manabzamin educative religious affair advertisement",
-                PriceDescription = 2500
-            };
-            return View(model);
-        }
-        #endregion
-        
         #region main page
 
         [SeoMetaKeywords("amader ad manab zamin first page advertisement, manab zamin first page color advertisement, manab zamin 1st page advertisement,  manab zamin 1st page color advbertisement, manab zamin 1 number page advertisement, manab zamin one number page color advertisement, publish advertisement at manab zamin first page, advertisement cost at manab zamin first page, manab zamin first page advertisement rate, color advertisement at manab zamin first page")]
@@ -145,7 +76,7 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-       
+
         [SeoMetaKeywords("amader ad manab zamin third page advertisement, manab zamin third page advertisement, manab zamin 3rd page advertisement,  manab zamin 3rd page color advbertisement, manab zamin 3 number page advertisement, manab zamin three number page color advertisement, publish advertisement at manab zamin third page, advertisement cost at manab zamin third page, manab zamin third page advertisement rate, color advertisement at manab zamin third page")]
         [SeoTitle("Publish advertisement in manab zamin third page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your advertisement in manab zamin third page")]
@@ -228,11 +159,82 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
-    
+
 
 
         #endregion
 
+
+        #region SpecialDisplay
+
+        [SeoMetaKeywords("amader ad manab zamin special display advertisement, manab zamin special display advertisement, manab zamin special display page advertisement, manab zamin one number page color advertisement, publish advertisement at manab zamin last page, advertisement cost at manab zamin special display advertisement, manab zamin special display advertisement rate")]
+        [SeoTitle("Publish special display advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your special display advertisement in manab zamin")]
+        public ActionResult SpecialDisplayAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Manabzamin",
+                AdLocation = "Manabzamin special display advertisement",
+                PriceDescription = 4000
+            };
+            return View(model);
+        }
+
+        #endregion
+
+        #region GeneralDisplay
+
+        [SeoMetaKeywords("amader ad manab zamin general display advertisement, manab zamin general display advertisement, publish general display advertisement in manab zamin, general display advertisement cost at manab zamin, manab zamin general display  advertisement rate, general display advertisement at manab zamin")]
+        [SeoTitle("Publish general display advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your general display advertisement in manab zamin")]
+        public ActionResult GeneralDisplayAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Manabzamin",
+                AdLocation = "Manabzamin general display advertisement",
+                PriceDescription = 3000
+            };
+            return View(model);
+        }
+
+        #endregion
+
+        #region Film
+
+        [SeoMetaKeywords("amader ad manab zamin general display advertisement, manab zamin general display advertisement, publish general display advertisement in manab zamin, general display advertisement cost at manab zamin, manab zamin general display  advertisement rate, general display advertisement at manab zamin")]
+        [SeoTitle("Publish general display advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your general display advertisement in manab zamin")]
+        public ActionResult Film_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Manabzamin",
+                AdLocation = "Manabzamin general display advertisement",
+                PriceDescription = 1500
+            };
+            return View(model);
+        }
+
+        #endregion
+
+        #region  EducativeReligiousAffair
+        [SeoMetaKeywords("amader ad manab zamin educative religious affair advertisement, manab zamin educative religious affair advertisement, publish educative religious affair advertisement in manab zamin, educative religious affair advertisement cost at manab zamin, manab zamin educative religious affair  advertisement rate, educative religious affair advertisement at manab zamin")]
+        [SeoTitle("Publish educative religious affair advertisement in manab zamin through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your educative religious affair advertisement in manab zamin")]
+        public ActionResult EduReliAffai_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Manabzamin",
+                AdLocation = "Manabzamin educative religious affair advertisement",
+                PriceDescription = 2500
+            };
+            return View(model);
+        }
+        #endregion
+        
 
         #region spot advertisement
 
@@ -404,6 +406,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {

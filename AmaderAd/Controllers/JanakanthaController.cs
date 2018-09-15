@@ -44,7 +44,7 @@ namespace AmaderAd.Controllers
         #endregion
 
         #region Main Page
-        #endregion
+       
 
         [SeoBaseTitle("Publish color advertisement in janakantha first page through amader ad")]
         [SeoMetaKeywords("amader ad janakantha first page advertisement, janakantha first page color advertisement, janakantha 1st page advertisement,  janakantha 1st page color advbertisement, janakantha 1 number page advertisement, janakantha one number page color advertisement, publish advertisement at janakantha first page, advertisement cost at janakantha first page, janakantha first page advertisement rate, color advertisement at janakantha first page,")]
@@ -221,6 +221,8 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+        #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {

@@ -1,160 +1,395 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using AmaderAd.Models;
-
-namespace AmaderAd.Controllers
-{
-    public class InqilabController : BaseController
-    {
-        // GET: Inqilab
-        public ActionResult Index()
-        {
-            return View();
-        }
-        //classified advertisement
-        public ActionResult ClassifiedAdvertisement()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "InqilabClassifiedAdvertisement",
-                AllAdCategory = GetAllAdCategory()
-            };
-            return View(model);
-        }
-        public ActionResult InqilabFirstPage_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab First Page Color",
-                PriceDescription = 14000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabGeneralDisplayAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab General Display Advertisement",
-                PriceDescription = 3000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabSecondpageblackandwhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab Secondpage black and white Advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabthirdpagecolorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab third page color Advertisement",
-                PriceDescription = 9000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabthirdpageblackandwhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab third page black and white advertisement",
-                PriceDescription = 7000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabfifthpagecolorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab fifth page color advertisement",
-                PriceDescription = 7500
-            };
-            return View(model);
-        }
-        public ActionResult InqilabfifthpageblackandwhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab fifth page black and white advertisement",
-                PriceDescription = 5000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabsportspagecolorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab sports page color advertisement",
-                PriceDescription = 5500
-            };
-            return View(model);
-        }
-        public ActionResult Inqilabsportspageblackandwhiteadvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab sports page black and white Advertisement",
-                PriceDescription = 4000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabpagebeforlastpageblackandwhiteAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab page befor last page black and white advertisement",
-                PriceDescription = 4500
-            };
-            return View(model);
-        }
-        public ActionResult InqilablastpagecolorAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab last page color advertisement",
-                PriceDescription = 12000
-            };
-            return View(model);
-        }
-        public ActionResult InqilabfirstpagespotAdvertisem_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "Inqilab first page spot advertisement",
-                PriceDescription = 20000
-            };
-            return View(model);
-        }
-        public ActionResult jankanthalastpagespotAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Inqilab",
-                AdLocation = "jankantha last page spot advertisement",
-                PriceDescription = 15000
-            };
-            return View(model);
-        }
-    }
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h1>Inqilab</h1>
 
+<div class="row" id="sortable_portlets">
+    <div class="col-md-12 column sortable">
+        <div class="portlet portlet-sortable  bg-inverse">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-puzzle font-red-flamingo"></i>
+                    <span class="caption-subject bold font-red-flamingo uppercase">শ্রেণিভুক্ত বিজ্ঞাপন</span>
+                    <span class="caption-helper">Classified Advertisement</span>
+                </div>
+                <div class="tools">
+                    <a href="" class="collapse"> </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                    <a href="" class="reload"> </a>
+                    <a href="" class="fullscreen"> </a>
+                    <a href="" class="remove"> </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-chambray">
+                                <div class="mt-head-desc">শ্রেণিভুক্ত বিজ্ঞাপন</div>
+                                <span class="mt-head-date">Classified Advertisement</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "ClassifiedAdvertisement", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- empty sortable porlet required for each columns! -->
+        <div class="portlet portlet-sortable-empty"> </div>
+    </div>
+</div>
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">Main Page Advertisement</span>
+                <span class="caption-helper">Main Paper</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>নির্দিষ্ট পৃষ্ঠা <small>Specific Page</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">প্রথম  পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date">1st page (Color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "FirstPageColorAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+                                <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন) </div>
+                                <span class="mt-head-date">Last Page (Color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "LastPageColorAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">General Display Ad</div>
+                                <span class="mt-head-date">Genera lDisplay Ad</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "GeneralDisplayAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc"> 3  পৃষ্ঠা </div>
+                                <span class="mt-head-date">3rd Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "ThirdPageColorAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> 2 পৃষ্ঠা</div>
+                                <span class="mt-head-date">2 Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "SecondPageBlackWhiteAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Inner Page</div>
+                                <span class="mt-head-date">Inner Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "InnerPageColorAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Inner Page</div>
+                                <span class="mt-head-date">Inner Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "SportsPageColorAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Inner Page</div>
+                                <span class="mt-head-date">Inner Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "PageBeforeLastPageBlackWhiteAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Inner Page</div>
+                                <span class="mt-head-date">Inner Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "EntertainmentPageColorAdvertisement_MainPage", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">special place</span>
+                <span class="caption-helper">special Place</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>নির্দিষ্ট পৃষ্ঠা <small>Specific Page</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">Financial Court</div>
+                                <span class="mt-head-date">Financial Court</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "FinancialCourt", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+                                <div class="mt-head-desc"> EduReligious</div>
+                                <span class="mt-head-date">EduReligious</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "EduReligious", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">Magazine</span>
+                <span class="caption-helper">Magazine</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>Bishesh Koropotro <small>Bishesh Koropotro</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">Financial Court</div>
+                                <span class="mt-head-date">Financial Court</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "FeaturePaper", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p> Spot Advertisement <small> Spot Advertisement</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">First Page</div>
+                                <span class="mt-head-date">First Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "FirstPage_SpotAdvertisement", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">Last Page</div>
+                                <span class="mt-head-date">Last Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "LastPage_SpotAdvertisement", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">Sports Page</div>
+                                <span class="mt-head-date">Sports Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "SportsPage_SpotAdvertisement", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">Govt.  বিজ্ঞাপন </span>
+                <span class="caption-helper">(Govt. Advertisement)</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>Govt. Ad<small>Govt. Ad</small></p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Gov tAd</div>
+                            <span class="mt-head-date">Govt Ad</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "GovtAd", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Govt CommercialAd</div>
+                            <span class="mt-head-date">Govt CommercialAd</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "GovtCommercialAd", "Inqilab", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/Content/metronic/portlet-draggable.js"></script>

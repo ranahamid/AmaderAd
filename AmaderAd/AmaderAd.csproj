@@ -3365,8 +3365,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\KalerKantho\" />
-    <Folder Include="Views\ProthomAlo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AmaderAd.dll.config" />
@@ -3780,6 +3778,10 @@
     <Content Include="Views\Shared\GovtAd.cshtml" />
     <Content Include="Views\Shared\GovtCommercialAd.cshtml" />
     <Content Include="Views\DailyStar\AcademicNotice_Display.cshtml" />
+    <Content Include="Views\KalerKantho\Index.cshtml" />
+    <Content Include="Views\Manabzamin\Index.cshtml" />
+    <Content Include="Views\NayaDiganta\Index.cshtml" />
+    <Content Include="Views\ProthomAlo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
