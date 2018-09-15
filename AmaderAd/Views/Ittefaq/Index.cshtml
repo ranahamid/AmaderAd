@@ -1,9 +1,8 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Ittefaq</h2>
+<h1>Ittefaq</h1>
 
 <div class="row" id="sortable_portlets">
     <div class="col-md-12 column sortable">
@@ -323,73 +322,76 @@
         <p>ঠাট্টা (ম্যাগাজিন) প্রকাশিত হয় রবিবার  <small>Thatta (Magazine) Publish in Sunday</small></p>
     </div>
     <div class="row">
-        <div class="col-md-2 col-md-offset-1">
+        <div class="col-md-4">
             <div class="mt-widget-3">
                 <div class="mt-head bg-yellow-gold">
 
                     <div class="mt-head-desc">শেষ প্রচ্ছদ </div>
                     <span class="mt-head-date">Last Cover Page</span>
                     <div class="mt-head-button">
-                          @Html.ActionLink("Click here to place your Ad", "LastCoverPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                        @Html.ActionLink("Click here to place your Ad", "LastCoverPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
             <div class="mt-widget-3">
                 <div class="mt-head bg-yellow-gold">
 
                     <div class="mt-head-desc">দ্বিতীয় প্রচ্ছদ </div>
                     <span class="mt-head-date">Second Cover Page</span>
                     <div class="mt-head-button">
-                          @Html.ActionLink("Click here to place your Ad", "SecondCoverPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                        @Html.ActionLink("Click here to place your Ad", "SecondCoverPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
             <div class="mt-widget-3">
                 <div class="mt-head bg-yellow-gold">
 
                     <div class="mt-head-desc">তৃতীয় প্রচ্ছদ</div>
                     <span class="mt-head-date">Third Cover Page</span>
                     <div class="mt-head-button">
-                          @Html.ActionLink("Click here to place your Ad", "ThirdCoverPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                        @Html.ActionLink("Click here to place your Ad", "ThirdCoverPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="col-md-2">
+      
+    </div>
+    <div class="row">
+        
+        <div class="col-md-6">
             <div class="mt-widget-3">
                 <div class="mt-head bg-yellow-gold">
 
                     <div class="mt-head-desc">ভিতরের পৃষ্ঠা </div>
                     <span class="mt-head-date">Inner Page</span>
                     <div class="mt-head-button">
-                          @Html.ActionLink("Click here to place your Ad", "InnerPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                        @Html.ActionLink("Click here to place your Ad", "InnerPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-6">
             <div class="mt-widget-3">
                 <div class="mt-head bg-yellow-gold">
 
                     <div class="mt-head-desc">ভিতরের দুই পৃষ্ঠা</div>
                     <span class="mt-head-date">Inner Two Page</span>
                     <div class="mt-head-button">
-                          @Html.ActionLink("Click here to place your Ad", "InnerTwoPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                        @Html.ActionLink("Click here to place your Ad", "InnerTwoPageColorAdvertisement_Thatta", "Ittefaq", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
 </div>
 <div class="portlet-body">
     <div class="box-heading-green box-sections box-block">

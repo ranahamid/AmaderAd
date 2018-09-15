@@ -1,0 +1,689 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Daily Star</h1>
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">Display Advertisement</span>
+                <span class="caption-helper">Main Paper</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="portlet-body">
+                <div class="box-heading-green box-sections box-block">
+                    <p>নির্দিষ্ট পৃষ্ঠা <small>Specific Page</small></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">প্রথম  পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date">1st page (Color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad","Frontpage_Display","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+                                <div class="mt-head-desc"> শেষ পৃষ্ঠা (রঙিন) </div>
+                                <span class="mt-head-date">Last Page (Color)</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "Backpage_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">তৃতীয় পৃষ্ঠা (রঙিন)</div>
+                                <span class="mt-head-date">3rd Page (Color)  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "PageThree_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc"> পঞ্চম  পৃষ্ঠা </div>
+                                <span class="mt-head-date">5th Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "PageFive_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> 7 পৃষ্ঠা</div>
+                                <span class="mt-head-date">7 Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "PageSeven_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Front Business Page</div>
+                                <span class="mt-head-date">Front Business Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "FrontBusinessPage_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Inner Business Page</div>
+                                <span class="mt-head-date">Inner Business Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "InnerBusinessPage_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc">Back Business Page</div>
+                                <span class="mt-head-date">Back Business Page</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "BackBusinessPage_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">OtherInside</div>
+                                <span class="mt-head-date">OtherInside</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "OtherInsidePages_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">Academic Notice</div>
+                                <span class="mt-head-date">Academic Notice</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "AcademicNotice_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">Career Notice</div>
+                                <span class="mt-head-date">Career Notice</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "CareerNotice_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">Birthday/ To-let</div>
+                                <span class="mt-head-date">Birthday/ To-let</span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "BirthdayTolet_Display", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- empty sortable porlet required for each columns! -->
+    <div class="portlet portlet-sortable-empty"> </div>
+</div>
+
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">side প্যানেল বিজ্ঞাপন </span>
+                <span class="caption-helper">(Side Panel Advertisement)</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>প্যানেল বিজ্ঞাপন <small>Panel Advertisement</small></p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Front Page</div>
+                            <span class="mt-head-date">Front Page  </span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","FrontPage_SidePanel","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Back পাতা</div>
+                            <span class="mt-head-date">Back Page  </span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","BackPage_SidePanel","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Business পাতা</div>
+                            <span class="mt-head-date">Business Page  </span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","BusinessPage_Panel","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Sports Page</div>
+                            <span class="mt-head-date">Sports Page  </span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","SportsPage_SidePanel","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Box Number</div>
+                            <span class="mt-head-date">Box Number</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","BoxNumber_SidePanel","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- empty sortable porlet required for each columns! -->
+    <div class="portlet portlet-sortable-empty"> </div>
+</div>
+
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="icon-pin font-yellow-lemon"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">নিয়মিত ক্রোড়পত্র</span>
+                <span class="caption-helper">Feature Paper</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>Style <small>Style (Magazine)</small></p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-yellow-gold">
+
+                            <div class="mt-head-desc">First প্রচ্ছদ </div>
+                            <span class="mt-head-date">First Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontPage_Style", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-yellow-gold">
+
+                            <div class="mt-head-desc">Front Inner প্রচ্ছদ </div>
+                            <span class="mt-head-date">Front Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontInner_Style", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-yellow-gold">
+
+                            <div class="mt-head-desc">BackPage_Style প্রচ্ছদ</div>
+                            <span class="mt-head-date">Back Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackPage_Style", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-yellow-gold">
+
+                            <div class="mt-head-desc">BackInner_Style পৃষ্ঠা </div>
+                            <span class="mt-head-date">Back Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "InnerPageColorAdvertisement_Thatta", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-yellow-gold">
+
+                            <div class="mt-head-desc">Third পৃষ্ঠা</div>
+                            <span class="mt-head-date">Third Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "ThirdPage_Style", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-yellow-gold">
+
+                            <div class="mt-head-desc">Inner পৃষ্ঠা</div>
+                            <span class="mt-head-date">Inner  Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "InnerPage_Style", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>Shout : প্রকাশিত হয়   <small>Shout (publish in )</small></p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc"> প্রথম  পৃষ্ঠা </div>
+                            <span class="mt-head-date">Front Page (Color)</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontPage_Shout", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">Front ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Front Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontInner_Shout", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc"> শেষ পৃষ্ঠা</div>
+                            <span class="mt-head-date">Last Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackPage_Shout", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">Back ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Back Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackInner_Shout", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "InnerPage_Shout", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>Showbiz: প্রকাশিত হয়  <small> Showbiz(publish in ) Weekly </small></p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc"> প্রথম  পৃষ্ঠা </div>
+                            <span class="mt-head-date">Front Page (Color)</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontPage_Showbiz", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">Front ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Front Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontInner_Showbiz", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc"> শেষ পৃষ্ঠা</div>
+                            <span class="mt-head-date">Last Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackPage_Showbiz", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">Back ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Back Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackInner_Showbiz", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "InnerPage_Showbiz", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>  StarWeekend : প্রকাশিত হয়  <small>StarWeekend(publish in  ) Weekly Tabloid </small></p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc"> প্রথম  পৃষ্ঠা </div>
+                            <span class="mt-head-date">Front Page (Color)</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontPage_StarWeekend", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">Front ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Front Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "FrontInner_StarWeekend", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc"> শেষ পৃষ্ঠা</div>
+                            <span class="mt-head-date">Last Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackPage_StarWeekend", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">Back ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Back Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "BackInner_StarWeekend", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-green-haze">
+
+                            <div class="mt-head-desc">ভিতরের পৃষ্ঠা</div>
+                            <span class="mt-head-date">Inner Page</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad", "InnerPage_StarWeekend", "DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="col-md-12 column sortable">
+    <div class="portlet portlet-sortable  bg-inverse">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift font-red-flamingo"></i>
+                <span class="caption-subject bold font-red-flamingo uppercase">Govt.  বিজ্ঞাপন </span>
+                <span class="caption-helper">(Govt. Advertisement)</span>
+            </div>
+            <div class="tools">
+                <a href="" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="" class="reload"> </a>
+                <a href="" class="fullscreen"> </a>
+                <a href="" class="remove"> </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="box-heading-green box-sections box-block">
+                <p>Govt. Ad<small>Govt. Ad</small></p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Gov tAd</div>
+                            <span class="mt-head-date">Govt Ad</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","GovtAd","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-widget-3">
+                        <div class="mt-head bg-purple">
+                            <div class="mt-head-desc">Govt CommercialAd</div>
+                            <span class="mt-head-date">Govt CommercialAd</span>
+                            <div class="mt-head-button">
+                                @Html.ActionLink("Click here to place your Ad","GovtCommercialAd","DailyStar", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+             
+            </div>
+      
+        </div>
+    </div>
+    <!-- empty sortable porlet required for each columns! -->
+    <div class="portlet portlet-sortable-empty"> </div>
+</div>
+
+
+
+<script src="~/Content/metronic/portlet-draggable.js"></script>

@@ -18,8 +18,12 @@
         <div class="container body-content" style="background-color:#fff">
             @Html.Partial("_TopMenu")
             @RenderBody()
+
+        </div>
+        <div class="container">
             @Html.Partial("_Footer")
         </div>
+        
         @Html.Partial("_LayoutFooter")
     </div>
     @RenderSection("scripts", required: false)
