@@ -42,6 +42,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region MainPage
         [SeoMetaKeywords("amader ad new nation first page advertisement, new nation first page color advertisement, new nation 1st page advertisement,  new nation 1st page color advbertisement, new nation 1 number page advertisement, new nation one number page color advertisement, publish advertisement at new nation first page, advertisement cost at new nation first page, new nation first page advertisement rate, color advertisement at new nation first page, new nation front page color advertisement")]
         [SeoTitle("Publish color advertisement in new nation  front page through amader ad")]
@@ -137,6 +138,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {

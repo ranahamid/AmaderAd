@@ -20,6 +20,7 @@ namespace AmaderAd.Controllers
         {
             return View();
         }
+
         #region classified advertisement
         [SeoMetaKeywords("amader ad news today classified advertisement,news today classified ad, news today classified advertisement,  publish classied advertisement at news today , classified advertisement cost at news today, news today classified advertisement rate, classified advertisement at news today, নিউজ টুডে  শ্রেণীভুক্ত বিজ্ঞাপন দিন,  rent at news today,  house rent at news today, publish rent advertisement at news today, news today rent advertisement, নিউজ টুডে বাড়ি ভাড়া বিজ্ঞাপন,  land slae advertisement at news today, news today land sale advertisement, news today land sale ad cost, নিউজ টুডে জমি বিক্রয়ের বিজ্ঞাপন দিন,  miscellaneous sales advertisement at news today, news today miscellaneous slaes advetisement,  miscellaneous sales cost at news today, publish miscellaneous advertisement at news today, miscellaneous at news today, নিউজ টুডে বিবিধ বিক্রয়ের বিজ্ঞাপন দিন, house sale advertisement at news today, news today house sales advertisement, house sales advertisement cost at news today, publish house sale advertisement at news today, house sale advertisement at news today, নিউজ টুডে বাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  shop sale advertisement at news today, news today shop sales advertisement, shop sales advertisement cost at news today, publish shop sale advertisement at news today, house shop advertisement at news today, নিউজ টুডে দোকান বিক্রয়ের বিজ্ঞাপন দিন,     car sale advertisement at news today, news today car sales advertisement, car sales advertisement cost at news today, publish car sale advertisement at news today, car sale advertisement at news today, নিউজ টুডে গাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  plot purchase advertisement at news today, news today plot purchase advertisement, plot purchase advertisement cost at news today, publish plot purchase advertisement at news today, plot purchase advertisement at news today, নিউজ টুডে প্লট ক্রয়ের  বিজ্ঞাপন দিন, wanted advertisement at news today, news today wanted advertisement, wanted advertisement cost at news today, publish wanted advertisement at news today, wanted advertisement at news today, tution wanted advertisement at news today, news today tution wante advertisement, tution wanted advertisement cost at news today, publish tution wanted advertisement at news today, tuiton wanted advertisement at news today, নিউজ টুডে  পড়াতে চাই   বিজ্ঞাপন দিন,  groom wanted advertisement at news today, news today groom wanted advertisement, groom wanted advertisement cost at news today, publish groom wanted advertisement at news today, groom wnated advertisement at news today, নিউজ টুডে  পাত্র চাই  বিজ্ঞাপন দিন,  bride wanted advertisement at news today, news today plot bride wanted advertisement, bride wanted  advertisement cost at news today, bride wanted purchase advertisement at news today, bride wanted  advertisement at news today, নিউজ টুডে পাত্রী চাই  বিজ্ঞাপন দিন")]
         [SeoTitle("Publish classified advertisement in news today through amader ad")]
@@ -45,6 +46,7 @@ namespace AmaderAd.Controllers
         }
 
         #endregion
+
         #region MainPag
         [SeoMetaKeywords("amader ad news today front page advertisement, news today front page advertisement, news today 1st page advertisement,  news today 1st page advbertisement, news today 1 number page advertisement, news today one number page color advertisement, publish advertisement at news today first page, advertisement cost at news today front page, news today front page advertisement rate, color advertisement at news today front page")]
         [SeoTitle("Publish advertisement in News Today front page through amader ad")]
@@ -198,6 +200,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {

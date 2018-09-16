@@ -42,6 +42,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region MainPage
         [SeoMetaKeywords("amader ad new age first page advertisement, new age first page advertisement, new age 1st page advertisement,  new age 1st page color advbertisement, new age 1 number page advertisement, new age one number page color advertisement, publish advertisement at new age first page, advertisement cost at new age first page, new age first page advertisement rate, color advertisement at new age first page, new age front page color advertisement")]
         [SeoTitle("Publish advertisement in New Age  front page through amader ad")]
@@ -252,6 +253,7 @@ namespace AmaderAd.Controllers
         }
 
         #endregion
+
         #region Panel
         [SeoMetaKeywords("amader ad new age front page panel advertisement, new age  front page panel advertisement, publish panel advertisement at new age front page,front page panel advertisement cost at new age, new age  front page panel advertisement rate, advertisement at new age front page side panel")]
         [SeoTitle("Publish front page panel advertisement in new age  through amader ad")]
@@ -360,9 +362,7 @@ namespace AmaderAd.Controllers
         }
 
 
-        #endregion
-
-
+        #endregion  
 
         #region Liner/ Band
         [SeoMetaKeywords("amader ad new age front page liner/band advertisement, new age front page liner/band advertisement, publish liner/band advertisement at new age front page, front page liner/band advertisement cost at new age, new age front page liner/band advertisement rate, advertisement at new age front page linear/band")]
@@ -942,6 +942,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {

@@ -5,7 +5,7 @@
     ViewBag.Title = "NewsToday";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>NewsToday</h2>
+<h2>News Today</h2>
 
 <div class="row" id="sortable_portlets">
     <div class="col-md-12 column sortable">
@@ -26,7 +26,7 @@
             </div>
             <div class="portlet-body">
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
+                    <div class="col-md-6 col-md-offset-3">
                         <div class="mt-widget-3">
                             <div class="mt-head bg-blue-chambray">
                                 <div class="mt-head-desc">Classified Advertisement</div>
@@ -68,206 +68,116 @@
                 <div class="box-heading-green box-sections box-block">
                     <p>Specific Page</p>
                 </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">Front Page (Color) </div>
+                                <span class="mt-head-date">Maximum 80 Column Inch </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "FrontPage_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-green-jungle">
+
+                                <div class="mt-head-desc">Back Page (Color)</div>
+                                <span class="mt-head-date">Maximum 80 Column Inch  </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "BackPage_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
+
+                                <div class="mt-head-desc"> Third Page (Color)</div>
+                                <span class="mt-head-date">Maximum 80 Column Inch </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "ThirdPage_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
                 <div class="row">
                     <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue">
 
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-green-jungle">
-
-                                    <div class="mt-head-desc">Front Page (Color) </div>
-                                    <span class="mt-head-date">Maximum 80 Column Inch </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "FrontPageColorAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
+                                <div class="mt-head-desc"> Inner Page (color)</div>
+                                <span class="mt-head-date"></span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "InnerPage_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-green-jungle">
 
-                                    <div class="mt-head-desc"> Front Page (Black and White)  </div>
-                                    <span class="mt-head-date">Maximum 80 Column Inch  </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "FrontPageBlackWhitAadvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-green-jungle">
-
-                                    <div class="mt-head-desc">Back Page (Color)</div>
-                                    <span class="mt-head-date">Maximum 80 Column Inch  </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "BackPageColorAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-green-jungle">
-
-                                    <div class="mt-head-desc">Back Page (Black and White)</div>
-                                    <span class="mt-head-date">Maximum 80 Column Inch   </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "BackPageBlackWhiteAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue">
 
-                                    <div class="mt-head-desc"> Third Page (Color)</div>
-                                    <span class="mt-head-date">Maximum 80 Column Inch </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "ThirdPageColorAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
+
+                                <div class="mt-head-desc">Different catagories advertyisements </div>
+                                <span class="mt-head-date"></span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "DifferentCat_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue">
 
-                                    <div class="mt-head-desc"> Third Page (Color)</div>
-                                    <span class="mt-head-date">Maximum 80 Column Inch</span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "ThirdPageBlacWhiteAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue">
-
-                                    <div class="mt-head-desc"> Inner Page (color)</div>
-                                    <span class="mt-head-date"></span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "InnerPageColorAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue">
-
-                                    <div class="mt-head-desc">Inner Page (Black and White) </div>
-                                    <span class="mt-head-date"></span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "InnerPageBlackWhiteAdvertisement_MainPage(", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue-steel">
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
 
-                                    <div class="mt-head-desc">Different catagories advertyisements </div>
-                                    <span class="mt-head-date"></span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "DifferentCategoriesPageAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
+                                <div class="mt-head-desc"> News today career opportunity vacancy black and white advertisement </div>
+                                <span class="mt-head-date"> </span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "Career_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                                 </div>
-
                             </div>
+
                         </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue-steel">
-
-                                    <div class="mt-head-desc"> News today career opportunity vacancy black and white advertisement </div>
-                                    <span class="mt-head-date"> </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "CareerOpportunityVacancyBlackWhiteAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-blue-steel">
-
-                                    <div class="mt-head-desc">News Today birthday tolet purchase sale tution qulkhani lost and found wanted scholarship coaching center reunion exibition academic feat fashion show cultural programme   </div>
-                                    <span class="mt-head-date"></span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "BirthdayToletPurchaseSaleTutionQulkhaniLostAndFoundWantedScholarshipCoachingCenterReunionExibitionAcademicFeatFashionShowCulturalProgramme_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-
                     </div>
 
+                    <div class="col-md-3">
+                        <div class="mt-widget-3">
+                            <div class="mt-head bg-blue-steel">
 
-                </div>
-                <div class="portlet-body">
-                    <div class="box-heading-green box-sections box-block">
-                        <p>স্পট বিজ্ঞাপন <small>Spot Advertisement</small></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-purple">
-
-                                    <div class="mt-head-desc">প্রথম পাতা</div>
-                                    <span class="mt-head-date">First Page  </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "firstpagespotAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
+                                <div class="mt-head-desc">News Today birthday tolet purchase sale tution qulkhani lost and found wanted scholarship coaching center reunion exibition academic feat fashion show cultural programme   </div>
+                                <span class="mt-head-date"></span>
+                                <div class="mt-head-button">
+                                    @Html.ActionLink("Click here to place your Ad", "BirthdayTolet_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
                                 </div>
-
                             </div>
+
                         </div>
-                        <div class="col-md-6">
-                            <div class="mt-widget-3">
-                                <div class="mt-head bg-purple">
-
-                                    <div class="mt-head-desc">শেষের পাতা</div>
-                                    <span class="mt-head-date">Last Page  </span>
-                                    <div class="mt-head-button">
-                                        @Html.ActionLink("Click here to place your Ad", "lastpagespotAdvertisement_MainPage", "NewsToday", new object { }, new { @class = "btn btn-circle btn-outline white btn-sm" })
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
-        <!-- empty sortable porlet required for each columns! -->
-        <div class="portlet portlet-sortable-empty"> </div>
     </div>
 
-
+    </div>
 
     <div class="col-md-12 column sortable">
         <div class="portlet portlet-sortable  bg-inverse">

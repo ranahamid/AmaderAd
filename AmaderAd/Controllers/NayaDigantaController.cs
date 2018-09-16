@@ -19,6 +19,7 @@ namespace AmaderAd.Controllers
         {
             return View();
         }
+
         #region  classified advertisement
         [SeoMetaKeywords("amader ad naya diganta  classified advertisement,naya diganta classified ad, naya diganta classified advertisement, publish classied advertisement at naya diganta, classified advertisement cost at naya diganta , naya diganta  classified advertisement rate, classified advertisement at naya diganta, নয়া দিগন্তে  শ্রেণীভুক্ত বিজ্ঞাপন দিন,  rent at naya diganta,  house rent at naya diganta, publish rent advertisement at naya diganta, naya diganta  rent advertisement, নয়া দিগন্ত বাড়ি ভাড়া বিজ্ঞাপন,  land slae advertisement at naya diganta, naya diganta  land sale advertisement, naya diganta  land sale ad cost, নয়া দিগন্তে জমি বিক্রয়ের বিজ্ঞাপন দিন,  miscellaneous sales advertisement at naya diganta, naya diganta  miscellaneous slaes advetisement, miscellaneous sales cost at naya diganta, publish miscellaneous advertisement at naya diganta , miscellaneous at naya diganta, নয়া দিগন্তে বিবিধ বিক্রয়ের বিজ্ঞাপন দিন, house sale advertisement at naya diganta, naya diganta house sales advertisement, house sales advertisement cost at naya diganta, publish house sale advertisement at naya diganta, house sale advertisement at naya diganta, নয়া দিগন্তে বাড়ি বিক্রয়ের বিজ্ঞাপন দিন,  shop sale advertisement at naya diganta, naya diganta  shop sales advertisement, shop sales advertisement cost at naya diganta, publish shop sale advertisement at naya diganta, house shop advertisement at naya diganta, নয়া দিগন্তে দোকান বিক্রয়ের বিজ্ঞাপন দিন, car sale advertisement at naya diganta, naya diganta  car sales advertisement, car sales advertisement cost at naya diganta, publish car sale advertisement at naya diganta, car sale advertisement at naya diganta, নয়া দিগন্তে গাড়ি বিক্রয়ের বিজ্ঞাপন দিন, plot purchase advertisement at naya diganta , naya diganta  plot purchase advertisement, plot purchase advertisement cost at naya diganta, publish plot purchase advertisement at naya diganta, plot purchase advertisement at naya diganta, নয়া দিগন্তে প্লট ক্রয়ের  বিজ্ঞাপন দিন,  wanted advertisement at naya diganta, naya diganta  wanted advertisement, wanted advertisement cost at naya diganta, publish wanted advertisement at naya diganta, wanted advertisement at naya diganta, tution wanted advertisement at naya diganta, naya diganta  tution wante advertisement, tution wanted advertisement cost at naya diganta, publish tution wanted advertisement at naya diganta, tuiton wanted advertisement at naya diganta, নয়া দিগন্তে  পড়াতে চাই   বিজ্ঞাপন দিন,  groom wanted advertisement at naya diganta, naya diganta groom wanted advertisement, groom wanted advertisement cost at naya diganta, publish groom wanted advertisement at naya diganta, groom wnated advertisement at naya diganta, নয়া দিগন্তে  পাত্র চাই  বিজ্ঞাপন দিন, bride wanted advertisement at naya diganta, naya diganta  plot bride wanted advertisement, bride wanted  advertisement cost at naya diganta, bride wanted purchase advertisement at naya diganta, bride wanted  advertisement at naya diganta, নয়া দিগন্তে  পাত্রী চাই  বিজ্ঞাপন দিন,")]
         [SeoTitle("Publish classified advertisement in naya diganta  through amader ad")]
@@ -41,21 +42,8 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
-      
+
         #region  MainPage
-        [SeoMetaKeywords("amader ad naya diganta general display advertisement, naya diganta general display advertisement, publish general display advertisement in naya diganta , general display advertisement cost at naya diganta , naya diganta general display advertisement rate, general display advertisement at naya diganta")]
-        [SeoTitle("Publish general display advertisement in naya diganta through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish your general advertisement in naya diganta")]
-        public ActionResult GeneralDisplayAdvertisement_MainPage()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "Naya Diganta",
-                AdLocation = "Naya Diganta general display advertisement.",
-                PriceDescription = 3500
-            };
-            return View(model);
-        }
         [SeoMetaKeywords("amader ad naya diganta first page advertisement, naya diganta first page color advertisement, naya diganta 1st page advertisement,  naya diganta 1st page color advbertisement, naya diganta 1 number page advertisement, naya diganta one number page color advertisement, publish advertisement at naya diganta first page, advertisement cost at naya diganta first page, naya diganta first page advertisement rate, color advertisement at naya diganta first page")]
         [SeoTitle("Publish color advertisement in naya diganta first page thourgh amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your color advertisement in naya diganta first page")]
@@ -69,6 +57,21 @@ namespace AmaderAd.Controllers
             };
             return View(model);
         }
+
+        [SeoMetaKeywords("amader ad naya diganta general display advertisement, naya diganta general display advertisement, publish general display advertisement in naya diganta , general display advertisement cost at naya diganta , naya diganta general display advertisement rate, general display advertisement at naya diganta")]
+        [SeoTitle("Publish general display advertisement in naya diganta through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish your general advertisement in naya diganta")]
+        public ActionResult GeneralDisplayAdvertisement_MainPage()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "Naya Diganta",
+                AdLocation = "Naya Diganta general display advertisement.",
+                PriceDescription = 3500
+            };
+            return View(model);
+        }
+     
         [SeoMetaKeywords("amader ad naya diganta second page advertisement, naya diganta second page black and white advertisement, naya diganta 2nd page advertisement,  naya diganta 2nd page black and white advbertisement, naya diganta 2 number page advertisement, naya diganta second number page black and white advertisement, publish advertisement at naya diganta second page, advertisement cost at naya diganta second page, naya diganta second page advertisement rate, black and white advertisement at naya diganta second page")]
         [SeoTitle("Publish black and white advertisement in naya diganta second page through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your black and white advertisement in naya diganta second page")]
@@ -362,6 +365,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region WeeklyPublication
         [SeoMetaKeywords("amader ad naya diganta weekly obokash  advertisement, naya diganta weekly obokash  color advertisement, naya diganta weekly obokash  advertisement, publish advertisement at naya diganta weekly obokash  , advertisement cost at naya diganta weekly obokash , naya diganta weekly obokash  advertisement rate, color advertisement at naya diganta weekly obokash")]
         [SeoTitle("Publish color advertisement in naya diganta weekly obokash  thourgh amader ad")]
@@ -448,6 +452,7 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         #endregion
+
         #region RegularPublication
         [SeoMetaKeywords("amader ad naya diganta anondolok  advertisement, naya diganta anondolok  color advertisement, naya diganta anondolok  advertisement, publish advertisement at naya diganta anondolok, advertisement cost at naya diganta anondolok , naya diganta anondolok  advertisement rate, color advertisement at naya diganta anondolok")]
         [SeoTitle("Publish color advertisement in naya diganta anondolok  thourgh amader ad")]
@@ -842,6 +847,7 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {
