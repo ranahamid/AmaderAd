@@ -253,6 +253,110 @@ namespace AmaderAd.Controllers
         }
 
         #endregion
+        #region Spot
+        [SeoMetaKeywords("amader ad new age front page spot advertisement, new age front page spot advertisement, publish spot advertisement at new age front page,front page spot advertisement cost at new age, new age front page spot advertisement rate, advertisement at new age front page side panel")]
+        [SeoTitle("Publish front page spot advertisement in new age through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish front page spot advertisement in new age")]
+        public ActionResult FrontPage_Spot()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Front Page- Spot",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 10000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "2",
+                InchFloat = "2/c",
+            };
+            return View(model);
+        }
+        [SeoMetaKeywords("amader ad new age  back page spot advertisement, new age back page spot advertisement, publish spot advertisement at new age back page,back page spot advertisement cost at new age , new age  back page spot advertisement rate, advertisement at new age back page side panel")]
+        [SeoTitle("Publish back page spot advertisement in new age  through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish back page spot advertisement in new age")]
+        public ActionResult BackPage_Spot()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Back Page- Spot",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 8000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "2",
+                InchFloat = "2/c",
+            };
+            return View(model);
+        }
+
+        [SeoMetaKeywords("amader ad new age  metro page spot advertisement, new age  metro page spot advertisement, publish spot advertisement at new age metro page,metro page spot advertisement cost at new age, new age metro page spot advertisement rate")]
+        [SeoTitle("Publish metro page spot advertisement in new age  through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish metro page spot advertisement in new age")]
+        public ActionResult MetroPage_Spot()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Metro Page- Spot",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 2000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "2",
+                InchFloat = "2/c",
+            };
+            return View(model);
+        }
+        [SeoMetaKeywords("amader ad new age  business page spot advertisement, new age business page spot advertisement, publish spot advertisement at new age business page,business page spot advertisement cost at new age, new age business page spot advertisement rate")]
+        [SeoTitle("Publish business page spot advertisement in new age  through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish business page spot advertisement in new age")]
+        public ActionResult BusinessPage_Spot()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Business Page- Spot",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 6000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "2",
+                InchFloat = "2/c",
+            };
+            return View(model);
+        }
+        [SeoMetaKeywords("amader ad new age  sports  page spot advertisement, new age sports  page spot advertisement, publish spot advertisement at new age sports page, sports page spot advertisement cost at new age, new age sports page spot advertisement rate")]
+        [SeoTitle("Publish sports  page spot advertisement in new age  through amader ad")]
+        [SeoMetaDescription("Through Amader Ad publish sports  page spot advertisement in new age")]
+        public ActionResult SportsPage_Spot()
+        {
+            Newspaper model = new Newspaper
+            {
+                NewspaperName = "New Age",
+                AdLocation = "Sports Page- Spot",
+
+                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
+                FirstWordLimitBase = 0,
+                PriceDescription = 4000,
+                ExtraWordPrice = 0,
+                WordLimit = 0,
+                ColumnSizeFloat = "2",
+                InchFloat = "2/c",
+            };
+            return View(model);
+        }
+
+        #endregion
 
         #region Panel
         [SeoMetaKeywords("amader ad new age front page panel advertisement, new age  front page panel advertisement, publish panel advertisement at new age front page,front page panel advertisement cost at new age, new age  front page panel advertisement rate, advertisement at new age front page side panel")]
@@ -468,111 +572,7 @@ namespace AmaderAd.Controllers
 
         #endregion
 
-        #region Spot
-        [SeoMetaKeywords("amader ad new age front page spot advertisement, new age front page spot advertisement, publish spot advertisement at new age front page,front page spot advertisement cost at new age, new age front page spot advertisement rate, advertisement at new age front page side panel")]
-        [SeoTitle("Publish front page spot advertisement in new age through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish front page spot advertisement in new age")]
-        public ActionResult FrontPage_Spot()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "Front Page- Spot",
-
-                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
-                FirstWordLimitBase = 0,
-                PriceDescription = 10000,
-                ExtraWordPrice = 0,
-                WordLimit = 0,
-                ColumnSizeFloat = "2",
-                InchFloat = "2/c",
-            };
-            return View(model);
-        }
-        [SeoMetaKeywords("amader ad new age  back page spot advertisement, new age back page spot advertisement, publish spot advertisement at new age back page,back page spot advertisement cost at new age , new age  back page spot advertisement rate, advertisement at new age back page side panel")]
-        [SeoTitle("Publish back page spot advertisement in new age  through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish back page spot advertisement in new age")]
-        public ActionResult BackPage_Spot()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "Back Page- Spot",
-
-                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
-                FirstWordLimitBase = 0,
-                PriceDescription = 8000,
-                ExtraWordPrice = 0,
-                WordLimit = 0,
-                ColumnSizeFloat = "2",
-                InchFloat = "2/c",
-            };
-            return View(model);
-        }
-
-        [SeoMetaKeywords("amader ad new age  metro page spot advertisement, new age  metro page spot advertisement, publish spot advertisement at new age metro page,metro page spot advertisement cost at new age, new age metro page spot advertisement rate")]
-        [SeoTitle("Publish metro page spot advertisement in new age  through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish metro page spot advertisement in new age")]
-        public ActionResult MetroPage_Spot()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "Metro Page- Spot",
-
-                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
-                FirstWordLimitBase = 0,
-                PriceDescription = 2000,
-                ExtraWordPrice = 0,
-                WordLimit = 0,
-                ColumnSizeFloat = "2",
-                InchFloat = "2/c",
-            };
-            return View(model);
-        }
-        [SeoMetaKeywords("amader ad new age  business page spot advertisement, new age business page spot advertisement, publish spot advertisement at new age business page,business page spot advertisement cost at new age, new age business page spot advertisement rate")]
-        [SeoTitle("Publish business page spot advertisement in new age  through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish business page spot advertisement in new age")]
-        public ActionResult BusinessPage_Spot()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "Business Page- Spot",
-
-                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
-                FirstWordLimitBase = 0,
-                PriceDescription = 6000,
-                ExtraWordPrice = 0,
-                WordLimit = 0,
-                ColumnSizeFloat = "2",
-                InchFloat = "2/c",
-            };
-            return View(model);
-        }
-        [SeoMetaKeywords("amader ad new age  sports  page spot advertisement, new age sports  page spot advertisement, publish spot advertisement at new age sports page, sports page spot advertisement cost at new age, new age sports page spot advertisement rate")]
-        [SeoTitle("Publish sports  page spot advertisement in new age  through amader ad")]
-        [SeoMetaDescription("Through Amader Ad publish sports  page spot advertisement in new age")]
-        public ActionResult SportsPage_Spot()
-        {
-            Newspaper model = new Newspaper
-            {
-                NewspaperName = "New Age",
-                AdLocation = "Sports Page- Spot",
-
-                //মূল্য প্রথম ১৬ শব্দের জন্য মোট ৬০০ টাকা এবং পরবর্তী প্রতি শব্দের জন্য ৪০ টাকা । শ্রেণিভুক্ত বিজ্ঞাপন সর্বোচ্চ ৫০ শব্দের মধ্যে হতে হবে
-                FirstWordLimitBase = 0,
-                PriceDescription = 4000,
-                ExtraWordPrice = 0,
-                WordLimit = 0,
-                ColumnSizeFloat = "2",
-                InchFloat = "2/c",
-            };
-            return View(model);
-        }
-
-        #endregion
-
+       
         #region online ad
         public ActionResult MiddleBannerType1_Online()
         {
