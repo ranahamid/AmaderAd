@@ -26,7 +26,7 @@ namespace AmaderAd.Controllers
         [SeoTitle("Homepage")]
         public ActionResult Index()
         {
-            Log.Info("App started...");
+          //  Log.Info("App started...");
             return View();
         }
         public ActionResult Contact()
