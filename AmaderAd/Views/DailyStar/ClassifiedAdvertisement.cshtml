@@ -1,0 +1,109 @@
+﻿@model AmaderAd.Models.Newspaper
+
+@{
+    ViewBag.Title = Model.AdLocation;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Daily Star শ্রেণিভুক্ত বিজ্ঞাপন দিন (Publish Classified Advertisement at Daily Star)</h2>
+<p>অনুগ্রহ পূর্বক নিচের তথ্যগুলো দিন (Please Provide the Information below) </p>
+
+@using (Html.BeginForm("Create", "Newspapers"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.Partial("_NewspaperHeader", Model)
+
+        @Html.Partial("_NewspaperAdCategory", Model)
+
+        @Html.Partial("_ClassifiedHeaderDescription", Model)
+
+        @Html.Partial("_NewspaperDescriptionAd", Model)
+
+        @Html.Partial("_NewspaperTotalCostWithVat", Model)
+
+        @Html.Partial("_NewspaperNotice")
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+            </div>
+        </div>
+    </div>
+}
+
+@Html.Partial("_NewspaperSampleAd")
+
+
+<script>
+    var amount;
+    $("#Description").bind('keyup keydown paste cut', function(e)
+    {
+        setTimeout(function () {
+            debugger
+            var maxWordCount = @Html.Raw(Model.WordLimit);
+            var priceDescription = @Html.Raw(Model.PriceDescription);
+
+            var firstWordLimitBase = @Html.Raw(Model.FirstWordLimitBase); //16
+            var extraWordPrice = @Html.Raw(Model.ExtraWordPrice); //40
+
+            var vat = @Html.Raw(Model.VAT); //0.15
+
+
+            var value = $('#Description').val();
+            if (value.length == 0) {
+                $('#TotalPrice').val(0);
+                $('#wordLimiter').html(0);
+                return;
+            }
+
+            var regex = /\s+/gi;
+            var wordcount = value.trim().replace(regex, ' ').split(' ').length;
+
+            var priceWithVat = priceDescription * vat;
+
+            if (wordcount >= maxWordCount) {
+                document.getElementById("maxwords").innerHTML = "আপনি সর্বোচ্চ " + maxWordCount + " শব্দের বিজ্ঞাপন দিতে পারবেন। <br>you can submit maximum " + maxWordCount + " words advertisement";
+            }
+            if (wordcount < maxWordCount) {
+                $('#maxwords').empty();
+            }
+
+            if (wordcount > maxWordCount ){
+                $("#submit-btn").attr("disabled", "disabled");
+
+            } else {
+                $("#submit-btn").removeAttr("disabled");
+            }
+
+            if (wordcount <= firstWordLimitBase) {
+                amount = priceDescription + priceWithVat;
+            }
+            else if (wordcount > firstWordLimitBase) {
+                var extraWord = wordcount - firstWordLimitBase;
+                var extraPriceWithVat = (extraWord * extraWordPrice) * vat;
+                var extraAmount = extraWord * extraWordPrice + extraPriceWithVat;
+                amount = priceDescription + priceWithVat + extraAmount;
+            }
+
+            $('#TotalPrice').val(amount);
+
+            $('#wordLimiter').html(wordcount);
+        },100);
+    });
+
+</script>
+
+
+<script>
+    var hour = new Date().getUTCHours() + 6;
+    $(".datetime").datepicker({
+        startDate: hour >= 18 ? '+2d' : '+1d',
+        autoclose: true
+    });
+
+</script>

@@ -43,6 +43,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
 #endregion
+
         #region MainPage
 
         [SeoBaseTitle("Publish color advertisement in amader shomoy first page through amader ad")]
@@ -295,6 +296,7 @@ namespace AmaderAd.Controllers
 
 
         #endregion
+
         #region SpecialKororpotro
         [SeoBaseTitle("Publish color advertisement in amader shomoy special kororpotro through amader ad")]
         [SeoMetaKeywords("amader ad amader shomoy bishesh korrorpotro advertisement,amader shomoy bisesh korrorpotro ad, amader shomoy bisesh korrorpotro color advertisement, amader shomoy bisesh korrorpotro 1st page ad,  amader shomoy bisesh korrorpotro 1st page color advertisement, amader shomoy bisesh orrorpotro 1 number page advertisement, amader shomoy bisesh korrorpotro one  number page color advertisement, publish advertisement at amader shomoy bisesh korrorpotro first page, advertisement cost at amader shomoy bisesh korrorpotro first  page, amader shomoy bisesh korrorpotro first page advertisement rate, color advertisement at amader shomoy bisesh korrorpotro first page")]
@@ -325,6 +327,7 @@ namespace AmaderAd.Controllers
         //    return View(model);
         //}
         #endregion
+
         #region Aynashomoy   
    
         [SeoBaseTitle("Publish color advertisement in ayna shomoy first page through amader ad")]
@@ -380,6 +383,7 @@ namespace AmaderAd.Controllers
             return View(model);
         }
         #endregion
+
         #region Govt. Ad
         public ActionResult GovtAd()
         {
@@ -434,9 +438,6 @@ namespace AmaderAd.Controllers
             };
             return PartialView("GovtCommercialAd", model);
         }
-
-
-
 
         #endregion
 

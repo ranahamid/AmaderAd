@@ -297,7 +297,7 @@ namespace AmaderAd.Controllers
         [SeoMetaKeywords("amader ad financial court related advertisement in naya diganta, finacial court related advertisement in naaya diganta, financial court related advertisement cost at naya diganta, financial court related advertisement rate at naya diganta,financial court advertisement")]
         [SeoTitle("Publish financial court related advertisement in naya diganta through amader ad")]
         [SeoMetaDescription("Through Amader Ad publish your financial court related advertisement in naya diganta")]
-        public ActionResult FinanceCourtAdvertisement_MainPage()
+        public ActionResult FinanaceCourtAdvertisement_MainPage()
         {
             Newspaper model = new Newspaper
             {
